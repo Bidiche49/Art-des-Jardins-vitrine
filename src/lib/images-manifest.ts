@@ -572,7 +572,7 @@ export const images: Record<string, ImageEntry> = {
   }
 };
 
-export const categories = ['creation', 'elagage', 'entretien', 'terrasse', 'cloture', 'arrosage', 'blog'] as const;
+export const categories = ['creation', 'elagage', 'entretien', 'terrasse', 'cloture', 'arrosage'] as const;
 export type ImageCategory = typeof categories[number];
 
 export function getImagesByCategory(category: ImageCategory): ImageEntry[] {

@@ -25,7 +25,7 @@ export function PhotoGallery({ maxItems, showFilters = true, initialCategory, ex
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const allImages = Object.values(images);
+  const allImages = Object.values(images).filter((img) => img.category !== 'blog' && !img.slug.includes('avant'));
   const excluded = excludeSlugs
     ? allImages.filter((img) => !excludeSlugs.includes(img.slug))
     : allImages;
