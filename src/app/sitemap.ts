@@ -3,7 +3,7 @@ import { services } from '@/lib/services-data';
 import { cities, serviceTypes } from '@/lib/cities-data';
 import { articles } from '@/lib/blog-data';
 
-const baseUrl = 'https://art-et-jardin.fr';
+const baseUrl = 'https://artdesjardins-paysagiste.fr';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();

@@ -27,7 +27,7 @@ export default function ServicesPage() {
       <ServiceSchema
         name="Services d'aménagement paysager Art des Jardins"
         description="Entreprise d'aménagement paysager proposant création de jardin, entretien, élagage et abattage à Angers et environs."
-        url="https://art-et-jardin.fr/services/"
+        url="https://artdesjardins-paysagiste.fr/services/"
       />
 
       {/* Hero */}

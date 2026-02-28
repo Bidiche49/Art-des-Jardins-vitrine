@@ -31,8 +31,8 @@ const contactInfo = [
   {
     icon: <IconEmail className="w-6 h-6" />,
     title: 'Email',
-    content: 'artdesjardins49@gmail.com',
-    link: 'mailto:artdesjardins49@gmail.com',
+    content: 'contact@artdesjardins-paysagiste.fr',
+    link: 'mailto:contact@artdesjardins-paysagiste.fr',
     description: 'Réponse sous 48h',
   },
   {

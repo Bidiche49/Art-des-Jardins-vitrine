@@ -84,7 +84,7 @@ export default function ServiceCityPage({ params }: PageProps) {
         postalCode={city.postalCode}
         service={service.serviceTitle}
         serviceDescription={service.serviceDescription}
-        url={`https://art-et-jardin.fr/${params.serviceCity}/`}
+        url={`https://artdesjardins-paysagiste.fr/${params.serviceCity}/`}
       />
 
       {/* Hero */}

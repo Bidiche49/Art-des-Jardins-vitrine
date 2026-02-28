@@ -40,7 +40,7 @@ export default function ElagageAngersPage() {
         postalCode="49000"
         service="Élagage"
         serviceDescription="Taille et soins des arbres par des élagueurs certifiés à Angers."
-        url="https://art-et-jardin.fr/elagage-angers/"
+        url="https://artdesjardins-paysagiste.fr/elagage-angers/"
       />
 
       {/* Hero */}

@@ -14,7 +14,7 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant',
 });
 
-const siteUrl = 'https://art-et-jardin.fr';
+const siteUrl = 'https://artdesjardins-paysagiste.fr';
 
 export const viewport: Viewport = {
   width: 'device-width',

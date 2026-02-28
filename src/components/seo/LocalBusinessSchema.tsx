@@ -2,13 +2,13 @@ export function LocalBusinessSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://art-et-jardin.fr/#organization',
+    '@id': 'https://artdesjardins-paysagiste.fr/#organization',
     name: 'Art des Jardins',
     legalName: 'SARL Art des Jardins',
     description: 'Paysagiste professionnel à Angers et Maine-et-Loire. Création de jardins, aménagement, entretien, élagage, abattage. 16 ans d\'expérience cumulée.',
-    url: 'https://art-et-jardin.fr',
-    image: 'https://art-et-jardin.fr/images/og-image.jpg',
-    logo: 'https://art-et-jardin.fr/images/logo.png',
+    url: 'https://artdesjardins-paysagiste.fr',
+    image: 'https://artdesjardins-paysagiste.fr/images/og-image.jpg',
+    logo: 'https://artdesjardins-paysagiste.fr/images/logo.png',
     foundingDate: '2026',
     numberOfEmployees: {
       '@type': 'QuantitativeValue',
@@ -30,7 +30,7 @@ export function LocalBusinessSchema() {
         contactType: 'customer service',
       },
     ],
-    email: 'artdesjardins49@gmail.com',
+    email: 'contact@artdesjardins-paysagiste.fr',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '9 bis rue Rouget de l\'Isle',

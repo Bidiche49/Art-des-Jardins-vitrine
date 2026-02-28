@@ -44,7 +44,7 @@ export default function EntretienJardinAngersPage() {
         postalCode="49000"
         service="Entretien de jardin"
         serviceDescription="Service d'entretien de jardin régulier à Angers : tonte, taille, désherbage."
-        url="https://art-et-jardin.fr/entretien-jardin-angers/"
+        url="https://artdesjardins-paysagiste.fr/entretien-jardin-angers/"
       />
 
       {/* Hero */}

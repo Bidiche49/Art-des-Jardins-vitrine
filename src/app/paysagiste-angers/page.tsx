@@ -40,7 +40,7 @@ export default function PaysagisteAngersPage() {
         postalCode="49000"
         service="Paysagiste"
         serviceDescription="Aménagement et création de jardins sur mesure à Angers et ses environs."
-        url="https://art-et-jardin.fr/paysagiste-angers/"
+        url="https://artdesjardins-paysagiste.fr/paysagiste-angers/"
       />
 
       {/* Hero */}

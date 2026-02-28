@@ -107,17 +107,17 @@ export default function ArticlePage({ params }: PageProps) {
     '@type': 'Article',
     headline: article.title,
     description: article.metaDescription,
-    image: `https://art-et-jardin.fr${getDefaultSrc(getImage(article.imageSlug)!, 1200)}`,
+    image: `https://artdesjardins-paysagiste.fr${getDefaultSrc(getImage(article.imageSlug)!, 1200)}`,
     datePublished: article.publishDate,
     author: {
       '@type': 'Organization',
       name: 'Art des Jardins',
-      url: 'https://art-et-jardin.fr',
+      url: 'https://artdesjardins-paysagiste.fr',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Art des Jardins',
-      url: 'https://art-et-jardin.fr',
+      url: 'https://artdesjardins-paysagiste.fr',
     },
   };
 
@@ -129,13 +129,13 @@ export default function ArticlePage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'Accueil',
-        item: 'https://art-et-jardin.fr',
+        item: 'https://artdesjardins-paysagiste.fr',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Conseils',
-        item: 'https://art-et-jardin.fr/conseils/',
+        item: 'https://artdesjardins-paysagiste.fr/conseils/',
       },
       {
         '@type': 'ListItem',

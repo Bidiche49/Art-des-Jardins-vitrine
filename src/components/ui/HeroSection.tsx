@@ -81,7 +81,7 @@ function BreadcrumbSchema({ items }: { items: { label: string; href?: string }[]
         name: item.label,
       };
       if (item.href) {
-        entry.item = `https://art-et-jardin.fr${item.href}`;
+        entry.item = `https://artdesjardins-paysagiste.fr${item.href}`;
       }
       return entry;
     }),

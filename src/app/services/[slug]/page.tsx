@@ -62,7 +62,7 @@ export default function ServicePage({ params }: PageProps) {
       <ServiceSchema
         name={service.title}
         description={service.metaDescription}
-        url={`https://art-et-jardin.fr/services/${service.slug}/`}
+        url={`https://artdesjardins-paysagiste.fr/services/${service.slug}/`}
       />
       <script
         type="application/ld+json"

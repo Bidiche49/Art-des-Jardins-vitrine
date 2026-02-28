@@ -32,7 +32,7 @@ export default function MentionsLegalesPage() {
 
           <h2>1. Éditeur du site</h2>
           <p>
-            Le site <strong>art-et-jardin.fr</strong> est édité par :
+            Le site <strong>artdesjardins-paysagiste.fr</strong> est édité par :
           </p>
           <ul>
             <li><strong>Raison sociale :</strong> SARL Art des Jardins</li>
@@ -44,7 +44,7 @@ export default function MentionsLegalesPage() {
             <li><strong>Code NAF :</strong> 81.30Z - Services d'aménagement paysager</li>
             <li><strong>Capital social :</strong> 5 000 euros</li>
             <li><strong>Téléphone :</strong> 07 81 16 07 37 / 06 59 68 49 16</li>
-            <li><strong>Email :</strong> artdesjardins49@gmail.com</li>
+            <li><strong>Email :</strong> contact@artdesjardins-paysagiste.fr</li>
             <li><strong>Co-gérants :</strong> M. Louis Coussière et M. Jocelyn Rondeau</li>
             <li><strong>Directeurs de la publication :</strong> M. Louis Coussière et M. Jocelyn Rondeau</li>
           </ul>
@@ -106,7 +106,7 @@ export default function MentionsLegalesPage() {
             Pour toute question relative aux présentes mentions légales, vous pouvez nous contacter :
           </p>
           <ul>
-            <li>Par email : artdesjardins49@gmail.com</li>
+            <li>Par email : contact@artdesjardins-paysagiste.fr</li>
             <li>Par téléphone : 07 81 16 07 37 / 06 59 68 49 16</li>
             <li>Par courrier : 9 bis rue Rouget de l'Isle, 49130 Les Ponts-de-Cé</li>
           </ul>

@@ -39,7 +39,7 @@ export function Footer() {
               </div>
               <p className="flex items-center gap-2">
                 <IconEmail className="w-4 h-4 text-primary-500 flex-shrink-0" />
-                <a href="mailto:artdesjardins49@gmail.com" className="hover:text-white transition-colors">artdesjardins49@gmail.com</a>
+                <a href="mailto:contact@artdesjardins-paysagiste.fr" className="hover:text-white transition-colors">contact@artdesjardins-paysagiste.fr</a>
               </p>
               <p className="flex items-center gap-2">
                 <IconInstagram className="w-4 h-4 text-primary-500 flex-shrink-0" />

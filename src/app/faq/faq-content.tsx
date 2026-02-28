@@ -298,7 +298,7 @@ function FAQSchemas() {
         '@type': 'ListItem',
         position: 1,
         name: 'Accueil',
-        item: 'https://art-et-jardin.fr/',
+        item: 'https://artdesjardins-paysagiste.fr/',
       },
       {
         '@type': 'ListItem',

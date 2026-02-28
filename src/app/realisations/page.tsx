@@ -26,11 +26,11 @@ function Schemas() {
     name: 'Réalisations - Art des Jardins',
     description:
       'Galerie de réalisations paysagères à Angers : aménagement de jardins, terrasses, clôtures, élagage et abattage.',
-    url: 'https://art-et-jardin.fr/realisations/',
+    url: 'https://artdesjardins-paysagiste.fr/realisations/',
     isPartOf: {
       '@type': 'WebSite',
       name: 'Art des Jardins',
-      url: 'https://art-et-jardin.fr/',
+      url: 'https://artdesjardins-paysagiste.fr/',
     },
   };
 
@@ -42,7 +42,7 @@ function Schemas() {
         '@type': 'ListItem',
         position: 1,
         name: 'Accueil',
-        item: 'https://art-et-jardin.fr/',
+        item: 'https://artdesjardins-paysagiste.fr/',
       },
       {
         '@type': 'ListItem',

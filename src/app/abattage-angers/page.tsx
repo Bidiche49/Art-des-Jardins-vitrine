@@ -40,7 +40,7 @@ export default function AbattageAngersPage() {
         postalCode="49000"
         service="Abattage d'arbres"
         serviceDescription="Abattage sécurisé d'arbres dangereux ou gênants à Angers."
-        url="https://art-et-jardin.fr/abattage-angers/"
+        url="https://artdesjardins-paysagiste.fr/abattage-angers/"
       />
 
       {/* Hero */}
