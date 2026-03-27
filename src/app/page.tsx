@@ -48,7 +48,7 @@ export default function HomePage() {
             </div>
             <div className="flex items-center gap-2">
               <IconExperience className="w-5 h-5 text-primary-600 flex-shrink-0" />
-              <span className="font-medium">16 ans d&apos;expérience</span>
+              <span className="font-medium">16 ans d&apos;expérience cumulée</span>
             </div>
             <div className="flex items-center gap-2">
               <IconDevis48h className="w-5 h-5 text-primary-600 flex-shrink-0" />
