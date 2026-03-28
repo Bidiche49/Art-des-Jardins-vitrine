@@ -63,7 +63,7 @@ export default function HomePage() {
             </div>
             <div className="flex items-center gap-2">
               <IconEuro className="w-5 h-5 text-secondary-500 flex-shrink-0" />
-              <span className="font-medium text-secondary-700">Crédit d&apos;impôt 50 %</span>
+              <span className="font-medium text-secondary-700">Crédit d&#x2019;impôt 50&#xa0;%</span>
             </div>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Prêt à transformer votre jardin ?</h2>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Intervention rapide dans tout Angers et ses environs.
-            Crédit d&apos;impôt 50 % sur l&apos;entretien de jardin.
+            Crédit d&#x2019;impôt 50&#xa0;% sur l&#x2019;entretien de jardin.
           </p>
           <Link href="/contact" className="btn-primary-light">
             Demander une visite conseil
@@ -274,6 +274,6 @@ const services = homepageServiceSlugs.map((slug) => {
     description: s.cardDescription,
     href: `/services/${s.slug}/`,
     imageSlug: serviceCardImages[s.slug as keyof typeof serviceCardImages],
-    badge: s.isTaxCreditEligible ? 'Crédit d\'impôt 50 %' : undefined,
+    badge: s.isTaxCreditEligible ? 'Crédit d\u2019impôt 50\u00a0%' : undefined,
   };
 });
