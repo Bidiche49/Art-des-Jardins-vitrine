@@ -15,7 +15,7 @@ const city = cities.find((c) => c.slug === 'angers')!;
 export const metadata: Metadata = {
   title: 'Entretien de Jardin Angers - 50% Crédit d\'Impôt | Art des Jardins',
   description:
-    'Entretien de jardin à Angers avec 50 % de crédit d\'impôt. Tonte pelouse, taille haies, désherbage. Professionnel agréé services à la personne. Devis gratuit.',
+    'Entretien de jardin à Angers : tonte, taille de haies, désherbage adaptés au climat océanique angevin. Agréé services à la personne — 50 % de crédit d\'impôt.',
   keywords: [
     'entretien jardin angers',
     'crédit impôt entretien jardin',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Entretien Jardin Angers - 50% Crédit d\'Impôt | Art des Jardins',
-    description: 'Entretien de jardin à Angers avec 50 % de crédit d\'impôt. Professionnel agréé, devis gratuit.',
+    description: 'Entretien de jardin à Angers adapté au climat doux et humide de l\'Anjou. Tonte, taille, désherbage — 50 % de crédit d\'impôt.',
     type: 'website',
     images: [{ url: ogImages.entretien, width: 1200, height: 630 }],
   },
@@ -56,7 +56,7 @@ export default function EntretienJardinAngersPage() {
         ]}
         imageSlug="entretien-3"
         title="Entretien de Jardin à Angers"
-        subtitle="Entretien de jardin à Angers — Bénéficiez de 50 % de crédit d'impôt. Tonte, taille, désherbage par un professionnel agréé."
+        subtitle="Entretien de jardin à Angers — tonte, taille de haies, désherbage au rythme du climat angevin. Agréé services à la personne, 50 % de crédit d'impôt."
       >
         <div className="flex flex-col sm:flex-row gap-4">
           <Link href="/contact/" className="btn-primary-light">
@@ -77,29 +77,37 @@ export default function EntretienJardinAngersPage() {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold mb-6">
-                Un jardin impeccable toute l'année
+                Entretenir un jardin sous climat angevin
               </h2>
               <div className="prose prose-lg max-w-none text-gray-600">
                 <p>
-                  L'<strong>entretien de jardin à Angers</strong> demande une attention régulière
-                  et des gestes adaptés à chaque saison. Chez Art des Jardins, nous proposons des
-                  contrats d'entretien sur mesure pour que vous puissiez profiter de votre
-                  extérieur sans contrainte.
+                  L'<strong>entretien de jardin à Angers</strong> suit un rythme dicté par le climat
+                  océanique de la vallée de la Maine. Douceur hivernale, humidité régulière, étés
+                  tempérés : les pelouses poussent de mars à octobre sans vraie pause, ce qui
+                  représente 25 à 30 tontes par an — près du double d'un jardin en climat continental.
+                  Les haies de laurier, de photinia ou de charme prennent 2 à 3 tailles annuelles
+                  pour rester contenues.
                 </p>
                 <p>
-                  Le climat angevin, doux et humide, favorise une croissance végétale importante.
-                  Pelouses, haies, massifs... tout pousse vite et nécessite un entretien régulier.
-                  Notre équipe intervient selon un calendrier adapté à votre jardin et aux saisons.
+                  L'humidité favorise aussi la mousse dans les gazons, les maladies fongiques sur
+                  les rosiers et les adventices qui ne gèlent pas en hiver. Le désherbage reste
+                  une activité quasi continue d'un bout à l'autre de l'année. En automne, les
+                  platanes, tilleuls et marronniers présents dans de nombreuses rues angevines
+                  génèrent un volume de feuilles important à évacuer avant que le gazon ne s'étouffe.
                 </p>
                 <p>
-                  Nous intervenons dans tous les quartiers d'Angers : {city.neighborhoods?.join(', ')}.
-                  Que vous habitiez une maison avec un grand jardin ou un appartement avec terrasse,
-                  nous adaptons nos prestations à vos besoins.
+                  Les sols jouent aussi un rôle dans le calendrier d'entretien. Sur les hauteurs de
+                  Monplaisir ou en centre-ville, le substrat schisteux se dessèche vite en été :
+                  l'arrosage et le paillage deviennent nécessaires dès juin. En fond de vallée, vers
+                  le lac de Maine ou les bords de la Maine, les sols alluviaux restent gorgés d'eau
+                  en hiver, rendant la tonte délicate et le passage d'engins plus contraignant.
                 </p>
                 <p>
-                  Nos jardiniers utilisent des équipements professionnels et des techniques
-                  respectueuses de l'environnement. Nous privilégions le désherbage manuel et
-                  les traitements biologiques pour préserver la biodiversité de votre jardin.
+                  Dans les quartiers pavillonnaires de Belle-Beille, des Hauts de Saint-Aubin ou de
+                  la Roseraie, les haies de thuyas et de leylandii plantées dans les années 90
+                  arrivent en fin de vie. Leur remplacement ou leur reconversion en haies mixtes
+                  fait partie des interventions courantes, au même titre que la tonte régulière
+                  et la taille des arbustes.
                 </p>
               </div>
 
@@ -172,26 +180,27 @@ export default function EntretienJardinAngersPage() {
             <div className="bg-white border border-gray-200 rounded-xl p-6">
               <h3 className="font-bold text-lg mb-2">Contrat annuel</h3>
               <p className="text-gray-600 text-sm mb-4">
-                Interventions régulières toute l'année selon un calendrier établi ensemble.
-                Tarif dégressif et priorité d'intervention.
+                Passages planifiés de mars à novembre, avec un calendrier calé sur le
+                rythme de pousse angevin. Priorité d'intervention garantie.
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li>• 10 à 15 passages par an</li>
-                <li>• Tonte, taille, désherbage inclus</li>
-                <li>• Évacuation des déchets</li>
-                <li>• Conseils personnalisés</li>
+                <li>• 10 à 15 passages par an (tonte, taille, désherbage)</li>
+                <li>• Traitement mousse et scarification du gazon</li>
+                <li>• Évacuation des déchets verts</li>
+                <li>• Ramassage de feuilles en automne</li>
               </ul>
             </div>
             <div className="bg-white border border-gray-200 rounded-xl p-6">
               <h3 className="font-bold text-lg mb-2">Intervention ponctuelle</h3>
               <p className="text-gray-600 text-sm mb-4">
-                Pour un besoin spécifique ou un rattrapage. Intervention rapide sur devis.
+                Pour un rattrapage après absence, un nettoyage saisonnier ou une
+                taille spécifique. Sur devis après évaluation du jardin.
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li>• Remise en état après absence</li>
-                <li>• Préparation pour événement</li>
-                <li>• Nettoyage saisonnier</li>
-                <li>• Taille exceptionnelle</li>
+                <li>• Remise en état d'un jardin non entretenu</li>
+                <li>• Arrachage de haies en fin de vie (thuyas, leylandii)</li>
+                <li>• Nettoyage automnal complet</li>
+                <li>• Taille de rattrapage sur haies ou arbustes</li>
               </ul>
             </div>
           </div>
@@ -203,10 +212,10 @@ export default function EntretienJardinAngersPage() {
         <img src="/images/realisations/entretien-1-1200w.webp" alt="" loading="lazy" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 hero-overlay-strong" />
         <div className="container-custom text-center relative z-10">
-          <h2 className="text-3xl font-bold mb-4 text-white">Un jardin parfait sans effort</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white">Entretien régulier ou ponctuel à Angers</h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Confiez l'entretien de votre jardin à des professionnels.
-            Premier devis gratuit et sans engagement.
+            Tonte, taille, désherbage, ramassage de feuilles — interventions adaptées
+            au rythme de votre jardin et au climat angevin.
           </p>
           <Link href="/contact/" className="btn-primary-light">
             Demander un devis gratuit

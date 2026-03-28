@@ -14,7 +14,7 @@ const city = cities.find((c) => c.slug === 'angers')!;
 export const metadata: Metadata = {
   title: 'Paysagiste Angers - Aménagement Jardin | Art des Jardins',
   description:
-    'Paysagiste professionnel à Angers. Aménagement de jardin, terrasse, plantation, engazonnement. 16 ans d\'expérience cumulée. Devis gratuit sous 48h.',
+    'Paysagiste à Angers : aménagement de jardins, terrasses et plantations adaptés aux sols schisteux et alluviaux du Maine-et-Loire. Intervention sur tous les quartiers.',
   keywords: [
     'paysagiste angers',
     'jardinier angers',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Paysagiste Angers - Art des Jardins',
-    description: 'Votre paysagiste de confiance à Angers pour tous vos projets de jardin.',
+    description: 'Aménagement et création de jardins à Angers, adaptés au climat océanique angevin et aux spécificités des sols locaux.',
     type: 'website',
     images: [{ url: ogImages.paysagisme, width: 1200, height: 630 }],
   },
@@ -48,7 +48,7 @@ export default function PaysagisteAngersPage() {
       <HeroSection
         imageSlug="creation-9"
         title="Paysagiste à Angers"
-        subtitle="Art des Jardins, votre partenaire de confiance pour l'aménagement et la création de jardins à Angers et dans tout le Maine-et-Loire. Devis gratuit sous 48h."
+        subtitle="Aménagement et création de jardins à Angers et dans le Maine-et-Loire. Des plantations choisies pour le climat océanique angevin et les sols locaux."
         breadcrumbs={[
           { label: 'Accueil', href: '/' },
           { label: 'Paysagiste Angers' },
@@ -73,22 +73,35 @@ export default function PaysagisteAngersPage() {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold mb-6">
-                Votre paysagiste de confiance à Angers
+                Aménagement paysager à Angers : sols, climat et quartiers
               </h2>
               <div className="prose prose-lg max-w-none text-gray-600">
                 <p>
-                  Bienvenue chez Art des Jardins, votre <strong>paysagiste à Angers</strong>.
-                  Forts de 16 ans d'expérience cumulée, nos associés mettent leur savoir-faire
-                  au service de vos projets d'aménagement extérieur, qu'il s'agisse de créer
-                  un jardin de A à Z ou de transformer un espace existant.
+                  Avec plus de 600 hectares d'espaces verts, Angers cultive une tradition
+                  horticole héritée du XIX<sup>e</sup> siècle. Le travail de <strong>paysagiste à Angers</strong> s'inscrit
+                  dans ce contexte particulier : un climat océanique doux, des hivers rarement
+                  rigoureux et des étés tempérés qui permettent une grande diversité de plantations
+                  — hortensias, camélias, magnolias et rhododendrons s'y épanouissent naturellement.
                 </p>
                 <p>
                   {city.description}
                 </p>
                 <p>
-                  Nous intervenons dans tous les quartiers d'Angers : {city.neighborhoods?.join(', ')}.
-                  Notre connaissance du terrain et des réglementations locales nous permet de vous
-                  proposer des solutions adaptées à votre environnement.
+                  Les sols angevins varient fortement d'un quartier à l'autre. Sur les hauteurs
+                  de Monplaisir et dans le centre, le schiste bien drainé favorise les massifs
+                  arbustifs et les rocailles. En fond de vallée, vers le lac de Maine et les bords
+                  de la Maine, les sols alluviaux plus lourds demandent un travail de drainage et
+                  d'amendement avant toute plantation structurante. Chaque projet d'aménagement
+                  commence par l'analyse de cette réalité pédologique.
+                </p>
+                <p>
+                  La Doutre, avec ses parcelles étroites et son patrimoine architectural, appelle
+                  des jardins de ville où chaque mètre carré compte. À Saint-Serge et Belle-Beille,
+                  les espaces plus généreux se prêtent à des créations paysagères complètes —
+                  terrasses, massifs et circulations. Dans les Hauts de Saint-Aubin ou autour du
+                  lac de Maine, les terrains de 500 à 1 000 m² ouvrent la possibilité de véritables
+                  jardins d'agrément. Art des Jardins intervient dans l'ensemble de ces
+                  quartiers : {city.neighborhoods?.join(', ')}.
                 </p>
               </div>
 
@@ -147,20 +160,20 @@ export default function PaysagisteAngersPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: 'Expertise locale',
-                description: '16 ans d\'expérience cumulée en aménagement paysager.',
+                title: 'Connaissance des sols angevins',
+                description: 'Analyse du terrain avant chaque projet : schiste, alluvions ou argile, le choix des végétaux en dépend.',
               },
               {
-                title: 'Conseil personnalisé',
-                description: 'Végétaux adaptés au climat angevin et à votre terrain.',
+                title: 'Végétaux adaptés au terroir',
+                description: 'Sélection d\'essences acclimatées au climat océanique doux : camélias, hortensias, magnolias, graminées.',
               },
               {
-                title: 'Devis gratuit',
-                description: 'Estimation détaillée et transparente sous 48h.',
+                title: 'Respect du PLU local',
+                description: 'Prise en compte des réglementations d\'urbanisme d\'Angers pour chaque aménagement extérieur.',
               },
               {
-                title: 'Garantie satisfaction',
-                description: 'Suivi après travaux et conseils d\'entretien inclus.',
+                title: 'Suivi après plantation',
+                description: 'Conseils d\'entretien saisonnier et vérification de la reprise des végétaux après mise en place.',
               },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-xl p-6 text-center shadow-sm">
@@ -203,10 +216,9 @@ export default function PaysagisteAngersPage() {
         <img src="/images/realisations/creation-8-1200w.webp" alt="" loading="lazy" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 hero-overlay-strong" />
         <div className="container-custom text-center relative z-10">
-          <h2 className="text-3xl font-bold mb-4 text-white">Prêt à embellir votre jardin ?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white">Un projet d'aménagement à Angers ?</h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Contactez-nous pour une visite gratuite et un devis personnalisé.
-            Notre équipe vous répond sous 48h.
+            Visite sur place et devis personnalisé selon les caractéristiques de votre terrain.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact/" className="btn-primary-light">

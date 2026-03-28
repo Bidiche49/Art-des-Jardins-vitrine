@@ -14,7 +14,7 @@ const city = cities.find((c) => c.slug === 'angers')!;
 export const metadata: Metadata = {
   title: 'Abattage d\'Arbres Angers - Dessouchage | Art des Jardins',
   description:
-    'Abattage d\'arbres sécurisé à Angers. Démontage technique, dessouchage, évacuation. Intervention urgence tempête. Devis gratuit.',
+    'Abattage d\'arbres à Angers : démontage technique en milieu urbain dense, dessouchage sur sol schisteux ou alluvial, évacuation et valorisation du bois.',
   keywords: [
     'abattage arbre angers',
     'dessouchage angers',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Abattage Arbres Angers - Art des Jardins',
-    description: 'Service d\'abattage d\'arbres professionnel et sécurisé à Angers.',
+    description: 'Abattage d\'arbres à Angers : démontage technique, dessouchage, évacuation. Frênes, peupliers, conifères disproportionnés.',
     type: 'website',
     images: [{ url: ogImages.abattage, width: 1200, height: 630 }],
   },
@@ -52,7 +52,7 @@ export default function AbattageAngersPage() {
         ]}
         imageSlug="elagage-3"
         title="Abattage d'Arbres à Angers"
-        subtitle="Art des Jardins réalise l'abattage sécurisé d'arbres à Angers. Arbres dangereux, malades ou gênants : intervention professionnelle garantie."
+        subtitle="Abattage d'arbres dangereux, malades ou gênants à Angers. Démontage technique en zone contrainte, dessouchage et évacuation."
       >
         <div className="flex flex-col sm:flex-row gap-4">
           <Link href="/contact/" className="btn-primary-light">
@@ -77,25 +77,38 @@ export default function AbattageAngersPage() {
               </h2>
               <div className="prose prose-lg max-w-none text-gray-600">
                 <p>
-                  L'<strong>abattage d'arbres à Angers</strong> est une opération délicate qui
-                  nécessite un savoir-faire professionnel. Chez Art des Jardins, nous réalisons
-                  l'abattage d'arbres dangereux, malades, morts ou gênants dans le respect des
-                  normes de sécurité les plus strictes.
+                  L'<strong>abattage d'arbres à Angers</strong> concerne souvent des sujets
+                  fragilisés ou devenus incompatibles avec leur environnement. Les frênes touchés
+                  par la chalarose (Chalara fraxinea), maladie qui progresse dans tout le
+                  Maine-et-Loire, sont aujourd'hui une cause fréquente d'abattage. Les peupliers
+                  d'Italie vieillissants le long de la Maine et de la Sarthe présentent des risques
+                  de rupture, tout comme les conifères — épicéas, thuyas, cyprès de Leyland —
+                  plantés dans les quartiers pavillonnaires des années 70-80 et devenus
+                  disproportionnés par rapport aux parcelles.
                 </p>
                 <p>
-                  Chaque abattage est unique : nous évaluons systématiquement les risques avant
-                  intervention. Proximité de bâtiments, lignes électriques, espace de chute...
-                  Nos équipes adaptent leur méthode à chaque situation.
+                  En centre-ville dense, l'abattage direct est rarement possible. L'absence
+                  d'espace de chute impose un démontage technique : descente des branches et
+                  tronçons à la corde, pièce par pièce. Dans le secteur sauvegardé d'Angers,
+                  toute intervention sur un arbre nécessite une déclaration préalable. Les quartiers
+                  de La Doutre, Saint-Serge ou Centre-ville présentent systématiquement ces
+                  contraintes d'accès et de réglementation.
                 </p>
                 <p>
-                  Nous intervenons dans tous les quartiers d'Angers : {city.neighborhoods?.join(', ')}.
-                  Notre connaissance du terrain et des réglementations locales nous permet de
-                  gérer les autorisations nécessaires pour les arbres en zone protégée.
+                  Le PLU d'Angers identifie des Espaces Boisés Classés (EBC) dans plusieurs
+                  quartiers, où l'abattage exige une autorisation de défrichement. En périmètre
+                  ABF (Architectes des Bâtiments de France), la déclaration est également
+                  obligatoire. Ces démarches administratives sont un préalable indispensable
+                  avant toute intervention.
                 </p>
                 <p>
-                  Après l'abattage, nous proposons le dessouchage à la rogneuse et l'évacuation
-                  complète des débris. Votre terrain est ainsi prêt pour une nouvelle plantation
-                  ou un autre aménagement.
+                  Le dessouchage après abattage dépend de la nature du sol. Sur les hauteurs
+                  de Monplaisir ou de Belle-Beille, le sous-sol schisteux ancre les souches dans
+                  la roche et nécessite une rogneuse de forte puissance. En fond de vallée, vers
+                  le lac de Maine, les sols alluviaux facilitent l'extraction mais la nappe
+                  phréatique haute impose des précautions spécifiques. Le bois de chêne et de
+                  hêtre issu de l'abattage peut être valorisé en bois de chauffage ; les résineux,
+                  moins demandés, sont évacués en filière de recyclage.
                 </p>
               </div>
 
@@ -107,7 +120,7 @@ export default function AbattageAngersPage() {
                   <h4 className="font-bold text-lg mb-2">Abattage direct</h4>
                   <p className="text-gray-600 text-sm">
                     Pour les arbres en terrain dégagé avec espace de chute suffisant.
-                    Méthode rapide et économique quand les conditions le permettent.
+                    Applicable en zone périurbaine quand les conditions le permettent.
                   </p>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-6">
@@ -141,8 +154,9 @@ export default function AbattageAngersPage() {
                   <li><strong>Arbre sur terrain privé hors zone protégée</strong> : pas d'autorisation</li>
                 </ul>
                 <p>
-                  Nous vous accompagnons dans les démarches administratives et pouvons nous
-                  charger des demandes d'autorisation auprès de la mairie d'Angers.
+                  Les demandes d'autorisation se font auprès de la mairie d'Angers (service
+                  urbanisme) ou de la préfecture selon le type de protection. Le délai
+                  d'instruction varie de 1 à 3 mois.
                 </p>
               </div>
             </div>
@@ -198,8 +212,8 @@ export default function AbattageAngersPage() {
         <div className="container-custom text-center relative z-10">
           <h2 className="text-3xl font-bold mb-4 text-white">Besoin d'abattre un arbre ?</h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Contactez-nous pour une évaluation gratuite et un devis sur mesure.
-            Intervention sécurisée garantie.
+            Évaluation sur place, diagnostic de l'arbre et devis détaillé.
+            Intervention possible en urgence après tempête.
           </p>
           <Link href="/contact/" className="btn-primary-light">
             Demander un devis gratuit

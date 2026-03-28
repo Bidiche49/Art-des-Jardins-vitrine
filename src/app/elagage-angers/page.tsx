@@ -14,7 +14,7 @@ const city = cities.find((c) => c.slug === 'angers')!;
 export const metadata: Metadata = {
   title: 'Élagage Angers - Taille d\'Arbres Professionnel | Art des Jardins',
   description:
-    'Élagueur professionnel à Angers. Taille d\'arbres, éclaircissage, taille de sécurisation, diagnostic phytosanitaire. Élagueurs certifiés. Devis gratuit.',
+    'Élagage à Angers : taille et soins des arbres adaptés au patrimoine arboré angevin. Platanes, tilleuls, frênes — secteur sauvegardé et jardins privés.',
   keywords: [
     'élagage angers',
     'élagueur angers',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Élagage Angers - Art des Jardins',
-    description: 'Service d\'élagage professionnel à Angers par des élagueurs certifiés.',
+    description: 'Élagage à Angers : soins des arbres adaptés aux sols schisteux et au climat océanique angevin. Secteur sauvegardé, parcs et jardins privés.',
     type: 'website',
     images: [{ url: ogImages.elagage, width: 1200, height: 630 }],
   },
@@ -52,7 +52,7 @@ export default function ElagageAngersPage() {
         ]}
         imageSlug="elagage-1"
         title="Élagage à Angers"
-        subtitle="Art des Jardins, élagueurs professionnels certifiés à Angers. Taille d'arbres, éclaircissage, sécurisation. Intervention rapide et devis gratuit."
+        subtitle="Art des Jardins, élagueurs certifiés à Angers. Taille, éclaircissage et sécurisation des arbres en milieu urbain et jardins privés."
       >
         <div className="flex flex-col sm:flex-row gap-4">
           <Link href="/contact/" className="btn-primary-light">
@@ -73,23 +73,40 @@ export default function ElagageAngersPage() {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold mb-6">
-                Service d'élagage professionnel à Angers
+                Élagage à Angers : un patrimoine arboré façonné par le climat océanique
               </h2>
               <div className="prose prose-lg max-w-none text-gray-600">
                 <p>
-                  L'<strong>élagage à Angers</strong> est un métier qui demande expertise et savoir-faire.
-                  Chez Art des Jardins, nos élagueurs certifiés interviennent sur tous types d'arbres pour
-                  assurer leur bonne santé, leur sécurité et leur esthétique.
+                  L'<strong>élagage à Angers</strong> concerne un patrimoine arboré dense
+                  et varié, réparti sur plus de 600 hectares d'espaces verts publics et
+                  de nombreux jardins privés. Les platanes du jardin du Mail, les tilleuls
+                  centenaires du parc de la Garenne, les chênes et hêtres du parc Balzac
+                  ou du lac de Maine — chaque quartier présente des essences et des
+                  contraintes d'intervention différentes.
                 </p>
                 <p>
-                  Angers et ses nombreux parcs et jardins abritent un patrimoine arboré remarquable.
-                  Des platanes centenaires aux chênes majestueux, en passant par les arbres fruitiers
-                  des jardins particuliers, chaque arbre mérite une attention particulière.
+                  Dans les jardins privés angevins, magnolias, camélias et rhododendrons
+                  bénéficient du climat océanique doux mais subissent aussi ses effets :
+                  la croissance vigoureuse sous humidité constante favorise le
+                  développement fongique, et les tempêtes hivernales atlantiques cassent
+                  régulièrement des branches. Les frênes, très présents dans le grand Ouest,
+                  sont par ailleurs touchés par la chalarose, une maladie qui impose un
+                  suivi phytosanitaire attentif et parfois l'abattage des sujets trop atteints.
                 </p>
                 <p>
-                  Notre équipe intervient dans tous les quartiers d'Angers : {city.neighborhoods?.join(', ')}.
-                  Nous connaissons les réglementations locales concernant les arbres classés et les
-                  zones protégées du secteur sauvegardé.
+                  Le centre historique d'Angers, classé secteur sauvegardé, impose des
+                  réglementations spécifiques pour les arbres sous l'autorité des
+                  Architectes des Bâtiments de France. Toute intervention sur un arbre
+                  classé ou situé en périmètre protégé nécessite une approche conforme
+                  à ces exigences réglementaires.
+                </p>
+                <p>
+                  Les sols jouent également un rôle dans le comportement des arbres :
+                  schisteux et bien drainés sur les hauteurs de Monplaisir ou de la
+                  Roseraie, ils produisent des systèmes racinaires différents des sols
+                  alluviaux plus lourds en fond de vallée, vers le lac de Maine ou
+                  Belle-Beille. L'approche de taille s'adapte à chaque situation — ancrage
+                  racinaire, exposition au vent, proximité des habitations.
                 </p>
               </div>
 
@@ -108,8 +125,7 @@ export default function ElagageAngersPage() {
               <h3 className="text-2xl font-bold mt-12 mb-6">Quand faire élaguer vos arbres ?</h3>
               <div className="prose prose-lg max-w-none text-gray-600">
                 <p>
-                  La période idéale d'élagage varie selon les espèces. En règle générale, nous
-                  recommandons :
+                  La période idéale d'élagage varie selon les espèces. En règle générale :
                 </p>
                 <ul>
                   <li><strong>Hiver (hors gel)</strong> : période idéale pour la plupart des feuillus</li>
@@ -117,8 +133,9 @@ export default function ElagageAngersPage() {
                   <li><strong>Toute l'année</strong> : pour les urgences et la sécurisation</li>
                 </ul>
                 <p>
-                  Nous vous conseillons sur la meilleure période pour intervenir sur vos arbres
-                  en fonction de leur espèce et de leur état sanitaire.
+                  À Angers, le climat océanique allonge la période de végétation active.
+                  Le choix du calendrier d'intervention dépend de l'espèce, de l'état
+                  sanitaire de l'arbre et de l'objectif de la taille.
                 </p>
               </div>
             </div>
@@ -189,9 +206,9 @@ export default function ElagageAngersPage() {
         <img src="/images/realisations/elagage-1-1200w.webp" alt="" loading="lazy" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 hero-overlay-strong" />
         <div className="container-custom text-center relative z-10">
-          <h2 className="text-3xl font-bold mb-4 text-white">Besoin d'un élagueur à Angers ?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white">Élagage à Angers et communes voisines</h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Contactez-nous pour un diagnostic gratuit de vos arbres et un devis détaillé.
+            Intervention sur tous types d'arbres, du jardin privé au patrimoine arboré classé.
           </p>
           <Link href="/contact/" className="btn-primary-light">
             Demander un devis gratuit
