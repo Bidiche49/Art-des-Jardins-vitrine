@@ -444,6 +444,84 @@ export const cities: CityData[] = [
       Les haies de séparation sont un sujet récurrent dans la commune. Nous préconisons les haies mixtes composées de photinia, eleagnus, viburnum et charmille, plus résistantes aux maladies qu'une haie monospécifique et offrant un intérêt écologique supérieur en accueillant une faune variée.
     `,
     neighborhoods: ['Bourg', 'Les Music\'Halles', 'La Baumette', 'Les Music\'Halles Nord', 'La Grande Chaussée'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Le sol argilo-schisteux de Saint-Barthélemy-d'Anjou se travaille différemment selon les saisons. Souple et collant en hiver quand l'argile gorge d'eau, il durcit en surface dès juin et forme une croûte que les racines peinent à traverser. Tout projet de plantation sérieux commence par un décompactage mécanique et un apport de matière organique — compost, fumier décomposé — pour restaurer une structure grumeleuse favorable à l'enracinement.
+
+          Les lotissements récents de la commune livrent des parcelles de 300 à 600 m², souvent plates, avec un terrain décapé par les travaux de construction. La couche de terre végétale résiduelle dépasse rarement vingt centimètres. Avant de dessiner quoi que ce soit — terrasse, massifs, pelouse — un apport de terre criblée sur l'ensemble de la surface s'impose pour reconstituer un horizon cultivable. Les parcelles plus anciennes du Bourg et de La Grande Chaussée présentent des sols nettement plus matures, enrichis par des décennies de jardinage.
+
+          Sur les terrains barthéloméens, les haies mixtes représentent une alternative robuste aux haies monospécifiques. Photinia, eleagnus, viburnum tinus, charmille : la diversité limite la propagation des maladies et crée une structure végétale dense toute l'année. En fond de parcelle, les arbustes à port libre — cornouillers, amélanchiers, viornes — demandent moins de taille et apportent un aspect naturaliste adapté à la transition avec les zones pavillonnaires voisines.
+
+          L'ensoleillement correct de la commune, combiné à la capacité de rétention du sol argileux, convient aux fruitiers palissés — pommiers, poiriers — et aux vivaces de sol frais : géraniums vivaces, heuchères, hostas en zones mi-ombragées.
+        `,
+        metaDescription: 'Paysagiste à Saint-Barthélemy-d\'Anjou : aménagement de jardins sur sol argilo-schisteux, haies mixtes, massifs adaptés aux lotissements récents et anciens.',
+        highlights: [
+          'Décompactage et amendement de sol argilo-schisteux avant plantation',
+          'Reconstitution de terre végétale sur parcelles de lotissements neufs',
+          'Haies mixtes résistantes : photinia, eleagnus, viburnum, charmille',
+          'Aménagement optimisé pour parcelles de 300 à 600 m²',
+          'Fruitiers palissés et vivaces adaptés au sol de rétention',
+        ],
+      },
+      elagage: {
+        content: `
+          Érables sycomores, tilleuls à grandes feuilles, chênes pédonculés — les quartiers établis du Bourg et de La Baumette abritent des arbres qui ont pris leur pleine envergure. Plantés lors des premiers lotissements, ces sujets dépassent souvent les douze mètres et leur houppier déborde largement au-dessus des toitures, des clôtures et des lignes de voisinage.
+
+          Sur sol argilo-schisteux, le système racinaire se développe de manière caractéristique. L'argile compacte en surface pousse les racines à s'étaler horizontalement avant de trouver des fissures dans le schiste sous-jacent. Ce profil racinaire étalé rend les arbres sensibles aux vents forts et provoque régulièrement des soulèvements d'allées et de terrasses. La taille douce, en réduisant progressivement la voilure sans coupes sévères, diminue la prise au vent tout en préservant la charpente.
+
+          Les conifères — thuyas, cyprès de Leyland — plantés en haie dans les lotissements des années 1980 et 1990 posent un problème récurrent à Saint-Barthélemy-d'Anjou. Devenus opaques et disproportionnés par rapport aux parcelles, ils créent une ombre dense et acidifient le sol autour d'eux. L'éclaircissage ciblé ou le retrait sélectif de certains sujets, suivi d'une replantation en essences caduques, redonne de la lumière aux jardins concernés.
+
+          Les fruitiers — pommiers, cerisiers, pruniers — restent bien présents dans les jardins anciens de la commune. La taille de fructification, menée entre novembre et février hors gel, maintient un port aéré qui favorise la mise à fruit et limite les foyers de moniliose ou de tavelure.
+        `,
+        metaDescription: 'Élagage à Saint-Barthélemy-d\'Anjou : taille douce d\'arbres matures sur sol argilo-schisteux, éclaircissage de conifères, taille fruitière. Élagueurs grimpeurs.',
+        highlights: [
+          'Taille douce des feuillus matures en quartiers résidentiels',
+          'Diagnostic racinaire sur sol argilo-schisteux compact',
+          'Éclaircissage et retrait sélectif de conifères disproportionnés',
+          'Taille de fructification des pommiers, cerisiers et pruniers',
+          'Réduction de voilure pour limiter la prise au vent',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          Dès les premières chaleurs de mai, le sol argileux de Saint-Barthélemy-d'Anjou commence à se fissurer en surface. La pelouse jaunit par plaques, la mousse recule mais les adventices à pivot — pissenlits, plantains — profitent des fentes pour s'installer. Ce cycle saisonnier impose un calendrier d'entretien précis : aération mécanique au printemps pour casser la croûte, terreautage au compost tamisé en automne pour nourrir le sol, et relevage de la hauteur de coupe à 7-8 cm en été pour protéger les racines du dessèchement.
+
+          La mousse colonise facilement les zones ombragées et les passages piétinés, là où le sol se tasse le plus. Le pH légèrement acide du substrat schisteux favorise son développement. La scarification mécanique en mars-avril, complétée d'un chaulage modéré, freine cette progression sans traitement chimique. Le résultat est visible dès la reprise végétative de fin avril.
+
+          Les haies représentent un poste d'entretien conséquent dans la commune. Photinias et lauriers-cerises dominent dans les lotissements récents ; charmilles et troènes persistent dans les jardins plus anciens. Deux à trois tailles par an — mai, juillet, septembre — maintiennent un port dense. Les haies de thuyas vieillissantes montrent souvent des zones dégarnies à la base, un défaut irréversible qui oriente vers un remplacement progressif par des essences mixtes.
+
+          Le paillage des massifs avec du broyat de branches joue un rôle central sur ce type de sol : il limite la pousse des adventices, maintient l'humidité en période sèche et se décompose lentement en nourrissant la couche superficielle. Un renouvellement annuel en fin d'hiver suffit à conserver une couverture efficace.
+        `,
+        metaDescription: 'Entretien de jardin à Saint-Barthélemy-d\'Anjou : tonte et aération sur sol argilo-schisteux compact, scarification anti-mousse, taille de haies et paillage.',
+        highlights: [
+          'Aération mécanique et terreautage sur sol argilo-schisteux',
+          'Scarification et chaulage anti-mousse en terrain acide',
+          'Taille de haies deux à trois fois par an selon essences',
+          'Paillage au broyat de branches pour massifs et pieds de haie',
+          'Tonte adaptée avec hauteur relevée en période sèche',
+        ],
+      },
+      abattage: {
+        content: `
+          Dans les quartiers pavillonnaires de La Grande Chaussée et des Music'Halles, les parcelles mitoyennes laissent peu d'espace de chute libre. Lorsqu'un arbre doit être retiré — dépérissement, instabilité racinaire, conflit de voisinage — le démontage par sections s'impose dans la majorité des cas. L'élagueur-grimpeur intervient de la cime vers la base, chaque tronçon descendu au cordage pour éviter tout impact sur les clôtures, toitures ou plantations voisines.
+
+          Les peupliers, encore présents en limite de certaines parcelles barthéloméennes, figurent parmi les arbres les plus fréquemment abattus. Après quatre à cinq décennies, leur bois devient cassant, les charpentières se fendent et les branches mortes en cime menacent les habitations proches. Leur système racinaire traçant, particulièrement agressif sur sol argileux, endommage canalisations et fondations à plusieurs mètres du tronc.
+
+          Le dessouchage sur sol argilo-schisteux demande un matériel adapté. La rogneuse travaille correctement dans l'argile meuble, mais les racines qui s'insinuent entre les strates de schiste résistent davantage et nécessitent parfois un complément à la mini-pelle. Le trou d'extraction est comblé de terre végétale amendée, prête à accueillir une replantation ou un engazonnement.
+
+          Les épisodes venteux d'automne et d'hiver fragilisent les arbres à enracinement superficiel, fréquents sur ce type de sol compact. Un diagnostic visuel après tempête permet d'identifier les sujets inclinés ou dont la motte racinaire s'est partiellement soulevée — signes d'un risque de basculement qui justifie un abattage de sécurisation.
+        `,
+        metaDescription: 'Abattage d\'arbres à Saint-Barthélemy-d\'Anjou : démontage par sections en parcelles mitoyennes, dessouchage sur sol argilo-schisteux, évacuation des rémanents.',
+        highlights: [
+          'Démontage technique par sections en parcelles mitoyennes',
+          'Abattage de peupliers vieillissants et arbres dépérissants',
+          'Dessouchage à la rogneuse sur sol argilo-schisteux',
+          'Diagnostic post-tempête et abattage de sécurisation',
+          'Évacuation des rémanents et valorisation en bois de chauffage',
+        ],
+      },
+    },
   },
   {
     slug: 'trelaze',
@@ -562,6 +640,84 @@ export const cities: CityData[] = [
       Le patrimoine végétal ligérien est remarquable : peupliers noirs, saules blancs, frênes et aulnes forment des ripisylves le long des berges. Les murs anciens en tuffeau créent des microclimats favorables aux fruitiers en espalier et aux plantes grimpantes.
     `,
     neighborhoods: ['Centre', 'Saint-Aubin', 'Saint-Maurille', 'Sorges', 'Belle-Île'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Entre Loire et bras du fleuve, les jardins des Ponts-de-Cé composent avec l'eau sous toutes ses formes : nappe haute en hiver, sols sablonneux filtrants dans les parties basses, risque de submersion sur Belle-Île et les parcelles riveraines. Cette omniprésence de l'eau oriente chaque choix d'aménagement — sélection végétale, niveau des terrasses, matériaux de revêtement.
+
+          Les hauteurs de Sorges et de Saint-Aubin présentent un tout autre contexte. Les sols y sont argilo-limoneux, plus compacts, avec une rétention d'eau correcte en été. Les parcelles, souvent entre 600 et 1 500 m², se prêtent à des compositions complètes : terrasse, massifs structurés, pelouse d'agrément et potager. Les dénivellations naturelles vers la Loire permettent des aménagements en terrasses qui tirent parti de la pente plutôt que de la subir.
+
+          Le tuffeau, omniprésent dans le bâti ancien du centre et de Saint-Maurille, crée des microclimats précieux. Ces murs clairs accumulent la chaleur diurne et la restituent la nuit, protégeant du gel les fruitiers palissés et les plantes méditerranéennes — figuiers, romarins, lavandes — qui s'installent durablement dans ces expositions abritées. L'effet modérateur de la Loire amplifie ce phénomène : les températures extrêmes restent atténuées par rapport à l'intérieur des terres.
+
+          En zone inondable, la palette végétale s'adapte. Iris des marais, salicaires, carex, cornouillers sanguins et saules arbustifs tolèrent les submersions temporaires sans dommage. Les revêtements perméables — gravier stabilisé, dalles sur plots — résistent mieux aux montées d'eau que les surfaces bétonnées classiques.
+        `,
+        metaDescription: 'Paysagiste aux Ponts-de-Cé : conception de jardins sur terrain ligérien entre Loire et coteaux, plantations adaptées aux sols sablonneux et zones inondables.',
+        highlights: [
+          'Aménagement adapté aux sols sablonneux filtrants de bord de Loire',
+          'Plantations résistantes aux submersions en zone inondable',
+          'Terrasses et murets en tuffeau intégrés au bâti ancien',
+          'Jardins en pente sur les coteaux de Sorges et Saint-Aubin',
+          'Végétaux méditerranéens en microclimats de murs anciens',
+        ],
+      },
+      elagage: {
+        content: `
+          Peupliers noirs, saules blancs, frênes communs et aulnes glutineux — la ripisylve des bords de Loire forme aux Ponts-de-Cé un patrimoine arboré dense. Ces essences hygrophiles prospèrent les pieds dans l'eau, mais leur proximité avec les habitations des quartiers riverains pose des questions régulières de cohabitation : branches surplombant les toitures, racines superficielles soulevant les clôtures, ombrage excessif sur les jardins.
+
+          Dans le centre historique et à Saint-Maurille, les arbres d'ornement — tilleuls, marronniers, érables — occupent des espaces aujourd'hui contraints. L'emprise des houppiers dépasse souvent les limites parcellaires. La taille douce, conduite en respectant le port naturel de chaque essence, permet de réduire progressivement le volume sans déclencher les repousses anarchiques que provoque un étêtage brutal.
+
+          Les saules, très présents le long des bras de Loire et sur Belle-Île, exigent un suivi particulier. Leur bois tendre se fend facilement sous l'effet du vent, et les charpentières âgées deviennent cassantes. Un élagage régulier — tous les trois à cinq ans selon les sujets — réduit la prise au vent et allège les branches maîtresses avant qu'elles ne cèdent.
+
+          Le sol sablonneux des zones basses offre un ancrage limité aux grands sujets. Frênes et peupliers de berge développent un enracinement étalé plutôt que profond, ce qui les rend sensibles aux coups de vent lors des tempêtes d'ouest. L'élagage préventif vise à diminuer l'effet voile du houppier et à répartir les contraintes mécaniques sur l'ensemble de la structure.
+        `,
+        metaDescription: 'Élagage aux Ponts-de-Cé : taille douce sur arbres de ripisylve en bord de Loire, entretien de saules et peupliers, intervention en quartiers anciens.',
+        highlights: [
+          'Taille douce de peupliers et saules en bord de Loire',
+          'Élagage préventif contre le risque de casse par vent d\'ouest',
+          'Intervention en centre historique et parcelles contraintes',
+          'Entretien des frênes et aulnes de ripisylve',
+          'Réduction de houppier respectueuse du port naturel',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          Le cycle des saisons marque les jardins ponts-de-céais plus intensément qu'ailleurs dans l'agglomération. En hiver, la proximité de la Loire maintient une humidité ambiante élevée qui favorise mousses et lichens sur les pelouses ombragées. En été, les sols sablonneux des parties basses perdent leur eau rapidement — le gazon jaunit dès les premières semaines sans pluie, bien avant les jardins installés sur argile.
+
+          Sur les hauteurs de Sorges et Saint-Aubin, le problème s'inverse. Les sols argilo-limoneux se compactent en hiver, retiennent l'eau en surface et deviennent lourds à travailler au printemps. L'aération mécanique suivie d'un sablage léger améliore la structure sur ces parcelles. Le regarnissage avec des fétuques élevées, plus tolérantes à l'ombre des arbres matures, complète le travail sur pelouse.
+
+          Les haies constituent un poste d'entretien conséquent. Lauriers-cerises, photinias et troènes dominent dans les lotissements récents, tandis que les propriétés anciennes conservent des haies champêtres — charmes, noisetiers, aubépines — qui demandent une taille moins fréquente mais plus technique. Deux à trois passages annuels suffisent pour les persistants ; un seul passage hivernal pour les caduques.
+
+          Le ramassage des feuilles à l'automne prend une ampleur particulière à proximité de la Loire. Peupliers et saules produisent un feuillage abondant qui, laissé au sol, forme un tapis humide propice aux maladies fongiques du gazon. Le broyage de ces feuilles et leur réutilisation en paillage dans les massifs constitue une valorisation simple et efficace.
+        `,
+        metaDescription: 'Entretien de jardin aux Ponts-de-Cé : tonte sur sols sablonneux et argileux, lutte contre la mousse en milieu humide, taille de haies et ramassage.',
+        highlights: [
+          'Tonte et fertilisation adaptées aux sols sablonneux de bord de Loire',
+          'Aération mécanique sur terrain argilo-limoneux compact',
+          'Traitement écologique de la mousse en milieu humide ligérien',
+          'Taille de haies persistantes et champêtres',
+          'Ramassage et broyage des feuilles de ripisylve en automne',
+        ],
+      },
+      abattage: {
+        content: `
+          Les tempêtes d'ouest qui remontent la vallée de la Loire frappent Les Ponts-de-Cé avec une intensité particulière. La configuration insulaire de la commune, sans relief pour briser le vent, expose les arbres de grande taille à des contraintes mécaniques répétées. Peupliers noirs de berge, saules blancs âgés et frênes fragilisés par la chalarose figurent parmi les sujets les plus fréquemment concernés par un abattage.
+
+          L'accès aux arbres en centre-ville et sur les îles pose des contraintes spécifiques. Rues étroites, façades en tuffeau à préserver, lignes électriques basses, proximité immédiate de la Loire — l'abattage directionnel classique est rarement envisageable. Le démontage par sections, avec rétention au cordage et descente contrôlée de chaque tronçon, reste la technique la plus adaptée à ce tissu urbain dense.
+
+          En zone inondable — Belle-Île, berges, bras secondaires — le calendrier d'intervention tient compte du niveau du fleuve. Les périodes de basses eaux, entre juin et octobre, offrent les meilleures conditions d'accès et de stabilité du sol pour les engins. L'hiver, les terrains gorgés d'eau ne supportent pas le passage de machines lourdes sans risque d'ornièrage profond.
+
+          Le dessouchage en terrain sablonneux se réalise bien à la rogneuse — le sable oppose peu de résistance aux dents de l'outil. Les racines des espèces riveraines, saules et aulnes notamment, s'étendent loin du tronc et nécessitent parfois un travail complémentaire pour dégager les ancrages principaux. Le trou est comblé avec de la terre végétale amendée.
+        `,
+        metaDescription: 'Abattage d\'arbres aux Ponts-de-Cé : démontage par sections en zone insulaire, intervention adaptée aux crues de Loire, dessouchage en sol sablonneux.',
+        highlights: [
+          'Abattage de peupliers et saules fragilisés en bord de Loire',
+          'Démontage par sections dans les rues étroites du centre',
+          'Calendrier d\'intervention adapté au niveau du fleuve',
+          'Dessouchage à la rogneuse en terrain sablonneux',
+          'Évacuation et valorisation des rémanents en bois et paillage',
+        ],
+      },
+    },
   },
   {
     slug: 'ecouflant',
@@ -622,6 +778,84 @@ export const cities: CityData[] = [
       L'entretien des jardins de coteaux présente des contraintes spécifiques : la pente rend la tonte complexe et l'érosion menace les sols mal protégés. Le paillage systématique, l'engazonnement des talus résistant à la sécheresse et les couvre-sols persistants stabilisent le terrain tout en réduisant l'entretien.
     `,
     neighborhoods: ['Mûrs', 'Érigné', 'Les Coteaux', 'La Plaine', 'Le Bourg'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Les sols schisteux des coteaux de Mûrs-Érigné imposent d'emblée une contrainte : la couche arable est mince, souvent 20 à 30 cm avant d'atteindre la roche fragmentée. Toute plantation d'envergure — arbre d'ornement, haie structurante, massif arbustif — passe par un travail de fosse élargie et d'apport de terre végétale mélangée au schiste concassé pour maintenir le drainage naturel du terrain.
+
+          L'exposition sud-ouest des coteaux et la proximité de la Loire créent un microclimat sensiblement plus doux que dans le reste de l'agglomération angevine. Figuiers, oliviers, grenadiers et lauriers-roses s'y développent dans des conditions inhabituelles pour le Maine-et-Loire. Ce potentiel végétal élargi permet des compositions d'inspiration méditerranéenne — massifs de lavandes, romarins et sauges associés à des graminées ornementales — qui trouvent ici un terrain favorable sans irrigation excessive.
+
+          Les propriétés du secteur des Coteaux et du bourg de Mûrs présentent souvent des dénivelés marqués. Les jardins en terrasses, soutenus par des murets en schiste local, restent la solution la plus cohérente avec le paysage viticole environnant. Ces murets accumulent la chaleur diurne et la restituent le soir, créant des microclimats de pied de mur propices aux fruitiers palissés et aux plantes grimpantes.
+
+          Dans la plaine d'Érigné, les sols changent de nature : plus profonds, sablo-limoneux, ils se prêtent à des aménagements différents. Pelouses, potagers et vergers s'y installent sans difficulté particulière. La transition entre coteau et plaine offre aux parcelles les plus vastes une diversité de conditions rarement réunie sur une même commune.
+        `,
+        metaDescription: 'Paysagiste à Mûrs-Érigné : création de jardins en terrasses sur coteaux schisteux, plantations méditerranéennes adaptées et murets en schiste local.',
+        highlights: [
+          'Jardins en terrasses sur coteaux schisteux avec murets locaux',
+          'Plantations méditerranéennes adaptées au microclimat ligérien',
+          'Fosses de plantation élargies sur sol à couche arable mince',
+          'Massifs de lavandes, romarins et graminées ornementales',
+          'Aménagement différencié coteau / plaine selon la parcelle',
+        ],
+      },
+      elagage: {
+        content: `
+          Chênes pubescents, pins maritimes, cèdres et tilleuls argentés composent l'essentiel du patrimoine arboré des propriétés de Mûrs-Érigné. Sur les coteaux, ces arbres se sont adaptés au sol schisteux en développant des systèmes racinaires étendus en surface, ancrés dans les fissures de la roche. Cette configuration rend leur houppier sensible au vent d'ouest qui remonte la vallée de la Loire, et les branches mortes ou mal équilibrées représentent un risque réel en période de tempête.
+
+          La taille douce — suppression du bois mort, éclaircissage de la ramure, réduction mesurée des branches basses — préserve la silhouette naturelle de l'arbre tout en limitant la prise au vent. Sur les sujets installés en haut de coteau, où l'exposition est maximale, un allègement régulier de la couronne réduit l'effet de levier sans recourir à un étêtage destructeur.
+
+          Les vignes abandonnées et les friches reconquises par la végétation spontanée abritent des arbres qui ont poussé sans contrainte ni taille. Robiniers, érables champêtres et frênes y forment parfois des houppiers déséquilibrés ou des fourches à écorce incluse, points de faiblesse structurelle qu'un diagnostic visuel permet d'identifier. La taille corrective sur ces sujets semi-sauvages demande une lecture attentive de l'architecture de chaque arbre.
+
+          Les fruitiers — figuiers, cerisiers, pruniers — sont fréquents dans les jardins de la commune. Leur taille de fructification s'effectue en hiver hors gel pour les arbres à pépins, en fin d'été pour les arbres à noyaux. Le figuier, particulièrement vigoureux sous ce microclimat, nécessite une taille de contention annuelle pour maintenir un port accessible à la récolte.
+        `,
+        metaDescription: 'Élagage à Mûrs-Érigné : taille douce des arbres de coteaux ventés, diagnostic sur enracinement schisteux, taille de fructification des figuiers.',
+        highlights: [
+          'Taille douce et éclaircissage sur arbres exposés au vent de Loire',
+          'Diagnostic structurel sur enracinement schisteux superficiel',
+          'Taille corrective des arbres issus de friches viticoles',
+          'Taille de fructification des figuiers et fruitiers de coteau',
+          'Allègement de couronne adapté aux sujets de haut de coteau',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          Sur les coteaux schisteux, la pelouse se comporte différemment que sur les sols profonds de la plaine. Le drainage rapide du schiste provoque un dessèchement estival précoce, dès la mi-juin certaines années. Relever la hauteur de coupe à 8 cm et espacer les tontes en été préserve le système racinaire. Les fétuques élevées et le ray-grass anglais résistent mieux à ces conditions que les variétés classiques de gazon d'ornement.
+
+          Le désherbage des allées et terrasses en schiste local constitue un poste récurrent. Les joints entre les pierres et les murets offrent des niches idéales aux adventices — sédum spontané, valériane, cymbalaire — dont certaines participent au charme du jardin. La gestion raisonnée consiste à maintenir les espèces décoratives et à éliminer mécaniquement celles qui fragilisent les structures.
+
+          Dans la plaine d'Érigné, les sols sablo-limoneux posent des problèmes inverses : rétention d'eau insuffisante en été, pousse vigoureuse au printemps qui impose une tonte hebdomadaire d'avril à juin. Le paillage organique des massifs — broyat de branches, écorces de pin — limite l'évaporation et nourrit progressivement le sol. Les haies de photinias et de lauriers, fréquentes dans les lotissements du secteur, se taillent deux fois par an pour conserver une forme dense.
+
+          Le microclimat favorable de la commune allonge la saison de végétation. Les massifs d'aromatiques — romarins, thyms, sauges — demandent peu d'entretien mais bénéficient d'une taille après floraison pour éviter le dégarnissage de la base. Les rosiers, omniprésents dans les jardins angevins, trouvent dans le schiste un drainage qui limite le développement du marsonia et de l'oïdium.
+        `,
+        metaDescription: 'Entretien de jardin à Mûrs-Érigné : tonte adaptée aux coteaux schisteux, taille de haies, paillage organique et entretien des aromatiques de coteau.',
+        highlights: [
+          'Tonte et gestion de pelouse sur sol schisteux drainant',
+          'Désherbage raisonné des murets et allées en pierre locale',
+          'Paillage organique des massifs sur sol sablo-limoneux en plaine',
+          'Taille de haies persistantes en lotissement (photinias, lauriers)',
+          'Entretien des massifs d\'aromatiques et rosiers de coteau',
+        ],
+      },
+      abattage: {
+        content: `
+          Les tempêtes d'ouest qui remontent le couloir de la Loire frappent les coteaux de Mûrs-Érigné avec une intensité particulière. Les arbres de grande taille installés en crête — peupliers, pins maritimes, chênes — subissent des contraintes mécaniques importantes. Ceux dont l'enracinement reste superficiel faute de sol profond au-dessus du schiste présentent un risque de basculement que l'inclinaison du terrain accentue.
+
+          Le démontage par sections s'impose sur la majorité des chantiers de la commune. Les parcelles en pente, les murets de schiste à préserver et la proximité des habitations voisines interdisent l'abattage directionnel classique dans la plupart des configurations. L'élagueur-grimpeur descend chaque tronçon au cordage, en commençant par la cime, pour maîtriser la trajectoire de chaque pièce de bois.
+
+          Le dessouchage sur schiste fragmenté présente une difficulté spécifique : les racines se faufilent entre les strates de roche et forment un réseau difficile à extraire avec une rogneuse seule. Sur les coteaux, le travail combine rogneuse de souche et extraction mécanique à la mini-pelle lorsque le schiste est trop compact. La pente ajoute une contrainte d'accès qui conditionne le choix du matériel.
+
+          Les résineux — pins, cyprès, thuyas — plantés dans les années 1980-1990 sur des parcelles de coteau atteignent des dimensions incompatibles avec leur emplacement initial. Leur système racinaire superficiel et leur prise au vent importante en font des sujets à risque lors des épisodes venteux. L'abattage reste souvent la seule option lorsque la taille de réduction ne suffit plus à contenir leur développement.
+        `,
+        metaDescription: 'Abattage d\'arbres à Mûrs-Érigné : démontage technique sur coteaux en pente, dessouchage sur schiste, retrait de résineux exposés au vent de Loire.',
+        highlights: [
+          'Démontage par sections sur parcelles en pente et terrain schisteux',
+          'Abattage de résineux disproportionnés sur coteaux exposés',
+          'Dessouchage combiné rogneuse et mini-pelle sur schiste compact',
+          'Sécurisation post-tempête des arbres fragilisés en crête',
+          'Évacuation et broyage des rémanents sur terrain en dénivelé',
+        ],
+      },
+    },
   },
   {
     slug: 'sainte-gemmes-sur-loire',
@@ -642,6 +876,84 @@ export const cities: CityData[] = [
       L'entretien suit le rythme des saisons ligériennes. Le printemps est la saison la plus active, l'été demande une gestion attentive de l'arrosage sur les sols sableux, l'automne est idéal pour les plantations et l'hiver pour l'élagage et la taille des fruitiers.
     `,
     neighborhoods: ['Bourg', 'Les Jubeaux', 'La Roche', 'Les Banchais', 'La Loire'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          La plaine alluviale qui s'étend entre le bourg et la Loire livre un sol sablo-limoneux profond, meuble, facile à travailler. C'est un terrain favorable aux plantations : l'enracinement s'y fait vite et la rétention en eau reste correcte tant que le paillage limite l'évaporation estivale. En revanche, les parcelles situées vers La Roche présentent un substrat schisteux plus maigre, drainant et sec en été, qui oriente le choix végétal vers des espèces frugales — lavandes, romarins, graminées.
+
+          Cette dualité de sol, à quelques centaines de mètres d'écart, permet de créer des ambiances très contrastées sur une même commune. Un jardin des Jubeaux n'appellera pas les mêmes matériaux ni les mêmes végétaux qu'un jardin de La Roche. Les terrasses en pierre de tuffeau, présentes dans le bourg historique, s'intègrent naturellement aux murs existants et prolongent l'identité architecturale locale.
+
+          La proximité de la Loire constitue un atout paysager rare. Les propriétés qui bénéficient d'une vue sur le fleuve appellent un travail de cadrage des perspectives : plantations basses en premier plan, arbustes à port transparent en plan intermédiaire, pour conserver l'ouverture visuelle sans laisser le jardin nu. Pergolas et tonnelles trouvent ici une place logique pour structurer l'espace sans obstruer.
+
+          En zone inondable — une réalité pour les parcelles les plus proches du fleuve — les aménagements doivent intégrer la contrainte hydraulique dès la conception. Matériaux résistants à la submersion temporaire, plantations de ripisylve en limite de terrain, revêtements perméables : la résilience du jardin face aux crues conditionne sa durabilité.
+        `,
+        metaDescription: 'Paysagiste à Sainte-Gemmes-sur-Loire : aménagement sur sol alluvial et schisteux, terrasses en tuffeau, jardins résilients en zone ligérienne inondable.',
+        highlights: [
+          'Création de jardins sur sol alluvial sablo-limoneux fertile',
+          'Aménagement en zone inondable avec matériaux résilients',
+          'Terrasses et murets en tuffeau intégrés au bâti ancien',
+          'Cadrage des perspectives sur la Loire',
+          'Plantations adaptées au substrat schisteux de La Roche',
+        ],
+      },
+      elagage: {
+        content: `
+          Saules blancs, aulnes, frênes, peupliers noirs : les parcelles proches de la Loire abritent des essences de ripisylve à croissance vigoureuse. Ces arbres développent un volume important en quelques décennies, et leur ramure finit par empiéter sur les toitures, les lignes ou les propriétés voisines. La taille douce — suppression du bois mort, éclaircissage de la couronne, relèvement de la base — permet de contenir ce développement sans compromettre l'équilibre physiologique de l'arbre.
+
+          Sur les hauteurs de La Roche, le sol schisteux superficiel limite l'ancrage racinaire. Les chênes et les châtaigniers qui y poussent développent un système racinaire étalé plutôt que profond, ce qui réduit leur stabilité face aux rafales. Un éclaircissage régulier diminue la prise au vent et le risque de casse lors des tempêtes hivernales qui remontent la vallée de la Loire.
+
+          Les frênes sont particulièrement surveillés dans le secteur. La chalarose, maladie fongique qui touche les frênes européens, provoque un dépérissement progressif des branches puis du houppier entier. Un diagnostic phytosanitaire permet d'évaluer le stade d'atteinte et de décider entre taille sanitaire et abattage. Les sujets encore sains méritent une taille préventive qui améliore la circulation d'air dans la couronne.
+
+          Dans le bourg, les jardins clos par des murs en tuffeau abritent souvent des fruitiers anciens — pommiers, poiriers, cognassiers — dont la taille de fructification s'effectue entre novembre et février hors gel. Ces arbres modestes en taille demandent un travail précis d'éclaircissage des rameaux à fruits pour maintenir une production régulière.
+        `,
+        metaDescription: 'Élagage à Sainte-Gemmes-sur-Loire : taille douce des essences de ripisylve en bord de Loire, diagnostic chalarose sur frênes, taille de fruitiers anciens.',
+        highlights: [
+          'Taille douce des arbres de ripisylve en bord de Loire',
+          'Éclaircissage sur sol schisteux superficiel à La Roche',
+          'Diagnostic et taille sanitaire des frênes touchés par la chalarose',
+          'Taille de fructification des fruitiers anciens en jardins clos',
+          'Sécurisation des arbres exposés aux vents de vallée',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          Sur les sols sableux de la plaine alluviale, le gazon lève vite au printemps mais souffre dès les premières chaleurs. Le sable draine l'eau en profondeur avant que les racines superficielles n'en profitent, et les pelouses jaunissent en juillet si rien n'est fait. Le choix de graminées résistantes à la sécheresse — fétuques élevées, ray-grass anglais — et un paillage systématique des massifs limitent les dégâts sans recourir à un arrosage intensif.
+
+          La mousse représente un problème récurrent dans les zones ombragées proches du fleuve. L'humidité ambiante, combinée à l'ombre portée des grands arbres riverains, crée des conditions idéales pour sa prolifération. Le scarifiage de printemps, suivi d'un sursemis et d'un apport de sable pour alléger la couche superficielle, restaure un gazon fonctionnel. Vers La Roche, le problème s'inverse : le sol schisteux sèche vite, et c'est l'aération mécanique qui prime pour éviter la formation d'une croûte imperméable.
+
+          Les haies de Sainte-Gemmes-sur-Loire reflètent la diversité des quartiers. Lauriers-cerises et photinias dans les lotissements, charmilles et buis dans le bourg ancien, haies champêtres mêlant cornouillers, troènes et viornes en périphérie. Chaque type appelle un calendrier de taille distinct — persistants en juin et septembre, caducs en fin d'hiver — et un entretien du pied par binage et paillage.
+
+          Le rythme saisonnier ligérien impose ses priorités. L'automne est la meilleure fenêtre pour les plantations, la terre encore chaude et l'humidité naturelle favorisant l'enracinement. L'hiver se consacre aux tailles de structure et au nettoyage des massifs avant la reprise printanière.
+        `,
+        metaDescription: 'Entretien de jardin à Sainte-Gemmes-sur-Loire : tonte sur sol sableux alluvial, scarifiage anti-mousse, taille de haies adaptée au rythme ligérien.',
+        highlights: [
+          'Tonte et fertilisation adaptées aux sols sableux alluviaux',
+          'Scarifiage et sursemis en zones ombragées humides',
+          'Taille de haies différenciée selon les quartiers et essences',
+          'Aération mécanique sur substrat schisteux à La Roche',
+          'Paillage systématique contre le dessèchement estival',
+        ],
+      },
+      abattage: {
+        content: `
+          Les peupliers noirs alignés le long de la Loire arrivent, pour certains, en fin de cycle biologique. Ces arbres à bois tendre deviennent cassants avec l'âge, et les cavités creusées par les champignons lignivores fragilisent le tronc de l'intérieur. L'abattage préventif de ces sujets évite les chutes incontrôlées lors des coups de vent qui balaient régulièrement la vallée.
+
+          L'accès aux parcelles riveraines de Sainte-Gemmes-sur-Loire complique souvent les interventions. Chemins étroits, sol meuble en bordure de fleuve, végétation dense : le démontage par sections, avec descente de chaque tronçon au cordage, reste l'approche la plus adaptée pour protéger les structures voisines. L'élagueur-grimpeur travaille de la cime vers la base, ce qui permet un contrôle précis de la direction de chute de chaque pièce.
+
+          Le dessouchage varie selon la zone. Sur les sols sableux de la plaine, la rogneuse travaille rapidement dans un substrat meuble et homogène. Vers La Roche, le schiste affleurant ralentit le travail mécanique et demande un matériel plus puissant. Dans les deux cas, le trou est comblé avec un mélange de terre végétale et de broyat pour préparer une éventuelle replantation.
+
+          Les frênes atteints de chalarose constituent un motif d'abattage croissant dans le secteur. Quand le dépérissement dépasse la moitié du houppier, la taille sanitaire ne suffit plus à maintenir l'arbre en sécurité. Le bois de frêne, dense et calorifique, se valorise en bûches de chauffage. Les branches sont broyées sur place et réutilisées comme paillage dans les massifs du jardin.
+        `,
+        metaDescription: 'Abattage d\'arbres à Sainte-Gemmes-sur-Loire : démontage en bord de Loire, dessouchage sur sol sableux et schisteux, abattage de frênes chalarosés.',
+        highlights: [
+          'Démontage par sections en parcelles riveraines enclavées',
+          'Abattage préventif de peupliers en fin de cycle',
+          'Dessouchage adapté aux sols sableux et schisteux',
+          'Abattage de frênes atteints de chalarose',
+          'Valorisation du bois en bûches et paillage sur place',
+        ],
+      },
+    },
   },
   {
     slug: 'montreuil-juigne',
