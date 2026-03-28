@@ -16,47 +16,29 @@ import {
   IconClose,
 } from '@/lib/icons';
 import { SITE } from '@/lib/site-config';
+import { services } from '@/lib/services-data';
 
-const serviceMenuItems = [
-  {
-    title: 'Aménagement paysager',
-    description: 'Conception et création de jardins sur mesure',
-    href: '/services/paysagisme/',
-    icon: <IconAmenagement className="w-6 h-6" />,
-  },
-  {
-    title: 'Entretien de jardin',
-    description: 'Tonte, taille, désherbage, entretien régulier',
-    href: '/services/entretien-jardin/',
-    icon: <IconEntretien className="w-6 h-6" />,
-    badge: 'Crédit d\u2019impôt',
-  },
-  {
-    title: 'Élagage',
-    description: 'Taille et soins des arbres par élagueurs certifiés',
-    href: '/services/elagage/',
-    icon: <IconElagage className="w-6 h-6" />,
-  },
-  {
-    title: 'Terrasses',
-    description: 'Bois, composite, pierre — espaces de vie extérieurs',
-    href: '/services/terrasse/',
-    icon: <IconTerrasse className="w-6 h-6" />,
-  },
-  {
-    title: 'Clôtures',
-    description: 'Panneaux, bois, composite, portails sur mesure',
-    href: '/services/cloture/',
-    icon: <IconCloture className="w-6 h-6" />,
-  },
-  {
-    title: 'Taille de haies',
-    description: 'Taille, rabattage et entretien de haies',
-    href: '/services/taille-haies/',
-    icon: <IconTailleHaies className="w-6 h-6" />,
-    badge: 'Crédit d\u2019impôt',
-  },
-];
+const menuIconMap: Record<string, React.ReactNode> = {
+  paysagisme: <IconAmenagement className="w-6 h-6" />,
+  'entretien-jardin': <IconEntretien className="w-6 h-6" />,
+  elagage: <IconElagage className="w-6 h-6" />,
+  terrasse: <IconTerrasse className="w-6 h-6" />,
+  cloture: <IconCloture className="w-6 h-6" />,
+  'taille-haies': <IconTailleHaies className="w-6 h-6" />,
+};
+
+const menuServiceSlugs = ['paysagisme', 'entretien-jardin', 'elagage', 'terrasse', 'cloture', 'taille-haies'] as const;
+
+const serviceMenuItems = menuServiceSlugs.map((slug) => {
+  const s = services.find((svc) => svc.slug === slug)!;
+  return {
+    title: s.shortTitle,
+    description: s.menuDescription,
+    href: `/services/${s.slug}/`,
+    icon: menuIconMap[s.slug],
+    badge: s.isTaxCreditEligible ? 'Crédit d\u2019impôt' : undefined,
+  };
+});
 
 
 export function Header() {

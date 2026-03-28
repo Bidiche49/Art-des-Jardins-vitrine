@@ -3,6 +3,9 @@ export interface ServiceData {
   title: string;
   shortTitle: string;
   icon: string;
+  cardDescription: string;
+  menuDescription: string;
+  isTaxCreditEligible: boolean;
   metaTitle: string;
   metaDescription: string;
   heroTitle: string;
@@ -32,6 +35,9 @@ export const services: ServiceData[] = [
     title: 'Aménagement Paysager et Création de Jardin',
     shortTitle: 'Aménagement paysager',
     icon: '🌳',
+    cardDescription: 'Conception et aménagement de jardins sur mesure.',
+    menuDescription: 'Conception et création de jardins sur mesure',
+    isTaxCreditEligible: false,
     metaTitle: 'Paysagiste Angers - Aménagement de Jardin | Art des Jardins',
     metaDescription:
       'Paysagiste professionnel à Angers. Conception et réalisation de jardins sur mesure : terrasses, massifs, engazonnement, arrosage automatique. Devis gratuit.',
@@ -121,6 +127,9 @@ export const services: ServiceData[] = [
     title: 'Entretien de Jardin',
     shortTitle: 'Entretien',
     icon: '✂️',
+    cardDescription: 'Tonte, taille, désherbage et entretien régulier.',
+    menuDescription: 'Tonte, taille, désherbage, entretien régulier',
+    isTaxCreditEligible: true,
     metaTitle: 'Entretien de Jardin Angers - Tonte, Taille, Désherbage | Art des Jardins',
     metaDescription:
       'Service d\'entretien de jardin à Angers. Tonte de pelouse, taille de haies, désherbage, nettoyage. Contrats annuels ou interventions ponctuelles. Devis gratuit.',
@@ -206,6 +215,9 @@ export const services: ServiceData[] = [
     title: 'Élagage et Taille d\'Arbres',
     shortTitle: 'Élagage',
     icon: '🪓',
+    cardDescription: 'Taille et élagage de tous types d\'arbres.',
+    menuDescription: 'Taille et soins des arbres par élagueurs certifiés',
+    isTaxCreditEligible: false,
     metaTitle: 'Élagage Angers - Taille d\'Arbres Professionnel | Art des Jardins',
     metaDescription:
       'Service d\'élagage professionnel à Angers. Taille d\'arbres, éclaircissage, taille de sécurisation, diagnostic phytosanitaire. Élagueurs certifiés. Devis gratuit.',
@@ -286,6 +298,9 @@ export const services: ServiceData[] = [
     title: 'Abattage d\'Arbres',
     shortTitle: 'Abattage',
     icon: '🌲',
+    cardDescription: 'Abattage sécurisé et dessouchage d\'arbres.',
+    menuDescription: 'Abattage sécurisé, dessouchage, évacuation',
+    isTaxCreditEligible: false,
     metaTitle: 'Abattage d\'Arbres Angers - Dessouchage | Art des Jardins',
     metaDescription:
       'Service d\'abattage d\'arbres sécurisé à Angers. Abattage, démontage, dessouchage, évacuation. Intervention rapide. Devis gratuit.',
@@ -377,6 +392,9 @@ export const services: ServiceData[] = [
     title: 'Terrasses et Aménagements Extérieurs',
     shortTitle: 'Terrasses',
     icon: '🏡',
+    cardDescription: 'Création de terrasses bois, composite et pierre.',
+    menuDescription: 'Bois, composite, pierre — espaces de vie extérieurs',
+    isTaxCreditEligible: false,
     metaTitle: 'Terrasse Angers - Aménagement Extérieur | Art des Jardins',
     metaDescription:
       'Création de terrasses à Angers : bois, composite, pierre naturelle, dalles. Conception sur mesure, pergolas, espaces de vie extérieurs. Devis gratuit.',
@@ -469,6 +487,9 @@ export const services: ServiceData[] = [
     title: 'Clôtures et Délimitations',
     shortTitle: 'Clôtures',
     icon: '🏗️',
+    cardDescription: 'Pose de clôtures, portails et délimitations.',
+    menuDescription: 'Panneaux, bois, composite, portails sur mesure',
+    isTaxCreditEligible: false,
     metaTitle: 'Clôture Angers - Pose de Clôtures | Art des Jardins',
     metaDescription:
       'Pose de clôtures à Angers : panneaux rigides, bois, composite, grillage, portails. Installation professionnelle et sur mesure. Devis gratuit.',
@@ -550,6 +571,9 @@ export const services: ServiceData[] = [
     title: 'Taille de Haies',
     shortTitle: 'Taille de haies',
     icon: '🌿',
+    cardDescription: 'Taille et entretien de haies de toutes essences.',
+    menuDescription: 'Taille, rabattage et entretien de haies',
+    isTaxCreditEligible: true,
     metaTitle: 'Taille de Haies Angers - Entretien Haies | Art des Jardins',
     metaDescription:
       'Taille de haies professionnelle à Angers. Haies de thuya, laurier, photinia, champêtres. Taille de formation et entretien régulier. Devis gratuit.',
@@ -636,6 +660,9 @@ export const services: ServiceData[] = [
     title: 'Débroussaillage et Nettoyage de Terrain',
     shortTitle: 'Débroussaillage',
     icon: '🔥',
+    cardDescription: 'Nettoyage de terrains et remise en état.',
+    menuDescription: 'Défrichage, nettoyage de terrains envahis',
+    isTaxCreditEligible: true,
     metaTitle: 'Débroussaillage Angers - Nettoyage Terrain | Art des Jardins',
     metaDescription:
       'Débroussaillage professionnel à Angers. Nettoyage de terrains, défrichage, remise en état de jardins abandonnés. Intervention rapide. Devis gratuit.',
@@ -718,6 +745,9 @@ export const services: ServiceData[] = [
     title: 'Arrosage Automatique',
     shortTitle: 'Arrosage automatique',
     icon: '💧',
+    cardDescription: 'Installation et entretien de systèmes d\'arrosage.',
+    menuDescription: 'Systèmes enterrés, goutte-à-goutte, programmation',
+    isTaxCreditEligible: false,
     metaTitle: 'Arrosage Automatique Angers - Installation | Art des Jardins',
     metaDescription:
       'Installation d\'arrosage automatique à Angers. Système enterré, goutte-à-goutte, programmation intelligente. Économies d\'eau garanties. Devis gratuit.',
@@ -808,6 +838,10 @@ export const services: ServiceData[] = [
     ],
   },
 ];
+
+export const TAX_CREDIT_SLUGS = services
+  .filter((s) => s.isTaxCreditEligible)
+  .map((s) => s.slug);
 
 export function getServiceBySlug(slug: string): ServiceData | undefined {
   return services.find((s) => s.slug === slug);

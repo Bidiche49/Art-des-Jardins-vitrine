@@ -164,7 +164,7 @@ export default function ServicePage({ params }: PageProps) {
       </section>
 
       {/* Credit d'impot - services éligibles */}
-      {['entretien-jardin', 'taille-haies', 'debroussaillage'].includes(service.slug) && (
+      {service.isTaxCreditEligible && (
         <TaxCreditSection serviceSlug={service.slug} />
       )}
 

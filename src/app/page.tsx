@@ -11,6 +11,8 @@ import { BeforeAfterSection } from '@/components/BeforeAfterSection';
 import { serviceCardImages, getSrcSet, getDefaultSrc, getImage } from '@/lib/images-manifest';
 import { IconRcPro, IconDecennale, IconExperience, IconDevis48h, IconZone30km, IconInstagram, IconEuro } from '@/lib/icons';
 import { SITE } from '@/lib/site-config';
+import { services as allServices } from '@/lib/services-data';
+import { cities } from '@/lib/cities-data';
 
 export default function HomePage() {
   return (
@@ -223,28 +225,10 @@ export default function HomePage() {
               })()}
             </div>
             <div className="flex flex-wrap justify-center gap-3 mt-6">
-              {[
-                { name: 'Angers', href: '/paysagiste-angers/' },
-                { name: 'Avrillé', href: '/paysagiste-avrille/' },
-                { name: 'Beaucouzé', href: '/paysagiste-beaucouze/' },
-                { name: 'Bouchemaine', href: '/paysagiste-bouchemaine/' },
-                { name: 'Les Ponts-de-Cé', href: '/paysagiste-les-ponts-de-ce/' },
-                { name: 'Trélazé', href: '/paysagiste-trelaze/' },
-                { name: 'Saint-Barthélemy-d\'Anjou', href: '/paysagiste-saint-barthelemy-anjou/' },
-                { name: 'Écouflant', href: '/paysagiste-ecouflant/' },
-                { name: 'Mûrs-Érigné', href: '/paysagiste-murs-erigne/' },
-                { name: 'Sainte-Gemmes-sur-Loire', href: '/paysagiste-sainte-gemmes-sur-loire/' },
-                { name: 'Montreuil-Juigné', href: '/paysagiste-montreuil-juigne/' },
-                { name: 'Saint-Jean-de-Linières', href: '/paysagiste-saint-jean-de-linieres/' },
-                { name: 'Briollay', href: '/paysagiste-briollay/' },
-                { name: 'Savennières', href: '/paysagiste-savennieres/' },
-                { name: 'Saint-Sylvain-d\'Anjou', href: '/paysagiste-saint-sylvain-anjou/' },
-                { name: 'Loire-Authion', href: '/paysagiste-loire-authion/' },
-                { name: 'Longuenée-en-Anjou', href: '/paysagiste-longuenee-en-anjou/' },
-              ].map((city) => (
+              {cities.map((city) => (
                 <Link
-                  key={city.name}
-                  href={city.href}
+                  key={city.slug}
+                  href={`/paysagiste-${city.slug}/`}
                   className="px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 hover:text-primary-600 hover:shadow-md transition-all border border-gray-200"
                 >
                   {city.name}
@@ -281,43 +265,15 @@ export default function HomePage() {
   );
 }
 
-const services: { title: string; description: string; href: string; imageSlug: string; badge?: string }[] = [
-  {
-    title: 'Aménagement paysager',
-    description: 'Conception et aménagement de jardins sur mesure.',
-    href: '/services/paysagisme/',
-    imageSlug: serviceCardImages.paysagisme,
-  },
-  {
-    title: 'Entretien',
-    description: 'Tonte, taille, désherbage et entretien régulier.',
-    href: '/services/entretien-jardin/',
-    imageSlug: serviceCardImages['entretien-jardin'],
-    badge: 'Crédit d\'impôt 50 %',
-  },
-  {
-    title: 'Élagage',
-    description: 'Taille et élagage de tous types d\'arbres.',
-    href: '/services/elagage/',
-    imageSlug: serviceCardImages.elagage,
-  },
-  {
-    title: 'Terrasses',
-    description: 'Création de terrasses bois, composite et pierre.',
-    href: '/services/terrasse/',
-    imageSlug: serviceCardImages.terrasse,
-  },
-  {
-    title: 'Clôtures',
-    description: 'Pose de clôtures, portails et délimitations.',
-    href: '/services/cloture/',
-    imageSlug: serviceCardImages.cloture,
-  },
-  {
-    title: 'Taille de haies',
-    description: 'Taille et entretien de haies de toutes essences.',
-    href: '/services/taille-haies/',
-    imageSlug: serviceCardImages['taille-haies'],
-    badge: 'Crédit d\'impôt 50 %',
-  },
-];
+const homepageServiceSlugs = ['paysagisme', 'entretien-jardin', 'elagage', 'terrasse', 'cloture', 'taille-haies'] as const;
+
+const services = homepageServiceSlugs.map((slug) => {
+  const s = allServices.find((svc) => svc.slug === slug)!;
+  return {
+    title: s.shortTitle,
+    description: s.cardDescription,
+    href: `/services/${s.slug}/`,
+    imageSlug: serviceCardImages[s.slug as keyof typeof serviceCardImages],
+    badge: s.isTaxCreditEligible ? 'Crédit d\'impôt 50 %' : undefined,
+  };
+});
