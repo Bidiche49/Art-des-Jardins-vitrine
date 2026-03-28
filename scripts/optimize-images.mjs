@@ -9,7 +9,6 @@ const ROOT = path.resolve(__dirname, '..');
 const IMAGES_SRC = path.join(ROOT, 'Images');
 const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'images', 'realisations');
 const OG_DIR = path.join(__dirname, '..', 'public', 'images');
-const FAVICON_DIR = path.join(__dirname, '..', 'public');
 const MANIFEST_PATH = path.join(__dirname, '..', 'src', 'lib', 'images-manifest.ts');
 
 const WIDTHS = [480, 800, 1200, 1920];
@@ -57,11 +56,11 @@ const IMAGE_CATALOG = [
 
 // OG image mappings
 const OG_IMAGES = [
-  { source: 'Entretien_2.JPG', output: 'og-image.jpg', alt: 'Art des Jardins - Paysagiste Angers' },
-  { source: 'Creation_9.jpg', output: 'og-paysagisme.jpg', alt: 'Paysagisme Angers - Art des Jardins' },
-  { source: 'Elagage_3.jpeg', output: 'og-elagage.jpg', alt: 'Elagage Angers - Art des Jardins' },
-  { source: 'Entretien_3.jpg', output: 'og-entretien.jpg', alt: 'Entretien Jardin Angers - Art des Jardins' },
-  { source: 'Elagage_1.JPG', output: 'og-abattage.jpg', alt: 'Abattage Arbres Angers - Art des Jardins' },
+  { source: 'Entretien_2.JPG', output: 'og-image.jpg', alt: 'Art des Jardins - Paysagiste Angers', subtitle: 'Paysagiste à Angers' },
+  { source: 'Creation_9.jpg', output: 'og-paysagisme.jpg', alt: 'Paysagisme Angers - Art des Jardins', subtitle: 'Création paysagère' },
+  { source: 'Elagage_3.jpeg', output: 'og-elagage.jpg', alt: 'Elagage Angers - Art des Jardins', subtitle: 'Élagage professionnel' },
+  { source: 'Entretien_3.jpg', output: 'og-entretien.jpg', alt: 'Entretien Jardin Angers - Art des Jardins', subtitle: 'Entretien de jardins' },
+  { source: 'Elagage_1.JPG', output: 'og-abattage.jpg', alt: 'Abattage Arbres Angers - Art des Jardins', subtitle: 'Abattage & démontage' },
 ];
 
 async function ensureDir(dir) {
@@ -138,10 +137,65 @@ async function processImage(entry) {
   };
 }
 
+async function loadLogo() {
+  const logoPath = path.join(OG_DIR, 'logo-leaf.png');
+  if (!existsSync(logoPath)) {
+    return null;
+  }
+  const logoBuffer = await sharp(logoPath)
+    .resize(90, null, { withoutEnlargement: true })
+    .toBuffer();
+  const logoMeta = await sharp(logoBuffer).metadata();
+  return { buffer: logoBuffer, width: logoMeta.width, height: logoMeta.height };
+}
+
+function buildBrandingOverlay(subtitle, logoHeight) {
+  const titleY = 555;
+  const subtitleY = 590;
+  const xmlSubtitle = subtitle.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  return `<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="55%" stop-color="black" stop-opacity="0" />
+          <stop offset="100%" stop-color="black" stop-opacity="0.65" />
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="630" fill="url(#grad)" />
+      <text x="600" y="${titleY}" text-anchor="middle" fill="white"
+            font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold">
+        Art des Jardins
+      </text>
+      <text x="600" y="${subtitleY}" text-anchor="middle" fill="white" fill-opacity="0.85"
+            font-family="Arial, Helvetica, sans-serif" font-size="27">
+        ${xmlSubtitle}
+      </text>
+    </svg>`;
+}
+
+function getBrandingComposites(logo, subtitle) {
+  const titleY = 555;
+  const logoX = Math.round((1200 - logo.width) / 2);
+  const logoY = titleY - logo.height - 18;
+  const svgOverlay = buildBrandingOverlay(subtitle, logo.height);
+
+  return [
+    { input: Buffer.from(svgOverlay), top: 0, left: 0 },
+    { input: logo.buffer, top: logoY, left: logoX },
+  ];
+}
+
 async function generateOGImages() {
   console.log('\nGenerating OG images...');
   await ensureDir(OG_DIR);
 
+  const logo = await loadLogo();
+  if (!logo) {
+    console.warn('  SKIP OG branding: logo-leaf.png not found');
+    return 0;
+  }
+
+  let count = 0;
   for (const og of OG_IMAGES) {
     const inputPath = path.join(IMAGES_SRC, og.source);
     if (!existsSync(inputPath)) {
@@ -153,46 +207,43 @@ async function generateOGImages() {
     await sharp(inputPath)
       .rotate()
       .resize(1200, 630, { fit: 'cover', position: 'center' })
+      .composite(getBrandingComposites(logo, og.subtitle))
       .jpeg({ quality: 85 })
       .withMetadata({ exif: undefined })
       .toFile(outputPath);
 
     console.log(`  OG: ${og.output}`);
+    count++;
   }
+  return count;
 }
 
-async function generateFavicon() {
-  console.log('\nGenerating favicon...');
+async function brandExistingOGImages() {
+  console.log('\nBranding existing OG images...');
 
-  // SVG leaf favicon
-  const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#22c55e"/>
-      <stop offset="100%" style="stop-color:#15803d"/>
-    </linearGradient>
-  </defs>
-  <path d="M16 2C10 2 4 8 4 16c0 2 .5 4 1.5 5.5C7 18 10 14 16 12c-4 4-6 8-6.5 12.5C11 27 13.5 28 16 28c8 0 12-8 12-16C28 6 22 2 16 2z" fill="url(#g)"/>
-  <path d="M16 12c-6 2-9 6-10.5 9.5" stroke="#dcfce7" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-  <path d="M16 12c-2 4-3 8-3.5 12" stroke="#dcfce7" stroke-width="1" fill="none" stroke-linecap="round"/>
-</svg>`;
+  const logo = await loadLogo();
+  if (!logo) {
+    console.warn('  SKIP branding: logo-leaf.png not found');
+    return;
+  }
 
-  await writeFile(path.join(FAVICON_DIR, 'favicon.svg'), svgContent);
+  for (const og of OG_IMAGES) {
+    const ogPath = path.join(OG_DIR, og.output);
+    if (!existsSync(ogPath)) {
+      console.warn(`  SKIP branding: ${og.output} not found`);
+      continue;
+    }
 
-  // Generate ICO (32x32)
-  const svgBuffer = Buffer.from(svgContent);
-  await sharp(svgBuffer, { density: 300 })
-    .resize(32, 32)
-    .png()
-    .toFile(path.join(FAVICON_DIR, 'favicon.ico'));
+    // Read entire file into buffer first (cannot read and write same file with sharp)
+    const inputBuffer = await readFile(ogPath);
 
-  // Apple touch icon (180x180)
-  await sharp(svgBuffer, { density: 300 })
-    .resize(180, 180)
-    .png()
-    .toFile(path.join(FAVICON_DIR, 'apple-touch-icon.png'));
+    await sharp(inputBuffer)
+      .composite(getBrandingComposites(logo, og.subtitle))
+      .jpeg({ quality: 85 })
+      .toFile(ogPath);
 
-  console.log('  Favicons generated');
+    console.log(`  Branded: ${og.output}`);
+  }
 }
 
 function generateManifest(results) {
@@ -331,11 +382,11 @@ async function main() {
     results.push(result);
   }
 
-  // Generate OG images
-  await generateOGImages();
-
-  // Generate favicon
-  await generateFavicon();
+  // Generate OG images (from sources if available, otherwise brand existing files)
+  const ogCount = await generateOGImages();
+  if (ogCount === 0) {
+    await brandExistingOGImages();
+  }
 
   // Generate manifest (only if images were processed, to avoid overwriting existing manifest)
   const processed = results.filter(Boolean);
@@ -360,8 +411,7 @@ async function main() {
   console.log(`\n=== Done! ===`);
   console.log(`  ${processed.length} images processed`);
   console.log(`  ${totalFiles} responsive variants generated`);
-  console.log(`  ${OG_IMAGES.length} OG images generated`);
-  console.log(`  3 favicon files generated`);
+  console.log(`  ${ogCount} OG images generated`);
 }
 
 main().catch((err) => {
