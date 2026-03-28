@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { LocalBusinessCitySchema } from '@/components/seo/LocalBusinessCitySchema';
-import { cities, serviceTypes, getCityBySlug, getServiceBySlugSeo } from '@/lib/cities-data';
+import { cities, serviceTypes, getCityBySlug, getServiceBySlugSeo, ServiceSlug } from '@/lib/cities-data';
 import { HeroSection } from '@/components/ui/HeroSection';
 import { serviceHeroImages } from '@/lib/images-manifest';
 import { IconCheck } from '@/lib/icons';
@@ -55,7 +55,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!service || !city) return {};
 
   const title = service.metaTitleTemplate.replace('{city}', city.name);
-  const description = service.metaDescriptionTemplate.replace('{city}', city.name);
+  const cityServiceContent = city.serviceContent?.[parsed.service as ServiceSlug];
+  const description = cityServiceContent?.metaDescription
+    ?? service.metaDescriptionTemplate.replace('{city}', city.name);
 
   return {
     title,
@@ -77,6 +79,7 @@ export default function ServiceCityPage({ params }: PageProps) {
 
   const pageTitle = `${service.serviceTitle} à ${city.name}`;
   const mainAngersPage = `/${service.service}-angers/`;
+  const cityServiceContent = city.serviceContent?.[parsed.service as ServiceSlug];
 
   return (
     <>
@@ -127,7 +130,7 @@ export default function ServiceCityPage({ params }: PageProps) {
                   {' '}{service.serviceDescription}.
                 </p>
                 <p>{city.description}</p>
-                {city.specificContent
+                {(cityServiceContent?.content ?? city.specificContent)
                   .split('\n\n')
                   .filter((p) => p.trim())
                   .map((paragraph, i) => (
@@ -142,7 +145,7 @@ export default function ServiceCityPage({ params }: PageProps) {
 
               <h3 className="text-2xl font-bold mt-12 mb-6">Nos prestations à {city.name}</h3>
               <div className="grid sm:grid-cols-2 gap-4">
-                {service.features.map((feature, i) => (
+                {(cityServiceContent?.highlights ?? service.features).map((feature, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
                     <IconCheck className="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>

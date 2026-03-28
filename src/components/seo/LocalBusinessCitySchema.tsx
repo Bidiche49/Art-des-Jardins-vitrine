@@ -29,8 +29,8 @@ export function LocalBusinessCitySchema({
     address: {
       '@type': 'PostalAddress',
       streetAddress: SITE.address.street,
-      addressLocality: city,
-      postalCode,
+      addressLocality: SITE.address.city,
+      postalCode: SITE.address.postalCode,
       addressRegion: SITE.address.region,
       addressCountry: SITE.address.country,
     },

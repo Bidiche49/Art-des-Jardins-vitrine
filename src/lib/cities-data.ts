@@ -1,3 +1,11 @@
+export type ServiceSlug = 'paysagiste' | 'elagage' | 'entretien-jardin' | 'abattage';
+
+export interface ServiceCityContent {
+  content: string;           // 3-5 unique paragraphs about THIS service in THIS city
+  metaDescription: string;   // unique meta description, 150-160 chars
+  highlights?: string[];     // service-specific highlights for this city
+}
+
 export interface CityData {
   slug: string;
   name: string;
@@ -8,10 +16,11 @@ export interface CityData {
   description: string;
   specificContent: string;
   neighborhoods?: string[];
+  serviceContent?: Partial<Record<ServiceSlug, ServiceCityContent>>;
 }
 
 export interface ServiceCityData {
-  service: 'paysagiste' | 'elagage' | 'entretien-jardin' | 'abattage';
+  service: ServiceSlug;
   serviceTitle: string;
   serviceTitlePlural: string;
   serviceDescription: string;
@@ -141,6 +150,87 @@ export const cities: CityData[] = [
       La commune étant bien exposée avec peu d'ombre naturelle, la création de zones ombragées est un enjeu important : pergolas, plantations d'arbres à croissance rapide comme les érables ou les charmes. Nous concevons des jardins qui offrent du confort toute l'année, avec des ambiances différentes selon les saisons.
     `,
     neighborhoods: ['Centre-bourg', 'La Perrière', 'L\'Adezière', 'La Blancheraie', 'Le Bois-du-Roy', 'La Garde'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Avrillé, avec ses terrains résidentiels de 600 à 1 500 m², offre un terrain de jeu idéal pour la création paysagère. Le sol argilo-limoneux caractéristique de la commune retient naturellement l'eau et les nutriments, ce qui permet d'installer des massifs arbustifs généreux et des haies structurées sans arrosage excessif. En revanche, ce sol exige un travail de décompactage soigné et des amendements organiques avant toute plantation pour garantir un enracinement profond.
+
+          Dans les quartiers de la Blancheraie et du Bois-du-Roy, les parcelles spacieuses se prêtent à des aménagements paysagers complets : grandes pelouses de détente, terrasses en pierre naturelle ou en bois composite, massifs de vivaces structurés par des graminées ornementales et des buis taillés. Nous concevons chaque jardin en intégrant les circulations, l'éclairage extérieur et les zones de vie pour créer un espace fonctionnel et esthétique toute l'année.
+
+          L'ensoleillement généreux d'Avrillé, avec peu d'ombre naturelle dans les lotissements récents, rend la création de zones ombragées essentielle. Nous installons des pergolas sur mesure en bois ou en aluminium, et plantons des arbres à croissance rapide — érables champêtres, charmes fastigiés, mûriers platanes — qui apportent une ombre bienvenue dès les premières années. Ces structures verticales donnent du volume et du caractère aux jardins neufs.
+
+          Pour les jardins du centre-bourg historique, les parcelles plus étroites demandent une approche sur mesure. Nous y créons des jardins de charme avec murets en pierre de tuffeau, rosiers grimpants sur les façades, et massifs compacts d'aromatiques et de vivaces qui fleurissent du printemps à l'automne. Chaque mètre carré est optimisé pour allier esthétique, intimité et facilité d'entretien.
+        `,
+        metaDescription: 'Paysagiste à Avrillé : création de jardins sur sol argilo-limoneux, terrasses, pergolas et massifs. Devis gratuit, intervention rapide.',
+        highlights: [
+          'Création de jardins adaptés au sol argilo-limoneux',
+          'Terrasses en pierre naturelle ou bois composite',
+          'Pergolas et structures ombragées sur mesure',
+          'Massifs arbustifs et vivaces quatre saisons',
+          'Aménagement optimisé des parcelles de 600 à 1 500 m²',
+          'Éclairage extérieur et mise en valeur nocturne',
+        ],
+      },
+      elagage: {
+        content: `
+          Les quartiers résidentiels établis d'Avrillé abritent un patrimoine arboré conséquent qui nécessite un entretien régulier et professionnel. Les arbres plantés il y a 30 à 40 ans dans les lotissements de la Blancheraie et du Bois-du-Roy — chênes, érables, tilleuls, cèdres — ont atteint leur maturité et demandent des tailles d'entretien et d'éclaircissage pour préserver leur santé, leur équilibre et la luminosité des jardins.
+
+          Sur le sol compact argilo-limoneux d'Avrillé, les systèmes racinaires des arbres de grande taille peuvent provoquer des soulèvements de terrasses, d'allées et même de clôtures. Nos élagueurs certifiés interviennent avec un diagnostic complet : évaluation phytosanitaire, analyse de la structure de l'arbre et recommandation de taille adaptée. Nous pratiquons la taille douce, respectueuse de la physiologie de l'arbre, qui réduit le volume sans compromettre la vigueur ni l'esthétique.
+
+          Dans les nouveaux lotissements de la commune, les jeunes arbres nécessitent des tailles de formation essentielles à leur développement futur. Un arbre bien formé dès ses premières années développe une charpente solide et équilibrée qui limitera les interventions lourdes à l'âge adulte. Nous intervenons sur les fruitiers, les arbres d'ornement et les haies haute tige pour guider leur croissance.
+
+          Les interventions d'élagage à Avrillé incluent aussi la sécurisation des arbres proches des habitations et des lignes électriques. Après tempête ou lors de signes de dépérissement, notre équipe intervient rapidement pour diagnostiquer le risque, réaliser les coupes nécessaires et évacuer les bois. Chaque chantier respecte les périodes favorables de taille selon les essences.
+        `,
+        metaDescription: 'Élagage à Avrillé : taille douce, éclaircissage et sécurisation des arbres matures. Élagueurs certifiés, diagnostic phytosanitaire inclus.',
+        highlights: [
+          'Taille douce des arbres matures en quartiers résidentiels',
+          'Taille de formation pour jeunes arbres et fruitiers',
+          'Diagnostic phytosanitaire avant intervention',
+          'Éclaircissage pour retrouver la luminosité au jardin',
+          'Sécurisation des arbres proches des habitations',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          Les grandes propriétés résidentielles d'Avrillé, avec leurs jardins de 600 à 1 500 m², représentent un entretien conséquent que de nombreux propriétaires souhaitent confier à un professionnel. Art des Jardins propose des contrats d'entretien annuels adaptés à chaque jardin, avec un calendrier d'interventions calé sur le rythme des saisons angevines : tonte, taille des haies, désherbage, fertilisation et nettoyage saisonnier.
+
+          Le sol argilo-limoneux d'Avrillé pose des défis spécifiques pour l'entretien des pelouses. En été, l'argile se compacte et durcit, freinant la pénétration de l'eau et de l'air vers les racines. Nous pratiquons une aération mécanique au printemps et à l'automne, suivie d'un terreautage qui restaure la porosité du sol. En hiver, le sol gorgé d'eau devient collant et fragile : nous adaptons les fréquences de tonte et évitons le passage d'engins lourds pour ne pas abîmer la structure du terrain.
+
+          Le désherbage écologique est au cœur de notre approche. Sans produit chimique, nous combinons désherbage mécanique, paillage des massifs avec du broyat de branches et des écorces de pin, et plantation de couvre-sols compétitifs qui étouffent naturellement les adventices. Cette méthode, plus respectueuse du sol vivant et de la biodiversité, donne des résultats durables sur les terrains argileux d'Avrillé.
+
+          Nos équipes interviennent régulièrement dans tous les quartiers de la commune. Du centre-bourg aux résidences du Bois-du-Roy, nous assurons la taille des haies persistantes et caduques, l'entretien des massifs de vivaces, le ramassage des feuilles en automne et l'évacuation systématique des déchets verts. Chaque intervention est tracée et un compte-rendu est transmis au propriétaire.
+        `,
+        metaDescription: 'Entretien de jardin à Avrillé : tonte, taille de haies et désherbage écologique. Contrats annuels adaptés au sol argileux. Devis gratuit.',
+        highlights: [
+          'Contrats d\'entretien annuels personnalisés',
+          'Tonte et aération adaptées au sol argilo-limoneux',
+          'Désherbage 100 % écologique sans produit chimique',
+          'Taille de haies persistantes et caduques',
+          'Ramassage des feuilles et évacuation des déchets verts',
+          'Fertilisation et terreautage saisonnier',
+        ],
+      },
+      abattage: {
+        content: `
+          À Avrillé, les arbres vieillissants du centre-bourg et des lotissements des années 1980-1990 nécessitent parfois un abattage lorsque leur état sanitaire ou leur implantation ne permettent plus de les conserver en toute sécurité. Conifères disproportionnés, peupliers en fin de vie, arbres fragilisés par des champignons lignivores : Art des Jardins intervient pour évaluer la situation et réaliser l'abattage dans les règles de l'art.
+
+          Les contraintes d'accès dans les quartiers résidentiels d'Avrillé imposent souvent un démontage technique plutôt qu'un abattage direct. Nos élagueurs-grimpeurs procèdent par sections, en descendant les branches et les tronçons au cordage pour protéger les clôtures, toitures et plantations voisines. Dans les rues étroites du centre-bourg ou les jardins enclavés de la Perrière, cette technique garantit une intervention propre et sans dommage collatéral.
+
+          Le dessouchage sur sol argileux d'Avrillé demande un équipement adapté. La rogneuse de souche que nous utilisons est dimensionnée pour travailler sur des sols compacts sans dégrader les abords. Après extraction, le trou est comblé avec un mélange de terre végétale et de compost pour préparer le terrain à une nouvelle plantation. Nous proposons aussi le broyage sur place des rémanents, transformés en paillage réutilisable au jardin.
+
+          Chaque chantier d'abattage à Avrillé fait l'objet d'une visite préalable gratuite. Nous vérifions les autorisations nécessaires auprès de la mairie, établissons un plan d'intervention détaillé et assurons l'évacuation complète des bois et des déchets. Le bois de chauffage issu de l'abattage peut être fendu et laissé sur place à la demande du propriétaire.
+        `,
+        metaDescription: 'Abattage d\'arbres à Avrillé : démontage technique en quartier résidentiel, dessouchage sur sol argileux, évacuation complète. Devis gratuit.',
+        highlights: [
+          'Abattage et démontage technique en zone résidentielle',
+          'Dessouchage à la rogneuse adapté au sol argileux',
+          'Évacuation complète du bois et des rémanents',
+          'Broyage sur place et valorisation en paillage',
+          'Fendage du bois de chauffage sur demande',
+          'Intervention d\'urgence après tempête',
+        ],
+      },
+    },
   },
   {
     slug: 'beaucouze',
