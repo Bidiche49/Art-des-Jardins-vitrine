@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { HeroSection } from '@/components/ui/HeroSection';
 import { PhotoGallery } from '@/components/ui/PhotoGallery';
 import { BeforeAfterSection } from '@/components/BeforeAfterSection';
+import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Réalisations Paysagiste Angers - Avant/Après',
@@ -26,11 +27,11 @@ function Schemas() {
     name: 'Réalisations - Art des Jardins',
     description:
       'Galerie de réalisations paysagères à Angers : aménagement de jardins, terrasses, clôtures, élagage et abattage.',
-    url: 'https://artdesjardins-paysagiste.fr/realisations/',
+    url: `${SITE.url}/realisations/`,
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Art des Jardins',
-      url: 'https://artdesjardins-paysagiste.fr/',
+      name: SITE.name,
+      url: `${SITE.url}/`,
     },
   };
 
@@ -42,7 +43,7 @@ function Schemas() {
         '@type': 'ListItem',
         position: 1,
         name: 'Accueil',
-        item: 'https://artdesjardins-paysagiste.fr/',
+        item: `${SITE.url}/`,
       },
       {
         '@type': 'ListItem',

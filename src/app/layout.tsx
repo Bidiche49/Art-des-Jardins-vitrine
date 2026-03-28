@@ -6,6 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { MobileStickyBar } from '@/components/ui/MobileStickyBar';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { Analytics } from '@/components/Analytics';
+import { SITE } from '@/lib/site-config';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const cormorant = Cormorant_Garamond({
@@ -14,7 +15,7 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant',
 });
 
-const siteUrl = 'https://artdesjardins-paysagiste.fr';
+const siteUrl = SITE.url;
 
 export const viewport: Viewport = {
   width: 'device-width',

@@ -7,6 +7,7 @@ import { TaxCreditSection } from '@/components/TaxCreditSection';
 import { HeroSection } from '@/components/ui/HeroSection';
 import { serviceCardImages, ogImages } from '@/lib/images-manifest';
 import { IconCheck, IconChevronRight } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 interface PageProps {
   params: { slug: string };
@@ -62,7 +63,7 @@ export default function ServicePage({ params }: PageProps) {
       <ServiceSchema
         name={service.title}
         description={service.metaDescription}
-        url={`https://artdesjardins-paysagiste.fr/services/${service.slug}/`}
+        url={`${SITE.url}/services/${service.slug}/`}
       />
       <script
         type="application/ld+json"
@@ -147,12 +148,12 @@ export default function ServicePage({ params }: PageProps) {
                   </Link>
                   <p className="text-center text-sm text-gray-500 mt-3">
                     Ou appelez-nous :{' '}
-                    <a href="tel:+33781160737" className="text-primary-600 font-medium">
-                      07 81 16 07 37
+                    <a href={SITE.phone1.link} className="text-primary-600 font-medium">
+                      {SITE.phone1.display}
                     </a>
                     {' '}<span className="text-gray-400">|</span>{' '}
-                    <a href="tel:+33659684916" className="text-primary-600 font-medium">
-                      06 59 68 49 16
+                    <a href={SITE.phone2.link} className="text-primary-600 font-medium">
+                      {SITE.phone2.display}
                     </a>
                   </p>
                 </div>
@@ -222,7 +223,7 @@ export default function ServicePage({ params }: PageProps) {
               Demander un devis gratuit
             </Link>
             <a
-              href="tel:+33781160737"
+              href={SITE.phone1.link}
               className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white/10"
             >
               Appeler maintenant

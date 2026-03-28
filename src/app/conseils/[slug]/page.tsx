@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { articles, getArticleBySlug } from '@/lib/blog-data';
 import { getImage, getDefaultSrc } from '@/lib/images-manifest';
+import { SITE } from '@/lib/site-config';
 
 interface PageProps {
   params: { slug: string };
@@ -107,17 +108,17 @@ export default function ArticlePage({ params }: PageProps) {
     '@type': 'Article',
     headline: article.title,
     description: article.metaDescription,
-    image: `https://artdesjardins-paysagiste.fr${getDefaultSrc(getImage(article.imageSlug)!, 1200)}`,
+    image: `${SITE.url}${getDefaultSrc(getImage(article.imageSlug)!, 1200)}`,
     datePublished: article.publishDate,
     author: {
       '@type': 'Organization',
-      name: 'Art des Jardins',
-      url: 'https://artdesjardins-paysagiste.fr',
+      name: SITE.name,
+      url: SITE.url,
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Art des Jardins',
-      url: 'https://artdesjardins-paysagiste.fr',
+      name: SITE.name,
+      url: SITE.url,
     },
   };
 
@@ -129,13 +130,13 @@ export default function ArticlePage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'Accueil',
-        item: 'https://artdesjardins-paysagiste.fr',
+        item: SITE.url,
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Conseils',
-        item: 'https://artdesjardins-paysagiste.fr/conseils/',
+        item: `${SITE.url}/conseils/`,
       },
       {
         '@type': 'ListItem',
@@ -249,8 +250,8 @@ export default function ArticlePage({ params }: PageProps) {
                       Demander un devis
                     </Link>
                     <p className="text-center text-sm text-gray-500 mt-3">
-                      <a href="tel:+33781160737" className="text-primary-600 font-medium">
-                        07 81 16 07 37
+                      <a href={SITE.phone1.link} className="text-primary-600 font-medium">
+                        {SITE.phone1.display}
                       </a>
                     </p>
                   </div>

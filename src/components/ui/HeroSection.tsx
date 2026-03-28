@@ -1,6 +1,7 @@
 import { type ImageEntry, getImage, getSrcSet, getDefaultSrc } from '@/lib/images-manifest';
 import { HeroClient } from './HeroClient';
 import { ScrollIndicator } from './ScrollIndicator';
+import { SITE } from '@/lib/site-config';
 
 interface HeroSectionProps {
   imageSlug: string;
@@ -81,7 +82,7 @@ function BreadcrumbSchema({ items }: { items: { label: string; href?: string }[]
         name: item.label,
       };
       if (item.href) {
-        entry.item = `https://artdesjardins-paysagiste.fr${item.href}`;
+        entry.item = `${SITE.url}${item.href}`;
       }
       return entry;
     }),

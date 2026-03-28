@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Politique de Confidentialité',
@@ -35,10 +36,10 @@ export default function PolitiqueConfidentialitePage() {
             Le responsable du traitement des données personnelles est :
           </p>
           <ul>
-            <li><strong>Art des Jardins</strong></li>
-            <li>[Adresse complète], 49000 Angers</li>
-            <li>Email : contact@artdesjardins-paysagiste.fr</li>
-            <li>Téléphone : 07 81 16 07 37 / 06 59 68 49 16</li>
+            <li><strong>{SITE.name}</strong></li>
+            <li>{SITE.address.full}</li>
+            <li>Email : {SITE.email}</li>
+            <li>Téléphone : {SITE.phone1.display} / {SITE.phone2.display}</li>
           </ul>
 
           <h2>2. Données collectées</h2>
@@ -98,7 +99,7 @@ export default function PolitiqueConfidentialitePage() {
             <li><strong>Droit d'opposition :</strong> vous opposer au traitement de vos données</li>
           </ul>
           <p>
-            Pour exercer ces droits, contactez-nous à : <strong>contact@artdesjardins-paysagiste.fr</strong>
+            Pour exercer ces droits, contactez-nous à : <strong>{SITE.email}</strong>
           </p>
           <p>
             Vous pouvez également introduire une réclamation auprès de la CNIL :{' '}
@@ -141,9 +142,9 @@ export default function PolitiqueConfidentialitePage() {
             Pour toute question concernant cette politique ou vos données personnelles :
           </p>
           <ul>
-            <li>Email : contact@artdesjardins-paysagiste.fr</li>
-            <li>Téléphone : 07 81 16 07 37 / 06 59 68 49 16</li>
-            <li>Adresse : [Adresse], 49000 Angers</li>
+            <li>Email : {SITE.email}</li>
+            <li>Téléphone : {SITE.phone1.display} / {SITE.phone2.display}</li>
+            <li>Adresse : {SITE.address.full}</li>
           </ul>
 
           <p className="text-sm text-gray-500 mt-8">

@@ -1,3 +1,5 @@
+import { SITE } from '@/lib/site-config';
+
 interface LocalBusinessCitySchemaProps {
   city: string;
   postalCode: string;
@@ -17,25 +19,25 @@ export function LocalBusinessCitySchema({
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${url}#localbusiness`,
-    name: 'Art des Jardins',
+    name: SITE.name,
     description: `${service} à ${city}. ${serviceDescription}`,
     url,
-    telephone: '+33781160737',
-    email: 'contact@artdesjardins-paysagiste.fr',
-    image: 'https://artdesjardins-paysagiste.fr/images/og-image.jpg',
-    logo: 'https://artdesjardins-paysagiste.fr/images/logo.png',
+    telephone: SITE.phone1.international,
+    email: SITE.email,
+    image: `${SITE.url}/images/og-image.jpg`,
+    logo: `${SITE.url}/images/logo.png`,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '9 bis rue Rouget de l\'Isle',
+      streetAddress: SITE.address.street,
       addressLocality: city,
       postalCode,
-      addressRegion: 'Maine-et-Loire',
-      addressCountry: 'FR',
+      addressRegion: SITE.address.region,
+      addressCountry: SITE.address.country,
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 47.4264,
-      longitude: -0.5256,
+      latitude: SITE.geo.latitude,
+      longitude: SITE.geo.longitude,
     },
     areaServed: {
       '@type': 'City',

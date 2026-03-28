@@ -1,14 +1,16 @@
+import { SITE } from '@/lib/site-config';
+
 export function LocalBusinessSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://artdesjardins-paysagiste.fr/#organization',
-    name: 'Art des Jardins',
-    legalName: 'SARL Art des Jardins',
+    '@id': `${SITE.url}/#organization`,
+    name: SITE.name,
+    legalName: SITE.legalName,
     description: 'Paysagiste professionnel à Angers et Maine-et-Loire. Création de jardins, aménagement, entretien, élagage, abattage. 16 ans d\'expérience cumulée.',
-    url: 'https://artdesjardins-paysagiste.fr',
-    image: 'https://artdesjardins-paysagiste.fr/images/og-image.jpg',
-    logo: 'https://artdesjardins-paysagiste.fr/images/logo.png',
+    url: SITE.url,
+    image: `${SITE.url}/images/og-image.jpg`,
+    logo: `${SITE.url}/images/logo.png`,
     foundingDate: '2026',
     numberOfEmployees: {
       '@type': 'QuantitativeValue',
@@ -17,31 +19,31 @@ export function LocalBusinessSchema() {
     knowsLanguage: 'French',
     paymentAccepted: ['Cash', 'Check', 'Bank Transfer'],
     currenciesAccepted: 'EUR',
-    telephone: '+33781160737',
+    telephone: SITE.phone1.international,
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+33781160737',
+        telephone: SITE.phone1.international,
         contactType: 'customer service',
       },
       {
         '@type': 'ContactPoint',
-        telephone: '+33659684916',
+        telephone: SITE.phone2.international,
         contactType: 'customer service',
       },
     ],
-    email: 'contact@artdesjardins-paysagiste.fr',
+    email: SITE.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '9 bis rue Rouget de l\'Isle',
-      addressLocality: 'Les Ponts-de-Cé',
-      postalCode: '49130',
-      addressCountry: 'FR',
+      streetAddress: SITE.address.street,
+      addressLocality: SITE.address.city,
+      postalCode: SITE.address.postalCode,
+      addressCountry: SITE.address.country,
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 47.4264,
-      longitude: -0.5256,
+      latitude: SITE.geo.latitude,
+      longitude: SITE.geo.longitude,
     },
     areaServed: [
       {
@@ -62,14 +64,14 @@ export function LocalBusinessSchema() {
         closes: '18:00',
       },
     ],
-    hasMap: 'https://maps.google.com/maps?q=9+bis+rue+Rouget+de+l%27Isle,+49130+Les+Ponts-de-C%C3%A9',
+    hasMap: `https://maps.google.com/maps?q=${encodeURIComponent(SITE.address.full)}`,
     identifier: {
       '@type': 'PropertyValue',
       name: 'SIRET',
-      value: '999 636 806 00013',
+      value: SITE.siret,
     },
     sameAs: [
-      'https://www.instagram.com/artdesjardins_49',
+      SITE.instagram.url,
       'https://www.societe.com/societe/art-des-jardins-999636806.html',
       // TODO: Ajouter quand les profils seront créés
       // 'https://www.google.com/maps/place/Art+des+Jardins/...',

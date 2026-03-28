@@ -10,6 +10,7 @@ import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
 import { BeforeAfterSection } from '@/components/BeforeAfterSection';
 import { serviceCardImages, getSrcSet, getDefaultSrc, getImage } from '@/lib/images-manifest';
 import { IconRcPro, IconDecennale, IconExperience, IconDevis48h, IconZone30km, IconInstagram, IconEuro } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 export default function HomePage() {
   return (
@@ -124,7 +125,7 @@ export default function HomePage() {
                 Demander un devis gratuit
               </Link>
               <a
-                href="https://www.instagram.com/artdesjardins_49"
+                href={SITE.instagram.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors"

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { ContactForm } from '@/components/ContactForm';
 import { HeroSection } from '@/components/ui/HeroSection';
 import { IconPhone, IconEmail, IconZone30km, IconHoraires, IconCheck } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Contact - Devis Gratuit',
@@ -22,17 +23,17 @@ const contactInfo = [
   {
     icon: <IconPhone className="w-6 h-6" />,
     title: 'Téléphone',
-    content: '07 81 16 07 37',
-    secondaryContent: '06 59 68 49 16',
-    link: 'tel:+33781160737',
-    secondaryLink: 'tel:+33659684916',
+    content: SITE.phone1.display,
+    secondaryContent: SITE.phone2.display,
+    link: SITE.phone1.link,
+    secondaryLink: SITE.phone2.link,
     description: 'Du lundi au vendredi, 8h-18h',
   },
   {
     icon: <IconEmail className="w-6 h-6" />,
     title: 'Email',
-    content: 'contact@artdesjardins-paysagiste.fr',
-    link: 'mailto:contact@artdesjardins-paysagiste.fr',
+    content: SITE.email,
+    link: `mailto:${SITE.email}`,
     description: 'Réponse sous 48h',
   },
   {
@@ -143,7 +144,7 @@ export default function ContactPage() {
                     Arbre dangereux, dégâts de tempête ? Appelez-nous directement.
                   </p>
                   <a
-                    href="tel:+33781160737"
+                    href={SITE.phone1.link}
                     className="block w-full text-center bg-red-600 text-white font-medium py-3 rounded-lg hover:bg-red-700 transition-colors"
                   >
                     Appeler l'urgence
@@ -184,7 +185,7 @@ export default function ContactPage() {
           <h2 className="text-2xl font-bold mb-6 text-center">Notre zone d&apos;intervention</h2>
           <div className="rounded-xl overflow-hidden h-64 md:h-80 bg-gray-200">
             <iframe
-              src="https://maps.google.com/maps?q=9+bis+rue+Rouget+de+l%27Isle,+49130+Les+Ponts-de-C%C3%A9&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(SITE.address.full)}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
               width="100%"
               height="100%"
               style={{ border: 0 }}

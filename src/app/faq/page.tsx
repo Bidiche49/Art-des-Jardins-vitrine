@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { HeroSection } from '@/components/ui/HeroSection';
 import { FAQContent } from './faq-content';
+import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'FAQ Paysagiste Angers - Questions Réponses',
@@ -44,8 +45,8 @@ export default function FAQPage() {
             sous 48h.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+33781160737" className="btn-primary w-full sm:w-auto">
-              Appeler le 07 81 16 07 37
+            <a href={SITE.phone1.link} className="btn-primary w-full sm:w-auto">
+              Appeler le {SITE.phone1.display}
             </a>
             <Link
               href="/contact/"

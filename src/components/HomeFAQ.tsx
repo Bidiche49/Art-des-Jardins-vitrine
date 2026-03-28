@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { IconChevronDown } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 interface FAQItem {
   question: string;
@@ -22,7 +23,7 @@ const faqs: FAQItem[] = [
   {
     question: 'Comment obtenir un devis ?',
     answer:
-      'Appelez-nous au 07 81 16 07 37 ou au 06 59 68 49 16, écrivez-nous sur WhatsApp, ou remplissez le formulaire sur notre page contact. Nous vous recontactons sous 48h et planifions une visite gratuite sur place pour évaluer votre projet. Le devis est gratuit sous 48h suite au rendez-vous, détaillé, transparent et sans engagement.',
+      `Appelez-nous au ${SITE.phone1.display} ou au ${SITE.phone2.display}, écrivez-nous sur WhatsApp, ou remplissez le formulaire sur notre page contact. Nous vous recontactons sous 48h et planifions une visite gratuite sur place pour évaluer votre projet. Le devis est gratuit sous 48h suite au rendez-vous, détaillé, transparent et sans engagement.`,
   },
   {
     question: 'Êtes-vous assurés ?',
@@ -42,7 +43,7 @@ const faqs: FAQItem[] = [
   {
     question: 'Quels sont vos délais d\'intervention ?',
     answer:
-      'Pour un devis, nous vous recontactons sous 48h suite au rendez-vous. Pour une intervention classique, comptez 2 semaines à 1 mois selon la saison. En cas d\'urgence (arbre dangereux, dégâts de tempête), nous pouvons intervenir sous 24 à 48h. Appelez-nous directement au 07 81 16 07 37.',
+      `Pour un devis, nous vous recontactons sous 48h suite au rendez-vous. Pour une intervention classique, comptez 2 semaines à 1 mois selon la saison. En cas d'urgence (arbre dangereux, dégâts de tempête), nous pouvons intervenir sous 24 à 48h. Appelez-nous directement au ${SITE.phone1.display}.`,
   },
 ];
 

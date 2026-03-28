@@ -7,6 +7,7 @@ import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
 import { HeroSection } from '@/components/ui/HeroSection';
 import { serviceCardImages, images } from '@/lib/images-manifest';
 import { IconCheck, IconChevronRight } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Nos Services d\'Aménagement Paysager',
@@ -27,7 +28,7 @@ export default function ServicesPage() {
       <ServiceSchema
         name="Services d'aménagement paysager Art des Jardins"
         description="Entreprise d'aménagement paysager proposant création de jardin, entretien, élagage et abattage à Angers et environs."
-        url="https://artdesjardins-paysagiste.fr/services/"
+        url={`${SITE.url}/services/`}
       />
 
       {/* Hero */}

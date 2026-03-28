@@ -15,6 +15,7 @@ import {
   IconMenu,
   IconClose,
 } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 const serviceMenuItems = [
   {
@@ -221,11 +222,11 @@ export function Header() {
               Contact
             </Link>
             <a
-              href="tel:+33781160737"
+              href={SITE.phone1.link}
               className="hidden lg:flex items-center gap-2 text-gray-700 hover:text-primary-600 transition-colors"
             >
               <IconPhone className="w-4 h-4" />
-              <span className="font-medium">07 81 16 07 37</span>
+              <span className="font-medium">{SITE.phone1.display}</span>
             </a>
             <Link href="/contact" className="btn-primary text-sm py-2">
               Devis gratuit

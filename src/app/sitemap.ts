@@ -2,8 +2,9 @@ import { MetadataRoute } from 'next';
 import { services } from '@/lib/services-data';
 import { cities, serviceTypes } from '@/lib/cities-data';
 import { articles } from '@/lib/blog-data';
+import { SITE } from '@/lib/site-config';
 
-const baseUrl = 'https://artdesjardins-paysagiste.fr';
+const baseUrl = SITE.url;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();

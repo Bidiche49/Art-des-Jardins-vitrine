@@ -1,7 +1,9 @@
 'use client';
 
+import { SITE } from '@/lib/site-config';
+
 export function WhatsAppButton() {
-  const phone = '33781160737';
+  const phone = SITE.whatsapp;
   const message = encodeURIComponent(
     'Bonjour, je souhaite un devis pour un projet de jardinage/paysage. Pouvez-vous me recontacter ?'
   );

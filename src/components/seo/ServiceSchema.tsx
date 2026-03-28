@@ -1,3 +1,5 @@
+import { SITE } from '@/lib/site-config';
+
 interface ServiceSchemaProps {
   name: string;
   description: string;
@@ -10,7 +12,7 @@ interface ServiceSchemaProps {
 export function ServiceSchema({
   name,
   description,
-  provider = 'Art des Jardins',
+  provider = SITE.name,
   areaServed = 'Angers, Maine-et-Loire',
   image,
   url,

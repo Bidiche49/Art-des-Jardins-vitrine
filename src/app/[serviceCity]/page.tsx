@@ -6,6 +6,7 @@ import { cities, serviceTypes, getCityBySlug, getServiceBySlugSeo } from '@/lib/
 import { HeroSection } from '@/components/ui/HeroSection';
 import { serviceHeroImages } from '@/lib/images-manifest';
 import { IconCheck } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 interface PageProps {
   params: { serviceCity: string };
@@ -84,7 +85,7 @@ export default function ServiceCityPage({ params }: PageProps) {
         postalCode={city.postalCode}
         service={service.serviceTitle}
         serviceDescription={service.serviceDescription}
-        url={`https://artdesjardins-paysagiste.fr/${params.serviceCity}/`}
+        url={`${SITE.url}/${params.serviceCity}/`}
       />
 
       {/* Hero */}
@@ -103,10 +104,10 @@ export default function ServiceCityPage({ params }: PageProps) {
             Demander un devis gratuit
           </Link>
           <a
-            href="tel:+33781160737"
+            href={SITE.phone1.link}
             className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white/10"
           >
-            Appeler : 07 81 16 07 37
+            Appeler : {SITE.phone1.display}
           </a>
         </div>
       </HeroSection>

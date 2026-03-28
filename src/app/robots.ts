@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next';
+import { SITE } from '@/lib/site-config';
 
 const SOFT_LAUNCH = false;
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://artdesjardins-paysagiste.fr';
+  const baseUrl = SITE.url;
 
   if (SOFT_LAUNCH) {
     return {

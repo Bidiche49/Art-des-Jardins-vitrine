@@ -6,6 +6,7 @@ import { HeroSection } from '@/components/ui/HeroSection';
 import { InlineGallery } from '@/components/ui/InlineGallery';
 import { ogImages } from '@/lib/images-manifest';
 import { IconCheck } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 const service = serviceTypes.find((s) => s.service === 'elagage')!;
 const city = cities.find((c) => c.slug === 'angers')!;
@@ -40,7 +41,7 @@ export default function ElagageAngersPage() {
         postalCode="49000"
         service="Élagage"
         serviceDescription="Taille et soins des arbres par des élagueurs certifiés à Angers."
-        url="https://artdesjardins-paysagiste.fr/elagage-angers/"
+        url={`${SITE.url}/elagage-angers/`}
       />
 
       {/* Hero */}
@@ -58,10 +59,10 @@ export default function ElagageAngersPage() {
             Demander un devis gratuit
           </Link>
           <a
-            href="tel:+33781160737"
+            href={SITE.phone1.link}
             className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white/10"
           >
-            Urgence : 07 81 16 07 37
+            Urgence : {SITE.phone1.display}
           </a>
         </div>
       </HeroSection>
@@ -132,7 +133,7 @@ export default function ElagageAngersPage() {
                     Nous intervenons rapidement pour sécuriser les lieux.
                   </p>
                   <a
-                    href="tel:+33781160737"
+                    href={SITE.phone1.link}
                     className="block w-full text-center bg-red-600 text-white font-medium py-3 rounded-lg hover:bg-red-700 transition-colors"
                   >
                     Appeler l'urgence

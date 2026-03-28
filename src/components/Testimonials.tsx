@@ -63,6 +63,7 @@ const testimonials: Testimonial[] = [
 ];
 
 import { IconStarFilled } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -105,7 +106,7 @@ function ReviewSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Art des Jardins',
+    name: SITE.name,
     aggregateRating,
     review: reviews,
   };

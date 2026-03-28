@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Mentions Légales',
@@ -36,15 +37,15 @@ export default function MentionsLegalesPage() {
           </p>
           <ul>
             <li><strong>Raison sociale :</strong> SARL Art des Jardins</li>
-            <li><strong>Siège social :</strong> 9 bis rue Rouget de l'Isle, 49130 Les Ponts-de-Cé</li>
-            <li><strong>SIREN :</strong> 999 636 806</li>
-            <li><strong>SIRET :</strong> 999 636 806 00013</li>
-            <li><strong>TVA intracommunautaire :</strong> FR36999636806</li>
+            <li><strong>Siège social :</strong> {SITE.address.full}</li>
+            <li><strong>SIREN :</strong> {SITE.siren}</li>
+            <li><strong>SIRET :</strong> {SITE.siret}</li>
+            <li><strong>TVA intracommunautaire :</strong> {SITE.tva}</li>
             <li><strong>RCS :</strong> Angers</li>
             <li><strong>Code NAF :</strong> 81.30Z - Services d'aménagement paysager</li>
             <li><strong>Capital social :</strong> 5 000 euros</li>
-            <li><strong>Téléphone :</strong> 07 81 16 07 37 / 06 59 68 49 16</li>
-            <li><strong>Email :</strong> contact@artdesjardins-paysagiste.fr</li>
+            <li><strong>Téléphone :</strong> {SITE.phone1.display} / {SITE.phone2.display}</li>
+            <li><strong>Email :</strong> {SITE.email}</li>
             <li><strong>Co-gérants :</strong> M. Louis Coussière et M. Jocelyn Rondeau</li>
             <li><strong>Directeurs de la publication :</strong> M. Louis Coussière et M. Jocelyn Rondeau</li>
           </ul>
@@ -106,9 +107,9 @@ export default function MentionsLegalesPage() {
             Pour toute question relative aux présentes mentions légales, vous pouvez nous contacter :
           </p>
           <ul>
-            <li>Par email : contact@artdesjardins-paysagiste.fr</li>
-            <li>Par téléphone : 07 81 16 07 37 / 06 59 68 49 16</li>
-            <li>Par courrier : 9 bis rue Rouget de l'Isle, 49130 Les Ponts-de-Cé</li>
+            <li>Par email : {SITE.email}</li>
+            <li>Par téléphone : {SITE.phone1.display} / {SITE.phone2.display}</li>
+            <li>Par courrier : {SITE.address.full}</li>
           </ul>
 
           <p className="text-sm text-gray-500 mt-8">

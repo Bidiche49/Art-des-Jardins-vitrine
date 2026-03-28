@@ -6,6 +6,7 @@ import { HeroSection } from '@/components/ui/HeroSection';
 import { InlineGallery } from '@/components/ui/InlineGallery';
 import { ogImages } from '@/lib/images-manifest';
 import { IconCheck, IconPin } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 const service = serviceTypes.find((s) => s.service === 'paysagiste')!;
 const city = cities.find((c) => c.slug === 'angers')!;
@@ -40,7 +41,7 @@ export default function PaysagisteAngersPage() {
         postalCode="49000"
         service="Paysagiste"
         serviceDescription="Aménagement et création de jardins sur mesure à Angers et ses environs."
-        url="https://artdesjardins-paysagiste.fr/paysagiste-angers/"
+        url={`${SITE.url}/paysagiste-angers/`}
       />
 
       {/* Hero */}
@@ -58,10 +59,10 @@ export default function PaysagisteAngersPage() {
             Demander un devis gratuit
           </Link>
           <a
-            href="tel:+33781160737"
+            href={SITE.phone1.link}
             className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white/10"
           >
-            Appeler : 07 81 16 07 37
+            Appeler : {SITE.phone1.display}
           </a>
         </div>
       </HeroSection>
@@ -212,10 +213,10 @@ export default function PaysagisteAngersPage() {
               Demander un devis gratuit
             </Link>
             <a
-              href="tel:+33781160737"
+              href={SITE.phone1.link}
               className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white/10"
             >
-              07 81 16 07 37
+              {SITE.phone1.display}
             </a>
           </div>
         </div>

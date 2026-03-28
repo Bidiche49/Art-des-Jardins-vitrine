@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { IconPin, IconPhone, IconEmail, IconInstagram } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -27,30 +28,30 @@ export function Footer() {
             <div className="text-gray-400 space-y-2">
               <p className="flex items-center gap-2">
                 <IconPin className="w-4 h-4 text-primary-500 flex-shrink-0" />
-                9 bis rue Rouget de l'Isle, 49130 Les Ponts-de-Cé
+                {SITE.address.full}
               </p>
               <div className="flex items-start gap-2">
                 <IconPhone className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" />
                 <div className="flex items-center">
-                  <a href="tel:+33781160737" className="hover:text-white transition-colors">07 81 16 07 37</a>
+                  <a href={SITE.phone1.link} className="hover:text-white transition-colors">{SITE.phone1.display}</a>
                   <span className="mx-1.5 text-gray-600">|</span>
-                  <a href="tel:+33659684916" className="hover:text-white transition-colors">06 59 68 49 16</a>
+                  <a href={SITE.phone2.link} className="hover:text-white transition-colors">{SITE.phone2.display}</a>
                 </div>
               </div>
               <p className="flex items-center gap-2">
                 <IconEmail className="w-4 h-4 text-primary-500 flex-shrink-0" />
-                <a href="mailto:contact@artdesjardins-paysagiste.fr" className="hover:text-white transition-colors">contact@artdesjardins-paysagiste.fr</a>
+                <a href={`mailto:${SITE.email}`} className="hover:text-white transition-colors">{SITE.email}</a>
               </p>
               <p className="flex items-center gap-2">
                 <IconInstagram className="w-4 h-4 text-primary-500 flex-shrink-0" />
                 <a
-                  href="https://www.instagram.com/artdesjardins_49"
+                  href={SITE.instagram.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Suivez-nous sur Instagram"
                   className="hover:text-white transition-colors"
                 >
-                  @artdesjardins_49
+                  {SITE.instagram.handle}
                 </a>
               </p>
             </div>
@@ -131,7 +132,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 space-y-1">
           <p>&copy; {currentYear} SARL Art des Jardins. Tous droits réservés.</p>
-          <p className="text-xs text-gray-600">SARL Art des Jardins - SIRET 999 636 806 00013 - TVA FR36999636806 - RCS Angers</p>
+          <p className="text-xs text-gray-600">{SITE.legalName} - SIRET {SITE.siret} - TVA {SITE.tva} - RCS Angers</p>
         </div>
       </div>
     </footer>

@@ -7,6 +7,7 @@ import { InlineGallery } from '@/components/ui/InlineGallery';
 import { TaxCreditSection } from '@/components/TaxCreditSection';
 import { ogImages } from '@/lib/images-manifest';
 import { IconCheck } from '@/lib/icons';
+import { SITE } from '@/lib/site-config';
 
 const service = serviceTypes.find((s) => s.service === 'entretien-jardin')!;
 const city = cities.find((c) => c.slug === 'angers')!;
@@ -44,7 +45,7 @@ export default function EntretienJardinAngersPage() {
         postalCode="49000"
         service="Entretien de jardin"
         serviceDescription="Service d'entretien de jardin régulier à Angers : tonte, taille, désherbage."
-        url="https://artdesjardins-paysagiste.fr/entretien-jardin-angers/"
+        url={`${SITE.url}/entretien-jardin-angers/`}
       />
 
       {/* Hero */}
@@ -62,10 +63,10 @@ export default function EntretienJardinAngersPage() {
             Demander un devis gratuit
           </Link>
           <a
-            href="tel:+33781160737"
+            href={SITE.phone1.link}
             className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white/10"
           >
-            Appeler : 07 81 16 07 37
+            Appeler : {SITE.phone1.display}
           </a>
         </div>
       </HeroSection>
