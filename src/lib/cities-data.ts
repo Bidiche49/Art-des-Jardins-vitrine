@@ -670,7 +670,7 @@ export const cities: CityData[] = [
 
           Le sol sablonneux des zones basses offre un ancrage limité aux grands sujets. Frênes et peupliers de berge développent un enracinement étalé plutôt que profond, ce qui les rend sensibles aux coups de vent lors des tempêtes d'ouest. L'élagage préventif vise à diminuer l'effet voile du houppier et à répartir les contraintes mécaniques sur l'ensemble de la structure.
         `,
-        metaDescription: 'Élagage aux Ponts-de-Cé : taille douce sur arbres de ripisylve en bord de Loire, entretien de saules et peupliers, intervention en quartiers anciens.',
+        metaDescription: 'Élagage aux Ponts-de-Cé : taille douce sur arbres de ripisylve en bord de Loire, entretien des saules et peupliers, intervention en quartiers anciens.',
         highlights: [
           'Taille douce de peupliers et saules en bord de Loire',
           'Élagage préventif contre le risque de casse par vent d\'ouest',
@@ -689,7 +689,7 @@ export const cities: CityData[] = [
 
           Le ramassage des feuilles à l'automne prend une ampleur particulière à proximité de la Loire. Peupliers et saules produisent un feuillage abondant qui, laissé au sol, forme un tapis humide propice aux maladies fongiques du gazon. Le broyage de ces feuilles et leur réutilisation en paillage dans les massifs constitue une valorisation simple et efficace.
         `,
-        metaDescription: 'Entretien de jardin aux Ponts-de-Cé : tonte sur sols sablonneux et argileux, lutte contre la mousse en milieu humide, taille de haies et ramassage.',
+        metaDescription: 'Entretien de jardin aux Ponts-de-Cé : tonte et scarification sur sols sablonneux et argileux, lutte contre la mousse en climat humide ligérien, taille de haies.',
         highlights: [
           'Tonte et fertilisation adaptées aux sols sablonneux de bord de Loire',
           'Aération mécanique sur terrain argilo-limoneux compact',
@@ -708,7 +708,7 @@ export const cities: CityData[] = [
 
           Le dessouchage en terrain sablonneux se réalise bien à la rogneuse — le sable oppose peu de résistance aux dents de l'outil. Les racines des espèces riveraines, saules et aulnes notamment, s'étendent loin du tronc et nécessitent parfois un travail complémentaire pour dégager les ancrages principaux. Le trou est comblé avec de la terre végétale amendée.
         `,
-        metaDescription: 'Abattage d\'arbres aux Ponts-de-Cé : démontage par sections en zone insulaire, intervention adaptée aux crues de Loire, dessouchage en sol sablonneux.',
+        metaDescription: 'Abattage d\'arbres aux Ponts-de-Cé : démontage technique par sections en zone insulaire, calendrier adapté aux crues de Loire, dessouchage en sol sablonneux.',
         highlights: [
           'Abattage de peupliers et saules fragilisés en bord de Loire',
           'Démontage par sections dans les rues étroites du centre',
@@ -738,6 +738,83 @@ export const cities: CityData[] = [
       Art des Jardins intervient à Écouflant pour des projets variés : création de jardins complets, restructuration de jardins anciens, et interventions sur les nombreux arbres de haute tige qui caractérisent la commune. Les peupliers, saules et frênes des bords de Sarthe font partie du patrimoine végétal local que nous contribuons à entretenir.
     `,
     neighborhoods: ['Bourg', 'Basse-Île', 'Éventard', 'Le Grésillé', 'La Sarthe'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Les alluvions déposées par la Sarthe ont façonné deux profils de sol distincts à Écouflant. En partie basse — Basse-Île, bords de rivière — la terre limoneuse, riche en matière organique, se gorge d'eau dès l'automne et reste fraîche tard au printemps. Sur les hauteurs du bourg et vers Éventard, le sol sablo-limoneux se ressuie vite et se travaille sans difficulté. Toute conception paysagère sur la commune doit intégrer cette dualité dès le plan de plantation.
+
+          Les terrains résidentiels, souvent compris entre 800 et 2 000 m², laissent la place à des aménagements structurés en plusieurs séquences : une zone de vie proche de l'habitation, des massifs arbustifs en transition, et un fond de jardin plus naturel qui prolonge visuellement le paysage des basses vallées angevines. Cette profondeur de parcelle est un atout rare dans l'agglomération.
+
+          Le classement Natura 2000 des prairies inondables voisines oriente le choix des végétaux vers des essences locales et des compositions à faible entretien. Haies champêtres mêlant cornouillers, viornes et prunelliers, prairies fleuries de graminées indigènes, bosquets de chênes et de charmes — ces éléments s'intègrent dans le paysage environnant sans rupture de registre. Les espèces horticoles trouvent leur place en zone de vie, mais le fond de parcelle gagne à rester dans un vocabulaire végétal ligérien.
+
+          Les parcelles en zone inondable demandent une attention particulière : matériaux de terrasse résistant à l'immersion, plantations sur buttes drainantes, choix de végétaux tolérant les submersions temporaires — saules, aulnes, iris des marais. Le dessin du jardin intègre la montée des eaux comme une donnée, pas comme une contrainte à combattre.
+        `,
+        metaDescription: 'Paysagiste à Écouflant — sols alluviaux en bord de Sarthe, sablo-limoneux sur les hauteurs, plantations adaptées au contexte Natura 2000 des basses vallées.',
+        highlights: [
+          'Conception sur double profil de sol — alluvial en zone basse, sablo-limoneux en hauteur',
+          'Plantations d\'essences indigènes en continuité des basses vallées angevines',
+          'Terrasses et matériaux résistant aux submersions en zone inondable',
+          'Haies champêtres de cornouillers, viornes et prunelliers',
+          'Aménagement de grandes parcelles résidentielles de 800 à 2 000 m²',
+        ],
+      },
+      elagage: {
+        content: `
+          Peupliers noirs, saules blancs, frênes communs, aulnes glutineux — les abords de la Sarthe à Écouflant abritent une ripisylve dense dont les sujets atteignent couramment 15 à 25 mètres. Ces essences de bord d'eau poussent vite, produisent un bois tendre et cassant, et développent des charpentes larges qui empiètent sur les propriétés riveraines. L'élagage régulier de ces arbres relève autant de la sécurité que de la gestion du patrimoine végétal local.
+
+          Sur les parcelles résidentielles du bourg et d'Éventard, le patrimoine arboré est plus classique : chênes, érables, tilleuls, quelques résineux plantés dans les années 1970-1980. Ces sujets, parvenus à maturité, nécessitent des interventions d'éclaircissage pour maintenir la pénétration de lumière au jardin et réduire la prise au vent. La taille douce — suppression du bois mort, des branches mal orientées et des gourmands — préserve l'architecture naturelle de l'arbre sans provoquer de repousses anarchiques.
+
+          Le sol alluvial en zone basse favorise un enracinement superficiel, surtout chez les peupliers et les saules. Cette particularité augmente la vulnérabilité au chablis lors des tempêtes hivernales. Un diagnostic d'ancrage, visuel et mécanique, permet d'évaluer la stabilité réelle d'un arbre avant de décider entre taille de réduction, haubanage ou abattage préventif.
+
+          Les frênes de la commune méritent une surveillance phytosanitaire particulière. La chalarose du frêne, maladie fongique en progression dans le Val de Loire, provoque le dessèchement progressif du houppier. Les sujets atteints nécessitent une taille sanitaire régulière pour éliminer le bois mort et ralentir la propagation. Les cas les plus avancés imposent l'abattage.
+        `,
+        metaDescription: 'Élagage à Écouflant — taille douce des peupliers, saules et frênes en bord de Sarthe, diagnostic d\'ancrage sur sol alluvial, surveillance de la chalarose.',
+        highlights: [
+          'Taille douce des peupliers, saules et frênes en bord de Sarthe',
+          'Éclaircissage des arbres matures en quartiers résidentiels',
+          'Diagnostic d\'ancrage sur sol alluvial à enracinement superficiel',
+          'Surveillance phytosanitaire de la chalarose du frêne',
+          'Taille de réduction et haubanage préventif avant tempêtes',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          La montée des eaux hivernale dans les basses vallées modifie profondément le calendrier d'entretien des jardins situés en zone basse d'Écouflant. Les pelouses immergées pendant plusieurs semaines ressortent au printemps couvertes de limon et de débris végétaux. Le nettoyage, le scarifiage et le réensemencement des zones clairsemées constituent le premier chantier de la saison avant toute reprise de tonte régulière.
+
+          Sur les hauteurs du bourg, les gazons installés sur sol sablo-limoneux se comportent différemment : le drainage rapide limite la mousse mais accélère le dessèchement estival. Une tonte à hauteur relevée — 7 à 8 cm en été — et un apport de compost en surface maintiennent l'humidité dans les premiers centimètres du sol. Le mulching, qui restitue les résidus de tonte, complète ce cycle de fertilisation naturelle.
+
+          Les haies champêtres, nombreuses sur la commune, demandent un entretien adapté à leur composition mixte. Cornouillers, viornes, prunelliers, noisetiers : chaque essence a son rythme de croissance et son calendrier de taille. Une haie champêtre ne se conduit pas comme une haie monospécifique de thuyas — elle se taille plus légèrement, en préservant les rameaux à fruits qui nourrissent l'avifaune locale.
+
+          Les massifs et sous-bois bénéficient d'un paillage organique épais — broyat de branches, feuilles mortes compostées — qui reproduit le couvert naturel des boisements voisins. Ce paillage limite le désherbage, maintient la fraîcheur du sol et nourrit progressivement la terre par décomposition. Sur les parcelles proches de la Sarthe, le contrôle des espèces invasives — renouée du Japon, balsamine de l'Himalaya — fait partie de l'entretien courant.
+        `,
+        metaDescription: 'Entretien de jardin à Écouflant — scarifiage post-crue en zone inondable, tonte sur sol sablo-limoneux, taille de haies champêtres et paillage organique.',
+        highlights: [
+          'Scarifiage et réensemencement post-crue en zone inondable',
+          'Tonte adaptée et mulching sur sol sablo-limoneux bien drainé',
+          'Taille de haies champêtres mixtes selon calendrier par essence',
+          'Paillage organique et contrôle des espèces invasives en bord de Sarthe',
+        ],
+      },
+      abattage: {
+        content: `
+          Les parcelles de Basse-Île et des bords de Sarthe présentent des contraintes d'accès qui conditionnent toute opération d'abattage à Écouflant. Chemins étroits, sols meubles en période humide, proximité immédiate de la rivière — l'acheminement d'engins lourds n'est pas toujours possible. Le démontage par sections, avec descente des tronçons au cordage, reste la technique la plus employée sur ces parcelles riveraines.
+
+          Les peupliers constituent la première cause d'abattage sur la commune. Essences à croissance rapide mais à bois fragile, ils atteignent des dimensions considérables en quelques décennies avant de devenir cassants et instables. Les signes de dépérissement — branches sommitales sèches, cavités au collet, champignons lignivores sur le tronc — indiquent un affaiblissement structurel qui justifie le retrait de l'arbre. Les saules blancs, soumis aux mêmes pathologies, suivent un cycle similaire.
+
+          Le dessouchage en sol alluvial diffère sensiblement du travail sur argile ou sur schiste. La terre meuble facilite le passage de la rogneuse, mais l'humidité du sol en zone basse peut compliquer l'intervention en dehors de la période estivale. Le trou laissé par la souche se comble avec un mélange de terre végétale et de compost, permettant une replantation rapide si souhaité.
+
+          Les frênes touchés par la chalarose représentent un volume croissant d'abattages dans le secteur. Quand la maladie a colonisé plus de la moitié du houppier, l'abattage devient la seule option réaliste. Le bois de frêne chamarosé ne présente pas de risque sanitaire une fois abattu, mais les rémanents se broient ou s'évacuent pour limiter la dissémination des spores dans l'environnement immédiat.
+        `,
+        metaDescription: 'Abattage d\'arbres à Écouflant — démontage par sections sur parcelles riveraines de la Sarthe, retrait de peupliers et frênes chamarosés, dessouchage alluvial.',
+        highlights: [
+          'Démontage par sections sur parcelles riveraines à accès restreint',
+          'Retrait de peupliers fragilisés et sujets à bois cassant',
+          'Abattage de frênes atteints de chalarose',
+          'Dessouchage à la rogneuse en sol alluvial meuble',
+          'Broyage et évacuation des rémanents en zone sensible Natura 2000',
+        ],
+      },
+    },
   },
   {
     slug: 'cantenay-epinard',
@@ -758,6 +835,84 @@ export const cities: CityData[] = [
       De nombreuses propriétés possèdent des arbres remarquables — chênes centenaires, cèdres du Liban, séquoias, tilleuls argentés — qui constituent un patrimoine végétal précieux. Les haies champêtres, que nous encourageons à maintenir et enrichir, structurent le territoire et abritent une faune diverse.
     `,
     neighborhoods: ['Cantenay', 'Épinard', 'Le Bourg', 'Les Basses-Vallées'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Les basses vallées angevines, classées Natura 2000, bordent la commune et imposent leur logique à tout projet d'aménagement. Les prairies inondables en contrebas, les haies bocagères et les grands arbres isolés composent un paysage qu'il serait contre-productif d'ignorer. Un jardin à Cantenay-Épinard fonctionne quand il prolonge ce cadre rural au lieu de s'en distinguer.
+
+          La dualité des sols oriente les choix de plantation. Sur les parties hautes — autour des bourgs de Cantenay et d'Épinard —, les limons profonds acceptent une palette large : fruitiers, rosiers, vivaces, graminées ornementales. En descendant vers les vallées, l'argile hydromorphe restreint les options aux essences de zone humide : saules, cornouillers, iris des marais, carex. Ignorer cette transition conduit à des échecs d'enracinement en bas de parcelle.
+
+          Les propriétés rurales de la commune — fermes en tuffeau, longères rénovées — disposent de terrains généreux. Cette surface permet de structurer des espaces distincts : potager clos dans l'esprit des jardins de curé angevins, verger haute-tige avec variétés locales, prairie fleurie en fond de parcelle. Les murets existants en tuffeau et les allées en gravier servent de trame à conserver et à prolonger.
+
+          Le bocage environnant fournit un vocabulaire végétal cohérent. Haies champêtres de chênes, frênes, noisetiers et aubépines, bosquets d'essences indigènes, mares naturelles — ces éléments s'intègrent aux aménagements sans rupture avec le paysage. Sur les parcelles exposées au vent du nord, la plantation de haies brise-vent en quinconce protège les zones de vie extérieures.
+        `,
+        metaDescription: 'Paysagiste à Cantenay-Épinard : aménagement de jardins ruraux sur sols limoneux et argileux, haies bocagères, potagers et vergers adaptés aux basses vallées.',
+        highlights: [
+          'Aménagement adapté à la dualité sol limoneux / argile hydromorphe',
+          'Haies champêtres bocagères (chênes, frênes, noisetiers, aubépines)',
+          'Potagers et vergers dans l\'esprit des jardins de curé angevins',
+          'Plantations de zone humide en bordure des basses vallées',
+          'Valorisation des murets en tuffeau et allées en gravier existants',
+        ],
+      },
+      elagage: {
+        content: `
+          Chênes centenaires, tilleuls argentés, cèdres du Liban, séquoias — les propriétés rurales de Cantenay-Épinard abritent des arbres remarquables dont l'envergure dépasse souvent quinze mètres. Ces sujets anciens, plantés à une époque où les parcelles n'avaient pas les mêmes usages, nécessitent un suivi régulier pour concilier leur préservation avec la sécurité des bâtiments et des personnes.
+
+          La taille douce s'impose sur ces arbres patrimoniaux. Supprimer le bois mort, alléger les branches basses, éclaircir la ramure pour laisser passer la lumière — chaque coupe se raisonne en fonction de l'architecture naturelle du sujet. Les chênes têtards du bocage environnant, héritage de la gestion paysanne traditionnelle, demandent une taille de restauration spécifique pour maintenir leur silhouette caractéristique sans compromettre leur vigueur.
+
+          Le long des basses vallées, les peupliers, frênes et saules blancs composent la ripisylve. La chalarose du frêne, maladie fongique qui progresse en Maine-et-Loire, fragilise les frênes communs et nécessite une surveillance attentive : dessèchement du houppier, nécroses sur l'écorce, chute de branches sans signal préalable. Les sujets atteints demandent soit un élagage sanitaire ciblé, soit un abattage quand la structure est compromise.
+
+          Sur les sols limoneux des parties hautes, l'enracinement profond des grands feuillus offre un ancrage solide. En revanche, sur les argiles de fond de vallée, les systèmes racinaires restent plus superficiels. Cette distinction conditionne le type d'intervention : un arbre bien ancré supporte un allègement plus important qu'un sujet dont la stabilité dépend d'un équilibre fragile entre houppier et racines.
+        `,
+        metaDescription: 'Élagage à Cantenay-Épinard : taille douce d\'arbres remarquables, restauration des chênes têtards du bocage, surveillance chalarose des frênes en vallée.',
+        highlights: [
+          'Taille douce d\'arbres remarquables (chênes centenaires, cèdres, tilleuls)',
+          'Restauration des chênes têtards du bocage angevin',
+          'Surveillance et élagage sanitaire des frênes touchés par la chalarose',
+          'Éclaircissage des grands feuillus en propriétés rurales',
+          'Intervention adaptée selon l\'ancrage racinaire (limon ou argile)',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          Les crues hivernales des basses vallées et le ruissellement des coteaux rythment l'entretien des jardins à Cantenay-Épinard. De novembre à mars, les parcelles basses restent gorgées d'eau ; toute intervention mécanique — tonte, scarification, passage d'engins — abîmerait la structure du sol. Le calendrier d'entretien se décale donc par rapport aux communes mieux drainées de l'agglomération.
+
+          Sur les limons des parties hautes, la pelouse pousse vigoureusement au printemps et nécessite une tonte hebdomadaire d'avril à juin. La hauteur de coupe se maintient à 7-8 cm en été pour protéger les racines du dessèchement. La mousse, favorisée par l'ombre des grands arbres et l'humidité ambiante, colonise les zones peu exposées au soleil. Une scarification au printemps suivie d'un réensemencement ciblé limite cette progression.
+
+          Les haies bocagères qui structurent les propriétés rurales demandent un entretien distinct des haies ornementales. Composées de chênes, frênes, noisetiers et aubépines, elles se taillent une fois par an en fin d'hiver, en préservant les branches fructifères qui nourrissent la faune locale. Ce rythme diffère des persistants — lauriers, photinias — qui exigent deux passages annuels.
+
+          Les grands terrains caractéristiques de la commune posent la question de la gestion différenciée. Tondre l'intégralité d'une parcelle de 2 000 m² est coûteux et écologiquement discutable. La fauche tardive en fond de parcelle, combinée à un gazon entretenu près de la maison, réduit la fréquence d'intervention tout en favorisant la biodiversité — cohérent avec le classement Natura 2000 voisin.
+        `,
+        metaDescription: 'Entretien de jardin à Cantenay-Épinard : tonte sur sol limoneux, taille de haies bocagères, fauche et gestion différenciée des grands terrains ruraux.',
+        highlights: [
+          'Calendrier d\'entretien adapté aux crues hivernales des basses vallées',
+          'Tonte et scarification sur sols limoneux en parties hautes',
+          'Taille annuelle des haies bocagères (chênes, noisetiers, aubépines)',
+          'Gestion différenciée tonte/fauche sur grands terrains ruraux',
+          'Traitement anti-mousse en zones ombragées par les grands arbres',
+        ],
+      },
+      abattage: {
+        content: `
+          Les longères et fermes en tuffeau de Cantenay-Épinard sont souvent implantées à proximité immédiate d'arbres de grand développement. Quand un chêne centenaire menace une toiture ou qu'un peuplier déraciné penche vers une dépendance, le démontage par sections s'impose. L'élagueur-grimpeur descend chaque tronçon au cordage pour éviter tout impact sur les bâtiments en pierre, dont la fragilité aux chocs ne pardonne pas.
+
+          Les frênes constituent une part croissante des demandes d'abattage sur la commune. La chalarose, maladie fongique qui nécrose le bois et provoque des ruptures de branches imprévisibles, touche de nombreux sujets le long des vallées et dans les haies bocagères. Un frêne atteint à plus de 50 % de son houppier ne récupère généralement pas ; son retrait évite les chutes de branches sur les chemins et les clôtures.
+
+          Le dessouchage varie selon la localisation sur la commune. Sur les limons profonds des hauteurs, la rogneuse travaille efficacement et permet un réengazonnement rapide. Sur les argiles lourdes de fond de vallée, la machine peine davantage et le trou de dessouchage se remplit d'eau en hiver. Dans ce cas, un comblement avec un mélange drainant — graviers, terre végétale, compost — prépare le terrain avant toute replantation.
+
+          Les tempêtes d'ouest, fréquentes dans le couloir des basses vallées, exposent les arbres à des rafales soutenues. Peupliers et saules, essences à bois tendre et croissance rapide, sont les premiers touchés. Après un épisode venteux, les branches cassées en hauteur restent parfois suspendues dans le houppier — un risque qu'un diagnostic visuel permet d'identifier avant qu'elles ne tombent.
+        `,
+        metaDescription: 'Abattage d\'arbres à Cantenay-Épinard : démontage par sections près des bâtiments en tuffeau, retrait de frênes chalarosés, dessouchage sur sol argileux.',
+        highlights: [
+          'Démontage par sections à proximité des bâtiments en tuffeau',
+          'Retrait des frênes atteints de chalarose le long des vallées',
+          'Dessouchage adapté selon le sol (limon en hauteur, argile en vallée)',
+          'Diagnostic post-tempête des arbres exposés au couloir de vent',
+          'Broyage et valorisation des rémanents sur place',
+        ],
+      },
+    },
   },
   {
     slug: 'murs-erigne',
@@ -974,6 +1129,84 @@ export const cities: CityData[] = [
       Les haies de thuyas et de leylandii des années 1990-2000 arrivent en fin de vie dans de nombreuses propriétés. Nous proposons leur remplacement par des haies mixtes persistantes et caduques, plus esthétiques, écologiques et résistantes aux maladies. La transition peut se faire progressivement.
     `,
     neighborhoods: ['Bourg', 'Juigné-Bené', 'La Foresterie', 'Les Music\'Halles', 'La Mayenne'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          L'argile lourde qui constitue l'essentiel du sous-sol de Montreuil-Juigné impose ses contraintes dès la phase de conception. Ce sol retient l'eau en hiver au point de saturer les horizons superficiels, puis se rétracte en été en formant des fissures qui peuvent endommager les bordures et les terrasses mal fondées. Toute création paysagère sérieuse commence ici par un travail de structure : drainage, apport de sable grossier, incorporation de compost pour alléger la terre et créer un milieu racinaire viable.
+
+          Les lotissements récents de La Foresterie et des Music'Halles livrent des terrains nus, souvent compactés par les engins de chantier. Le décompactage mécanique en profondeur, suivi d'un apport de terre végétale amendée, conditionne la réussite des plantations et de l'engazonnement. Sur ces parcelles de 300 à 600 m², les aménagements combinent terrasse, pelouse, massifs structurants et clôtures végétales — le tout conçu pour fonctionner sur un sol qui travaille beaucoup selon les saisons.
+
+          Du côté de Juigné-Bené, les jardins plus anciens présentent d'autres enjeux. Les haies de thuyas plantées dans les années 1990 arrivent en fin de cycle, dégarnies à la base et sensibles au bupreste. Leur remplacement par des haies mixtes — photinia, éléagnus, charme, viorne — apporte diversité visuelle et meilleure résilience. Les massifs vieillissants gagnent à être restructurés avec des vivaces et des graminées adaptées à l'argile : hémérocalles, rudbeckias, miscanthus.
+
+          La proximité de la Mayenne influence les parcelles riveraines. L'humidité ambiante favorise les mousses sur les terrasses et les maladies fongiques sur certains végétaux. Le choix d'essences tolérantes à l'humidité — cornouillers, saules ornementaux, hostas — et de matériaux résistants au milieu humide oriente les créations en bordure de rivière.
+        `,
+        metaDescription: 'Aménagement paysager à Montreuil-Juigné : création de jardins sur sol argileux, terrasses adaptées au retrait-gonflement, plantations en bord de Mayenne.',
+        highlights: [
+          'Création de jardins sur sol argileux avec drainage adapté',
+          'Aménagement complet de parcelles neuves en lotissement',
+          'Remplacement de haies de thuyas par des haies mixtes',
+          'Plantations résistantes à l\'humidité en bord de Mayenne',
+          'Restructuration de massifs avec vivaces adaptées à l\'argile',
+        ],
+      },
+      elagage: {
+        content: `
+          Érables sycomores, tilleuls, chênes pédonculés et frênes composent l'essentiel du patrimoine arboré de Montreuil-Juigné. Dans le bourg ancien et à Juigné-Bené, ces arbres plantés lors des premiers lotissements ont atteint des dimensions qui posent des problèmes de cohabitation : branches en surplomb des toitures, racines soulevant les trottoirs, ombrage excessif sur les parcelles voisines.
+
+          Sur sol argileux, l'enracinement des arbres reste relativement superficiel. Les racines s'étalent en surface plutôt que de plonger en profondeur, ce qui rend les sujets plus sensibles au vent et aux épisodes de sécheresse estivale. La taille douce, qui allège progressivement le houppier sans coupes sévères, limite la prise au vent tout en préservant l'équilibre physiologique de l'arbre. Les coupes drastiques provoquent des réactions de rejets vigoureux qui aggravent le problème à moyen terme.
+
+          Les peupliers en bord de Mayenne constituent un cas particulier. Espèce à croissance rapide et bois tendre, le peuplier devient fragile après trente à quarante ans : charpentières cassantes, cavités internes, champignons lignivores. La taille de sécurisation de ces sujets — suppression du bois mort, réduction des branches à risque — s'effectue de préférence en fin d'été, quand le bois est le plus sec et les interventions en bord de rivière les plus praticables.
+
+          Les fruitiers sont courants dans les jardins de la commune : pommiers, poiriers, cerisiers, pruniers. La taille de fructification, distincte de l'élagage d'entretien, vise à aérer le centre de l'arbre et à favoriser les rameaux porteurs de fruits. Elle s'effectue entre janvier et mars, avant le débourrement.
+        `,
+        metaDescription: 'Élagage à Montreuil-Juigné : taille douce sur sol argileux, sécurisation des peupliers en bord de Mayenne, entretien des fruitiers et feuillus matures.',
+        highlights: [
+          'Taille douce des feuillus matures sur sol argileux',
+          'Sécurisation des peupliers vieillissants en bord de Mayenne',
+          'Taille de fructification des pommiers, poiriers et cerisiers',
+          'Réduction de houppier sur arbres en surplomb de toiture',
+          'Suppression de bois mort et branches à risque',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          Le cycle des saisons pèse lourd sur les jardins de Montreuil-Juigné. L'argile, gorgée d'eau de novembre à mars, interdit pratiquement tout passage d'engin sans risque de compactage. Les tontes reprennent tard — rarement avant fin mars — et s'interrompent tôt à l'automne. Entre les deux, la croissance vigoureuse du gazon sur ce sol riche impose un rythme soutenu, parfois hebdomadaire en mai-juin.
+
+          La scarification est un geste essentiel sur les pelouses argileuses de la commune. Le feutrage s'accumule plus vite que sur des sols drainants, et la mousse colonise rapidement les zones ombragées, surtout à proximité de la Mayenne où l'humidité ambiante reste élevée. Deux passages de scarificateur par an — mars et septembre — combinés à un terreautage sableux, améliorent la perméabilité de surface et limitent l'asphyxie racinaire.
+
+          Les haies représentent un poste d'entretien conséquent. Thuyas, lauriers-cerises et cyprès de Leyland, très plantés dans les lotissements des années 1990-2000, exigent deux à trois tailles annuelles pour rester contenus. Les haies mixtes qui les remplacent progressivement demandent un travail plus nuancé : chaque essence a son rythme de croissance et sa période de taille optimale. Le charme se taille en août, le photinia après la floraison, l'éléagnus en fin de printemps.
+
+          Le désherbage des massifs et allées reste un entretien récurrent. Sur l'argile, les adventices développent des systèmes racinaires tenaces, difficiles à arracher complètement. Le paillage épais — 8 à 10 centimètres de broyat ou d'écorces — freine efficacement la repousse tout en régulant l'humidité du sol, un double bénéfice appréciable sur ce type de terrain.
+        `,
+        metaDescription: 'Entretien de jardin à Montreuil-Juigné : tonte et scarification sur sol argileux compact, taille de haies mixtes, paillage organique et désherbage adapté.',
+        highlights: [
+          'Tonte et aération sur sol argileux compact',
+          'Scarification et terreautage sableux anti-mousse',
+          'Taille différenciée de haies mixtes et de conifères',
+          'Paillage épais pour contrôle des adventices sur argile',
+          'Calendrier d\'entretien adapté au cycle hydrique du sol',
+        ],
+      },
+      abattage: {
+        content: `
+          Les parcelles mitoyennes des lotissements de Montreuil-Juigné laissent rarement la place pour un abattage en pied. Le démontage par sections — tronçonnage progressif depuis le sommet, descente des billots au cordage — reste la technique standard dans les quartiers résidentiels du Bourg, de La Foresterie et des Music'Halles. Cette approche demande plus de temps qu'un abattage direct mais préserve les clôtures, les toitures et les jardins mitoyens.
+
+          Les conifères disproportionnés arrivent en tête des demandes. Épicéas de huit à douze mètres, thuyas devenus des arbres, pins sylvestres au houppier déséquilibré : plantés comme éléments de haie ou d'ornement, ces sujets dépassent l'échelle du jardin après vingt-cinq à trente ans. Leur système racinaire superficiel sur l'argile de Montreuil-Juigné les rend d'autant plus vulnérables aux coups de vent.
+
+          Le dessouchage sur sol argileux présente des particularités. La rogneuse travaille plus lentement dans l'argile compacte que dans un sol sableux ou limoneux. En période humide, le terrain porte mal et l'accès de la machine peut nécessiter la pose de plaques de roulage pour éviter l'ornièrage. Le trou laissé par la souche est comblé avec un mélange de terre végétale et de sable pour améliorer le drainage local et préparer une éventuelle replantation.
+
+          En bord de Mayenne, l'abattage de peupliers ou de saules en déclin suit un protocole spécifique. La proximité de la rivière impose de retenir chaque section pour éviter toute chute dans l'eau. Le bois est évacué ou débité sur place selon l'accessibilité. Les rémanents sont broyés et peuvent servir de paillage dans les massifs du jardin.
+        `,
+        metaDescription: 'Abattage d\'arbres à Montreuil-Juigné : démontage par sections en zone résidentielle, dessouchage à la rogneuse sur argile, peupliers en bord de Mayenne.',
+        highlights: [
+          'Démontage par sections en parcelles mitoyennes',
+          'Abattage de conifères disproportionnés en lotissement',
+          'Dessouchage à la rogneuse sur sol argileux compact',
+          'Abattage sécurisé de peupliers en bord de Mayenne',
+          'Broyage des rémanents et valorisation en paillage',
+        ],
+      },
+    },
   },
   {
     slug: 'saint-jean-de-linieres',
@@ -994,6 +1227,84 @@ export const cities: CityData[] = [
       Les grandes surfaces permettent des aménagements ambitieux : allées de promenade, parcs arborés, prairies fleuries, vergers de variétés anciennes et potagers généreux. Les arbres de grande taille — chênes pédonculés, hêtres, châtaigniers — sont omniprésents et font partie du patrimoine végétal de la commune.
     `,
     neighborhoods: ['Bourg', 'Les Linières', 'La Motte', 'Le Bocage'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Le sol limono-argileux de Saint-Jean-de-Linières, reposant sur un substrat de grès et de schiste, offre une couche cultivable profonde et fertile. La plupart des végétaux d'ornement et des fruitiers s'y développent sans difficulté. En revanche, les bas de parcelle et les cuvettes retiennent l'eau en excès — un drainage correctif s'impose avant toute plantation sur ces zones.
+
+          Les propriétés dépassent souvent 1 500 m², parfois largement. Ces surfaces autorisent des aménagements que l'on rencontre rarement dans l'agglomération angevine : allées de promenade sous couvert arboré, prairies fleuries en lisière de bocage, vergers d'anciennes variétés angevines, potagers ceinturés de haies basses. Le paysage bocager qui entoure la commune — haies vives, chemins creux, chênes têtards — fournit un vocabulaire végétal cohérent pour les créations.
+
+          Les anciens corps de ferme reconvertis en habitations représentent une part notable du bâti. Le réaménagement de leurs abords passe par un reprofilage du terrain, la création d'une cour paysagée en harmonie avec la pierre locale et l'intégration de haies mixtes — charmes, érables champêtres, noisetiers, aubépines — qui prolongent visuellement le bocage environnant.
+
+          Les terrains situés vers La Motte et Les Linières présentent parfois des affleurements de grès. Ces éléments minéraux, loin d'être un obstacle, servent de socle pour des rocailles sèches ou des murets bas qui structurent les espaces sans créer de rupture avec le paysage rural.
+        `,
+        metaDescription: 'Paysagiste à Saint-Jean-de-Linières — aménagement de grands jardins sur sol limono-argileux, haies bocagères et mise en valeur des corps de ferme rénovés.',
+        highlights: [
+          'Aménagement de grandes parcelles rurales (1 500 m² et plus)',
+          'Haies mixtes bocagères : charmes, érables champêtres, aubépines',
+          'Réaménagement paysager d\'abords de corps de ferme rénovés',
+          'Drainage correctif en bas de parcelle sur sol limono-argileux',
+          'Rocailles et murets sur affleurements de grès locaux',
+        ],
+      },
+      elagage: {
+        content: `
+          Chênes pédonculés, hêtres, châtaigniers — le patrimoine arboré de Saint-Jean-de-Linières reflète l'histoire de son bocage. Ces arbres de grande taille, souvent implantés en limites de propriétés ou en alignement le long des chemins creux, ont grandi sans taille de formation. Leurs houppiers, développés librement, atteignent des envergures qui empiètent sur les toitures, les lignes aériennes ou les parcelles voisines.
+
+          Le sol limono-argileux profond favorise un enracinement puissant mais concentré. En période de saturation hivernale, la cohésion du sol diminue et les sujets les plus exposés au vent d'ouest présentent un risque de basculement accru. La taille douce — allègement progressif de la couronne, suppression du bois mort, éclaircissage des branches croisées — réduit la prise au vent sans altérer la silhouette de l'arbre.
+
+          Les chênes têtards, vestiges de l'exploitation traditionnelle du bocage, sont encore présents sur certaines parcelles. Leur taille d'entretien, dite de rétrogradage, suit un cycle de cinq à huit ans. Le maintien de ces arbres relève aujourd'hui de la conservation du patrimoine paysager autant que de la gestion arboricole.
+
+          Les fruitiers — pommiers, poiriers, cerisiers — occupent une place importante dans les jardins et vergers de la commune. La taille de fructification s'effectue en hiver pour les arbres à pépins, après récolte pour les arbres à noyaux. Un fruitier non taillé pendant plusieurs années produit en hauteur, hors de portée, et s'expose aux chancres et au gui qui colonisent les branches mal ventilées.
+        `,
+        metaDescription: 'Élagage à Saint-Jean-de-Linières : taille douce sur chênes, hêtres et châtaigniers matures en bocage, entretien des chênes têtards, taille de fructification.',
+        highlights: [
+          'Taille douce de chênes, hêtres et châtaigniers en bocage',
+          'Entretien et rétrogradage des chênes têtards patrimoniaux',
+          'Taille de fructification sur pommiers, poiriers et cerisiers',
+          'Éclaircissage de houppiers développés sans taille de formation',
+          'Allègement de couronne sur sujets exposés au vent d\'ouest',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          Dès les premières pluies d'automne, le sol limono-argileux se gorge d'eau et devient collant. La tonte s'interrompt plus tôt qu'en milieu urbain, et reprend plus tard au printemps — le sol reste gras jusqu'en avril certaines années. Ce décalage saisonnier conditionne l'ensemble du calendrier d'entretien à Saint-Jean-de-Linières.
+
+          En été, le même sol se rétracte et se fissure en surface. L'aération mécanique au printemps, suivie d'un terreautage au compost, améliore la structure et la capacité de rétention sans compacter davantage. Les fétuques élevées, plus tolérantes à la sécheresse que le ray-grass fin, donnent de meilleurs résultats sur ce type de terrain. La hauteur de coupe maintenue à 7-8 cm en période sèche protège le système racinaire.
+
+          Les haies bocagères — charmes, aubépines, noisetiers, prunelliers — demandent une taille annuelle en fin d'hiver pour conserver leur densité sans perturber la nidification. Les haies ornementales des lotissements plus récents (photinias, lauriers-cerises, eleagnus) suivent un rythme différent : deux à trois passages entre mai et septembre. La cohabitation de ces deux types de haies sur une même commune est caractéristique du tissu rural en cours d'urbanisation.
+
+          Les grandes pelouses qui accompagnent les propriétés rurales représentent un volume de tonte conséquent. Le ramassage des feuilles en automne, sous les chênes et les hêtres, s'étale sur plusieurs semaines. Le broyage des feuilles sur place à la tondeuse constitue une alternative lorsque le volume reste raisonnable — les feuilles broyées se décomposent et nourrissent le sol sans former le tapis asphyxiant des feuilles entières.
+        `,
+        metaDescription: 'Entretien de jardin à Saint-Jean-de-Linières : tonte sur sol limono-argileux, taille de haies bocagères et ornementales, aération et terreautage saisonnier.',
+        highlights: [
+          'Tonte et aération sur sol limono-argileux compact',
+          'Taille de haies bocagères (charmes, aubépines, noisetiers)',
+          'Entretien de haies ornementales en lotissement',
+          'Terreautage au compost pour améliorer la structure du sol',
+          'Ramassage et broyage de feuilles sous chênes et hêtres',
+        ],
+      },
+      abattage: {
+        content: `
+          Les parcelles du secteur du Bocage et de La Motte, souvent bordées de haies arborées et de vieux chênes en limite de propriété, concentrent la majorité des besoins d'abattage sur la commune. Ces arbres, intégrés au maillage bocager, n'ont pas été plantés dans une logique de jardin — ils sont là depuis plusieurs générations, et leur envergure dépasse parfois ce que la cohabitation avec l'habitat permet.
+
+          Les chênes pédonculés et les châtaigniers constituent les essences les plus fréquentes. Les premiers développent un bois dense et résistant mais des charpentières lourdes susceptibles de rompre sous le poids du givre ou lors des coups de vent. Les châtaigniers, sensibles à la maladie de l'encre et au chancre, peuvent dépérir progressivement — un arbre apparemment sain en feuillage peut cacher un tronc affaibli par la pourriture interne.
+
+          Le démontage par sections s'impose dès que la proximité d'un bâtiment, d'une clôture ou d'une haie mitoyenne interdit l'abattage directionnel. L'élagueur-grimpeur descend chaque tronçon au cordage, ce qui permet d'intervenir même sur les parcelles sans accès pour un engin de levage.
+
+          Le dessouchage en sol limono-argileux profond se fait à la rogneuse de souche. L'argile compacte demande un travail plus lent qu'en sol sableux, mais les racines n'opposent pas la résistance que l'on rencontre sur substrat rocheux. La fosse est comblée de terre végétale amendée, prête à recevoir une replantation ou un engazonnement.
+        `,
+        metaDescription: 'Abattage d\'arbres à Saint-Jean-de-Linières : démontage de chênes et châtaigniers en bocage, dessouchage en sol argileux profond, évacuation des rémanents.',
+        highlights: [
+          'Abattage de chênes et châtaigniers matures en limite bocagère',
+          'Démontage par sections en parcelles sans accès engin',
+          'Dessouchage à la rogneuse sur sol limono-argileux profond',
+          'Diagnostic de châtaigniers atteints de maladie de l\'encre',
+          'Évacuation et valorisation des rémanents en broyat',
+        ],
+      },
+    },
   },
   {
     slug: 'briollay',
@@ -1014,6 +1325,84 @@ export const cities: CityData[] = [
       Les arbres de bord de rivière — saules blancs, aulnes glutineux, peupliers noirs et frênes — bordent la Sarthe et le Loir et constituent un patrimoine végétal remarquable. Ces essences à croissance rapide nécessitent un suivi régulier pour préserver leur santé et assurer la sécurité des riverains.
     `,
     neighborhoods: ['Bourg', 'Vaux', 'La Basse-Rivière', 'Le Port', 'Les Grandes-Rivières'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Les limons déposés par la Sarthe et le Loir forment à Briollay un sol alluvial profond, fertile, à forte capacité de rétention. Cette richesse pédologique autorise une palette végétale large : arbustes à fleurs, vivaces gourmandes, fruitiers de plein vent. Mais la nappe phréatique, souvent haute entre novembre et mars, interdit les plantations à enracinement profond dans les secteurs les plus bas — vers La Basse-Rivière et Le Port notamment.
+
+          Les propriétés du bourg et de Vaux présentent des jardins de taille moyenne à généreuse, souvent clos de murs anciens ou bordés par des haies champêtres. Les demeures bourgeoises qui jalonnent les rives conservent parfois des structures paysagères héritées — allées de tilleuls, massifs de buis, roseraies — que tout nouvel aménagement doit composer avec ou remplacer en respectant l'échelle du lieu.
+
+          La proximité des rivières crée un microclimat humide et tempéré. Les gelées tardives sont rares, la chaleur estivale atténuée par l'évaporation. Ces conditions conviennent aux hortensias, astilbes, hostas et fougères, qui trouvent ici l'humidité atmosphérique nécessaire sans arrosage excessif. En terrain inondable, les aménagements intègrent des matériaux imputrescibles — bois classe 4, pierre naturelle, gravier stabilisé — et des végétaux de zone humide capables de supporter une submersion temporaire.
+
+          Le secteur des Grandes-Rivières, plus ouvert, offre des parcelles où des prairies fleuries et des vergers peuvent s'installer. Le sol limoneux, bien pourvu en matière organique, porte sans difficulté des fruitiers pommiers, poiriers et cognassiers sur porte-greffes adaptés à l'humidité.
+        `,
+        metaDescription: 'Paysagiste à Briollay : création de jardins sur sols alluviaux fertiles du confluent Sarthe-Loir, plantations adaptées aux zones humides et inondables.',
+        highlights: [
+          'Aménagement sur sol alluvial profond et fertile',
+          'Plantations adaptées aux remontées de nappe hivernales',
+          'Jardins d\'eau et végétaux de zone humide en bord de rivière',
+          'Matériaux imputrescibles pour parcelles en zone inondable',
+          'Prairies fleuries et vergers sur limons du confluent',
+        ],
+      },
+      elagage: {
+        content: `
+          Saules blancs, aulnes glutineux, peupliers noirs et frênes composent l'essentiel du patrimoine arboré de Briollay. Ces essences de ripisylve, installées le long de la Sarthe et du Loir, poussent vite dans le sol alluvial humide. En une vingtaine d'années, un peuplier atteint 20 mètres et un saule blanc développe une ramure étalée qui couvre facilement 15 mètres de diamètre. Sans intervention, ces houppiers finissent par déborder sur les toitures, les clôtures ou les voies d'accès.
+
+          La taille douce reste l'approche la plus respectueuse de ces essences à bois tendre. Suppression du bois mort, éclaircissage de la couronne, relèvement des branches basses : chaque intervention préserve la silhouette naturelle de l'arbre tout en réduisant la prise au vent. Les saules, dont le bois casse facilement en tempête, bénéficient d'un allègement régulier qui limite les chutes de branches sur les berges et les embarcadères.
+
+          Les frênes du secteur méritent une attention particulière. La chalarose — maladie fongique causée par Hymenoscyphus fraxineus — progresse en vallée de la Sarthe et provoque un dessèchement des rameaux puis des branches charpentières. Un diagnostic visuel régulier permet de repérer les premiers symptômes : nécroses en fuseau sur l'écorce, flétrissement du feuillage en pleine saison, mortalité des pousses apicales. La taille sanitaire des parties atteintes ralentit la progression.
+
+          Dans les jardins clos du bourg, tilleuls et marronniers d'alignement sont fréquents. Leur taille d'entretien — réduction de volume, suppression des rejets de souche, dégagement des façades — s'effectue en période de repos végétatif, entre novembre et février.
+        `,
+        metaDescription: 'Élagage à Briollay : taille douce des arbres de ripisylve le long de la Sarthe et du Loir, diagnostic de chalarose sur frênes et entretien des tilleuls.',
+        highlights: [
+          'Taille douce des saules et peupliers en bord de rivière',
+          'Diagnostic et taille sanitaire des frênes face à la chalarose',
+          'Éclaircissage des couronnes pour réduire la prise au vent',
+          'Entretien des tilleuls et marronniers du bourg historique',
+          'Intervention sur arbres à proximité de berges et cours d\'eau',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          Le sol limoneux de Briollay retient bien l'eau, parfois trop. Au printemps, les pelouses restent gorgées longtemps après les pluies, et la mousse s'installe dans les zones ombragées par les arbres de berge. Une scarification en mars-avril, suivie d'un regarnissage en ray-grass anglais et fétuque élevée, restaure la densité du gazon. En été, la rétention d'eau du limon joue en faveur de la pelouse : la tonte peut rester espacée sans jaunissement prématuré.
+
+          Les haies champêtres — charmes, noisetiers, troènes — sont caractéristiques des jardins de Briollay. Leur taille s'effectue deux fois par an : une première passe en juin après la pousse printanière, une seconde en septembre pour un aspect soigné avant l'hiver. Les haies de lauriers-palme, plus fréquentes dans les secteurs pavillonnaires, demandent une taille au sécateur plutôt qu'au taille-haie pour éviter le brunissement des feuilles coupées.
+
+          L'humidité ambiante favorise le développement de maladies cryptogamiques. Le marsonia sur les rosiers, le mildiou sur les vivaces tendres, la tavelure sur les pommiers : ces pathologies fongiques prospèrent dans l'air humide du confluent. L'entretien préventif passe par l'espacement des plantations pour favoriser la circulation d'air, le ramassage systématique des feuilles mortes à l'automne et l'élimination des rameaux atteints dès leur apparition.
+
+          Les massifs de plantes de terrain humide — hostas, astilbes, ligulaires, rodgersias — demandent peu d'entretien hormis un nettoyage des tiges sèches en fin d'hiver et une division des touffes tous les trois à quatre ans pour maintenir leur vigueur.
+        `,
+        metaDescription: 'Entretien de jardin à Briollay : scarification sur sol limoneux humide du confluent, taille de haies champêtres et lutte contre les maladies fongiques.',
+        highlights: [
+          'Scarification et regarnissage sur sol limoneux à forte rétention',
+          'Taille de haies champêtres (charmes, noisetiers, troènes)',
+          'Traitement préventif des maladies fongiques liées à l\'humidité',
+          'Entretien des massifs de vivaces de terrain humide',
+          'Gestion de la mousse en zones ombragées et humides',
+        ],
+      },
+      abattage: {
+        content: `
+          Les peupliers noirs alignés le long de la Sarthe et du Loir constituent le principal motif d'abattage à Briollay. Plantés en rangées serrées il y a plusieurs décennies, certains sujets présentent des cavités de cœur, des champignons lignivores à la base ou une inclinaison progressive vers la rivière. Leur chute, en cas de rupture, menace les berges aménagées, les pontons et les habitations riveraines.
+
+          Le démontage par sections est la technique standard sur ces chantiers. L'accès aux berges est souvent étroit — chemins de halage, servitudes de passage — et le voisinage immédiat de l'eau interdit toute chute libre de tronçons volumineux. L'élagueur-grimpeur procède de la cime vers la base, chaque section descendue au cordage et déposée en retrait de la berge. Sur les sujets penchés au-dessus du cours d'eau, un haubanage temporaire sécurise l'arbre pendant le démontage.
+
+          Le dessouchage sur sol alluvial ne pose pas les mêmes difficultés que sur roche. La rogneuse de souche travaille efficacement dans le limon meuble, et les racines se fragmentent sans résistance excessive. En revanche, la proximité de la nappe phréatique peut rendre le terrain instable sous le poids du matériel : les interventions en période de basses eaux, entre juin et septembre, limitent ce risque.
+
+          Les frênes atteints de chalarose à un stade avancé — houppier défolié à plus de 50 %, nécroses de collet, champignons à la base — nécessitent un abattage sanitaire. Ces sujets fragilisés cassent de façon imprévisible, parfois par temps calme, et leur maintien à proximité des zones fréquentées présente un risque réel.
+        `,
+        metaDescription: 'Abattage d\'arbres à Briollay : démontage par sections des peupliers en bord de Sarthe et du Loir, dessouchage sur sol alluvial, retrait sanitaire de frênes.',
+        highlights: [
+          'Démontage par sections des peupliers en bord de rivière',
+          'Dessouchage à la rogneuse sur sol alluvial meuble',
+          'Abattage sanitaire des frênes touchés par la chalarose',
+          'Haubanage temporaire sur arbres penchés au-dessus de l\'eau',
+          'Intervention en période de basses eaux pour sol stable',
+        ],
+      },
+    },
   },
   {
     slug: 'savennieres',
@@ -1034,6 +1423,84 @@ export const cities: CityData[] = [
       L'entretien suit un calendrier adapté au terroir : taille en fin d'hiver, désherbage mécanique sans produit chimique dans le respect de l'environnement viticole, et arrosages limités grâce au choix de plantes adaptées à la sécheresse estivale des coteaux.
     `,
     neighborhoods: ['Bourg', 'Épiré', 'La Roche-aux-Moines', 'La Coulée-de-Serrant', 'Les Coteaux'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Le schiste pourpré affleure à quelques centimètres sous la surface des coteaux de Savennières. Ce substrat maigre, caillouteux et naturellement drainé ne retient ni l'eau stagnante ni les excès d'humidité — un avantage pour l'enracinement des végétaux, à condition de sélectionner des espèces tolérantes à la sécheresse estivale. Le sol impose un cadre : travailler avec lui, pas contre lui.
+
+          L'exposition sud-est face à la Loire crée un microclimat singulier dans le Maine-et-Loire. La réverbération du fleuve et l'accumulation de chaleur dans la roche permettent la culture d'espèces habituellement cantonnées au pourtour méditerranéen : lavandes, romarins, santolines, cistes, figuiers. La palette végétale envisageable ici dépasse largement celle des communes voisines sur sols profonds et argileux.
+
+          Les propriétés de caractère — maisons de vignerons en tuffeau, corps de ferme rénovés, manoirs sur les hauteurs — appellent des aménagements cohérents avec le paysage viticole environnant. Murets en schiste local, escaliers de pierre sèche, graves de Loire pour les cheminements : les matériaux du terroir s'intègrent sans artifice dans ces jardins pentus. Le travail en terrasses successives structure l'espace tout en canalisant le ruissellement sur les pentes.
+
+          Du côté d'Épiré, les terrains plus plats et les sols légèrement plus profonds accueillent des compositions différentes — massifs de rosiers, haies champêtres, fruitiers en espalier. Sur les coteaux de la Roche-aux-Moines, la rocaille et les plantations de type garrigue s'imposent naturellement, prolongeant l'atmosphère viticole jusque dans les jardins privés.
+        `,
+        metaDescription: 'Paysagiste à Savennières — aménagement de jardins sur sols schisteux drainants, terrasses en pierre locale et plantations méditerranéennes sur coteaux de Loire.',
+        highlights: [
+          'Aménagement sur sols schisteux drainants des coteaux viticoles',
+          'Terrasses et murets en schiste local et pierre sèche',
+          'Plantations méditerranéennes adaptées au microclimat ligérien',
+          'Jardins de propriétés en tuffeau intégrés au paysage viticole',
+          'Rocaille et garrigue sur les pentes exposées sud-est',
+        ],
+      },
+      elagage: {
+        content: `
+          Chênes pubescents, pins maritimes, tilleuls et figuiers centenaires composent le patrimoine arboré de Savennières. Ces essences, façonnées par le microclimat ligérien et le sol schisteux, développent des ports souvent irréguliers — troncs noueux, houppiers asymétriques orientés par les vents dominants d'ouest. La taille respecte cette morphologie plutôt que de chercher à l'uniformiser.
+
+          Sur les coteaux, les arbres s'enracinent dans les fissures du schiste et de la rhyolite. L'ancrage est solide en profondeur mais le volume de terre exploitable reste limité. Cette contrainte produit des systèmes racinaires concentrés qui rendent certains sujets sensibles aux épisodes de sécheresse prolongée. Un arbre stressé hydriquement développe du bois mort dans le houppier — signal qui appelle une taille sanitaire ciblée avant que les branches ne deviennent dangereuses.
+
+          Les propriétés en tuffeau posent un problème récurrent : branches frottant sur les toitures, gourmands envahissant les façades, racines menaçant les murets de soutènement. La taille douce permet de dégager les structures bâties sans déséquilibrer la charpente de l'arbre. L'intervention se fait en grimpe — les pentes et l'étroitesse des chemins bordés de murets rendent l'accès en nacelle souvent impossible sur cette commune.
+
+          Les fruitiers — figuiers, pruniers, cerisiers — abondent dans les jardins clos du bourg et d'Épiré. La taille de fructification s'effectue en fin d'hiver, hors gel, pour favoriser la mise à fruit sans affaiblir le sujet. Sur les figuiers, une taille légère suffit : supprimer le bois mort et les rameaux qui se croisent à l'intérieur de la ramure.
+        `,
+        metaDescription: 'Élagage à Savennières : taille douce sur coteaux schisteux, grimpe près des propriétés en tuffeau, taille sanitaire et de fructification des fruitiers.',
+        highlights: [
+          'Taille douce respectant le port naturel des arbres de coteau',
+          'Intervention en grimpe sur parcelles pentues et enclavées',
+          'Dégagement des façades en tuffeau et des toitures en ardoise',
+          'Taille sanitaire sur arbres stressés par la sécheresse estivale',
+          'Taille de fructification des figuiers, pruniers et cerisiers',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          La sécheresse estivale frappe tôt sur les coteaux schisteux. Dès juin, le sol maigre et drainant perd toute réserve hydrique, et les pelouses jaunissent si elles n'ont pas été préparées. L'alternative au gazon classique reste la prairie sèche fleurie — achillées, fétuques, trèfles — qui tolère les périodes sans eau et reverdit naturellement aux premières pluies d'automne.
+
+          Sur les terrains plus plats d'Épiré, le sol légèrement plus profond autorise des pelouses conventionnelles, mais l'entretien diffère des communes sur argile. La tonte peut être espacée : la croissance ralentit vite en été sur sol drainant. Le mulching restitue l'azote et protège les racines de l'évaporation. L'aération mécanique, moins critique ici que sur sol compact, reste utile au printemps pour décompacter le piétinement hivernal.
+
+          Le désherbage en contexte viticole exclut tout recours aux produits phytosanitaires. Binage manuel, paillage minéral — graviers de schiste, pouzzolane — et couvre-sols compétitifs (thym serpolet, sédum) constituent les leviers principaux. Les murets en pierre sèche, omniprésents à Savennières, abritent une faune auxiliaire — lézards, carabes — qu'il convient de préserver lors des interventions.
+
+          Les haies reflètent le caractère viticole de la commune : lauriers-tins, fusains et buis taillés dans les jardins clos du bourg, haies champêtres libres en périphérie. Les rosiers grimpants et les glycines qui habillent les façades en tuffeau demandent un palissage et une taille annuelle pour contenir leur développement sans endommager la pierre tendre.
+        `,
+        metaDescription: 'Entretien de jardin à Savennières : tonte sur sols schisteux drainants, désherbage sans produit chimique en contexte viticole, taille de haies et rosiers.',
+        highlights: [
+          'Tonte et prairie sèche adaptées aux sols schisteux drainants',
+          'Désherbage mécanique sans produit chimique en zone viticole',
+          'Paillage minéral en schiste et pouzzolane sur massifs secs',
+          'Taille de haies persistantes et caduques selon calendrier',
+          'Palissage et taille des grimpantes sur façades en tuffeau',
+        ],
+      },
+      abattage: {
+        content: `
+          Les coteaux pentus de la rive droite de la Loire compliquent l'accès aux arbres à abattre sur une partie de Savennières. Chemins étroits bordés de murets en schiste, parcelles en dénivelé, proximité des vignes et des bâtis en tuffeau : l'abattage direct par chute orientée est rarement envisageable. Le démontage par sections, avec descente de chaque tronçon au cordage, reste la méthode standard sur ce type de terrain.
+
+          Les frênes constituent un motif d'abattage récurrent dans le secteur ligérien. La chalarose, maladie fongique qui provoque le dessèchement progressif du houppier, touche les frênes communs présents en bordure de Loire et dans les haies bocagères. Quand le dépérissement dépasse la moitié du houppier, la taille sanitaire ne suffit plus et l'abattage devient la seule option réaliste.
+
+          Le dessouchage sur substrat schisteux est plus lent que sur sol meuble. La rogneuse bute sur les blocs de roche et les affleurements de rhyolite, ce qui allonge le temps de travail et exige un matériel renforcé. Le broyat de souche, mélangé à du compost, sert à reconstituer une poche de terre végétale dans le trou laissé par l'extraction — condition nécessaire à toute replantation sur ces sols maigres.
+
+          Les figuiers et les pins qui ont poussé sans formation dans les terrains en friche atteignent parfois des dimensions problématiques. Leur suppression libère de la lumière et de l'espace racinaire pour les plantations voisines. Sur les parcelles viticoles reconverties en jardins d'agrément, le débroussaillage et l'abattage sélectif précèdent tout projet de réaménagement paysager.
+        `,
+        metaDescription: 'Abattage d\'arbres à Savennières : démontage par sections sur coteaux schisteux, dessouchage sur roche, abattage de frênes chalarosés en bord de Loire.',
+        highlights: [
+          'Démontage par sections sur coteaux pentus et enclavés',
+          'Dessouchage à la rogneuse sur substrat schisteux et rhyolite',
+          'Abattage de frênes atteints de chalarose en zone ligérienne',
+          'Débroussaillage et abattage sélectif sur parcelles en friche',
+          'Évacuation et broyage des rémanents pour valorisation sur place',
+        ],
+      },
+    },
   },
   {
     slug: 'saint-sylvain-anjou',
@@ -1054,6 +1521,84 @@ export const cities: CityData[] = [
       La commune étant en zone périurbaine, de nombreux jardins combinent agrément et potager familial. Les carrés potagers surélevés, faciles à entretenir et esthétiques, sont associés à des rotations de cultures et des variétés adaptées au terroir angevin pour des récoltes généreuses du printemps à l'automne.
     `,
     neighborhoods: ['Bourg', 'Le Plessis-Grammoire', 'La Papillaie', 'Les Music\'Halles', 'Le Grand-Coudray'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Le sol limono-argileux qui caractérise Saint-Sylvain-d'Anjou retient bien l'eau et les éléments nutritifs, ce qui en fait un support de plantation polyvalent. Rosiers, hortensias, érables du Japon, graminées ornementales — la palette envisageable est large, à condition de travailler le drainage en amont sur les parcelles les plus basses, là où l'eau stagne en hiver.
+
+          Les lotissements développés à partir des années 1970 ont produit des jardins de 400 à 900 m², une surface suffisante pour structurer des espaces distincts mais trop limitée pour improviser. Terrasse, massifs, circulation, coin ombragé : chaque zone doit trouver sa place dans un plan cohérent. Sur les parcelles plus récentes, le terrain livré nu demande un apport de terre végétale et un engazonnement complet avant toute plantation.
+
+          Beaucoup de jardins plantés dans les années 1980-1990 arrivent à un stade de saturation. Les conifères ont pris des proportions incompatibles avec la parcelle, les massifs se sont appauvris, les haies monotones de thuyas ou de lauriers vieillissent mal. La restructuration de ces espaces passe par un tri sélectif — conserver les sujets structurants, supprimer ce qui encombre — et une replantation en essences mieux proportionnées au terrain disponible.
+
+          La proximité de la route de Paris et des axes passants crée un besoin d'intimité dans certains quartiers. Les haies mixtes associant persistants et caducs — photinias, charmilles, viornes, fusains — offrent un écran végétal dense tout en évitant la monotonie des haies monospécifiques. Le choix d'essences à croissance modérée limite la fréquence de taille.
+        `,
+        metaDescription: 'Aménagement paysager à Saint-Sylvain-d\'Anjou — sols limono-argileux, restructuration de jardins pavillonnaires et plantations adaptées au terrain local.',
+        highlights: [
+          'Plantations adaptées au sol limono-argileux fertile',
+          'Restructuration de jardins pavillonnaires des années 1980-1990',
+          'Création de jardins complets sur terrain nu en lotissement récent',
+          'Haies mixtes brise-vue pour parcelles en bordure d\'axes passants',
+          'Drainage préventif sur parcelles basses sujettes à la stagnation',
+        ],
+      },
+      elagage: {
+        content: `
+          Érables, tilleuls, chênes pédonculés et bouleaux forment l'essentiel du patrimoine arboré de Saint-Sylvain-d'Anjou. Dans les quartiers pavillonnaires les plus anciens, ces arbres dépassent souvent quinze mètres et leur ramure empiète sur les toitures, les lignes électriques ou les propriétés voisines.
+
+          La taille douce s'impose sur ces sujets matures. Le principe : alléger la couronne en supprimant le bois mort, les branches qui se croisent et les rejets, sans coupe drastique qui provoquerait une réaction de stress et une repousse anarchique. Sur le sol limono-argileux de la commune, l'enracinement des grands feuillus est profond et vigoureux — un élagage trop sévère romprait l'équilibre entre houppier et système racinaire.
+
+          Les conifères plantés en haie dans les lotissements des années 1970-1980 posent un problème récurrent. Thuyas, cyprès de Leyland et épicéas atteignent huit à douze mètres et créent un ombrage excessif sur les parcelles mitoyennes. Les résineux ne repartent pas sur le vieux bois, ce qui limite toute réduction significative. Quand la hauteur est incompatible avec le voisinage, l'abattage reste souvent la seule option réaliste.
+
+          Les fruitiers sont courants dans les jardins de la commune — pommiers, poiriers, cerisiers, noyers. Leur taille obéit à un calendrier précis : fructification en fin d'hiver pour les pommiers et poiriers, taille douce après récolte pour les cerisiers, qui supportent mal les coupes en période de dormance. Un fruitier mal taillé produit du bois au détriment des fruits.
+        `,
+        metaDescription: 'Élagage à Saint-Sylvain-d\'Anjou : taille douce des feuillus matures en quartier pavillonnaire, gestion des conifères, entretien des fruitiers.',
+        highlights: [
+          'Taille douce des érables, tilleuls et chênes en zone résidentielle',
+          'Gestion des conifères disproportionnés en lotissement',
+          'Taille de fructification des pommiers, poiriers et cerisiers',
+          'Suppression du bois mort et allègement de ramure',
+          'Intervention à proximité des toitures et lignes électriques',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          Sur sol limono-argileux, la pelouse pousse avec vigueur au printemps — tonte hebdomadaire d'avril à juin — puis ralentit en été quand la terre se fissure en surface. Cette alternance entre excès d'eau hivernal et sécheresse estivale caractérise l'entretien des jardins à Saint-Sylvain-d'Anjou. Une scarification au printemps, suivie d'un terreautage sableux, améliore la perméabilité et limite le compactage.
+
+          La mousse colonise facilement les zones ombragées par les grands arbres. Plutôt qu'un traitement chimique, l'aération mécanique combinée à un réensemencement en graminées d'ombre — fétuques fines, ray-grass anglais — donne des résultats durables. En plein soleil, les adventices à rhizomes — liseron, chiendent — profitent de la fertilité du sol et exigent un désherbage régulier, idéalement mécanique.
+
+          Les haies constituent un poste d'entretien important dans les quartiers pavillonnaires. Les thuyas et lauriers omniprésents demandent deux à trois tailles par an pour rester contenus. Les haies mixtes, de plus en plus courantes, nécessitent une taille plus nuancée — chaque essence a son propre rythme de croissance. Le photinia se taille après la pousse rouge printanière, le charme en été une fois la croissance stabilisée.
+
+          Le nettoyage automnal prend une dimension particulière dans les rues bordées de feuillus. Les feuilles mortes d'érables et de tilleuls forment un tapis épais qui, laissé en place sur la pelouse, étouffe le gazon et favorise les maladies cryptogamiques. Le ramassage régulier, suivi d'un compostage en tas ou en bac, transforme cette contrainte en ressource pour les massifs.
+        `,
+        metaDescription: 'Entretien de jardin à Saint-Sylvain-d\'Anjou : tonte sur sol limono-argileux, taille de haies en lotissement, désherbage mécanique et gestion de la mousse.',
+        highlights: [
+          'Tonte et aération sur sol limono-argileux compact',
+          'Traitement anti-mousse mécanique en zones ombragées',
+          'Taille de haies de thuyas, lauriers et haies mixtes',
+          'Scarification et terreautage saisonnier des pelouses',
+          'Désherbage mécanique sans produit chimique',
+        ],
+      },
+      abattage: {
+        content: `
+          Les parcelles mitoyennes des lotissements de Saint-Sylvain-d'Anjou laissent peu de marge pour un abattage direct. Quand un arbre doit être retiré — conifère devenu trop imposant, feuillu en déclin sanitaire, sujet déstabilisé par une tempête —, le démontage par sections reste la méthode standard. L'élagueur-grimpeur travaille de la cime vers la base, descendant chaque tronçon au cordage pour éviter tout impact sur les clôtures, abris et constructions voisines.
+
+          Les conifères représentent une part importante des demandes. Épicéas jaunissants, thuyas dépérissants, pins trop proches des fondations — ces arbres, plantés il y a quarante ou cinquante ans dans des jardins alors vides, sont devenus incompatibles avec l'espace disponible. Leur système racinaire superficiel les rend aussi plus vulnérables aux coups de vent que les feuillus bien ancrés dans le sol limono-argileux.
+
+          Le dessouchage à la rogneuse s'effectue sans difficulté majeure sur les limons de la commune. La machine réduit la souche en copeaux sur 30 à 40 centimètres de profondeur, suffisant pour permettre un réengazonnement ou une replantation. Sur les zones les plus argileuses, le trou de dessouchage peut retenir l'eau en hiver ; un comblement avec un mélange drainant — graviers, terre végétale, compost — évite cette stagnation.
+
+          Après tempête, les branches cassées suspendues dans le houppier constituent un risque sous-estimé. Elles peuvent tomber des semaines plus tard, sans signal. Un diagnostic visuel après chaque épisode venteux permet d'identifier ces branches pendantes et de les retirer avant qu'elles ne causent des dégâts sur les véhicules, les clôtures ou les passants.
+        `,
+        metaDescription: 'Abattage d\'arbres à Saint-Sylvain-d\'Anjou : démontage par sections en lotissement, retrait de conifères, dessouchage sur sol limono-argileux.',
+        highlights: [
+          'Démontage par sections en zone résidentielle mitoyenne',
+          'Retrait de conifères disproportionnés (épicéas, thuyas, pins)',
+          'Dessouchage à la rogneuse sur sol limono-argileux',
+          'Diagnostic post-tempête des branches suspendues',
+          'Broyage et évacuation des rémanents sur place',
+        ],
+      },
+    },
   },
   {
     slug: 'soulaines-sur-aubance',
@@ -1074,6 +1619,84 @@ export const cities: CityData[] = [
       Les anciennes fermes reconverties offrent un cadre idéal pour des projets paysagers ambitieux : cours, dépendances et vergers qui constituent la base d'aménagements de charme intégrés dans le paysage viticole et bocager de la commune.
     `,
     neighborhoods: ['Bourg', 'Saint-Melaine', 'L\'Aubance', 'Les Coteaux'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Les sols argilo-calcaires des coteaux de Soulaines-sur-Aubance se réchauffent vite au printemps et retiennent bien les éléments nutritifs, mais leur teneur en argile les rend collants et difficiles à travailler en période humide. Toute création de massif ou de terrasse passe par un travail du sol en conditions ressuyées, généralement entre avril et mai ou en septembre-octobre.
+
+          Le long de l'Aubance, les sols alluviaux changent de nature : plus légers, plus frais, ils conviennent aux espèces qui apprécient l'humidité sans excès — cornouillers, viornes, saules ornementaux, hostas et fougères. Cette transition entre coteau sec et fond de vallée humide offre une palette végétale étendue sur une même propriété, à condition de respecter les exigences de chaque zone.
+
+          Les propriétés de 1 000 à 5 000 m², fréquentes sur la commune, permettent de structurer l'espace en séquences : un jardin d'agrément proche de l'habitation, un verger ou un potager en fond de parcelle, des haies champêtres en limite. Le paysage viticole environnant — coteaux plantés, rangs de vignes, murets de pierre — constitue une référence visuelle que l'aménagement gagne à prolonger plutôt qu'à contredire.
+
+          Les anciennes fermes et longères reconverties présentent des cours fermées et des dépendances en tuffeau ou moellon local. L'aménagement de ces espaces minéraux — dallage en pierre naturelle, massifs surélevés, treilles et grimpantes sur les façades — s'intègre dans l'architecture existante sans la dénaturer.
+        `,
+        metaDescription: 'Paysagiste à Soulaines-sur-Aubance : aménagement sur sols argilo-calcaires, jardins de propriétés rurales et plantations adaptées au bocage de l\'Aubance.',
+        highlights: [
+          'Création de massifs sur sols argilo-calcaires de coteau',
+          'Plantations de fond de vallée adaptées à l\'humidité de l\'Aubance',
+          'Aménagement de cours de fermes et longères en pierre locale',
+          'Haies champêtres de bocage : charme, noisetier, aubépine',
+          'Structuration de grands jardins ruraux de 1 000 à 5 000 m²',
+        ],
+      },
+      elagage: {
+        content: `
+          Chênes sessiles, châtaigniers et frênes composent l'ossature arborée des propriétés de Soulaines-sur-Aubance. Sur les coteaux, ces arbres développent des houppiers larges favorisés par l'ensoleillement généreux des versants exposés au sud. Leurs branches basses, qui descendent parfois jusqu'à deux mètres du sol, nécessitent un relèvement de couronne pour dégager les accès et laisser passer la lumière.
+
+          Le long de l'Aubance, saules blancs et aulnes glutineux bordent la rivière. Ces essences à croissance rapide produisent un bois tendre et cassant. Les branches mortes s'accumulent dans la ramure et tombent sans prévenir lors des coups de vent. Un nettoyage régulier du bois mort — tous les trois à cinq ans — limite ce risque sans perturber le rôle de corridor écologique de la ripisylve.
+
+          Les vergers anciens de la commune — pommiers, poiriers, cerisiers, noyers — portent souvent des années de croissance non maîtrisée. La taille de restauration s'étale sur deux à trois saisons pour ne pas épuiser l'arbre : suppression du bois mort la première année, éclaircissage de la charpente la deuxième, mise en forme de fructification la troisième. Forcer le processus en une seule intervention affaiblit le sujet et favorise les rejets anarchiques.
+
+          Les parcelles viticoles reconverties en jardins d'agrément conservent parfois des arbres de haut jet en bordure — peupliers, chênes — dont les racines s'étendent dans l'ancien vignoble. La taille de ces sujets tient compte de l'équilibre entre houppier et système racinaire pour éviter un déséquilibre mécanique.
+        `,
+        metaDescription: 'Élagage à Soulaines-sur-Aubance : taille douce des chênes et châtaigniers sur coteaux, entretien de la ripisylve de l\'Aubance et restauration de vergers.',
+        highlights: [
+          'Taille douce des chênes et châtaigniers de coteau argilo-calcaire',
+          'Nettoyage du bois mort en ripisylve le long de l\'Aubance',
+          'Restauration progressive de vergers anciens sur plusieurs saisons',
+          'Relèvement de couronne sur arbres à branches basses',
+          'Diagnostic de sujets à risque en bordure de parcelles viticoles',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          L'automne dans la vallée de l'Aubance apporte une humidité persistante qui transforme les pelouses en terrain propice aux mousses et au feutrage racinaire. Les sols argilo-calcaires, gorgés d'eau d'octobre à mars, se compactent sous le poids des passages répétés. L'aération mécanique au printemps — carottage ou scarification — restaure la circulation d'air et d'eau dans les dix premiers centimètres du sol.
+
+          Les haies bocagères qui délimitent les propriétés sont composées de charme, noisetier, prunellier et aubépine. Leur taille s'effectue après la nidification, en septembre, pour respecter la faune qu'elles abritent. Une taille annuelle suffit à maintenir leur forme et leur densité. Les haies persistantes des lotissements plus récents — lauriers, photinias, eleagnus — demandent deux passages par an, en juin et en septembre.
+
+          Les massifs de vivaces adaptés au sol calcaire — iris germanica, pivoines, lavandes, sauges — demandent peu d'intervention en saison mais bénéficient d'un nettoyage complet en fin d'hiver : suppression des tiges sèches, division des touffes tous les trois à quatre ans, apport de compost. Les rosiers, sensibles au calcaire actif, nécessitent un amendement en terre de bruyère et en fer chélaté pour éviter la chlorose foliaire.
+
+          Le long de l'Aubance, les jardins en fond de vallée restent humides tard en saison. La tonte y est plus fréquente au printemps — parfois hebdomadaire en avril-mai — et les adventices à rhizomes profitent de la fraîcheur pour coloniser les massifs. Le désherbage mécanique régulier et le paillage épais limitent leur progression.
+        `,
+        metaDescription: 'Entretien de jardin à Soulaines-sur-Aubance : aération sur sol argilo-calcaire, taille de haies bocagères, gestion de l\'humidité en vallée de l\'Aubance.',
+        highlights: [
+          'Aération et scarification sur sol argilo-calcaire compacté',
+          'Taille de haies bocagères après nidification (charme, noisetier, aubépine)',
+          'Entretien de massifs calcicoles : iris, pivoines, lavandes',
+          'Correction de chlorose sur rosiers en sol calcaire actif',
+          'Désherbage mécanique et paillage en fond de vallée humide',
+        ],
+      },
+      abattage: {
+        content: `
+          Les cours fermées des anciennes fermes de Soulaines-sur-Aubance posent un problème récurrent : des arbres devenus trop volumineux dans des espaces enclavés entre bâtiments en pierre, dépendances et murets. L'abattage directionnel est rarement envisageable. Le démontage par sections, tronçon par tronçon depuis la cime, reste l'approche la plus courante pour maîtriser la chute de chaque pièce de bois.
+
+          Les châtaigniers de la commune sont sujets à la maladie de l'encre et au chancre de l'écorce, deux pathologies favorisées par les sols humides des zones basses. Un châtaignier atteint présente des branches mortes en cime, un écoulement noirâtre sur le tronc et un affaiblissement général qui le rend vulnérable aux coups de vent. L'abattage s'impose quand la progression de la maladie compromet la stabilité de l'arbre.
+
+          Les peupliers plantés le long de l'Aubance ou en limite de parcelle atteignent des hauteurs considérables. Leur bois cassant et leur enracinement superficiel en font des sujets à risque lors des tempêtes d'automne et d'hiver. La chute d'un peuplier sur une toiture ou une clôture représente un coût bien supérieur à celui d'un retrait préventif.
+
+          Le dessouchage en sol argilo-calcaire demande un travail adapté. La rogneuse de souche fonctionne efficacement dans les couches supérieures, mais les racines profondes ancrées dans le calcaire sous-jacent résistent au broyage. Sur les souches de grand diamètre, le travail se complète à la mini-pelle pour extraire les pivots principaux.
+        `,
+        metaDescription: 'Abattage d\'arbres à Soulaines-sur-Aubance : démontage en cours de ferme, retrait de châtaigniers malades, peupliers à risque et dessouchage sur calcaire.',
+        highlights: [
+          'Démontage par sections dans les cours de fermes enclavées',
+          'Abattage de châtaigniers atteints par la maladie de l\'encre',
+          'Retrait préventif de peupliers à bois cassant le long de l\'Aubance',
+          'Dessouchage combiné rogneuse et mini-pelle sur sol calcaire',
+          'Évacuation et broyage des rémanents sur propriétés rurales',
+        ],
+      },
+    },
   },
   {
     slug: 'loire-authion',
@@ -1094,6 +1717,84 @@ export const cities: CityData[] = [
       Le risque d'inondation est un paramètre important. La levée de Loire protège la plaine, mais les jardins sont conçus pour résister aux submersions : végétaux résilients, matériaux résistants à l'eau et terrasses en pierre naturelle privilégiées dans les zones exposées.
     `,
     neighborhoods: ['Brain-sur-l\'Authion', 'Andard', 'La Bohalle', 'La Daguenière', 'Corné', 'Saint-Mathurin-sur-Loire'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Les limons noirs de la plaine alluviale, déposés par les crues successives de la Loire et de l'Authion, comptent parmi les sols les plus fertiles du Maine-et-Loire. Profonds, meubles et riches en matière organique, ils permettent un enracinement rapide et une reprise végétale vigoureuse — à condition de gérer leur tendance à l'engorgement hivernal par un drainage adapté.
+
+          Six bourgs, six configurations de jardins. À Saint-Mathurin-sur-Loire, les propriétés en surplomb de la levée disposent de terrains exposés au vent d'ouest dominant : les haies brise-vent en charme ou en troène y conditionnent la réussite de tout aménagement. À Brain-sur-l'Authion, les anciens terrains horticoles reconvertis en parcelles résidentielles offrent des surfaces généreuses, souvent supérieures à 1 000 m², où plusieurs ambiances paysagères peuvent coexister.
+
+          Le patrimoine horticole local oriente naturellement les choix de plantation. Rosiers, hortensias, magnolias, camélias — ces végétaux emblématiques de l'Anjou trouvent ici des conditions optimales. Les pépinières encore actives sur la commune fournissent des sujets acclimatés, cultivés sur le même terroir que les jardins de destination.
+
+          Dans les zones inondables situées en contrebas de la levée, le choix des matériaux et des végétaux intègre le risque de submersion. Pierre de tuffeau, bois classe IV, saules, aulnes et iris des marais composent des aménagements capables de supporter une montée des eaux sans dommage structurel.
+        `,
+        metaDescription: 'Paysagiste à Loire-Authion : aménagement de jardins sur limons alluviaux fertiles, haies brise-vent, plantations adaptées au terroir horticole angevin.',
+        highlights: [
+          'Aménagement sur limons alluviaux fertiles entre Loire et Authion',
+          'Haies brise-vent adaptées à l\'exposition ouest dominante',
+          'Végétaux issus des pépinières locales du terroir horticole',
+          'Jardins résilients en zone inondable avec matériaux adaptés',
+          'Création paysagère sur grands terrains d\'anciens sites horticoles',
+        ],
+      },
+      elagage: {
+        content: `
+          Peupliers noirs, saules blancs, frênes communs, aulnes glutineux — la ripisylve qui borde l'Authion et les boires de Loire constitue l'essentiel du patrimoine arboré de la commune. Ces essences de milieu humide poussent vite et atteignent des dimensions imposantes en quelques décennies, mais leur bois tendre les rend vulnérables aux ruptures de branches lors des coups de vent.
+
+          Les frênes méritent une attention particulière. La chalarose, maladie fongique qui progresse en Val de Loire, provoque le dessèchement des houppiers et fragilise la structure des sujets atteints. Un élagage sanitaire ciblé — suppression du bois mort, réduction de voilure — prolonge la durée de vie des arbres encore viables tout en limitant la propagation des spores.
+
+          Sur les parcelles résidentielles, les arbres d'ornement plantés dans les lotissements des années 1980-1990 arrivent à maturité. Érables, tilleuls, marronniers développent des couronnes larges qui empiètent sur les toitures, occultent la lumière et interfèrent avec les lignes aériennes. La taille douce par éclaircissage restaure la luminosité sans mutiler la charpente.
+
+          Le sol alluvial, meuble et profond, favorise un enracinement puissant mais parfois déséquilibré. Les arbres implantés près des berges ou en terrain régulièrement saturé d'eau développent des systèmes racinaires asymétriques. Un diagnostic d'ancrage précède toute intervention sur ces sujets pour évaluer le risque de basculement.
+        `,
+        metaDescription: 'Élagage à Loire-Authion : taille douce des arbres de ripisylve et d\'ornement, suivi sanitaire des frênes, diagnostic d\'ancrage en sol alluvial meuble.',
+        highlights: [
+          'Taille douce des peupliers, saules et frênes de ripisylve',
+          'Suivi sanitaire et élagage des frênes face à la chalarose',
+          'Éclaircissage des arbres matures en lotissement',
+          'Diagnostic d\'ancrage racinaire en sol alluvial saturé',
+          'Intervention sur arbres en bord de berge et zone humide',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          D'avril à octobre, les pelouses installées sur limon alluvial poussent avec une vigueur que peu de sols égalent. Cette fertilité naturelle impose une fréquence de tonte soutenue — hebdomadaire au printemps, bihebdomadaire en période de pic — sous peine de voir le gazon monter en épis et étouffer les graminées fines. Le mulching restitue au sol une partie des nutriments et limite l'accumulation de feutre.
+
+          L'humidité ambiante liée à la proximité des cours d'eau favorise le développement de la mousse et des maladies fongiques sur les gazons. La fusariose et le fil rouge apparaissent dès l'automne dans les zones mal drainées ou trop ombragées. Un scarifiage en mars-avril, suivi d'un réensemencement ciblé avec des variétés résistantes, rétablit la densité du tapis herbeux.
+
+          Les haies de la commune reflètent son passé horticole. Lauriers du Portugal, photinias, osmanthes, fusains — des essences moins banales que les thuyas omniprésents ailleurs — demandent des tailles précises pour conserver leur port naturel. Deux passages annuels suffisent pour les persistants, complétés par un apport de compost au pied chaque automne.
+
+          Le vent d'ouest, constant sur la plaine, accélère l'évapotranspiration estivale. Les massifs exposés sèchent plus vite que ne le laisserait supposer la richesse du sol. Un paillage organique épais — broyat de branches, paillettes de chanvre — maintient l'humidité en surface et limite le désherbage à quelques interventions manuelles par saison.
+        `,
+        metaDescription: 'Entretien de jardin à Loire-Authion : tonte sur limon fertile, traitement mousse et maladies fongiques, taille de haies horticoles, paillage coupe-vent.',
+        highlights: [
+          'Tonte régulière sur sol alluvial à croissance rapide',
+          'Scarifiage et traitement des maladies fongiques liées à l\'humidité',
+          'Taille de haies d\'essences horticoles locales',
+          'Paillage organique contre l\'évapotranspiration éolienne',
+          'Entretien adapté aux six bourgs de la commune nouvelle',
+        ],
+      },
+      abattage: {
+        content: `
+          Les peupliers d'Italie, plantés en alignement le long des chemins ruraux et en limite de propriétés, constituent le motif d'abattage le plus fréquent sur la commune. Après quarante à cinquante ans, ces arbres à croissance rapide deviennent cassants : le bois se creuse, les charpentières se fendent, et chaque tempête arrache des branches maîtresses. Leur retrait s'impose quand le risque de chute menace les habitations ou les voies de circulation.
+
+          L'accès aux arbres situés en bordure de l'Authion ou dans les parcelles enclavées de La Bohalle et La Daguenière complique les interventions. Le démontage par sections, effectué par un élagueur-grimpeur qui descend chaque tronçon au cordage, reste la méthode la plus sûre quand ni la grue ni la nacelle ne peuvent s'approcher. Le sol alluvial, meuble en surface, impose par ailleurs un calage rigoureux du matériel lourd pour éviter l'enlisement.
+
+          Le dessouchage en terrain limoneux se déroule dans de bonnes conditions : la rogneuse travaille un sol souple, sans les blocages que provoquent les cailloux ou l'argile compacte. La souche est réduite en copeaux jusqu'à 30-40 cm sous le niveau du sol, et le mélange copeaux-terre peut être laissé en place pour se décomposer ou remplacé par de la terre végétale si une replantation est prévue.
+
+          Les frênes atteints de chalarose à un stade avancé — houppier desséché à plus de 50 %, écorce nécrosée à la base — ne répondent plus à l'élagage sanitaire. L'abattage devient alors la seule option. Le bois contaminé est évacué et non broyé sur place pour limiter la dissémination du champignon.
+        `,
+        metaDescription: 'Abattage d\'arbres à Loire-Authion : démontage de peupliers vieillissants, dessouchage en sol limoneux meuble, retrait de frênes atteints de chalarose.',
+        highlights: [
+          'Abattage de peupliers vieillissants en alignement',
+          'Démontage par sections en parcelles enclavées des six bourgs',
+          'Dessouchage facilité en sol limoneux alluvial meuble',
+          'Retrait sécurisé de frênes atteints de chalarose avancée',
+          'Évacuation et gestion adaptée des bois contaminés',
+        ],
+      },
+    },
   },
   {
     slug: 'longuenee-en-anjou',
@@ -1114,6 +1815,84 @@ export const cities: CityData[] = [
       Le bocage bien conservé abrite une biodiversité riche. Les haies mixtes de charmes, chênes, noisetiers et aubépines constituent le maillage bocager traditionnel. Nous proposons de les enrichir avec des espèces à fleurs (viornes, cornouillers) et à fruits (pommiers sauvages, alisiers) pour maximiser l'intérêt ornemental et écologique.
     `,
     neighborhoods: ['La Meignanne', 'Le Plessis-Macé', 'La Membrolle-sur-Longuenée', 'Le Bourg', 'La Chaussée'],
+    serviceContent: {
+      paysagiste: {
+        content: `
+          Le grès roussard qui affleure sur les hauteurs du Plessis-Macé donne un sol léger, filtrant, pauvre en matière organique. Quelques centaines de mètres plus bas, vers La Meignanne, le terrain passe à une argilo-limoneuse épaisse, fertile et lourde en hiver. Cette transition géologique sur un territoire restreint conditionne chaque projet d'aménagement : les palettes végétales, les systèmes de drainage et les amendements diffèrent radicalement d'un bourg à l'autre.
+
+          Les lotissements récents de La Meignanne présentent des parcelles de 500 à 900 m², souvent nues à la livraison. Le sol argileux compacté par les engins de chantier nécessite un décompactage mécanique avant toute plantation. Terrasses en dalles sur plots, massifs structurés de graminées et d'arbustes persistants, clôtures végétalisées — l'aménagement part de zéro et doit intégrer à la fois l'intimité, le drainage et l'usage familial.
+
+          Du côté du Plessis-Macé, les propriétés anciennes entourant le château s'inscrivent dans un paysage plus marqué. Murs de grès, portails en fer forgé, allées gravillonnées sous des tilleuls centenaires. Les interventions paysagères y relèvent davantage de la restauration que de la création : remettre en état un parterre envahi, replanter une haie de charmes clairsemée, reprendre un muret effondré en pierre locale.
+
+          Le bocage dense qui relie les trois bourgs offre un cadre végétal que les aménagements gagnent à prolonger plutôt qu'à contredire. Haies champêtres de cornouillers, viornes et noisetiers en limite de terrain, arbres tiges en point focal, prairies fleuries en fond de parcelle — ces éléments ancrent le jardin dans le paysage environnant.
+        `,
+        metaDescription: 'Paysagiste à Longuenée-en-Anjou : création de jardins sur sol argileux et grès roussard, terrasses, haies bocagères et restauration de jardins anciens.',
+        highlights: [
+          'Création complète sur parcelles neuves à La Meignanne',
+          'Restauration de jardins anciens au Plessis-Macé',
+          'Amendement et drainage adaptés au sol argilo-limoneux',
+          'Haies champêtres bocagères en prolongement du paysage local',
+          'Terrasses et murets en grès roussard ou pierre locale',
+        ],
+      },
+      elagage: {
+        content: `
+          Tilleuls, platanes, cèdres de l'Atlas, magnolias grandiflora : le patrimoine arboré du Plessis-Macé et de La Membrolle témoigne d'une tradition de plantation ancienne, liée aux grandes propriétés et au parc du château. Ces sujets de première grandeur, dont certains dépassent vingt mètres, exigent un suivi régulier — éclaircissage de la couronne, suppression du bois mort, relèvement de la base au-dessus des toitures et des voies de passage.
+
+          Sur le sol argileux compact de La Meignanne, les systèmes racinaires se développent en surface. Les racines traçantes soulèvent progressivement les terrasses, fissurent les murets et déstabilisent les clôtures. Un diagnostic racinaire avant intervention permet d'adapter la taille : alléger un côté pour rééquilibrer l'arbre, réduire la voilure pour limiter l'effort sur un ancrage fragilisé, ou poser un haubanage préventif sur un sujet à conserver.
+
+          Les chênes pédonculés et les châtaigniers du bocage développent des charpentes larges et lourdes. La taille douce — suppression sélective des branches mortes, mal orientées ou en surnombre — maintient la structure sans provoquer les repousses anarchiques des coupes sévères. Sur les vieux chênes têtards encore présents le long des chemins creux, la taille de ragréage perpétue une forme traditionnelle qui fait partie du paysage de Longuenée-en-Anjou.
+
+          Les fruitiers occupent une place importante dans les jardins de la commune. Pommiers, poiriers, cerisiers, noyers — la taille de fructification s'effectue entre novembre et février, hors gel, en supprimant les rameaux improductifs et en aérant le centre de l'arbre pour limiter les maladies cryptogamiques.
+        `,
+        metaDescription: 'Élagage à Longuenée-en-Anjou : taille douce de grands sujets au Plessis-Macé, éclaircissage des chênes du bocage, taille de fruitiers et diagnostic racinaire.',
+        highlights: [
+          'Taille douce des grands arbres patrimoniaux au Plessis-Macé',
+          'Diagnostic racinaire sur sol argileux compact',
+          'Éclaircissage des chênes et châtaigniers du bocage',
+          'Taille de fructification des fruitiers (pommiers, poiriers, noyers)',
+          'Taille de ragréage des chênes têtards en chemin creux',
+        ],
+      },
+      'entretien-jardin': {
+        content: `
+          D'octobre à mars, le sol argilo-limoneux des zones basses reste gorgé d'eau. Les pelouses s'enfoncent sous le pied, la mousse colonise les parties ombragées, les engins de tonte laissent des ornières. De mai à août, le même sol se rétracte, fissure et durcit en surface. Ce cycle impose un calendrier d'entretien rigoureux : scarifiage et aération mécanique au printemps, tonte haute en été pour protéger les racines, terreautage à l'automne pour restaurer la structure.
+
+          Les haies constituent le poste d'entretien le plus constant sur la commune. Le maillage bocager qui traverse Longuenée-en-Anjou se prolonge dans les jardins sous forme de haies de charmes, de hêtres, de troènes ou de lauriers selon les quartiers. Les persistants se taillent en juin et septembre, les caducs en fin d'hiver. Le pied de haie, souvent négligé, demande un désherbage mécanique et un paillage organique pour maintenir la vigueur des plants.
+
+          Sur les hauteurs du Plessis-Macé, le substrat de grès plus filtrant crée des conditions différentes. Le gazon y souffre davantage de la sécheresse estivale que de l'excès d'eau hivernal. Les fétuques élevées et le trèfle nain, plus résistants au sec, constituent des alternatives pertinentes au ray-grass classique. Le paillage des massifs en couche épaisse — 8 à 10 cm de broyat de bois — limite l'évaporation et nourrit le sol par décomposition lente.
+
+          Les grandes propriétés de La Membrolle demandent une gestion adaptée à leur surface. Tonte différenciée — ras près de la maison, plus haute en fond de parcelle —, zones de prairie fauchée deux fois par an, massifs arbustifs taillés une fois par saison. L'entretien se planifie sur l'année pour répartir les interventions.
+        `,
+        metaDescription: 'Entretien de jardin à Longuenée-en-Anjou : tonte et aération sur sol argileux compact, taille de haies bocagères et paillage, gestion des grandes parcelles.',
+        highlights: [
+          'Aération mécanique et terreautage sur sol argilo-limoneux',
+          'Taille de haies bocagères et persistantes selon calendrier',
+          'Tonte différenciée adaptée aux grandes propriétés',
+          'Scarifiage anti-mousse dans les zones ombragées humides',
+          'Paillage organique épais sur substrat de grès filtrant',
+        ],
+      },
+      abattage: {
+        content: `
+          Les conifères plantés dans les années 1980-1990 à La Meignanne arrivent à un stade critique. Épicéas dont les racines superficielles soulèvent les terrasses, thuyas devenus opaques et envahissants, sapins qui privent les pièces de lumière — ces sujets, dimensionnés pour la forêt et non pour un jardin de 700 m², finissent par poser des problèmes d'encombrement que seul l'abattage résout.
+
+          Dans les lotissements, la mitoyenneté et la proximité des constructions interdisent l'abattage direct dans la majorité des cas. Le démontage par sections s'impose : l'élagueur-grimpeur travaille de la cime vers la base, chaque tronçon descendu au cordage pour éviter tout impact sur les clôtures, toitures ou plantations voisines. Les rémanents sont broyés sur place en paillage réutilisable.
+
+          Au Plessis-Macé et à La Membrolle, les arbres feuillus de grande taille constituent l'essentiel des interventions. Tilleuls dépérissants, châtaigniers creux, chênes fragilisés par les sécheresses successives — le diagnostic visuel et mécanique permet d'évaluer si l'arbre relève de la taille sanitaire ou de l'abattage. Le bois de chêne et de châtaignier, dense et calorifique, se valorise en bûches.
+
+          Le dessouchage sur sol argileux demande un matériel dimensionné. L'argile compacte freine la progression de la rogneuse et colle aux outils. Après rognage, le mélange de copeaux et d'argile est excavé et remplacé par de la terre végétale amendée, prête à recevoir une nouvelle plantation ou un engazonnement.
+        `,
+        metaDescription: 'Abattage d\'arbres à Longuenée-en-Anjou : démontage par sections en lotissement mitoyen, abattage de feuillus au Plessis-Macé, dessouchage sur sol argileux.',
+        highlights: [
+          'Démontage par sections en parcelles mitoyennes à La Meignanne',
+          'Abattage de conifères disproportionnés des années 1980-1990',
+          'Diagnostic et abattage de feuillus dépérissants au Plessis-Macé',
+          'Dessouchage à la rogneuse sur sol argileux compact',
+          'Valorisation du bois de chêne et châtaignier en bûches',
+        ],
+      },
+    },
   },
 ];
 
