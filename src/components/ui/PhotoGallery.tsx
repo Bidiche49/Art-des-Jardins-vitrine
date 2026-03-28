@@ -24,6 +24,7 @@ export function PhotoGallery({ maxItems, showFilters = true, initialCategory, ex
   const [activeCategory, setActiveCategory] = useState<string | null>(initialCategory || null);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
 
   const hiddenSlugs = ['creation-6'];
   const allImages = Object.values(images).filter((img) => img.category !== 'blog' && !img.slug.includes('avant') && !hiddenSlugs.includes(img.slug));
@@ -55,6 +56,7 @@ export function PhotoGallery({ maxItems, showFilters = true, initialCategory, ex
   useEffect(() => {
     if (lightboxIndex !== null) {
       dialogRef.current?.showModal();
+      closeBtnRef.current?.focus();
     } else {
       dialogRef.current?.close();
     }
@@ -77,6 +79,7 @@ export function PhotoGallery({ maxItems, showFilters = true, initialCategory, ex
         <div className="flex flex-wrap gap-2 mb-8 justify-center">
           <button
             onClick={() => setActiveCategory(null)}
+            aria-pressed={activeCategory === null}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               activeCategory === null
                 ? 'bg-primary-600 text-white'
@@ -89,6 +92,7 @@ export function PhotoGallery({ maxItems, showFilters = true, initialCategory, ex
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
+              aria-pressed={activeCategory === cat}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === cat
                   ? 'bg-primary-600 text-white'
@@ -138,6 +142,7 @@ export function PhotoGallery({ maxItems, showFilters = true, initialCategory, ex
       <dialog
         ref={dialogRef}
         className="lightbox-dialog"
+        aria-label="Visionneuse photo"
         onClose={closeLightbox}
         onClick={(e) => {
           if (e.target === dialogRef.current) closeLightbox();
@@ -146,6 +151,7 @@ export function PhotoGallery({ maxItems, showFilters = true, initialCategory, ex
         {lightboxIndex !== null && displayed[lightboxIndex] && (
           <div className="lightbox-content">
             <button
+              ref={closeBtnRef}
               onClick={closeLightbox}
               className="absolute top-4 right-4 z-10 text-white/80 hover:text-white bg-black/50 rounded-full p-2"
               aria-label="Fermer"
