@@ -339,9 +339,15 @@ async function main() {
 
   // Generate manifest (only if images were processed, to avoid overwriting existing manifest)
   const processed = results.filter(Boolean);
+  if (processed.length < IMAGE_CATALOG.length) {
+    const processedSlugs = new Set(processed.map((r) => r.slug));
+    const missingSlugs = IMAGE_CATALOG.filter((e) => !processedSlugs.has(e.slug)).map((e) => e.slug);
+    console.warn(`\n⚠ ${missingSlugs.length} image(s) missing from catalog:`);
+    missingSlugs.forEach((slug) => console.warn(`  - ${slug}`));
+  }
   if (processed.length > 0) {
     console.log('\nGenerating images manifest...');
-    const manifestContent = generateManifest(results);
+    const manifestContent = generateManifest(processed);
     await ensureDir(path.dirname(MANIFEST_PATH));
     await writeFile(MANIFEST_PATH, manifestContent, 'utf-8');
     console.log(`  Manifest written to ${path.relative(ROOT, MANIFEST_PATH)}`);

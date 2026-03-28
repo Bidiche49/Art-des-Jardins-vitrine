@@ -82,13 +82,12 @@ export const metadata: Metadata = {
     description: 'Paysagiste professionnel à Angers. Devis gratuit.',
     images: ['/images/og-image.jpg'],
   },
-  // TODO: Passer index/follow a true pour le lancement SEO
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
     },
   },
   verification: {

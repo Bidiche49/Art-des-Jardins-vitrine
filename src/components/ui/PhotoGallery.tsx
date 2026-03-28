@@ -65,11 +65,10 @@ export function PhotoGallery({ maxItems, showFilters = true, initialCategory, ex
       if (lightboxIndex === null) return;
       if (e.key === 'ArrowLeft') navigate(-1);
       if (e.key === 'ArrowRight') navigate(1);
-      if (e.key === 'Escape') closeLightbox();
     };
     window.addEventListener('keydown', handleKeydown);
     return () => window.removeEventListener('keydown', handleKeydown);
-  }, [lightboxIndex, navigate, closeLightbox]);
+  }, [lightboxIndex, navigate]);
 
   return (
     <div>
@@ -139,6 +138,7 @@ export function PhotoGallery({ maxItems, showFilters = true, initialCategory, ex
       <dialog
         ref={dialogRef}
         className="lightbox-dialog"
+        onClose={closeLightbox}
         onClick={(e) => {
           if (e.target === dialogRef.current) closeLightbox();
         }}
