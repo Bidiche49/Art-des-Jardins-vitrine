@@ -414,7 +414,12 @@ async function main() {
   console.log(`  ${ogCount} OG images generated`);
 }
 
-main().catch((err) => {
-  console.error('Error:', err);
-  process.exit(1);
-});
+const isDirectRun = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1];
+if (isDirectRun) {
+  main().catch((err) => {
+    console.error('Error:', err);
+    process.exit(1);
+  });
+}
+
+export { generateManifest };
