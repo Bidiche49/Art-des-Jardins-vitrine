@@ -38,24 +38,18 @@ export const services: ServiceData[] = [
     cardDescription: 'Conception et aménagement de jardins sur mesure.',
     menuDescription: 'Conception et création de jardins sur mesure',
     isTaxCreditEligible: false,
-    metaTitle: 'Paysagiste Angers - Aménagement de Jardin | Art des Jardins',
+    metaTitle: 'Aménagement Paysager et Création de Jardin | Art des Jardins',
     metaDescription:
-      'Paysagiste professionnel à Angers. Conception et réalisation de jardins sur mesure : terrasses, massifs, engazonnement, arrosage automatique. Devis gratuit.',
-    heroTitle: 'Aménagement de Jardin à Angers',
+      'Conception et réalisation de jardins sur mesure : terrasses, massifs, engazonnement, arrosage automatique. Devis gratuit.',
+    heroTitle: 'Aménagement Paysager et Création de Jardin',
     heroSubtitle:
-      'Transformez votre extérieur en un espace de vie unique avec notre équipe de paysagistes professionnels.',
+      'Conception d\'espaces extérieurs sur mesure par des paysagistes professionnels.',
     description: `
-      Art des Jardins est votre partenaire de confiance pour tous vos projets d'aménagement paysager dans la région d'Angers.
-      Forts de notre expérience et de notre passion pour les espaces verts, nous concevons et réalisons des jardins qui
-      reflètent votre personnalité et s'adaptent parfaitement à votre mode de vie.
+      L'aménagement paysager couvre un large spectre d'interventions : création de jardins complets, restructuration d'espaces existants, plantation de massifs, pose de terrasses et installation de systèmes d'arrosage. Chaque terrain présente ses propres contraintes — exposition, nature du sol, dénivelé, végétation en place — et chaque projet part de leur analyse.
 
-      Notre approche de l'aménagement paysager combine créativité, expertise technique et respect de l'environnement. Chaque projet
-      est unique : nous prenons le temps d'écouter vos envies, d'analyser votre terrain et de vous proposer des solutions
-      sur mesure qui valorisent votre propriété.
+      L'approche combine conception paysagère et expertise technique. Après une étude du terrain et un échange sur les usages souhaités, un plan d'aménagement détaillé est élaboré avec le choix des végétaux, des matériaux et un chiffrage précis. Les plantations sont sélectionnées en fonction du climat ligérien et des conditions locales du sol pour une reprise durable.
 
-      Que vous souhaitiez créer un jardin contemporain aux lignes épurées, un espace champêtre et naturel, ou un jardin
-      méditerranéen plein de couleurs, notre équipe saura donner vie à vos rêves. Nous travaillons avec des végétaux
-      adaptés au climat de la Loire, sélectionnés pour leur robustesse et leur beauté durable.
+      Jardins contemporains aux lignes épurées, espaces champêtres et naturels, compositions méditerranéennes : le style s'adapte au lieu et aux envies. Les travaux incluent aussi bien le terrassement et la maçonnerie paysagère que les finitions végétales et l'éclairage extérieur.
     `,
     features: [
       'Conseils et propositions d\'aménagements personnalisés',
@@ -75,7 +69,7 @@ export const services: ServiceData[] = [
       'Espace de détente personnalisé',
       'Entretien facilité grâce à une conception réfléchie',
       'Végétaux adaptés au climat local',
-      'Respect de votre budget',
+      'Projet adapté aux contraintes du terrain',
     ],
     process: [
       {
@@ -130,23 +124,18 @@ export const services: ServiceData[] = [
     cardDescription: 'Tonte, taille, désherbage et entretien régulier.',
     menuDescription: 'Tonte, taille, désherbage, entretien régulier',
     isTaxCreditEligible: true,
-    metaTitle: 'Entretien de Jardin Angers - Tonte, Taille, Désherbage | Art des Jardins',
+    metaTitle: 'Entretien de Jardin - Tonte, Taille, Désherbage | Art des Jardins',
     metaDescription:
-      'Service d\'entretien de jardin à Angers. Tonte de pelouse, taille de haies, désherbage, nettoyage. Contrats annuels ou interventions ponctuelles. Devis gratuit.',
-    heroTitle: 'Entretien de Jardin à Angers',
+      'Tonte de pelouse, taille de haies, désherbage, nettoyage saisonnier. Contrats annuels ou interventions ponctuelles. Éligible au crédit d\'impôt. Devis gratuit.',
+    heroTitle: 'Entretien de Jardin',
     heroSubtitle:
-      'Un jardin impeccable toute l\'année sans effort grâce à notre service d\'entretien professionnel.',
+      'Tonte, taille, désherbage et soins saisonniers pour un jardin entretenu toute l\'année.',
     description: `
-      Un beau jardin demande un entretien régulier et adapté à chaque saison. Art des Jardins vous propose un service
-      d'entretien complet pour que vous puissiez profiter de votre extérieur sans contrainte.
+      Un jardin demande un entretien régulier, adapté aux saisons et à la nature des plantations en place. Le service d'entretien couvre l'ensemble des travaux courants : tonte de pelouse, taille de haies et d'arbustes, désherbage, bêchage des massifs, ramassage des feuilles mortes et traitement phytosanitaire raisonné.
 
-      Notre équipe de jardiniers professionnels intervient régulièrement selon un calendrier adapté à votre jardin
-      et à vos besoins. Nous utilisons des équipements professionnels et des techniques respectueuses de l'environnement
-      pour garantir un résultat impeccable.
+      Les interventions suivent un calendrier calé sur le cycle végétatif : tontes rapprochées au printemps et en été, tailles de formation en fin d'hiver, protections hivernales à l'automne. L'équipement professionnel — tondeuses autoportées, taille-haies thermiques, souffleurs — permet un travail rapide et soigné, même sur de grandes surfaces.
 
-      Que vous ayez un petit jardin de ville ou un grand parc, nous adaptons nos prestations à vos attentes et à votre
-      budget. Nos contrats d'entretien sont flexibles : interventions hebdomadaires, bi-mensuelles ou mensuelles selon
-      la saison et vos préférences.
+      Les formules sont modulables : contrat annuel avec passages programmés (hebdomadaires, bi-mensuels ou mensuels selon la saison) ou interventions ponctuelles à la demande. L'entretien de jardin est éligible au crédit d'impôt de 50 % dans le cadre des services à la personne.
     `,
     features: [
       'Tonte de pelouse et réfection de gazon',
@@ -163,7 +152,7 @@ export const services: ServiceData[] = [
       'Jardin toujours impeccable',
       'Matériels professionnels fournis',
       'Conseils de jardinage inclus',
-      'Tarifs dégressifs en contrat annuel',
+      'Éligible au crédit d\'impôt de 50 %',
     ],
     process: [
       {
@@ -218,21 +207,18 @@ export const services: ServiceData[] = [
     cardDescription: 'Taille et élagage de tous types d\'arbres.',
     menuDescription: 'Taille et soins des arbres par élagueurs certifiés',
     isTaxCreditEligible: false,
-    metaTitle: 'Élagage Angers - Taille d\'Arbres Professionnel | Art des Jardins',
+    metaTitle: 'Élagage et Taille d\'Arbres par Élagueurs Certifiés | Art des Jardins',
     metaDescription:
-      'Service d\'élagage professionnel à Angers. Taille d\'arbres, éclaircissage, taille de sécurisation, diagnostic phytosanitaire. Élagueurs certifiés. Devis gratuit.',
-    heroTitle: 'Élagage Professionnel à Angers',
+      'Taille d\'arbres, éclaircissage, taille de sécurisation et diagnostic phytosanitaire. Élagueurs certifiés, intervention sur toutes essences. Devis gratuit.',
+    heroTitle: 'Élagage et Taille d\'Arbres',
     heroSubtitle:
-      'Des arbres sains et esthétiques grâce à l\'expertise de nos élagueurs certifiés.',
+      'Taille, éclaircissage et sécurisation de vos arbres par des élagueurs certifiés.',
     description: `
-      L'élagage est un art qui nécessite savoir-faire et précision. Chez Art des Jardins, nos élagueurs certifiés
-      interviennent sur tous types d'arbres pour assurer leur bonne santé, leur sécurité et leur esthétique.
+      L'élagage regroupe l'ensemble des interventions de taille sur les arbres de moyenne et grande hauteur : taille d'entretien, éclaircissage de couronne, réduction de volume, taille de sécurisation et taille de formation sur les jeunes sujets. Chaque type de taille répond à un objectif précis — santé de l'arbre, sécurité, luminosité ou esthétique.
 
-      Un élagage bien réalisé permet de contrôler la croissance de l'arbre, d'améliorer sa structure, de prévenir
-      les risques de chute de branches et de favoriser la pénétration de la lumière. Nos techniques respectent
-      la physiologie de l'arbre pour garantir une cicatrisation optimale.
+      Les techniques employées respectent la physiologie de l'arbre pour limiter le stress et favoriser une cicatrisation correcte. Un diagnostic visuel préalable permet d'évaluer l'état sanitaire, la structure et les risques éventuels avant de définir le plan de taille adapté.
 
-      Nous intervenons aussi bien chez les particuliers que pour les copropriétés, les entreprises et les collectivités.
+      Les interventions concernent aussi bien les jardins de particuliers que les copropriétés, parcs d'entreprise et espaces publics. Le matériel utilisé — cordes, harnais de grimpe, nacelle, broyeur — est adapté à chaque configuration de chantier.
     `,
     features: [
       'Taille de formation pour jeunes arbres',
@@ -301,23 +287,18 @@ export const services: ServiceData[] = [
     cardDescription: 'Abattage sécurisé et dessouchage d\'arbres.',
     menuDescription: 'Abattage sécurisé, dessouchage, évacuation',
     isTaxCreditEligible: false,
-    metaTitle: 'Abattage d\'Arbres Angers - Dessouchage | Art des Jardins',
+    metaTitle: 'Abattage d\'Arbres Sécurisé et Dessouchage | Art des Jardins',
     metaDescription:
-      'Service d\'abattage d\'arbres sécurisé à Angers. Abattage, démontage, dessouchage, évacuation. Intervention rapide. Devis gratuit.',
-    heroTitle: 'Abattage d\'Arbres Sécurisé à Angers',
+      'Abattage d\'arbres, démontage technique, dessouchage à la rogneuse et évacuation. Intervention rapide, y compris en urgence après tempête. Devis gratuit.',
+    heroTitle: 'Abattage d\'Arbres Sécurisé',
     heroSubtitle:
-      'Élimination sûre et efficace des arbres dangereux, malades ou gênants par des professionnels.',
+      'Abattage, démontage technique et dessouchage d\'arbres dangereux, malades ou gênants.',
     description: `
-      L'abattage d'un arbre est une opération délicate qui ne s'improvise pas. Qu'il s'agisse d'un arbre malade,
-      dangereux, mort ou simplement mal placé, Art des Jardins réalise l'abattage en toute sécurité avec les
-      techniques adaptées à chaque situation.
+      L'abattage d'un arbre est une opération technique qui nécessite une évaluation préalable des risques : proximité de bâtiments, lignes électriques, accès au chantier, espace de chute disponible. Selon la configuration, l'intervention se fait par abattage direct en terrain dégagé ou par démontage pièce par pièce lorsque l'environnement est contraint.
 
-      Nos équipes évaluent systématiquement les risques avant intervention : proximité de bâtiments, lignes
-      électriques, accès, espace de chute... Selon le contexte, nous procédons à un abattage direct ou à un
-      démontage pièce par pièce pour les situations les plus contraintes.
+      Les situations qui appellent un abattage sont variées : arbre mort ou dépérissant, sujet devenu dangereux (inclinaison, racines déchaussées), arbre mal placé gênant une construction ou une clôture, ou dégâts après tempête nécessitant une intervention rapide.
 
-      Après l'abattage, nous proposons également le dessouchage (rogneuse de souche) et l'évacuation complète
-      des débris. Votre terrain est ainsi prêt pour un nouvel aménagement ou une nouvelle plantation.
+      Le dessouchage à la rogneuse et l'évacuation complète des débris sont proposés en complément de l'abattage. Le terrain est alors prêt pour un nouvel aménagement ou une replantation.
     `,
     features: [
       'Abattage direct en terrain dégagé',
@@ -331,7 +312,7 @@ export const services: ServiceData[] = [
       'Conseil pour replantation',
     ],
     benefits: [
-      'Sécurité garantie pour les personnes et biens',
+      'Sécurisation des personnes et des biens',
       'Intervention rapide en urgence',
       'Matériel professionnel adapté',
       'Entreprise assurée',
@@ -395,23 +376,18 @@ export const services: ServiceData[] = [
     cardDescription: 'Création de terrasses bois, composite et pierre.',
     menuDescription: 'Bois, composite, pierre — espaces de vie extérieurs',
     isTaxCreditEligible: false,
-    metaTitle: 'Terrasse Angers - Aménagement Extérieur | Art des Jardins',
+    metaTitle: 'Création de Terrasses et Aménagements Extérieurs | Art des Jardins',
     metaDescription:
-      'Création de terrasses à Angers : bois, composite, pierre naturelle, dalles. Conception sur mesure, pergolas, espaces de vie extérieurs. Devis gratuit.',
-    heroTitle: 'Création de Terrasses à Angers',
+      'Terrasses bois, composite, pierre naturelle et dalles sur plots. Conception sur mesure, pergolas et aménagements complémentaires. Devis gratuit.',
+    heroTitle: 'Création de Terrasses et Aménagements Extérieurs',
     heroSubtitle:
-      'Prolongez votre intérieur avec une terrasse sur mesure, conçue pour durer et sublimer votre jardin.',
+      'Terrasses sur mesure en bois, composite ou pierre, avec pergolas et aménagements complémentaires.',
     description: `
-      La terrasse est le prolongement naturel de votre maison vers le jardin. Chez Art des Jardins, nous concevons et
-      réalisons des terrasses sur mesure qui s'intègrent harmonieusement à votre extérieur et à votre style de vie.
+      La création d'une terrasse implique plusieurs étapes techniques : étude du terrain et de l'exposition, choix du matériau adapté à l'usage et aux contraintes (portance, drainage, gel), préparation de l'assise et pose du revêtement. Chaque matériau a ses caractéristiques propres en termes de durabilité, d'entretien et de rendu.
 
-      Bois naturel, composite, pierre naturelle, dalles sur plots ou béton décoratif : nous maîtrisons tous les
-      matériaux pour vous proposer la solution la plus adaptée à vos envies et à votre budget. Chaque projet est
-      étudié en tenant compte de l'exposition, du terrain et de l'usage souhaité.
+      Bois naturel (pin traité, chêne, essences exotiques), lames composite, pierre naturelle, dalles sur plots ou béton décoratif : le choix se fait en fonction de l'esthétique souhaitée, de l'exposition au soleil et aux intempéries, et du niveau d'entretien acceptable. La pose sur plots permet notamment de compenser les irrégularités du terrain sans travaux de maçonnerie lourds.
 
-      Au-delà de la terrasse elle-même, nous réalisons l'ensemble des aménagements extérieurs complémentaires :
-      pergolas, murets, escaliers, éclairage d'ambiance et plantations pour créer un véritable espace de vie
-      en plein air.
+      Les aménagements complémentaires — pergolas, murets, escaliers extérieurs, éclairage d'ambiance — sont conçus en cohérence avec la terrasse pour former un ensemble fonctionnel et intégré au jardin.
     `,
     features: [
       'Terrasse en bois naturel (pin, chêne, exotique)',
@@ -428,7 +404,7 @@ export const services: ServiceData[] = [
     benefits: [
       'Espace de vie supplémentaire toute l\'année',
       'Valorisation immédiate de votre propriété',
-      'Matériaux durables et garantis',
+      'Matériaux durables et résistants aux intempéries',
       'Conception sur mesure adaptée à votre terrain',
       'Finitions soignées et intégration paysagère',
     ],
@@ -490,23 +466,18 @@ export const services: ServiceData[] = [
     cardDescription: 'Pose de clôtures, portails et délimitations.',
     menuDescription: 'Panneaux, bois, composite, portails sur mesure',
     isTaxCreditEligible: false,
-    metaTitle: 'Clôture Angers - Pose de Clôtures | Art des Jardins',
+    metaTitle: 'Pose de Clôtures, Portails et Délimitations | Art des Jardins',
     metaDescription:
-      'Pose de clôtures à Angers : panneaux rigides, bois, composite, grillage, portails. Installation professionnelle et sur mesure. Devis gratuit.',
-    heroTitle: 'Pose de Clôtures à Angers',
+      'Pose de clôtures : panneaux rigides, bois, composite, aluminium, grillage, gabions. Portails battants et coulissants. Devis gratuit.',
+    heroTitle: 'Clôtures, Portails et Délimitations',
     heroSubtitle:
-      'Délimitez et sécurisez votre propriété avec une clôture esthétique posée par des professionnels.',
+      'Pose de clôtures et portails pour délimiter, sécuriser et structurer votre extérieur.',
     description: `
-      La clôture est essentielle pour délimiter votre propriété, protéger votre intimité et sécuriser votre
-      terrain. Art des Jardins vous propose une large gamme de solutions de clôture adaptées à tous les
-      styles et à tous les budgets.
+      La pose de clôture répond à plusieurs besoins : délimitation de propriété, protection de l'intimité, sécurisation du terrain ou simple structuration de l'espace extérieur. Le choix du type de clôture dépend de l'objectif principal, des règles d'urbanisme locales et de l'intégration paysagère souhaitée.
 
-      Panneaux rigides, bois naturel, composite, aluminium, grillage souple ou gabions : nous installons
-      tous les types de clôtures avec un soin particulier apporté à la pose et aux finitions. Nos clôtures
-      sont conçues pour résister aux intempéries et s'intégrer harmonieusement dans votre environnement.
+      Les solutions disponibles couvrent un large éventail : panneaux rigides avec ou sans occultant, clôtures en bois naturel ou composite, aluminium sur mesure, grillage souple ou rigide, gabions décoratifs, murets en pierre ou parpaing. Chaque type présente des caractéristiques différentes en termes de durabilité, d'opacité et d'entretien.
 
-      Nous réalisons également la pose de portails (battants ou coulissants), de portillons et de systèmes
-      de contrôle d'accès pour une solution complète de délimitation de votre propriété.
+      La prestation inclut également la pose de portails (battants ou coulissants), portillons et brise-vue. Les règles de voisinage et d'urbanisme (hauteur maximale, distances, matériaux autorisés) sont vérifiées en amont pour une installation conforme.
     `,
     features: [
       'Clôture en panneaux rigides (avec occultant possible)',
@@ -574,24 +545,18 @@ export const services: ServiceData[] = [
     cardDescription: 'Taille et entretien de haies de toutes essences.',
     menuDescription: 'Taille, rabattage et entretien de haies',
     isTaxCreditEligible: true,
-    metaTitle: 'Taille de Haies Angers - Entretien Haies | Art des Jardins',
+    metaTitle: 'Taille de Haies - Entretien et Rabattage | Art des Jardins',
     metaDescription:
-      'Taille de haies professionnelle à Angers. Haies de thuya, laurier, photinia, champêtres. Taille de formation et entretien régulier. Devis gratuit.',
-    heroTitle: 'Taille de Haies à Angers',
+      'Taille de haies : thuya, laurier, photinia, charme, haies champêtres. Taille de formation, entretien régulier et rabattage. Éligible au crédit d\'impôt. Devis gratuit.',
+    heroTitle: 'Taille de Haies',
     heroSubtitle:
-      'Des haies parfaitement taillées pour un jardin net et soigné toute l\'année.',
+      'Taille d\'entretien, de formation et rabattage pour toutes essences de haies.',
     description: `
-      La taille des haies est indispensable pour maintenir leur densité, leur forme et leur bonne santé.
-      Art des Jardins intervient pour la taille de tous types de haies : thuya, laurier, photinia, charme,
-      hêtre, troène et haies champêtres.
+      La taille régulière des haies est nécessaire pour maintenir leur densité, leur forme et leur rôle de brise-vue ou de clôture végétale. Chaque essence a ses propres exigences : les persistantes (thuya, laurier, photinia) se taillent différemment des caduques (charme, hêtre, troène) et des haies champêtres composées de plusieurs espèces.
 
-      Une haie bien entretenue assure son rôle de brise-vue, de brise-vent et de clôture végétale tout en
-      restant esthétique. Nos jardiniers maîtrisent les techniques de taille adaptées à chaque essence
-      pour favoriser une repousse dense et régulière.
+      Les interventions couvrent la taille d'entretien courante, la taille de formation sur les jeunes haies pour favoriser une ramification dense, et le rabattage pour réduire la hauteur des sujets devenus trop imposants. La technique de coupe est adaptée à chaque essence pour favoriser une repousse régulière et limiter le stress végétal.
 
-      Nous proposons des interventions ponctuelles ou des contrats d'entretien annuels avec tailles
-      saisonnières programmées. Notre équipement professionnel (taille-haies thermiques et sur perche)
-      nous permet d'intervenir sur des haies de toutes hauteurs.
+      Les prestations sont possibles en intervention ponctuelle ou en contrat annuel avec tailles saisonnières programmées (généralement deux à trois passages par an selon les espèces). L'évacuation des déchets de taille est incluse. Ce service est éligible au crédit d'impôt de 50 % dans le cadre des services à la personne.
     `,
     features: [
       'Taille de haies persistantes (thuya, laurier, photinia)',
@@ -663,24 +628,18 @@ export const services: ServiceData[] = [
     cardDescription: 'Nettoyage de terrains et remise en état.',
     menuDescription: 'Défrichage, nettoyage de terrains envahis',
     isTaxCreditEligible: true,
-    metaTitle: 'Débroussaillage Angers - Nettoyage Terrain | Art des Jardins',
+    metaTitle: 'Débroussaillage et Nettoyage de Terrain | Art des Jardins',
     metaDescription:
-      'Débroussaillage professionnel à Angers. Nettoyage de terrains, défrichage, remise en état de jardins abandonnés. Intervention rapide. Devis gratuit.',
-    heroTitle: 'Débroussaillage et Nettoyage de Terrain à Angers',
+      'Débroussaillage, défrichage et remise en état de terrains envahis. Jardins abandonnés, parcelles en friche, terrains à bâtir. Devis gratuit.',
+    heroTitle: 'Débroussaillage et Nettoyage de Terrain',
     heroSubtitle:
-      'Redonnez vie à vos terrains envahis par la végétation grâce à notre intervention professionnelle.',
+      'Défrichage, broyage et remise en état de terrains envahis par la végétation.',
     description: `
-      Un terrain laissé à l'abandon se retrouve rapidement envahi par les ronces, les broussailles et les
-      mauvaises herbes. Art des Jardins intervient pour remettre en état vos parcelles, jardins ou terrains
-      à bâtir grâce à un débroussaillage professionnel.
+      Un terrain non entretenu est rapidement colonisé par les ronces, broussailles, repousses d'arbres et adventices. Le débroussaillage permet de remettre en état des parcelles devenues impraticables — jardins abandonnés, terrains à bâtir, sous-bois encombrés ou friches à valoriser.
 
-      Nous disposons du matériel adapté pour venir à bout de toutes les situations : débroussailleuses
-      professionnelles, broyeurs de végétaux, tronçonneuses et mini-pelle pour les terrains les plus
-      difficiles. Notre équipe intervient rapidement pour transformer un terrain impraticable en un
-      espace propre et exploitable.
+      Le matériel professionnel utilisé — débroussailleuses à lames, broyeurs de végétaux, tronçonneuses, mini-pelle — est dimensionné en fonction de la densité de végétation et de la surface à traiter. Les végétaux coupés sont broyés sur place (le broyat peut servir de paillis) ou évacués vers un centre de compostage.
 
-      Le débroussaillage est aussi une obligation légale dans certaines zones pour la prévention des
-      incendies. Nous vous accompagnons dans la mise en conformité de vos terrains.
+      Le débroussaillage répond aussi à une obligation légale : dans les zones classées à risque d'incendie, le débroussaillage dans un rayon de 50 m autour des habitations est imposé par la réglementation. Ce service est éligible au crédit d'impôt de 50 % dans le cadre des services à la personne.
     `,
     features: [
       'Débroussaillage de terrains envahis',
@@ -748,25 +707,18 @@ export const services: ServiceData[] = [
     cardDescription: 'Installation et entretien de systèmes d\'arrosage.',
     menuDescription: 'Systèmes enterrés, goutte-à-goutte, programmation',
     isTaxCreditEligible: false,
-    metaTitle: 'Arrosage Automatique Angers - Installation | Art des Jardins',
+    metaTitle: 'Arrosage Automatique - Installation et Entretien | Art des Jardins',
     metaDescription:
-      'Installation d\'arrosage automatique à Angers. Système enterré, goutte-à-goutte, programmation intelligente. Économies d\'eau garanties. Devis gratuit.',
-    heroTitle: 'Arrosage Automatique à Angers',
+      'Installation de systèmes d\'arrosage automatique : enterré, goutte-à-goutte, programmation intelligente. Maintenance et hivernage. Devis gratuit.',
+    heroTitle: 'Installation d\'Arrosage Automatique',
     heroSubtitle:
-      'Un jardin verdoyant sans effort grâce à un système d\'arrosage automatique sur mesure.',
+      'Systèmes enterrés, goutte-à-goutte et programmation adaptée à chaque zone du jardin.',
     description: `
-      Un système d'arrosage automatique bien conçu garantit un jardin verdoyant tout en optimisant la
-      consommation d'eau. Art des Jardins conçoit et installe des systèmes d'arrosage sur mesure,
-      parfaitement adaptés à la configuration de votre jardin et aux besoins de vos plantations.
+      Un système d'arrosage automatique adapte l'apport en eau aux besoins réels de chaque zone du jardin : tuyères et turbines enterrées pour les pelouses, goutte-à-goutte pour les massifs et les haies, micro-aspersion pour les potagers. Le dimensionnement tient compte du débit disponible, de la surface à couvrir et de la nature des plantations.
 
-      Arrosage enterré par tuyères et turbines pour les pelouses, goutte-à-goutte pour les massifs et
-      les haies, micro-aspersion pour les potagers : nous sélectionnons les équipements les plus adaptés
-      à chaque zone de votre jardin. La programmation est optimisée pour arroser au bon moment et en
-      quantité juste nécessaire.
+      La conception du réseau inclut le zonage (découpage du jardin en secteurs arrosés séquentiellement), le choix des arroseurs, le tracé des canalisations enterrées et la programmation des cycles d'arrosage. Des sondes d'humidité ou un pluviomètre peuvent compléter l'installation pour éviter les arrosages inutiles et réduire la consommation d'eau.
 
-      Nos installations sont réalisées avec des composants de qualité professionnelle pour une durabilité
-      et une fiabilité maximales. Nous assurons également la maintenance, l'hivernage et la remise en
-      route de votre système.
+      L'installation se fait par tranchage léger dans la pelouse existante — le gazon se referme en quelques semaines. La maintenance saisonnière (hivernage avec purge du circuit à l'automne, remise en route au printemps) et le dépannage sont également pris en charge.
     `,
     features: [
       'Arrosage enterré (tuyères et turbines)',

@@ -107,7 +107,7 @@ export default function PaysagisteAngersPage() {
 
               <InlineGallery slugs={['creation-4', 'creation-7', 'creation-5', 'creation-8', 'creation-3', 'terrasse-2']} />
 
-              <h3 className="text-2xl font-bold mt-12 mb-6">Nos services d'aménagement paysager à Angers</h3>
+              <h3 className="text-2xl font-bold mt-12 mb-6">Parmi nos interventions à Angers</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {service.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
@@ -116,6 +116,14 @@ export default function PaysagisteAngersPage() {
                   </div>
                 ))}
               </div>
+              <p className="mt-6 text-sm">
+                <Link
+                  href="/services/paysagisme/"
+                  className="text-primary-600 hover:text-primary-800 font-medium"
+                >
+                  Découvrir l'ensemble de nos prestations paysagiste →
+                </Link>
+              </p>
             </div>
 
             {/* Sidebar */}
@@ -147,43 +155,6 @@ export default function PaysagisteAngersPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="container-custom">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Pourquoi choisir Art des Jardins ?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: 'Connaissance des sols angevins',
-                description: 'Analyse du terrain avant chaque projet : schiste, alluvions ou argile, le choix des végétaux en dépend.',
-              },
-              {
-                title: 'Végétaux adaptés au terroir',
-                description: 'Sélection d\'essences acclimatées au climat océanique doux : camélias, hortensias, magnolias, graminées.',
-              },
-              {
-                title: 'Respect du PLU local',
-                description: 'Prise en compte des réglementations d\'urbanisme d\'Angers pour chaque aménagement extérieur.',
-              },
-              {
-                title: 'Suivi après plantation',
-                description: 'Conseils d\'entretien saisonnier et vérification de la reprise des végétaux après mise en place.',
-              },
-            ].map((item, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 text-center shadow-sm">
-                <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconCheck className="w-6 h-6 text-primary-600" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

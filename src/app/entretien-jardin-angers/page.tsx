@@ -113,7 +113,7 @@ export default function EntretienJardinAngersPage() {
 
               <InlineGallery slugs={['entretien-1', 'entretien-2']} columns={2} />
 
-              <h3 className="text-2xl font-bold mt-12 mb-6">Nos prestations d'entretien</h3>
+              <h3 className="text-2xl font-bold mt-12 mb-6">Parmi nos interventions à Angers</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {service.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
@@ -122,6 +122,14 @@ export default function EntretienJardinAngersPage() {
                   </div>
                 ))}
               </div>
+              <p className="mt-6 text-sm">
+                <Link
+                  href="/services/entretien-jardin/"
+                  className="text-primary-600 hover:text-primary-800 font-medium"
+                >
+                  Découvrir l'ensemble de nos prestations entretien de jardin →
+                </Link>
+              </p>
 
             </div>
 

@@ -132,7 +132,7 @@ export default function AbattageAngersPage() {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold mt-12 mb-6">Nos prestations</h3>
+              <h3 className="text-2xl font-bold mt-12 mb-6">Parmi nos interventions à Angers</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {service.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
@@ -141,6 +141,14 @@ export default function AbattageAngersPage() {
                   </div>
                 ))}
               </div>
+              <p className="mt-6 text-sm">
+                <Link
+                  href="/services/abattage/"
+                  className="text-primary-600 hover:text-primary-800 font-medium"
+                >
+                  Découvrir l'ensemble de nos prestations abattage →
+                </Link>
+              </p>
 
               <h3 className="text-2xl font-bold mt-12 mb-6">Faut-il une autorisation ?</h3>
               <div className="prose prose-lg max-w-none text-gray-600">

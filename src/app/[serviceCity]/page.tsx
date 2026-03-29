@@ -143,7 +143,7 @@ export default function ServiceCityPage({ params }: PageProps) {
                 )}
               </div>
 
-              <h3 className="text-2xl font-bold mt-12 mb-6">Nos prestations à {city.name}</h3>
+              <h3 className="text-2xl font-bold mt-12 mb-6">Parmi nos interventions à {city.name}</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {(cityServiceContent?.highlights ?? service.features).map((feature, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
@@ -152,33 +152,14 @@ export default function ServiceCityPage({ params }: PageProps) {
                   </div>
                 ))}
               </div>
-
-              <h3 className="text-2xl font-bold mt-12 mb-6">Pourquoi choisir Art des Jardins ?</h3>
-              <div className="grid sm:grid-cols-2 gap-6">
-                {[
-                  {
-                    title: 'Proximité',
-                    description: `Basés à Angers, nous intervenons rapidement à ${city.name}.`,
-                  },
-                  {
-                    title: 'Expérience',
-                    description: '16 ans d\'expérience cumulée en aménagement paysager.',
-                  },
-                  {
-                    title: 'Qualité',
-                    description: 'Équipements professionnels et techniques respectueuses.',
-                  },
-                  {
-                    title: 'Garantie',
-                    description: 'Entreprise assurée, devis gratuit et sans engagement.',
-                  },
-                ].map((item, i) => (
-                  <div key={i} className="bg-white border border-gray-200 rounded-xl p-5">
-                    <h4 className="font-bold text-gray-900 mb-2">{item.title}</h4>
-                    <p className="text-gray-600 text-sm">{item.description}</p>
-                  </div>
-                ))}
-              </div>
+              <p className="mt-6 text-sm">
+                <Link
+                  href={`/services/${service.service === 'paysagiste' ? 'paysagisme' : service.service}/`}
+                  className="text-primary-600 hover:text-primary-800 font-medium"
+                >
+                  Découvrir l'ensemble de nos prestations {service.serviceTitle.toLowerCase()} →
+                </Link>
+              </p>
             </div>
 
             {/* Sidebar */}
@@ -269,10 +250,11 @@ export default function ServiceCityPage({ params }: PageProps) {
         <img src={`/images/realisations/${serviceHeroImages[service.service] || 'creation-4'}-1200w.webp`} alt="" loading="lazy" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 hero-overlay-strong" />
         <div className="container-custom text-center relative z-10">
-          <h2 className="text-3xl font-bold mb-4 text-white">{pageTitle}</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white">
+            {service.serviceTitle} à {city.name}
+          </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Contactez Art des Jardins pour un devis gratuit et sans engagement.
-            Intervention rapide à {city.name}.
+            Intervention dans tous les quartiers de {city.name}{city.distance ? ' et dans un rayon de 30 km autour d\'Angers' : ''}.
           </p>
           <Link href="/contact/" className="btn-primary-light">
             Demander un devis gratuit

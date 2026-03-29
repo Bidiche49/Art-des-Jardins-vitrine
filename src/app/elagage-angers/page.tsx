@@ -9,7 +9,6 @@ import { IconCheck } from '@/lib/icons';
 import { SITE } from '@/lib/site-config';
 
 const service = serviceTypes.find((s) => s.service === 'elagage')!;
-const city = cities.find((c) => c.slug === 'angers')!;
 
 export const metadata: Metadata = {
   title: 'Élagage Angers - Taille d\'Arbres Professionnel | Art des Jardins',
@@ -112,7 +111,7 @@ export default function ElagageAngersPage() {
 
               <InlineGallery slugs={['elagage-2', 'elagage-4', 'elagage-5']} />
 
-              <h3 className="text-2xl font-bold mt-12 mb-6">Nos services d'élagage</h3>
+              <h3 className="text-2xl font-bold mt-12 mb-6">Parmi nos interventions à Angers</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {service.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
@@ -121,6 +120,14 @@ export default function ElagageAngersPage() {
                   </div>
                 ))}
               </div>
+              <p className="mt-6 text-sm">
+                <Link
+                  href="/services/elagage/"
+                  className="text-primary-600 hover:text-primary-800 font-medium"
+                >
+                  Découvrir l'ensemble de nos prestations élagage →
+                </Link>
+              </p>
 
               <h3 className="text-2xl font-bold mt-12 mb-6">Quand faire élaguer vos arbres ?</h3>
               <div className="prose prose-lg max-w-none text-gray-600">
