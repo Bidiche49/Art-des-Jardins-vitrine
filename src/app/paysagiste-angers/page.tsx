@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { LocalBusinessCitySchema } from '@/components/seo/LocalBusinessCitySchema';
-import { cities, serviceTypes } from '@/lib/cities-data';
+import { cities, serviceTypes, getCitiesByProximity } from '@/lib/cities-data';
 import { HeroSection } from '@/components/ui/HeroSection';
 import { InlineGallery } from '@/components/ui/InlineGallery';
 import { ogImages } from '@/lib/images-manifest';
@@ -166,7 +166,7 @@ export default function PaysagisteAngersPage() {
             Nous intervenons aussi à proximité d'Angers
           </h2>
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {cities.slice(1).map((c) => (
+            {getCitiesByProximity(city).map((c) => (
               <Link
                 key={c.slug}
                 href={`/paysagiste-${c.slug}/`}

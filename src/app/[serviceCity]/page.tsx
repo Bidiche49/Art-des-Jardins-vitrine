@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { LocalBusinessCitySchema } from '@/components/seo/LocalBusinessCitySchema';
-import { cities, serviceTypes, getCityBySlug, getServiceBySlugSeo, ServiceSlug } from '@/lib/cities-data';
+import { cities, serviceTypes, getCityBySlug, getServiceBySlugSeo, getCitiesByProximity, ServiceSlug } from '@/lib/cities-data';
 import { HeroSection } from '@/components/ui/HeroSection';
 import { serviceHeroImages } from '@/lib/images-manifest';
 import { IconCheck } from '@/lib/icons';
@@ -227,8 +227,7 @@ export default function ServiceCityPage({ params }: PageProps) {
             {service.serviceTitle} dans les communes voisines
           </h2>
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {cities
-              .filter((c) => c.slug !== city.slug)
+            {getCitiesByProximity(city)
               .slice(0, 10)
               .map((c) => (
                 <Link

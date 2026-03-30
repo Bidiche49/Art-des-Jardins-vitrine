@@ -13,6 +13,7 @@ export interface CityData {
   postalCode: string;
   population?: string;
   distance?: string; // from Angers
+  geo: { lat: number; lng: number };
   description: string;
   specificContent: string;
   neighborhoods?: string[];
@@ -107,6 +108,7 @@ export const cities: CityData[] = [
     department: 'Maine-et-Loire',
     postalCode: '49000',
     population: '155 000',
+    geo: { lat: 47.4712, lng: -0.5518 },
     description:
       'Capitale du Maine-et-Loire, Angers est une ville verte aux nombreux parcs et jardins. Connue pour son château et ses ardoises, elle offre un cadre de vie agréable avec un patrimoine végétal exceptionnel.',
     specificContent: `
@@ -138,6 +140,7 @@ export const cities: CityData[] = [
     postalCode: '49240',
     population: '14 000',
     distance: '5 km',
+    geo: { lat: 47.4955, lng: -0.5876 },
     description:
       'Commune résidentielle au nord d\'Angers, Avrillé est appréciée pour son cadre de vie verdoyant et ses nombreux espaces naturels, avec un parc de loisirs réputé.',
     specificContent: `
@@ -236,6 +239,7 @@ export const cities: CityData[] = [
     postalCode: '49070',
     population: '5 500',
     distance: '7 km',
+    geo: { lat: 47.4812, lng: -0.6147 },
     description:
       'Commune de l\'ouest angevin, Beaucouzé allie zones résidentielles et commerciales avec de nombreux espaces verts à entretenir.',
     specificContent: `
@@ -334,6 +338,7 @@ export const cities: CityData[] = [
     postalCode: '49080',
     population: '6 800',
     distance: '8 km',
+    geo: { lat: 47.4415, lng: -0.6089 },
     description:
       'Au confluent de la Maine et de la Loire, Bouchemaine offre des paysages exceptionnels et des jardins souvent en bord de rivière.',
     specificContent: `
@@ -432,6 +437,7 @@ export const cities: CityData[] = [
     postalCode: '49124',
     population: '9 500',
     distance: '4 km',
+    geo: { lat: 47.4687, lng: -0.51 },
     description:
       'Commune de l\'est angevin en plein développement, Saint-Barthélemy-d\'Anjou offre un mix de quartiers résidentiels établis et de programmes immobiliers récents.',
     specificContent: `
@@ -530,6 +536,7 @@ export const cities: CityData[] = [
     postalCode: '49800',
     population: '14 000',
     distance: '5 km',
+    geo: { lat: 47.4432, lng: -0.5064 },
     description:
       'Ancienne cité ardoisière, Trélazé est une commune dynamique avec un riche patrimoine industriel reconverti et de nombreux jardins à entretenir.',
     specificContent: `
@@ -628,6 +635,7 @@ export const cities: CityData[] = [
     postalCode: '49130',
     population: '12 500',
     distance: '7 km',
+    geo: { lat: 47.4264, lng: -0.5256 },
     description:
       'Ville insulaire sur la Loire, Les Ponts-de-Cé possède un patrimoine remarquable et des jardins au caractère ligérien prononcé.',
     specificContent: `
@@ -726,6 +734,7 @@ export const cities: CityData[] = [
     postalCode: '49000',
     population: '4 500',
     distance: '6 km',
+    geo: { lat: 47.513, lng: -0.5362 },
     description:
       'Commune au nord d\'Angers entre Sarthe et basses vallées angevines, Écouflant offre un cadre naturel préservé avec de beaux jardins résidentiels.',
     specificContent: `
@@ -823,6 +832,7 @@ export const cities: CityData[] = [
     postalCode: '49460',
     population: '2 400',
     distance: '10 km',
+    geo: { lat: 47.532, lng: -0.5527 },
     description:
       'Village rural au nord d\'Angers, Cantenay-Épinard conserve un caractère authentique avec ses fermes rénovées et leurs grands jardins bordant les basses vallées angevines.',
     specificContent: `
@@ -921,6 +931,7 @@ export const cities: CityData[] = [
     postalCode: '49610',
     population: '5 500',
     distance: '10 km',
+    geo: { lat: 47.3985, lng: -0.562 },
     description:
       'Commune viticole au sud-ouest d\'Angers, Mûrs-Érigné est appréciée pour son cadre de vie entre vignes et Loire, avec un microclimat favorable aux jardins.',
     specificContent: `
@@ -1019,6 +1030,7 @@ export const cities: CityData[] = [
     postalCode: '49130',
     population: '4 200',
     distance: '8 km',
+    geo: { lat: 47.4082, lng: -0.5517 },
     description:
       'Commune paisible au sud d\'Angers en bord de Loire, Sainte-Gemmes-sur-Loire offre un cadre de vie verdoyant entre fleuve et coteaux, avec des propriétés de charme.',
     specificContent: `
@@ -1117,6 +1129,7 @@ export const cities: CityData[] = [
     postalCode: '49460',
     population: '8 500',
     distance: '9 km',
+    geo: { lat: 47.5115, lng: -0.602 },
     description:
       'Commune dynamique au nord-ouest d\'Angers, Montreuil-Juigné allie quartiers résidentiels récents et espaces naturels préservés le long de la Mayenne.',
     specificContent: `
@@ -1215,6 +1228,7 @@ export const cities: CityData[] = [
     postalCode: '49070',
     population: '2 200',
     distance: '12 km',
+    geo: { lat: 47.462, lng: -0.6498 },
     description:
       'Village rural à l\'ouest d\'Angers, Saint-Jean-de-Linières conserve un caractère champêtre avec de grandes propriétés, des espaces boisés et un paysage de bocage préservé.',
     specificContent: `
@@ -1313,6 +1327,7 @@ export const cities: CityData[] = [
     postalCode: '49125',
     population: '2 800',
     distance: '12 km',
+    geo: { lat: 47.556, lng: -0.51 },
     description:
       'Au confluent de la Sarthe et du Loir, Briollay est une commune prisée pour son cadre naturel exceptionnel, ses belles propriétés en bord de rivière et ses paysages de zones humides.',
     specificContent: `
@@ -1411,6 +1426,7 @@ export const cities: CityData[] = [
     postalCode: '49170',
     population: '1 500',
     distance: '14 km',
+    geo: { lat: 47.385, lng: -0.631 },
     description:
       'Célèbre pour son vignoble d\'exception classé AOC, Savennières est une commune de caractère sur les bords de Loire, entre coteaux viticoles et jardins de charme.',
     specificContent: `
@@ -1509,6 +1525,7 @@ export const cities: CityData[] = [
     postalCode: '49480',
     population: '5 500',
     distance: '8 km',
+    geo: { lat: 47.495, lng: -0.481 },
     description:
       'Commune résidentielle au nord-est d\'Angers, Saint-Sylvain-d\'Anjou offre un cadre de vie familial avec des quartiers pavillonnaires bien établis et un environnement verdoyant.',
     specificContent: `
@@ -1607,6 +1624,7 @@ export const cities: CityData[] = [
     postalCode: '49610',
     population: '3 200',
     distance: '15 km',
+    geo: { lat: 47.358, lng: -0.549 },
     description:
       'Commune rurale au sud d\'Angers traversée par l\'Aubance, appréciée pour son calme, ses paysages de bocage préservés et ses vins de l\'appellation Coteaux-de-l\'Aubance.',
     specificContent: `
@@ -1705,6 +1723,7 @@ export const cities: CityData[] = [
     postalCode: '49800',
     population: '16 000',
     distance: '15 km',
+    geo: { lat: 47.435, lng: -0.415 },
     description:
       'Commune nouvelle regroupant six bourgs à l\'est d\'Angers, Loire-Authion est le berceau historique de l\'horticulture angevine, entre Loire et Authion.',
     specificContent: `
@@ -1803,6 +1822,7 @@ export const cities: CityData[] = [
     postalCode: '49770',
     population: '7 500',
     distance: '15 km',
+    geo: { lat: 47.535, lng: -0.635 },
     description:
       'Commune nouvelle au nord d\'Angers, Longuenée-en-Anjou allie patrimoine rural remarquable et développement résidentiel dans un cadre naturel préservé de bocage.',
     specificContent: `
@@ -1922,4 +1942,27 @@ export function getMainServicePages(): { slug: string; service: ServiceCityData;
     service,
     city: cities[0], // Angers
   }));
+}
+
+function haversineDistance(
+  a: { lat: number; lng: number },
+  b: { lat: number; lng: number },
+): number {
+  const R = 6371;
+  const dLat = ((b.lat - a.lat) * Math.PI) / 180;
+  const dLng = ((b.lng - a.lng) * Math.PI) / 180;
+  const sinLat = Math.sin(dLat / 2);
+  const sinLng = Math.sin(dLng / 2);
+  const h =
+    sinLat * sinLat +
+    Math.cos((a.lat * Math.PI) / 180) *
+      Math.cos((b.lat * Math.PI) / 180) *
+      sinLng * sinLng;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+export function getCitiesByProximity(fromCity: CityData, excludeSelf = true): CityData[] {
+  return cities
+    .filter((c) => (excludeSelf ? c.slug !== fromCity.slug : true))
+    .sort((a, b) => haversineDistance(fromCity.geo, a.geo) - haversineDistance(fromCity.geo, b.geo));
 }
