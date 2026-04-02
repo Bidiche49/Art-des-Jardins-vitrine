@@ -48,7 +48,7 @@ export default function PaysagisteAngersPage() {
       <HeroSection
         imageSlug="creation-9"
         title="Paysagiste à Angers"
-        subtitle="Aménagement et création de jardins à Angers et dans le Maine-et-Loire. Des plantations choisies pour le climat océanique angevin et les sols locaux."
+        subtitle="Des jardins conçus pour durer, adaptés aux sols angevins et au climat océanique du Maine-et-Loire. Aménagement, plantation et création d'espaces extérieurs."
         breadcrumbs={[
           { label: 'Accueil', href: '/' },
           { label: 'Paysagiste Angers' },
@@ -67,25 +67,39 @@ export default function PaysagisteAngersPage() {
         </div>
       </HeroSection>
 
-      {/* Introduction */}
+      {/* Content */}
       <section className="pt-8 pb-16 lg:pt-10 lg:pb-24">
         <div className="container-custom">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
+
+              {/* Section 2 — Accroche problème */}
+              <h2 className="text-3xl font-bold mb-6">
+                Un projet d'aménagement paysager à Angers
+              </h2>
+              <div className="prose prose-lg max-w-none text-gray-600 mb-12">
+                <p>
+                  Terrain nu après construction, jardin vieillissant à restructurer, plantations
+                  qui ne reprennent pas sur un sol inadapté, envie d'une terrasse ou d'une pergola
+                  sans vision d'ensemble, extérieur mal organisé pour les usages quotidiens — les
+                  raisons de repenser un jardin sont concrètes.
+                </p>
+                <p>
+                  Chaque terrain à Angers a ses contraintes — nature du sol, exposition, réglementation
+                  du PLU. Un aménagement qui dure commence par leur analyse.
+                </p>
+              </div>
+
+              {/* Section 3 — Expertise locale */}
               <h2 className="text-3xl font-bold mb-6">
                 Aménagement paysager à Angers : sols, climat et quartiers
               </h2>
+
+              {/* Sous-section sols */}
+              <h3 className="font-serif text-2xl text-gray-800 mt-10 mb-4">
+                Schiste, alluvions, argile : un sol différent à chaque quartier
+              </h3>
               <div className="prose prose-lg max-w-none text-gray-600">
-                <p>
-                  Avec plus de 600 hectares d'espaces verts, Angers cultive une tradition
-                  horticole héritée du XIX<sup>e</sup> siècle. Le travail de <strong>paysagiste à Angers</strong> s'inscrit
-                  dans ce contexte particulier : un climat océanique doux, des hivers rarement
-                  rigoureux et des étés tempérés qui permettent une grande diversité de plantations
-                  — hortensias, camélias, magnolias et rhododendrons s'y épanouissent naturellement.
-                </p>
-                <p>
-                  {city.description}
-                </p>
                 <p>
                   Les sols angevins varient fortement d'un quartier à l'autre. Sur les hauteurs
                   de Monplaisir et dans le centre, le schiste bien drainé favorise les massifs
@@ -94,6 +108,36 @@ export default function PaysagisteAngersPage() {
                   d'amendement avant toute plantation structurante. Chaque projet d'aménagement
                   commence par l'analyse de cette réalité pédologique.
                 </p>
+              </div>
+
+              <InlineGallery slugs={['creation-4', 'creation-7']} columns={2} />
+
+              {/* Sous-section climat */}
+              <h3 className="font-serif text-2xl text-gray-800 mt-10 mb-4">
+                Un climat favorable à une grande diversité végétale
+              </h3>
+              <div className="prose prose-lg max-w-none text-gray-600">
+                <p>
+                  Le climat océanique d'Angers — hivers rarement rigoureux, étés tempérés — permet
+                  une diversité de plantations rare en France métropolitaine. Hortensias, camélias,
+                  magnolias et rhododendrons s'épanouissent naturellement dans ce terroir. Le choix
+                  des végétaux dépend toutefois de l'exposition réelle de chaque parcelle.
+                </p>
+              </div>
+
+              <div className="bg-primary-50 border-l-4 border-primary-500 rounded-r-lg p-4 my-6">
+                <p className="text-primary-800 font-medium text-sm">
+                  Avec plus de 600 hectares d'espaces verts, Angers cultive une tradition
+                  horticole héritée du XIX<sup>e</sup> siècle — la ville était déjà reconnue
+                  comme un centre majeur de la production végétale en France.
+                </p>
+              </div>
+
+              {/* Sous-section quartiers */}
+              <h3 className="font-serif text-2xl text-gray-800 mt-10 mb-4">
+                Des quartiers, des jardins différents
+              </h3>
+              <div className="prose prose-lg max-w-none text-gray-600">
                 <p>
                   La Doutre, avec ses parcelles étroites et son patrimoine architectural, appelle
                   des jardins de ville où chaque mètre carré compte. À Saint-Serge et Belle-Beille,
@@ -105,8 +149,9 @@ export default function PaysagisteAngersPage() {
                 </p>
               </div>
 
-              <InlineGallery slugs={['creation-4', 'creation-7', 'creation-5', 'creation-8', 'creation-3', 'terrasse-2']} />
+              <InlineGallery slugs={['creation-5', 'creation-8', 'creation-3', 'terrasse-2']} />
 
+              {/* Section 5 — Prestations */}
               <h3 className="text-2xl font-bold mt-12 mb-6">Parmi nos interventions à Angers</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {service.features.map((feature, i) => (
@@ -121,9 +166,111 @@ export default function PaysagisteAngersPage() {
                   href="/services/paysagisme/"
                   className="text-primary-600 hover:text-primary-800 font-medium"
                 >
-                  Découvrir l'ensemble de nos prestations paysagiste →
+                  Découvrir l'ensemble de nos prestations paysagisme →
                 </Link>
               </p>
+
+              {/* Section 6 — Déroulement du projet */}
+              <h3 className="text-2xl font-bold mt-12 mb-6">Comment se déroule un projet</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  {
+                    step: 1,
+                    title: 'Visite et analyse du terrain',
+                    description:
+                      'Déplacement gratuit, étude du sol et de l\'exposition. Sur les terrains angevins, l\'analyse distingue les substrats schisteux des sols alluviaux pour adapter les choix de plantation.',
+                  },
+                  {
+                    step: 2,
+                    title: 'Échange sur vos besoins',
+                    description:
+                      'Usages souhaités, style, niveau d\'entretien envisagé, budget. Cette étape définit le cadre du projet.',
+                  },
+                  {
+                    step: 3,
+                    title: 'Proposition d\'aménagement',
+                    description:
+                      'Plan détaillé avec choix des végétaux adaptés au terroir angevin, matériaux et chiffrage précis.',
+                  },
+                  {
+                    step: 4,
+                    title: 'Réalisation',
+                    description:
+                      'Travaux exécutés selon le planning défini, du terrassement aux plantations et finitions.',
+                  },
+                  {
+                    step: 5,
+                    title: 'Suivi après plantation',
+                    description:
+                      'Conseils d\'entretien personnalisés et vérification de la reprise des végétaux.',
+                  },
+                ].map((item) => (
+                  <div key={item.step} className="bg-gray-50 rounded-xl p-5">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-600 text-white text-sm font-bold">
+                        {item.step}
+                      </span>
+                      <h4 className="font-bold text-gray-900">{item.title}</h4>
+                    </div>
+                    <p className="text-gray-600 text-sm">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Section 7 — Pourquoi faire appel à un paysagiste */}
+              <h3 className="text-2xl font-bold mt-12 mb-6">Pourquoi faire appel à un paysagiste</h3>
+              <div className="prose prose-lg max-w-none text-gray-600">
+                <p>
+                  Un aménagement pensé dans son ensemble assure la cohérence entre végétaux,
+                  terrasse, circulations et usages — ce qu'une approche par ajouts successifs
+                  ne permet pas. Le choix des essences en fonction du sol et de l'exposition
+                  évite les erreurs de plantation : à Angers, un magnolia planté en fond de
+                  vallée sur sol alluvial mal drainé ne se développera pas comme sur les
+                  hauteurs schisteuses de Monplaisir.
+                </p>
+                <p>
+                  Un jardin conçu par un paysagiste intègre dès le départ l'évolution des
+                  végétaux dans le temps. Les volumes, les ombres portées, l'encombrement à
+                  maturité sont anticipés pour que le jardin reste fonctionnel dans 5 ou 10 ans,
+                  pas seulement à la livraison. Un extérieur aménagé contribue aussi à la
+                  valorisation du bien immobilier.
+                </p>
+              </div>
+
+              {/* Section 8 — Pourquoi choisir Art des Jardins */}
+              <h3 className="text-2xl font-bold mt-12 mb-8">Pourquoi choisir Art des Jardins</h3>
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h4 className="font-bold text-lg mb-2">Connaissance des sols angevins</h4>
+                  <p className="text-gray-600 text-sm">
+                    Analyse terrain systématique avant chaque projet. Substrats schisteux,
+                    alluviaux ou argileux : le diagnostic oriente le drainage, les amendements
+                    et le choix des végétaux.
+                  </p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h4 className="font-bold text-lg mb-2">Végétaux adaptés au terroir</h4>
+                  <p className="text-gray-600 text-sm">
+                    Essences acclimatées au climat océanique angevin, sélectionnées pour leur
+                    reprise durable selon l'exposition et la nature du sol de chaque parcelle.
+                  </p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h4 className="font-bold text-lg mb-2">Respect du PLU local</h4>
+                  <p className="text-gray-600 text-sm">
+                    Connaissance des réglementations d'urbanisme d'Angers : Espaces Boisés
+                    Classés, périmètre ABF du secteur sauvegardé, règles de prospect et
+                    d'emprise au sol.
+                  </p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h4 className="font-bold text-lg mb-2">Suivi après plantation</h4>
+                  <p className="text-gray-600 text-sm">
+                    Conseils d'entretien adaptés à chaque projet, vérification de la reprise
+                    des végétaux. Le jardin doit fonctionner dans la durée.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Sidebar */}
@@ -159,7 +306,7 @@ export default function PaysagisteAngersPage() {
         </div>
       </section>
 
-      {/* Other Cities */}
+      {/* Section 9 — Other Cities */}
       <section className="py-16 lg:py-24">
         <div className="container-custom">
           <h2 className="text-3xl font-bold text-center mb-12">
@@ -182,7 +329,7 @@ export default function PaysagisteAngersPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Section 10 — CTA */}
       <section className="relative py-16 overflow-hidden">
         <img src="/images/realisations/creation-8-1200w.webp" alt="" loading="lazy" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 hero-overlay-strong" />
