@@ -25,7 +25,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'Quels services proposez-vous ?',
         answer:
-          'Art des Jardins propose l\'aménagement paysager (création de jardins, terrasses, clôtures), l\'entretien régulier (tonte, taille de haies, désherbage), l\'élagage d\'arbres et l\'abattage sécurisé avec dessouchage. Nous intervenons aussi bien chez les particuliers que pour les professionnels et syndics.',
+          'Art des Jardins propose l\'aménagement paysager (création de jardins, terrasses, clôtures), l\'entretien régulier (tonte, taille de haies, désherbage), l\'élagage d\'arbres et l\'abattage sécurisé avec dessouchage. Nous intervenons aussi bien chez les particuliers que pour les professionnels.',
       },
       {
         question: 'Dans quelle zone intervenez-vous ?',

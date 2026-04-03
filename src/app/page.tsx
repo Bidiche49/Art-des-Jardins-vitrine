@@ -171,7 +171,7 @@ export default function HomePage() {
             <div className="prose prose-lg text-gray-600 mx-auto text-center">
               <p>
                 Fondée par deux associés passionnés cumulant plus de <strong>16 ans d&apos;expérience</strong>,
-                Art des Jardins accompagne particuliers, professionnels et syndics dans tous leurs projets
+                Art des Jardins accompagne particuliers et professionnels dans tous leurs projets
                 d&apos;espaces verts à Angers et dans le Maine-et-Loire.
               </p>
               <p>
