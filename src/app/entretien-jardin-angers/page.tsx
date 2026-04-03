@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { LocalBusinessCitySchema } from '@/components/seo/LocalBusinessCitySchema';
-import { cities, serviceTypes } from '@/lib/cities-data';
+import { cities, serviceTypes, getCitiesByProximity } from '@/lib/cities-data';
 import { HeroSection } from '@/components/ui/HeroSection';
 import { InlineGallery } from '@/components/ui/InlineGallery';
 import { TaxCreditSection } from '@/components/TaxCreditSection';
 import { ogImages } from '@/lib/images-manifest';
-import { IconCheck } from '@/lib/icons';
+import { IconCheck, IconPin } from '@/lib/icons';
 import { SITE } from '@/lib/site-config';
 
 const service = serviceTypes.find((s) => s.service === 'entretien-jardin')!;
@@ -72,16 +72,41 @@ export default function EntretienJardinAngersPage() {
       </HeroSection>
 
       {/* Content */}
-      <section className="py-16 lg:py-24">
+      <section className="pt-8 pb-16 lg:pt-10 lg:pb-24">
         <div className="container-custom">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
+
+              {/* Section 2 — Accroche problème */}
+              <h2 className="text-3xl font-bold mb-6">
+                Un jardin à entretenir à Angers
+              </h2>
+              <div className="prose prose-lg max-w-none text-gray-600 mb-12">
+                <p>
+                  Jardin envahi après une absence prolongée, pelouse jaunie ou couverte
+                  de mousse, haies qui débordent sur le trottoir ou chez le voisin, pas
+                  le temps de suivre le rythme d'entretien qu'impose un jardin angevin —
+                  les raisons de faire appel à un professionnel sont concrètes.
+                </p>
+                <p>
+                  À Angers, le climat océanique accélère la pousse de mars à octobre
+                  sans vraie pause. Le calendrier d'entretien s'adapte à ce rythme,
+                  à la nature du sol et aux spécificités de chaque quartier.
+                </p>
+              </div>
+
+              {/* Section 3 — Expertise locale */}
               <h2 className="text-3xl font-bold mb-6">
                 Entretenir un jardin sous climat angevin
               </h2>
+
+              {/* H3 1 — Rythme de pousse */}
+              <h3 className="font-serif text-2xl text-gray-800 mt-10 mb-4">
+                Rythme de pousse sous climat océanique
+              </h3>
               <div className="prose prose-lg max-w-none text-gray-600">
                 <p>
-                  L'<strong>entretien de jardin à Angers</strong> suit un rythme dicté par le climat
+                  L'entretien de jardin à Angers suit un rythme dicté par le climat
                   océanique de la vallée de la Maine. Douceur hivernale, humidité régulière, étés
                   tempérés : les pelouses poussent de mars à octobre sans vraie pause, ce qui
                   représente 25 à 30 tontes par an — près du double d'un jardin en climat continental.
@@ -95,6 +120,22 @@ export default function EntretienJardinAngersPage() {
                   platanes, tilleuls et marronniers présents dans de nombreuses rues angevines
                   génèrent un volume de feuilles important à évacuer avant que le gazon ne s'étouffe.
                 </p>
+              </div>
+
+              <InlineGallery slugs={['entretien-1', 'entretien-2']} columns={2} />
+
+              <div className="bg-primary-50 border-l-4 border-primary-500 rounded-r-lg p-4 my-6">
+                <p className="text-primary-800 font-medium text-sm">
+                  25 à 30 tontes par an sous climat océanique — près du double d'un jardin
+                  en climat continental. Une régularité d'entretien indispensable de mars à octobre.
+                </p>
+              </div>
+
+              {/* H3 2 — Sols et calendrier */}
+              <h3 className="font-serif text-2xl text-gray-800 mt-10 mb-4">
+                Sols et calendrier d'entretien
+              </h3>
+              <div className="prose prose-lg max-w-none text-gray-600">
                 <p>
                   Les sols jouent aussi un rôle dans le calendrier d'entretien. Sur les hauteurs de
                   Monplaisir ou en centre-ville, le substrat schisteux se dessèche vite en été :
@@ -102,6 +143,13 @@ export default function EntretienJardinAngersPage() {
                   le lac de Maine ou les bords de la Maine, les sols alluviaux restent gorgés d'eau
                   en hiver, rendant la tonte délicate et le passage d'engins plus contraignant.
                 </p>
+              </div>
+
+              {/* H3 3 — Quartiers */}
+              <h3 className="font-serif text-2xl text-gray-800 mt-10 mb-4">
+                Des quartiers, des jardins à entretenir
+              </h3>
+              <div className="prose prose-lg max-w-none text-gray-600">
                 <p>
                   Dans les quartiers pavillonnaires de Belle-Beille, des Hauts de Saint-Aubin ou de
                   la Roseraie, les haies de thuyas et de leylandii plantées dans les années 90
@@ -111,8 +159,7 @@ export default function EntretienJardinAngersPage() {
                 </p>
               </div>
 
-              <InlineGallery slugs={['entretien-1', 'entretien-2']} columns={2} />
-
+              {/* Section 5 — Prestations */}
               <h3 className="text-2xl font-bold mt-12 mb-6">Parmi nos interventions à Angers</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {service.features.map((feature, i) => (
@@ -131,6 +178,104 @@ export default function EntretienJardinAngersPage() {
                 </Link>
               </p>
 
+              {/* Section 6 — Déroulement */}
+              <h3 className="text-2xl font-bold mt-12 mb-6">Comment se déroule un entretien</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  {
+                    step: 1,
+                    title: 'Évaluation du jardin',
+                    description:
+                      'Déplacement sur place, état de la pelouse, des haies et des massifs. À Angers, l\'analyse prend en compte le type de sol (schisteux ou alluvial) et l\'exposition.',
+                  },
+                  {
+                    step: 2,
+                    title: 'Proposition de formule',
+                    description:
+                      'Contrat annuel ou intervention ponctuelle, selon les besoins et la superficie du jardin.',
+                  },
+                  {
+                    step: 3,
+                    title: 'Planning adapté au rythme de pousse',
+                    description:
+                      'Calendrier de passages calé sur le cycle végétatif angevin : tontes rapprochées de mars à octobre, tailles saisonnières, traitements préventifs.',
+                  },
+                  {
+                    step: 4,
+                    title: 'Passages réguliers',
+                    description:
+                      'Tonte, taille de haies, désherbage, ramassage de feuilles. Chaque passage est adapté à l\'état réel du jardin.',
+                  },
+                  {
+                    step: 5,
+                    title: 'Ajustements saisonniers',
+                    description:
+                      'Scarification de printemps, traitement mousse, paillage estival, nettoyage automnal. Le programme évolue avec les saisons.',
+                  },
+                ].map((item) => (
+                  <div key={item.step} className="bg-gray-50 rounded-xl p-5">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-600 text-white text-sm font-bold">
+                        {item.step}
+                      </span>
+                      <h4 className="font-bold text-gray-900">{item.title}</h4>
+                    </div>
+                    <p className="text-gray-600 text-sm">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Section 7 — Pourquoi un professionnel */}
+              <h3 className="text-2xl font-bold mt-12 mb-6">Pourquoi faire appel à un professionnel</h3>
+              <div className="prose prose-lg max-w-none text-gray-600">
+                <p>
+                  Un jardin sous climat océanique ne pardonne pas les retards : la mousse
+                  s'installe en quelques semaines sur un gazon non scarifié, les haies se
+                  dégarnissent à la base quand les tailles sont espacées. À Angers, où les
+                  pelouses poussent de mars à octobre sans pause, un décalage de deux semaines
+                  dans le planning de tonte suffit à dégrader l'état du gazon.
+                </p>
+                <p>
+                  L'équipement joue aussi : tondeuse professionnelle adaptée à la superficie,
+                  taille-haies pour toutes les hauteurs, scarificateur. Un professionnel
+                  repère les premiers signes de problème — mousse qui signale un sol compacté,
+                  jaunissement qui indique une carence ou un défaut de drainage.
+                </p>
+              </div>
+
+              {/* Section 8 — Pourquoi choisir Art des Jardins */}
+              <h3 className="text-2xl font-bold mt-12 mb-8">Pourquoi choisir Art des Jardins</h3>
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h4 className="font-bold text-lg mb-2">Rythme adapté au climat océanique</h4>
+                  <p className="text-gray-600 text-sm">
+                    Calendrier de passages calé sur le cycle végétatif angevin, pas sur
+                    un forfait standard. Les interventions suivent le rythme réel de
+                    pousse, saison par saison.
+                  </p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h4 className="font-bold text-lg mb-2">Crédit d'impôt 50 %</h4>
+                  <p className="text-gray-600 text-sm">
+                    Agréé services à la personne. L'avance immédiate permet de ne payer
+                    que la moitié dès la facturation.
+                  </p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h4 className="font-bold text-lg mb-2">Contrat ou ponctuel</h4>
+                  <p className="text-gray-600 text-sm">
+                    Formule annuelle avec tarif préférentiel, ou intervention à la demande
+                    pour un rattrapage ou un nettoyage saisonnier.
+                  </p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h4 className="font-bold text-lg mb-2">Équipement professionnel</h4>
+                  <p className="text-gray-600 text-sm">
+                    Tondeuse adaptée à la superficie, taille-haies pour toutes hauteurs,
+                    scarificateur, souffleur. Résultat net et rapide.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Sidebar */}
@@ -177,7 +322,7 @@ export default function EntretienJardinAngersPage() {
         </div>
       </section>
 
-      {/* Credit d'impot - Section mise en avant */}
+      {/* TaxCreditSection */}
       <TaxCreditSection />
 
       {/* Formules d'entretien */}
@@ -215,7 +360,30 @@ export default function EntretienJardinAngersPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Section 9 — Maillage villes */}
+      <section className="py-16 lg:py-24">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Entretien de jardin dans les communes voisines
+          </h2>
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {getCitiesByProximity(city).map((c) => (
+              <Link
+                key={c.slug}
+                href={`/entretien-jardin-${c.slug}/`}
+                className="block p-4 bg-gray-50 rounded-lg hover:bg-primary-50 transition-colors text-center"
+              >
+                <span className="font-medium text-gray-900">Entretien jardin {c.name}</span>
+                {c.distance && (
+                  <span className="block text-sm text-gray-500 mt-1">à {c.distance}</span>
+                )}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 10 — CTA */}
       <section className="relative py-16 overflow-hidden">
         <img src="/images/realisations/entretien-1-1200w.webp" alt="" loading="lazy" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 hero-overlay-strong" />
@@ -225,9 +393,17 @@ export default function EntretienJardinAngersPage() {
             Tonte, taille, désherbage, ramassage de feuilles — interventions adaptées
             au rythme de votre jardin et au climat angevin.
           </p>
-          <Link href="/contact/" className="btn-primary-light">
-            Demander un devis gratuit
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact/" className="btn-primary-light">
+              Demander un devis gratuit
+            </Link>
+            <a
+              href={SITE.phone1.link}
+              className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white/10"
+            >
+              {SITE.phone1.display}
+            </a>
+          </div>
         </div>
       </section>
     </>
