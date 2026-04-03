@@ -96,6 +96,82 @@ export default function AProposPage() {
         </div>
       </section>
 
+      {/* Notre équipe */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Notre équipe</h2>
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+
+            {/* Louis Coussière */}
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+              <img
+                src="/images/team/louis-coussiere.webp"
+                alt="Louis Coussière, élagueur et paysagiste — Art des Jardins"
+                width={1024}
+                height={1536}
+                loading="lazy"
+                decoding="async"
+                className="w-full aspect-[2/3] object-cover object-top"
+              />
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-gray-900 mb-3">Louis Coussière</h3>
+                <div className="text-gray-600 text-sm space-y-3">
+                  <p>
+                    Passionné par le végétal et le travail en extérieur, je mets mon savoir-faire au
+                    service de vos espaces verts. Élagueur et paysagiste de métier, j&apos;interviens
+                    avec précision et respect pour la santé et l&apos;esthétique des arbres.
+                  </p>
+                  <p>
+                    Grâce à mes compétences en maçonnerie paysagère, je conçois et réalise également
+                    des aménagements durables et harmonieux, adaptés à vos besoins.
+                  </p>
+                  <p>
+                    Polyvalent et rigoureux, j&apos;assure aussi l&apos;entretien complet de vos
+                    extérieurs afin de garantir leur beauté au fil des saisons.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Joselyn Rondeau */}
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+              <img
+                src="/images/team/joselyn-rondeau.webp"
+                alt="Joselyn Rondeau, spécialiste bois et arrosage — Art des Jardins"
+                width={1024}
+                height={1536}
+                loading="lazy"
+                decoding="async"
+                className="w-full aspect-[2/3] object-cover object-top"
+              />
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-gray-900 mb-3">Joselyn Rondeau</h3>
+                <div className="text-gray-600 text-sm space-y-3">
+                  <p>
+                    Spécialiste du travail du bois, je conçois et réalise des aménagements sur mesure
+                    alliant esthétisme, solidité et intégration naturelle dans votre environnement
+                    extérieur.
+                  </p>
+                  <p>
+                    Fort d&apos;une expertise en systèmes d&apos;arrosage automatique et en électricité
+                    extérieure, je mets en place des installations fiables et performantes, pensées
+                    pour optimiser la gestion de l&apos;eau et valoriser vos espaces grâce à des
+                    solutions d&apos;éclairage adaptées.
+                  </p>
+                  <p>
+                    Force de proposition, je vous accompagne dans la création de jardins sur mesure,
+                    en apportant des idées innovantes et des solutions personnalisées afin de donner
+                    vie à des espaces extérieurs uniques, en parfaite harmonie avec vos envies et
+                    votre cadre de vie.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Chiffres clés */}
       <AnimateOnScroll>
         <StatsCounter />
