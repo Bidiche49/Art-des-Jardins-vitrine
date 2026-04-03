@@ -13,7 +13,7 @@ export const SITE = {
     international: '+33659684916',
   },
   whatsapp: '33781160737',
-  email: 'contact@artdesjardins-paysagiste.fr',
+  email: 'artdesjardins49@gmail.com',
   address: {
     street: '9 bis rue Rouget de l\'Isle',
     city: 'Les Ponts-de-Cé',
