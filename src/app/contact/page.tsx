@@ -76,7 +76,7 @@ export default function ContactPage() {
                 {[
                   { step: '1', title: 'Vous nous contactez', desc: 'Via ce formulaire ou par téléphone' },
                   { step: '2', title: 'Visite gratuite', desc: 'Nous venons étudier votre projet sur place' },
-                  { step: '3', title: 'Devis sous 48h', desc: 'Détaillé, transparent et sans engagement' },
+                  { step: '3', title: 'Devis gratuit', desc: 'Détaillé, transparent et sans engagement' },
                 ].map((item) => (
                   <div key={item.step} className="text-center">
                     <div className="w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-2">

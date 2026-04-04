@@ -1,3 +1,8 @@
+/** Années d'expérience cumulée des 2 associés. Base : 16 ans en 2026, +2/an. */
+export function getCumulatedExperience(): number {
+  return 16 + (new Date().getFullYear() - 2026) * 2;
+}
+
 export const SITE = {
   name: 'Art des Jardins',
   legalName: 'SARL Art des Jardins',

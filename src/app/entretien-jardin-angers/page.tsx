@@ -257,8 +257,8 @@ export default function EntretienJardinAngersPage() {
                 <div className="bg-gray-50 rounded-xl p-6">
                   <h4 className="font-bold text-lg mb-2">Crédit d'impôt 50 %</h4>
                   <p className="text-gray-600 text-sm">
-                    Agréé services à la personne. L'avance immédiate permet de ne payer
-                    que la moitié dès la facturation.
+                    Agréé services à la personne. Récupérez 50 % du montant
+                    en crédit d'impôt sur votre déclaration de revenus.
                   </p>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-6">
@@ -286,7 +286,7 @@ export default function EntretienJardinAngersPage() {
                   <ul className="space-y-3 text-primary-700">
                     <li className="flex items-start gap-2">
                       <IconCheck className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                      <span>Tarif préférentiel (-15%)</span>
+                      <span>Tarif préférentiel</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <IconCheck className="w-5 h-5 mt-0.5 flex-shrink-0" />

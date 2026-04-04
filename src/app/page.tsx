@@ -10,7 +10,7 @@ import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
 import { BeforeAfterSection } from '@/components/BeforeAfterSection';
 import { serviceCardImages, getSrcSet, getDefaultSrc, getImage } from '@/lib/images-manifest';
 import { IconRcPro, IconDecennale, IconExperience, IconDevis48h, IconZone30km, IconInstagram, IconEuro } from '@/lib/icons';
-import { SITE } from '@/lib/site-config';
+import { SITE, getCumulatedExperience } from '@/lib/site-config';
 import { services as allServices } from '@/lib/services-data';
 import { cities } from '@/lib/cities-data';
 
@@ -51,11 +51,11 @@ export default function HomePage() {
             </div>
             <div className="flex items-center gap-2">
               <IconExperience className="w-5 h-5 text-primary-600 flex-shrink-0" />
-              <span className="font-medium">16 ans d&apos;expérience cumulée</span>
+              <span className="font-medium">{getCumulatedExperience()} ans d&apos;expérience cumulée</span>
             </div>
             <div className="flex items-center gap-2">
               <IconDevis48h className="w-5 h-5 text-primary-600 flex-shrink-0" />
-              <span className="font-medium">Devis gratuit sous 48h suite au rendez-vous</span>
+              <span className="font-medium">Réponse sous 48h</span>
             </div>
             <div className="flex items-center gap-2">
               <IconZone30km className="w-5 h-5 text-primary-600 flex-shrink-0" />
@@ -170,7 +170,7 @@ export default function HomePage() {
           <AnimateOnScroll>
             <div className="prose prose-lg text-gray-600 mx-auto text-center">
               <p>
-                Fondée par deux associés passionnés cumulant plus de <strong>16 ans d&apos;expérience</strong>,
+                Fondée par deux associés passionnés cumulant plus de <strong>{getCumulatedExperience()} ans d&apos;expérience</strong>,
                 Art des Jardins accompagne particuliers et professionnels dans tous leurs projets
                 d&apos;espaces verts à Angers et dans le Maine-et-Loire.
               </p>

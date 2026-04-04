@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { MobileStickyBar } from '@/components/ui/MobileStickyBar';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { Analytics } from '@/components/Analytics';
-import { SITE } from '@/lib/site-config';
+import { SITE, getCumulatedExperience } from '@/lib/site-config';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const cormorant = Cormorant_Garamond({
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: '%s | Art des Jardins - Paysagiste Angers',
   },
   description:
-    'Paysagiste professionnel à Angers et Maine-et-Loire. Aménagement de jardins, entretien, élagage, abattage. 16 ans d\'expérience cumulée. Devis gratuit sous 48h.',
+    `Paysagiste professionnel à Angers et Maine-et-Loire. Aménagement de jardins, entretien, élagage, abattage. ${getCumulatedExperience()} ans d'expérience cumulée. Devis gratuit sous 48h.`,
   keywords: [
     'paysagiste angers',
     'jardinier angers',

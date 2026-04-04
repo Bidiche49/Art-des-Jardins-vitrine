@@ -3,12 +3,13 @@ import Link from 'next/link';
 import { HeroSection } from '@/components/ui/HeroSection';
 import { StatsCounter } from '@/components/ui/StatsCounter';
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
+import { getCumulatedExperience } from '@/lib/site-config';
 import { IconQualite, IconEquipe, IconEcologie, IconTransparence } from '@/lib/icons';
 
 export const metadata: Metadata = {
   title: 'À propos - Art des Jardins | Paysagiste Angers',
   description:
-    'Découvrez Art des Jardins, entreprise de paysage à Angers. Deux associés passionnés, 16 ans d\'expérience cumulée. Notre histoire, notre équipe, nos valeurs.',
+    `Découvrez Art des Jardins, entreprise de paysage à Angers. Deux associés passionnés, ${getCumulatedExperience()} ans d'expérience cumulée. Notre histoire, notre équipe, nos valeurs.`,
   alternates: {
     canonical: '/a-propos/',
   },
@@ -69,7 +70,7 @@ export default function AProposPage() {
           <div className="prose prose-lg text-gray-600 mx-auto">
             <p>
               <strong>Art des Jardins</strong> est née de la rencontre de deux passionnés du paysage,
-              cumulant plus de 16 ans d&apos;expérience dans l&apos;aménagement et l&apos;entretien
+              cumulant plus de {getCumulatedExperience()} ans d&apos;expérience dans l&apos;aménagement et l&apos;entretien
               d&apos;espaces verts. Installés aux Ponts-de-Cé, aux portes d&apos;Angers, nous avons
               fondé notre entreprise avec une conviction : offrir un service de qualité artisanale,
               proche de nos clients.

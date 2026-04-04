@@ -60,7 +60,7 @@ export const services: ServiceData[] = [
       'Installation de systèmes d\'arrosage automatique',
       'Pergola sur mesure',
       'Maçonneries extérieures',
-      'Cabane dans les arbres',
+
       'Pose de clôtures et bordures',
       'Éclairage de jardin',
     ],
@@ -139,7 +139,7 @@ export const services: ServiceData[] = [
     `,
     features: [
       'Tonte de pelouse et réfection de gazon',
-      'Taille de haies, arbustes et topiaires',
+      'Taille de haies et arbustes',
       'Désherbage manuel et écologique',
       'Ramassage des feuilles mortes',
       'Bêchage et préparation des massifs',
@@ -218,7 +218,7 @@ export const services: ServiceData[] = [
 
       Les techniques employées respectent la physiologie de l'arbre pour limiter le stress et favoriser une cicatrisation correcte. Un diagnostic visuel préalable permet d'évaluer l'état sanitaire, la structure et les risques éventuels avant de définir le plan de taille adapté.
 
-      Les interventions concernent aussi bien les jardins de particuliers que les copropriétés, parcs d'entreprise et espaces publics. Le matériel utilisé — cordes, harnais de grimpe, nacelle, broyeur — est adapté à chaque configuration de chantier.
+      Les interventions concernent aussi bien les jardins de particuliers que les espaces verts de professionnels. Le matériel utilisé — cordes, harnais de grimpe, nacelle, broyeur — est adapté à chaque configuration de chantier.
     `,
     features: [
       'Taille de formation pour jeunes arbres',
@@ -359,7 +359,7 @@ export const services: ServiceData[] = [
       {
         question: 'Intervenez-vous en urgence après tempête ?',
         answer:
-          'Oui, nous disposons d\'une ligne d\'urgence pour les arbres tombés ou dangereux. Nous intervenons rapidement pour sécuriser les lieux.',
+          'Oui, en cas d\'arbre tombé ou dangereux, appelez-nous directement. Nous faisons notre maximum pour intervenir rapidement et sécuriser les lieux.',
       },
       {
         question: 'Quel est le prix d\'un abattage d\'arbre ?',
@@ -564,7 +564,7 @@ export const services: ServiceData[] = [
       'Taille de haies champêtres et bocagères',
       'Taille de formation pour jeunes haies',
       'Rabattage et réduction de haies trop hautes',
-      'Taille en topiaire et formes décoratives',
+
       'Ramassage et évacuation des déchets de taille',
       'Traitement phytosanitaire si nécessaire',
     ],

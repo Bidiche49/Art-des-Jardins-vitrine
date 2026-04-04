@@ -80,8 +80,8 @@ export function TaxCreditSection({ serviceSlug = 'entretien-jardin' }: TaxCredit
                   directement par l&apos;administration fiscale.
                 </p>
                 <p>
-                  L&apos;avance immédiate de crédit d&apos;impôt vous permet de ne payer que
-                  50&nbsp;% du montant dès la facturation, sans attendre votre déclaration de revenus.
+                  Le crédit d&apos;impôt est versé l&apos;année suivante lors de votre déclaration
+                  de revenus, ou remboursé directement si vous n&apos;êtes pas imposable.
                 </p>
               </div>
             </div>
