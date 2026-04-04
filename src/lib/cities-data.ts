@@ -4,6 +4,8 @@ export interface ServiceCityContent {
   content: string;           // 3-5 unique paragraphs about THIS service in THIS city
   metaDescription: string;   // unique meta description, 150-160 chars
   highlights?: string[];     // service-specific highlights for this city
+  accroche?: string;         // Section 2 text (80-120 words)
+  whyPro?: string;           // Section 7 text (80-120 words)
 }
 
 export interface CityData {
