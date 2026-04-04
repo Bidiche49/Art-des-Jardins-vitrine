@@ -174,6 +174,8 @@ export const cities: CityData[] = [
           'Massifs de vivaces et graminées ornementales quatre saisons',
           'Aménagement de jardins étroits en centre-bourg historique',
         ],
+        accroche: 'Sol argilo-limoneux qui compacte dès juin et freine l\'enracinement, parcelles de 600 à 1 500 m² à structurer entre terrasse, massifs et circulations, lotissements récents sans ombre où le plein soleil rend les étés difficiles, jardin étroit du centre-bourg à repenser en profondeur plutôt qu\'en largeur.\n\nChaque terrain à Avrillé a ses contraintes — la nature argileuse du sol, l\'exposition généreuse et la taille de la parcelle orientent les choix bien avant la première plantation.',
+        whyPro: 'Un aménagement conçu dans son ensemble évite les incohérences qu\'une approche par ajouts successifs accumule — une terrasse posée sans anticiper les circulations, des massifs qui bloquent l\'accès au fond de parcelle, des végétaux mal assortis au sol. À Avrillé, planter sans décompactage préalable du sol argilo-limoneux condamne les racines à rester en surface ; un érable champêtre ou un charme fastigié installé sans amendement organique peinera à s\'établir là où le même sujet, correctement préparé, formera un arbre d\'ombrage structurant en quelques années.',
       },
       elagage: {
         content: `
@@ -273,6 +275,8 @@ export const cities: CityData[] = [
           'Drainage et noues paysagères pour parcelles en zone basse',
           'Rénovation de massifs et haies dans les quartiers anciens',
         ],
+        accroche: 'Terrain nu livré par le constructeur, haies monotones de thuyas à remplacer, massifs vieillissants à restructurer dans les quartiers du centre-bourg ou de la Gaudière, limons qui saturent d\'eau en hiver et asphyxient les plantations récentes — les raisons de repenser un jardin à Beaucouzé sont liées au terrain autant qu\'aux usages.\n\nLe relief plat et les sols limoneux fertiles de la commune offrent un potentiel large, à condition d\'intégrer le drainage dès la conception.',
+        whyPro: 'Un jardin dessiné dans sa globalité assure la cohérence entre terrasse, pelouse, massifs et haies — ce qu\'un aménagement par morceaux ne permet pas. À Beaucouzé, les limons profonds sur substrat schisteux retiennent l\'eau en hiver au point de noyer les racines des plantations sensibles. Poser un drain agricole ou créer une noue paysagère avant de planter, choisir des cornouillers ou des iris en zone basse plutôt que des essences de sol sec : ces décisions techniques, prises en amont, évitent des remplacements coûteux après deux ou trois hivers.',
       },
       elagage: {
         content: `
@@ -372,6 +376,8 @@ export const cities: CityData[] = [
           'Jardins étagés intégrant la topographie des coteaux',
           'Palette végétale méditerranéenne sur sol schisteux drainé',
         ],
+        accroche: 'Jardin en zone inondable où les plantations doivent résister aux submersions, propriété de 1 000 à 3 000 m² sur les coteaux avec une vue sur la Loire à préserver, sol alluvial lourd en bas de parcelle et schiste sec sur les hauteurs du Bourg ou de La Pointe — à Bouchemaine, un même terrain peut imposer deux logiques d\'aménagement distinctes.\n\nLa topographie, la nature du sol et les contraintes hydrauliques du confluent orientent chaque décision avant le premier coup de pelle.',
+        whyPro: 'La dualité des sols à Bouchemaine — alluvions lourdes en zone basse, schiste drainé sur les coteaux — rend les erreurs de plantation coûteuses. Un cornouiller sanguin ou un iris des marais prospère en Basse-Île mais dépérit sur le schiste sec de La Pointe ; inversement, une lavande ou un romarin installé en fond de vallée pourrira dès le premier hiver humide. Un aménagement pensé dans son ensemble intègre ces contraintes parcelle par parcelle, choisit les matériaux adaptés au contexte ligérien — tuffeau, pierre de schiste, bois — et anticipe l\'évolution des végétaux sur un terrain où le relief crée des microclimats à quelques mètres d\'écart.',
       },
       elagage: {
         content: `
@@ -471,6 +477,8 @@ export const cities: CityData[] = [
           'Aménagement optimisé pour parcelles de 300 à 600 m²',
           'Fruitiers palissés et vivaces adaptés au sol de rétention',
         ],
+        accroche: 'Terrain décapé par la construction avec à peine vingt centimètres de terre végétale, parcelle de 300 à 600 m² à organiser entre terrasse, coin repas et plantations, sol argilo-schisteux qui durcit en croûte dès juin et colle aux outils en hiver — dans les lotissements récents comme dans les jardins anciens du Bourg et de La Grande Chaussée, les contraintes du terrain conditionnent chaque choix.\n\nLa nature du sol, la taille de la parcelle et l\'état du terrain de départ orientent un aménagement avant toute considération esthétique.',
+        whyPro: 'Sur le sol argilo-schisteux de Saint-Barthélemy-d\'Anjou, planter sans préparation revient à condamner les végétaux : l\'argile compacte forme une croûte en été que les racines ne traversent pas, et le schiste sous-jacent limite la profondeur d\'enracinement. Un décompactage mécanique suivi d\'un apport de compost transforme ce sol difficile en substrat favorable. De même, une haie monospécifique de thuyas finit par se dégarnir à la base — une haie mixte associant photinia, eleagnus et charmille résiste mieux aux maladies et reste dense toute l\'année. Ces choix techniques, intégrés dès la conception, évitent les reprises à trois ou cinq ans.',
       },
       elagage: {
         content: `
