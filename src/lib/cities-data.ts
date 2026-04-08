@@ -1789,6 +1789,8 @@ export const cities: CityData[] = [
           'Jardins résilients en zone inondable avec matériaux adaptés',
           'Création paysagère sur grands terrains d\'anciens sites horticoles',
         ],
+        accroche: 'Ancien terrain horticole à Brain-sur-l\'Authion vaste mais sans structure, propriété en surplomb de levée à Saint-Mathurin battue par le vent d\'ouest, jardin pavillonnaire à Corné livré nu par le constructeur, parcelle en contrebas de la levée qui se retrouve sous l\'eau certains hivers — sur une commune de six bourgs, les situations de départ se ressemblent rarement.\n\nLes limons noirs de la plaine, parmi les plus fertiles du département, portent presque tout ce qu\'on y plante — à condition d\'avoir réglé le drainage et la protection au vent avant de choisir le premier végétal.',
+        whyPro: 'Sur un ancien terrain horticole de plus de 1 000 m², aménager par morceaux produit une succession de zones sans lien — un potager ici, une terrasse là, un massif au milieu. À Loire-Authion, la fertilité exceptionnelle des limons pousse les végétaux vite et fort : un arbre mal placé atteint en cinq ans une envergure qui gêne la terrasse ou prive le potager de lumière. En zone inondable sous la levée, une terrasse en bois non classé IV ou des plantations sensibles à la submersion sont à refaire après le premier hiver de crue. Un professionnel intègre ces paramètres dès le plan d\'ensemble.',
       },
       elagage: {
         content: `
@@ -1888,6 +1890,8 @@ export const cities: CityData[] = [
           'Haies champêtres bocagères en prolongement du paysage local',
           'Terrasses et murets en grès roussard ou pierre locale',
         ],
+        accroche: 'Parcelle nue dans un lotissement de La Meignanne où tout reste à créer sur un sol compacté par les engins, jardin ancien au Plessis-Macé avec un parterre envahi et une haie de charmes clairsemée, ferme rénovée à La Membrolle dont les abords n\'ont pas suivi la restauration du bâti, envie de prolonger le bocage environnant plutôt que de poser un jardin générique — à Longuenée-en-Anjou, les points de départ vont du terrain vierge au patrimoine végétal à sauver.\n\nLe sol change vite entre les bourgs — grès filtrant en hauteur, argile lourde en bas — et chaque configuration appelle ses propres choix de plantation et de drainage.',
+        whyPro: 'Au Plessis-Macé, replanter une haie de charmes clairsemée sans vérifier l\'état du sol de grès roussard en sous-sol, c\'est risquer un enracinement superficiel et une reprise médiocre. À La Meignanne, poser une terrasse sur un sol argileux compacté sans décompactage préalable expose les dalles au soulèvement dès le premier cycle de retrait-gonflement estival. Le bocage dense qui relie les trois bourgs fournit un vocabulaire végétal — cornouillers, viornes, noisetiers, chênes — qu\'un aménagement cohérent prolonge en limite de propriété plutôt que d\'ignorer au profit d\'un alignement de thuyas. Un professionnel adapte les plantations, les matériaux et le drainage au profil exact de chaque parcelle.',
       },
       elagage: {
         content: `
