@@ -981,6 +981,8 @@ export const cities: CityData[] = [
           'Massifs de lavandes, romarins et graminées ornementales',
           'Aménagement différencié coteau / plaine selon la parcelle',
         ],
+        accroche: 'Couche arable de 20 à 30 cm sur les coteaux avant d\'atteindre le schiste fragmenté, dénivelés marqués dans le secteur des Coteaux et du bourg de Mûrs qui compliquent toute plantation sans travail de fosse élargie, microclimat quasi-méditerranéen lié à l\'exposition sud-ouest et à la Loire qui ouvre la palette aux figuiers, oliviers et grenadiers, sols sablo-limoneux en plaine d\'Érigné qui changent complètement la donne — sur une même commune, deux natures de sol et deux logiques d\'aménagement coexistent.\n\nLa minceur du sol schisteux en coteau et la profondeur du sablo-limoneux en plaine orientent chaque choix de plantation bien avant le dessin du jardin.',
+        whyPro: 'Un aménagement pensé dans sa globalité intègre la transition coteau–plaine dès le plan, ce qu\'un jardin créé par ajouts successifs ne permet pas. À Mûrs-Érigné, un olivier planté sur le schiste des coteaux sans fosse élargie ni apport de terre végétale reste coincé dans 20 cm de sol cultivable ; le même sujet, installé dans une fosse mélangée au schiste concassé pour conserver le drainage, développe un enracinement viable en profondeur. Les murets en schiste local ne jouent leur rôle de régulateur thermique — chaleur diurne restituée le soir aux fruitiers palissés — que s\'ils sont dimensionnés pour retenir suffisamment de substrat en terrasse.',
       },
       elagage: {
         content: `
@@ -1080,6 +1082,8 @@ export const cities: CityData[] = [
           'Cadrage des perspectives sur la Loire',
           'Plantations adaptées au substrat schisteux de La Roche',
         ],
+        accroche: 'Sol sablo-limoneux profond et meuble dans la plaine alluviale, substrat schisteux maigre et sec en été vers La Roche, terrasses en tuffeau du bourg historique à prolonger sans rompre l\'identité architecturale, parcelles en bord de Loire avec une vue sur le fleuve à cadrer sans la fermer, zone inondable qui impose des matériaux et des végétaux résistants à la submersion — à Sainte-Gemmes-sur-Loire, la nature du sol et la distance au fleuve changent les règles d\'un jardin à l\'autre.\n\nLa dualité alluvial–schisteux et la contrainte hydraulique ligérienne cadrent le projet dès le relevé de terrain.',
+        whyPro: 'Aux Jubeaux, le sol sablo-limoneux profond retient l\'eau et autorise une palette large ; à La Roche, le substrat schisteux impose des espèces frugales — lavandes, romarins, graminées. Confondre les deux conduit à des échecs de plantation dès le premier été. Un professionnel identifie cette transition à quelques centaines de mètres d\'écart et adapte végétaux et matériaux parcelle par parcelle. De même, cadrer une perspective sur la Loire demande un travail de plans successifs — plantations basses au premier plan, arbustes à port transparent en intermédiaire — qu\'un alignement improvisé ne produit pas.',
       },
       elagage: {
         content: `
@@ -1179,6 +1183,8 @@ export const cities: CityData[] = [
           'Plantations résistantes à l\'humidité en bord de Mayenne',
           'Restructuration de massifs avec vivaces adaptées à l\'argile',
         ],
+        accroche: 'Terrain nu livré compacté par les engins dans les lotissements de La Foresterie ou des Music\'Halles, argile lourde qui sature en hiver et fissure en été au point d\'endommager bordures et terrasses, haies de thuyas dégarnies à la base à Juigné-Bené après trente ans de service, massifs vieillissants sur un sol que peu de vivaces tolèrent sans amendement, parcelles en bord de Mayenne où l\'humidité favorise mousses et maladies fongiques — à Montreuil-Juigné, le sol argileux et le contexte de chaque quartier dictent l\'approche avant tout choix de plantation.\n\nL\'argile qui travaille selon les saisons et la proximité de la Mayenne conditionnent la durabilité de chaque aménagement.',
+        whyPro: 'Sur l\'argile lourde de Montreuil-Juigné, poser une terrasse sans fondation adaptée au retrait-gonflement, c\'est accepter des fissures en deux ou trois étés. Planter sans décompactage préalable sur un terrain de lotissement compacté par les engins condamne l\'engazonnement et les massifs à végéter. Un professionnel distingue les parcelles neuves de La Foresterie, où tout est à créer depuis le drainage, des jardins anciens de Juigné-Bené où le remplacement d\'une haie de thuyas en fin de cycle par une haie mixte — charme, viorne, éléagnus — demande un phasage pour ne pas laisser la parcelle à nu. Ces diagnostics, posés en amont, évitent les reprises.',
       },
       elagage: {
         content: `
@@ -1278,6 +1284,8 @@ export const cities: CityData[] = [
           'Drainage correctif en bas de parcelle sur sol limono-argileux',
           'Rocailles et murets sur affleurements de grès locaux',
         ],
+        accroche: 'Parcelles de plus de 1 500 m² à structurer entre allées, verger, potager et fond de bocage, corps de ferme rénovés dont les abords restent à reprofiler et à planter, bas de parcelle et cuvettes qui retiennent l\'eau sur un sol limono-argileux pourtant fertile en partie haute, affleurements de grès vers La Motte et Les Linières qui émergent au milieu du terrain — à Saint-Jean-de-Linières, la surface disponible et la variété des situations sur une même propriété élargissent le champ des possibles autant qu\'elles compliquent la conception.\n\nLe paysage bocager environnant — haies vives, chênes têtards, chemins creux — fournit un vocabulaire végétal qu\'un aménagement cohérent prolonge plutôt que d\'ignorer.',
+        whyPro: 'Sur une parcelle de 1 500 m² et plus, un aménagement par morceaux produit une accumulation de zones sans lien entre elles — un potager ici, une terrasse là, un massif au milieu, sans circulation ni cohérence de registre. À Saint-Jean-de-Linières, les corps de ferme rénovés appellent un travail d\'ensemble : cour paysagée en harmonie avec la pierre locale, haies mixtes de charmes et d\'aubépines prolongeant le bocage, drainage des cuvettes avant plantation du verger en bas de parcelle. Un érable champêtre planté sans tenir compte de l\'affleurement de grès en sous-sol verra ses racines buter sur la roche là où un reprofilage aurait permis un enracinement correct.',
       },
       elagage: {
         content: `
