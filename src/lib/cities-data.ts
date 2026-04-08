@@ -195,6 +195,8 @@ export const cities: CityData[] = [
           'Taille de fructification des fruitiers (pommiers, poiriers, cerisiers)',
           'Sécurisation des arbres fragilisés par le vent',
         ],
+        accroche: 'Arbre qui n\'a pas été taillé depuis la construction du lotissement et dont les branches basses raclent le toit du garage, cèdre devenu si large qu\'il plonge la moitié du jardin dans l\'ombre, racines qui soulèvent les dalles de l\'allée, branche morte repérée après un coup de vent d\'hiver — dans les quartiers résidentiels d\'Avrillé, les arbres plantés il y a trente ou quarante ans ont atteint une envergure que personne n\'avait anticipée.\n\nLe sol argilo-limoneux de la commune, compact et peu profond, pousse les racines à s\'étaler en surface — une contrainte qui conditionne l\'approche de taille autant que la gestion de l\'ancrage.',
+        whyPro: 'Une coupe mal placée sur un chêne ou un érable mature ne cicatrise pas — elle ouvre une porte d\'entrée permanente aux champignons lignivores qui fragilisent la charpente de l\'intérieur. Sur les sujets d\'Avrillé, où le sol argilo-limoneux compact limite déjà l\'ancrage racinaire, un houppier déséquilibré par une taille sévère augmente le risque de basculement au premier coup de vent.\n\nL\'intervention en hauteur à proximité des toitures et des lignes aériennes exige un matériel et un savoir-faire spécifiques. Un professionnel adapte chaque coupe à l\'espèce, à la saison et à la structure de l\'arbre — conditions qu\'un non-spécialiste ne maîtrise pas.',
       },
       'entretien-jardin': {
         content: `
@@ -296,6 +298,8 @@ export const cities: CityData[] = [
           'Respect du calendrier de taille selon les essences',
           'Intervention sur arbres proches des clôtures et toitures',
         ],
+        accroche: 'Thuyas plantés en haie il y a vingt-cinq ans qui dépassent les huit mètres et plongent la parcelle du voisin dans l\'ombre, tilleul dont le houppier déborde sur la toiture depuis plusieurs saisons, branches mortes au-dessus de l\'allée repérées après une tempête — au centre-bourg comme à la Gaudière, les arbres de Beaucouzé posent des problèmes concrets que le temps n\'arrange pas.\n\nLes résineux devenus disproportionnés constituent un cas particulier : un thuya ou un cyprès de Leyland ne repart pas sur le vieux bois, ce qui limite les possibilités de réduction et impose une approche spécifique.',
+        whyPro: 'Sur un chêne pédonculé ou un tilleul mature de Beaucouzé, une taille sévère provoque des repousses anarchiques — gourmands vigoureux mais mal ancrés — et crée des plaies larges qui cicatrisent lentement, favorisant les champignons lignivores. L\'arbre perd sa structure et devient moins sûr qu\'avant l\'intervention.\n\nLes conifères posent un problème inverse : tailler un thuya ou un cyprès de Leyland au-delà de la zone verte laisse un trou définitif — le résineux ne repartira pas. L\'évaluation préalable par un professionnel détermine ce qui est rattrapable et ce qui relève du remplacement, évitant une intervention coûteuse sur un sujet irrécupérable.',
       },
       'entretien-jardin': {
         content: `
@@ -397,6 +401,8 @@ export const cities: CityData[] = [
           'Élagage en bord de rivière avec contraintes réglementaires',
           'Sécurisation des arbres sur sol schisteux superficiel',
         ],
+        accroche: 'Saule dont les branches traînent sur le toit depuis le dernier coup de vent, frêne qui penche au-dessus de la rivière avec un houppier à moitié sec, arbre du coteau jamais taillé qui masque la vue sur la Loire, branches mortes suspendues au-dessus du passage après une tempête de février — à Bouchemaine, la proximité de l\'eau et l\'exposition aux vents de vallée accélèrent la croissance et multiplient les situations d\'urgence.\n\nEntre les parcelles basses le long de la Maine et les coteaux schisteux du Bourg et de La Pointe, les conditions d\'ancrage et les contraintes réglementaires changent radicalement d\'un terrain à l\'autre.',
+        whyPro: 'Un frêne fragilisé par l\'humidité permanente des bords de Maine ou un saule dont le bois tendre cède à chaque rafale ne se taille pas comme un arbre sain — une coupe mal placée ouvre une porte d\'entrée aux pathogènes que l\'atmosphère humide propage rapidement. Sur les coteaux de La Pointe, où le schiste limite l\'ancrage à quelques dizaines de centimètres, un élagage trop sévère déséquilibre un arbre déjà vulnérable aux vents de vallée.\n\nLes interventions en bord de rivière relèvent souvent de périmètres réglementés — zones humides, berges protégées — où le calendrier et les méthodes sont encadrés. Un professionnel intègre ces contraintes au diagnostic et adapte chaque coupe à l\'état sanitaire réel du sujet.',
       },
       'entretien-jardin': {
         content: `
@@ -498,6 +504,8 @@ export const cities: CityData[] = [
           'Taille de fructification des pommiers, cerisiers et pruniers',
           'Réduction de voilure pour limiter la prise au vent',
         ],
+        accroche: 'Érable qui a doublé de volume depuis dix ans et dont les branches raclent la toiture, haie de cyprès de Leyland devenue opaque et si haute qu\'elle prive la terrasse de lumière, racines qui fissurent les dalles de l\'allée, vieux cerisier qui n\'a jamais été taillé et produit de moins en moins — au Bourg comme à La Baumette, les arbres plantés dans les premiers lotissements de Saint-Barthélemy ont largement dépassé les dimensions prévues.\n\nLe sol argilo-schisteux de la commune, compact en surface, pousse les racines à s\'étaler plutôt qu\'à descendre — une caractéristique qui conditionne à la fois la stabilité des arbres et les dégâts au voisinage.',
+        whyPro: 'Sur un érable sycomore ou un tilleul de douze mètres, une taille sévère à la tronçonneuse provoque des repousses désordonnées et crée des plaies qui ne cicatrisent pas — porte d\'entrée directe pour les champignons lignivores. À Saint-Barthélemy, le sol argilo-schisteux étale les racines en surface : un arbre dont on a trop réduit le houppier bascule plus facilement sous les rafales, sans que le système racinaire puisse compenser.\n\nLes conifères des années 1980 posent un problème spécifique — un thuya taillé au-delà de la zone verte ne repart pas. Seul un diagnostic préalable détermine si l\'arbre est encore rattrapable par élagage ou s\'il faut envisager un remplacement. Un professionnel évalue cette limite avant d\'intervenir.',
       },
       'entretien-jardin': {
         content: `
