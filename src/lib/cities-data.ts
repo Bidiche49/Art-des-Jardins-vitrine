@@ -1018,6 +1018,8 @@ export const cities: CityData[] = [
           'Taille de fructification des figuiers et fruitiers de coteau',
           'Allègement de couronne adapté aux sujets de haut de coteau',
         ],
+        accroche: 'Pin maritime penché par les rafales d\'ouest sur le coteau, chêne pubescent dont les branches mortes menacent la toiture, figuier si vigoureux qu\'il faut le contenir chaque année pour garder la récolte accessible, robiniers et érables champêtres poussés sans contrainte dans une ancienne vigne avec des fourches qui se fendent à chaque tempête — à Mûrs-Érigné, les situations d\'élagage varient autant que les arbres, entre coteaux schisteux et plaine.\n\nSur les hauteurs, le sol schisteux force les racines à courir dans les fissures de la roche en surface — un ancrage limité qui rend chaque arbre exposé au vent de vallée plus vulnérable qu\'il n\'y paraît.',
+        whyPro: 'Un cerisier taillé en plein hiver cicatrise mal et s\'expose à la gommose ; un figuier rabattu au mauvais moment repart de plus belle sans fructifier. À Mûrs-Érigné, le microclimat des coteaux et la diversité des espèces — fruitiers, résineux, feuillus de friche — imposent un calendrier d\'intervention propre à chaque arbre, pas une fenêtre unique.\n\nLes sujets issus des anciennes vignes posent un problème structurel distinct : houppiers déséquilibrés, fourches à écorce incluse que seul un examen rapproché permet de détecter. Un professionnel identifie ces faiblesses et adapte la taille à l\'architecture réelle de chaque sujet.',
       },
       'entretien-jardin': {
         content: `
@@ -1119,6 +1121,8 @@ export const cities: CityData[] = [
           'Taille de fructification des fruitiers anciens en jardins clos',
           'Sécurisation des arbres exposés aux vents de vallée',
         ],
+        accroche: 'Saule blanc dont les branches traînent sur le toit depuis la dernière crue, peuplier noir en bord de Loire qui perd des branches sans prévenir, frêne dont le houppier sèche de saison en saison, vieux poirier dans un jardin clos de tuffeau au bourg qui n\'a pas été taillé depuis des années — à Sainte-Gemmes-sur-Loire, les arbres de ripisylve et les fruitiers anciens cohabitent à quelques centaines de mètres d\'écart.\n\nSur les hauteurs de La Roche, le schiste superficiel limite l\'ancrage des chênes et des châtaigniers — une contrainte que les rafales remontant la vallée de la Loire mettent régulièrement à l\'épreuve.',
+        whyPro: 'En bord de Loire, les interventions sur la végétation ne se programment pas librement. La ripisylve — saules, aulnes, frênes, peupliers — relève de périmètres où le calendrier et les méthodes sont encadrés : périodes de nidification à respecter, essences protégées à identifier, accès au chantier conditionné par le niveau d\'eau. Un élagage conduit hors de ce cadre expose le propriétaire à des complications administratives.\n\nÀ La Roche, le problème est différent mais tout aussi technique : le schiste superficiel limite l\'ancrage, et un arbre allégé trop brutalement sur ce sol perd sa stabilité face aux rafales. Un professionnel intègre ces deux réalités — réglementaire et mécanique — dès le diagnostic.',
       },
       'entretien-jardin': {
         content: `
@@ -1220,6 +1224,8 @@ export const cities: CityData[] = [
           'Réduction de houppier sur arbres en surplomb de toiture',
           'Suppression de bois mort et branches à risque',
         ],
+        accroche: 'Érable planté quand le lotissement a été construit dont les branches surplombent maintenant la toiture du voisin, tilleul qui déborde sur la clôture et soulève le trottoir, peuplier en bord de Mayenne qui a perdu une charpentière sans prévenir, pommier devenu si haut que les fruits pourrissent hors de portée — au bourg comme à Juigné-Bené, les arbres des premiers lotissements de Montreuil-Juigné sont devenus trop grands pour les parcelles qui les accueillent.\n\nLe sol argileux, qui sature en hiver et fissure en été, pousse les racines à s\'étaler en surface — une donnée qui conditionne la stabilité des arbres et le type d\'intervention.',
+        whyPro: 'Un érable ou un tilleul de trente ans dont on réduit brutalement le houppier ne rapetisse pas — il réagit par des rejets vigoureux, mal ancrés, qui aggravent le problème en deux ou trois saisons. À Montreuil-Juigné, où les arbres des premiers lotissements ont dépassé les dimensions prévues, la tentation de la taille sévère est fréquente. Elle est aussi la plus coûteuse à terme.\n\nLes peupliers en bord de Mayenne posent un problème distinct : bois tendre qui devient cassant après trente à quarante ans, cavités internes, champignons. Un professionnel évalue si le sujet peut être sécurisé par élagage ou s\'il a dépassé le stade où la taille suffit.',
       },
       'entretien-jardin': {
         content: `
@@ -1321,6 +1327,8 @@ export const cities: CityData[] = [
           'Éclaircissage de houppiers développés sans taille de formation',
           'Allègement de couronne sur sujets exposés au vent d\'ouest',
         ],
+        accroche: 'Chêne de limite de propriété dont le houppier, jamais taillé depuis la plantation, empiète sur la toiture et les lignes aériennes, hêtre qui a poussé librement le long d\'un chemin creux et dont les branches basses gênent le passage, châtaignier au fond du jardin qui perd des branches à chaque coup de vent d\'ouest, pommier non taillé depuis des années qui produit en hauteur et se couvre de gui — à Saint-Jean-de-Linières, les arbres du bocage et les fruitiers de verger posent des problèmes d\'entretien que leur taille rend difficiles à reporter.\n\nLe sol limono-argileux profond porte des enracinements puissants, mais en hiver, quand il sature d\'eau, la stabilité des sujets les plus exposés diminue.',
+        whyPro: 'Les arbres de Saint-Jean-de-Linières ont grandi sans taille de formation — houppiers développés librement, branches croisées, bois mort pris dans la ramure. Sur ces sujets, une coupe au hasard aggrave les défauts structurels au lieu de les corriger : un éclaircissage mal orienté déplace le centre de gravité, et une réduction trop forte déclenche des rejets qui referment la couronne en une saison.\n\nLes chênes têtards du bocage exigent un savoir-faire distinct — le rétrogradage suit un cycle de cinq à huit ans, et une taille d\'entretien classique appliquée par erreur compromet leur silhouette patrimoniale. Un professionnel lit l\'architecture de chaque arbre avant de décider où couper.',
       },
       'entretien-jardin': {
         content: `
