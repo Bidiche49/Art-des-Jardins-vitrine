@@ -1842,6 +1842,8 @@ export const cities: CityData[] = [
           'Diagnostic d\'ancrage racinaire en sol alluvial saturé',
           'Intervention sur arbres en bord de berge et zone humide',
         ],
+        accroche: 'Peuplier qui a perdu une maîtresse branche au-dessus du jardin lors du dernier coup de vent, frêne dont le houppier sèche par le haut depuis deux ans sans explication claire, érables et tilleuls des lotissements de Brain ou Corné dont les couronnes touchent la toiture et masquent les fenêtres de l\'étage, saule blanc en bord de boire qui penche un peu plus à chaque crue — à Loire-Authion, les arbres poussent vite sur les limons fertiles, et les problèmes arrivent plus tôt qu\'ailleurs.\n\nLe sol alluvial meuble qui favorise cette croissance rapide produit aussi des enracinements asymétriques en terrain saturé — une donnée à intégrer avant toute intervention.',
+        whyPro: 'En sol alluvial meuble, un arbre qui penche n\'a pas forcément le même problème qu\'un arbre qui penche sur terrain stable. Près des berges de l\'Authion ou en terrain régulièrement saturé par les crues, les racines se développent de manière asymétrique — ancrées d\'un côté, quasi absentes de l\'autre. Tailler le houppier sans évaluer cet ancrage réel peut aggraver le déséquilibre au lieu de le corriger.\n\nUn diagnostic d\'ancrage sur ces sujets précède toute coupe : il détermine si l\'arbre supporte une réduction de voilure ou s\'il relève du haubanage, voire de l\'abattage. Un professionnel fait cette distinction avant de monter dans l\'arbre.',
       },
       'entretien-jardin': {
         content: `
@@ -1943,6 +1945,8 @@ export const cities: CityData[] = [
           'Taille de fructification des fruitiers (pommiers, poiriers, noyers)',
           'Taille de ragréage des chênes têtards en chemin creux',
         ],
+        accroche: 'Tilleul centenaire au Plessis-Macé dont les branches basses raclent la toiture du voisin, cèdre de l\'Atlas devenu si large qu\'il prive le jardin de lumière six mois par an, racines d\'un marronnier qui soulèvent les dalles de la terrasse à La Meignanne, vieux chêne têtard en bord de chemin creux qui n\'a pas été ragréé depuis des années et dont les rejets deviennent lourds — à Longuenée-en-Anjou, les arbres hérités posent autant de questions que les arbres plantés.\n\nLe sol change entre les bourgs — argileux et compact en contrebas, grès filtrant sur les hauteurs — et chaque situation d\'ancrage appelle un diagnostic avant la première coupe.',
+        whyPro: 'Sur le sol argileux compact de La Meignanne, les racines ne descendent pas — elles s\'étalent en surface. Un marronnier ou un tilleul de trente ans y développe un réseau traçant capable de soulever une terrasse, fissurer un muret ou déstabiliser une clôture sur plusieurs mètres. Tailler le houppier sans évaluer ce réseau racinaire revient à traiter un symptôme en ignorant la contrainte mécanique réelle.\n\nUn diagnostic racinaire détermine si l\'arbre peut être allégé d\'un côté pour rééquilibrer les efforts, s\'il nécessite un haubanage préventif, ou si les dégâts au sol imposent une solution plus radicale. Un professionnel pose ce diagnostic avant d\'intervenir.',
       },
       'entretien-jardin': {
         content: `
