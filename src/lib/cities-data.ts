@@ -1385,6 +1385,8 @@ export const cities: CityData[] = [
           'Matériaux imputrescibles pour parcelles en zone inondable',
           'Prairies fleuries et vergers sur limons du confluent',
         ],
+        accroche: 'Demeures bourgeoises dont les jardins conservent des structures héritées — allées de tilleuls, roseraies, massifs de buis — à intégrer ou à remplacer, parcelles en bord de Sarthe ou de Loir où la nappe haute entre novembre et mars interdit certaines plantations vers La Basse-Rivière et Le Port, terrain limoneux fertile aux Grandes-Rivières qui porte sans difficulté un verger ou une prairie fleurie — à Briollay, le confluent des deux rivières crée autant de possibilités que de contraintes.\n\nLe microclimat humide et tempéré du confluent, les sols alluviaux profonds et le risque de submersion temporaire conditionnent chaque choix de matériau et de végétal.',
+        whyPro: 'Un jardin conçu dans sa globalité tient compte de la nappe, du sol et du microclimat dès le plan — ce qu\'un aménagement par ajouts successifs ne fait pas. À Briollay, un hortensia prospère naturellement grâce à l\'humidité atmosphérique du confluent, là où la même plante exige un arrosage constant sur un coteau sec à quelques kilomètres. Mais poser une terrasse en bois non classé 4 vers Le Port, c\'est accepter qu\'elle pourrisse à la première submersion hivernale. Replanter une roseraie héritée sans vérifier la profondeur de nappe condamne les rosiers à l\'asphyxie racinaire dès novembre. Ces arbitrages se décident au relevé de terrain, pas au fil des saisons.',
       },
       elagage: {
         content: `
@@ -1484,6 +1486,8 @@ export const cities: CityData[] = [
           'Jardins de propriétés en tuffeau intégrés au paysage viticole',
           'Rocaille et garrigue sur les pentes exposées sud-est',
         ],
+        accroche: 'Propriétés en tuffeau nichées entre les rangs de vignes, jardins pentus sur les coteaux de la Roche-aux-Moines où le schiste pourpré affleure à quelques centimètres, cours de ferme rénovées à réaménager sans dénaturer le caractère viticole du lieu, terrains plus plats du côté d\'Épiré avec des sols légèrement plus profonds qui élargissent la palette — à Savennières, le terroir viticole donne le ton jusque dans les jardins privés.\n\nL\'exposition sud-est face à la Loire et le microclimat qui en résulte autorisent des plantations inhabituelles en Maine-et-Loire, mais le schiste drainant impose ses propres limites.',
+        whyPro: 'Sur les coteaux schisteux de Savennières, un aménagement improvisé accumule les erreurs que le terroir ne pardonne pas. Un massif installé sans travail en terrasses voit sa terre emportée au premier orage ; un rosier planté en plein schiste sans apport de substrat végète là où une lavande ou un romarin s\'installerait durablement. Du côté d\'Épiré, les sols plus profonds acceptent des fruitiers en espalier et des haies champêtres, mais la transition entre coteau maigre et plaine fertile se joue sur quelques centaines de mètres. Un professionnel adapte les murets en schiste local, les escaliers de pierre sèche et les plantations au profil exact de chaque zone.',
       },
       elagage: {
         content: `
@@ -1583,6 +1587,8 @@ export const cities: CityData[] = [
           'Haies mixtes brise-vue pour parcelles en bordure d\'axes passants',
           'Drainage préventif sur parcelles basses sujettes à la stagnation',
         ],
+        accroche: 'Jardins des années 1980-1990 où les conifères ont pris des proportions incompatibles avec des parcelles de 400 à 900 m², haies de thuyas dégarnies après trente ans qui n\'assurent plus leur rôle de brise-vue, massifs appauvris à restructurer, terrain nu livré sans terre végétale dans les lotissements récents — à Saint-Sylvain-d\'Anjou, la plupart des projets commencent par un constat : le jardin existant ne fonctionne plus, ou le terrain de départ n\'offre rien.\n\nLe sol limono-argileux de la commune retient bien l\'eau et les nutriments, mais sa tendance à stagner en hiver impose un travail de drainage avant toute plantation en partie basse.',
+        whyPro: 'Sur une parcelle de 400 à 900 m², chaque mètre compte. Poser une terrasse sans anticiper les circulations, planter un arbre sans projeter son ombrage à maturité, aligner des thuyas en haie sans prévoir leur encombrement à dix ans — ces choix fragmentés produisent un jardin qu\'il faut reprendre. À Saint-Sylvain-d\'Anjou, un cyprès de Leyland planté dans les années 1990 en limite de parcelle atteint aujourd\'hui huit mètres et prive le voisin de lumière ; une haie mixte de photinias, charmilles et viornes aurait assuré la même intimité en restant à deux mètres. Un professionnel dimensionne les plantations en fonction de la surface réelle et du sol limono-argileux local.',
       },
       elagage: {
         content: `
@@ -1682,6 +1688,8 @@ export const cities: CityData[] = [
           'Haies champêtres de bocage : charme, noisetier, aubépine',
           'Structuration de grands jardins ruraux de 1 000 à 5 000 m²',
         ],
+        accroche: 'Fermes et longères reconverties dont les cours en tuffeau et moellon attendent un aménagement à la mesure de l\'architecture, propriétés de 1 000 à 5 000 m² assez vastes pour accueillir jardin d\'agrément, verger et potager en séquences distinctes, coteaux argilo-calcaires qui se réchauffent vite au printemps mais collent aux outils en période humide, fond de vallée le long de l\'Aubance où le sol alluvial plus frais change complètement la palette végétale — à Soulaines-sur-Aubance, la surface des parcelles et la variété des sols ouvrent un champ large.\n\nLe paysage viticole et bocager environnant — rangs de vignes, murets de pierre, haies vives — constitue une référence que l\'aménagement gagne à prolonger.',
+        whyPro: 'Sur une propriété de plusieurs milliers de mètres carrés, un aménagement par morceaux produit une juxtaposition de zones sans cohérence — un potager isolé, une terrasse déconnectée, un verger mal placé. À Soulaines-sur-Aubance, la transition entre coteau argilo-calcaire sec et fond de vallée humide le long de l\'Aubance se joue parfois au milieu de la parcelle. Un cornouiller ou un hosta s\'installe en zone basse là où un rosier dépérirait ; sur le coteau, lavandes et graminées prospèrent dans un sol que les mêmes hostas ne supporteraient pas. Structurer l\'espace en tenant compte de cette dualité évite les remplacements à répétition.',
       },
       elagage: {
         content: `
