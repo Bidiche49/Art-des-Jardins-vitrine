@@ -1430,6 +1430,8 @@ export const cities: CityData[] = [
           'Entretien des tilleuls et marronniers du bourg historique',
           'Intervention sur arbres à proximité de berges et cours d\'eau',
         ],
+        accroche: 'Saule blanc dont la ramure couvre quinze mètres de diamètre et frotte sur la toiture, peuplier noir qui a pris vingt mètres en vingt ans et surplombe maintenant le chemin d\'accès, aulne dont les branches mortes tombent sur la berge à chaque rafale, frêne de ripisylve qui perd ses rameaux par le haut sans raison visible — à Briollay, les essences du confluent Sarthe-Loir poussent vite dans le sol alluvial humide, et les problèmes suivent.\n\nLe bois tendre des saules et des peupliers casse plus facilement que celui des chênes ou des érables — une réalité que chaque tempête rappelle le long des berges.',
+        whyPro: 'Un saule blanc ou un peuplier noir ne se taille pas comme un chêne — le bois est tendre, les fibres cassent net, et une coupe mal orientée sur une charpentière peut fendre le tronc jusqu\'à la fourche. À Briollay, ces essences de ripisylve atteignent des dimensions imposantes en vingt ans sur le sol alluvial du confluent, mais leur bois reste fragile. Un allègement régulier de la couronne réduit la prise au vent et limite les chutes de branches.\n\nSur les frênes, la chalarose ajoute une fragilité que seul un diagnostic en hauteur permet d\'évaluer. Un professionnel adapte chaque coupe à la nature du bois et à l\'état sanitaire réel du sujet.',
       },
       'entretien-jardin': {
         content: `
@@ -1531,6 +1533,8 @@ export const cities: CityData[] = [
           'Taille sanitaire sur arbres stressés par la sécheresse estivale',
           'Taille de fructification des figuiers, pruniers et cerisiers',
         ],
+        accroche: 'Chêne pubescent au houppier asymétrique façonné par les vents d\'ouest, pin maritime penché au-dessus de la toiture en ardoise, figuier centenaire dont les branches envahissent la façade en tuffeau, tilleul qui n\'a pas été taillé depuis la rénovation de la propriété et dont les gourmands recouvrent les fenêtres — sur les coteaux de Savennières, les arbres poussent dans les fissures du schiste et de la rhyolite, avec des ports irréguliers que la taille doit respecter plutôt que corriger.\n\nLes pentes et l\'étroitesse des chemins bordés de murets rendent l\'accès en nacelle souvent impossible — l\'intervention passe par la grimpe.',
+        whyPro: 'Sur les coteaux schisteux de Savennières, le volume de terre exploitable par les racines reste limité malgré un ancrage profond dans la roche. En période de sécheresse prolongée, les arbres développent du bois mort dans le houppier — un signal d\'alarme, pas un défaut esthétique. Ces branches sèches deviennent cassantes et tombent sans prévenir, parfois sur les toitures en ardoise des propriétés en tuffeau en contrebas.\n\nDistinguer le bois mort lié au stress hydrique d\'une branche encore viable demande un examen en hauteur. Un professionnel identifie ce qui relève de la taille sanitaire urgente et ce qui peut attendre la saison suivante.',
       },
       'entretien-jardin': {
         content: `
@@ -1632,6 +1636,8 @@ export const cities: CityData[] = [
           'Suppression du bois mort et allègement de ramure',
           'Intervention à proximité des toitures et lignes électriques',
         ],
+        accroche: 'Érable ou tilleul de plus de quinze mètres dont les branches empiètent sur la toiture et les lignes électriques, haie de cyprès de Leyland des années 1980 montée à dix mètres qui plonge la parcelle voisine dans l\'ombre, bouleau dont le houppier encombre l\'allée, vieux pommier jamais taillé qui produit hors de portée et se couvre de gui — dans les quartiers pavillonnaires de Saint-Sylvain-d\'Anjou, les arbres plantés il y a trente ou quarante ans ont dépassé les dimensions que les parcelles peuvent absorber.\n\nLe sol limono-argileux, fertile et bien pourvu en eau, a nourri un enracinement profond et vigoureux qui alimente des houppiers devenus disproportionnés.',
+        whyPro: 'Sur le sol limono-argileux de Saint-Sylvain-d\'Anjou, les grands feuillus développent un enracinement profond et vigoureux. Réduire brutalement le houppier d\'un érable ou d\'un chêne de quinze mètres rompt l\'équilibre entre la partie aérienne et ce système racinaire puissant — l\'arbre réagit par des rejets vigoureux qui referment la couronne en une ou deux saisons, annulant l\'intervention.\n\nLes conifères des années 1970-1980 — thuyas, cyprès de Leyland, épicéas — posent un problème inverse : montés à huit ou douze mètres, ils ne repartent pas sur le vieux bois. Toute réduction au-delà de la zone verte est définitive. Un professionnel évalue la marge de manœuvre réelle avant d\'intervenir.',
       },
       'entretien-jardin': {
         content: `
@@ -1733,6 +1739,8 @@ export const cities: CityData[] = [
           'Relèvement de couronne sur arbres à branches basses',
           'Diagnostic de sujets à risque en bordure de parcelles viticoles',
         ],
+        accroche: 'Chêne sessile dont les branches basses descendent à deux mètres du sol et bloquent l\'accès au fond de la parcelle, châtaignier au houppier si large qu\'il couvre la moitié du jardin, saule en bord d\'Aubance qui perd ses branches mortes à chaque coup de vent, vieux pommier ou poirier du verger qui n\'a pas été taillé depuis des années et ne produit plus que du bois — à Soulaines-sur-Aubance, les arbres des coteaux et de la ripisylve cohabitent avec des vergers anciens dont personne ne s\'est occupé.\n\nLes parcelles viticoles reconverties en jardins conservent parfois des arbres de haut jet en bordure — peupliers, chênes — dont l\'envergure n\'avait pas été anticipée pour un usage résidentiel.',
+        whyPro: 'Un verger de pommiers ou de poiriers non taillé depuis des années ne se rattrape pas en une seule intervention. Forcer la restauration sur un arbre qui a accumulé dix ans de croissance non maîtrisée provoque des rejets anarchiques et affaiblit la charpente au lieu de la restructurer. À Soulaines-sur-Aubance, les vergers anciens — pommiers, poiriers, cerisiers, noyers — demandent un travail étalé sur deux à trois saisons : bois mort la première année, éclaircissage de la charpente la deuxième, mise en forme de fructification la troisième.\n\nUn professionnel planifie cette progression et adapte chaque passage à la réponse de l\'arbre — un rythme que l\'impatience d\'un non-spécialiste compromet.',
       },
       'entretien-jardin': {
         content: `
