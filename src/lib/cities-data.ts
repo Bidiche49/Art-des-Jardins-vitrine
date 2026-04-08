@@ -578,6 +578,8 @@ export const cities: CityData[] = [
           'Massifs arbustifs résistants aux sols drainants',
           'Conception optimisée pour parcelles de centre-ville',
         ],
+        accroche: 'Sol schisteux ardoisier qui draine vite mais manque de matière organique, parcelle de 800 à 1 200 m² au Petit Trélazé ou à la Quantinière à structurer entre terrasse, massifs et potager, jardin compact en centre-ville où chaque mètre carré compte, terrain en dénivelé près des anciennes carrières qui appelle un aménagement en terrasses — les conditions de départ varient d\'un quartier à l\'autre.\n\nÀ Trélazé, la nature du sol ardoisier et la topographie du terrain orientent les choix de conception bien avant la première plantation.',
+        whyPro: 'Un aménagement conçu dans sa globalité assure la cohérence entre terrasse, massifs, circulations et potager — ce qu\'une approche par ajouts successifs ne permet pas. À Trélazé, le schiste ardoisier draine l\'eau si vite que les plantations non amendées peinent à s\'enraciner ; un apport de compost et de terre végétale avant plantation transforme ce sol minéral en substrat viable. De même, un muret en schiste local mal dimensionné retiendra peu de terre en terrasse étagée — la profondeur de substrat et le drainage de chaque niveau se calculent dès le plan.',
       },
       elagage: {
         content: `
@@ -677,6 +679,8 @@ export const cities: CityData[] = [
           'Jardins en pente sur les coteaux de Sorges et Saint-Aubin',
           'Végétaux méditerranéens en microclimats de murs anciens',
         ],
+        accroche: 'Sols sablonneux qui perdent leur eau dès les premières chaleurs en partie basse, nappe haute et risque de submersion sur Belle-Île, parcelles argilo-limoneuses de 600 à 1 500 m² sur les hauteurs de Sorges et Saint-Aubin, jardins du centre historique encadrés par des murs en tuffeau qui créent des microclimats — aux Ponts-de-Cé, un même projet peut croiser deux natures de sol et une contrainte hydraulique liée à la Loire.\n\nLa proximité du fleuve, le type de sol et l\'altitude de la parcelle conditionnent chaque choix d\'aménagement.',
+        whyPro: 'Un jardin pensé dans son ensemble intègre les contraintes du terrain dès le départ — ce qu\'un aménagement par morceaux ne garantit pas. Aux Ponts-de-Cé, planter en zone basse sans tenir compte de la nappe haute et des submersions hivernales condamne les végétaux sensibles dès le premier hiver. Un professionnel distingue les parcelles sablonneuses de bord de Loire, où iris des marais et cornouillers sanguins prospèrent, des coteaux argilo-limoneux de Sorges où la palette s\'élargit. Le choix des revêtements suit la même logique : dalles sur plots en zone inondable, pierre naturelle sur les hauteurs.',
       },
       elagage: {
         content: `
@@ -776,6 +780,8 @@ export const cities: CityData[] = [
           'Haies champêtres de cornouillers, viornes et prunelliers',
           'Aménagement de grandes parcelles résidentielles de 800 à 2 000 m²',
         ],
+        accroche: 'Sol alluvial gorgé d\'eau en Basse-Île qui impose des plantations tolérantes aux submersions, terrain sablo-limoneux sur les hauteurs du bourg et d\'Éventard qui se ressuie en quelques jours, parcelles de 800 à 2 000 m² assez profondes pour structurer plusieurs ambiances, proximité des prairies Natura 2000 qui oriente le choix vers des essences indigènes — à Écouflant, le profil du sol change avec l\'altitude et chaque zone de la parcelle peut appeler une approche différente.\n\nLa dualité alluvial–sablo-limoneux et le contexte naturel des basses vallées cadrent le projet dès le relevé de terrain.',
+        whyPro: 'Un aménagement conçu globalement anticipe les erreurs qu\'un jardin construit par ajouts successifs accumule — une terrasse posée en zone inondable sans matériaux résistants, des essences de sol sec plantées sur alluvions gorgées d\'eau. À Écouflant, un saule arbustif ou un cornouiller s\'installe durablement en Basse-Île là où un rosier ou un lilas dépérira dès la première remontée de nappe. En hauteur vers Éventard, le sol sablo-limoneux autorise une palette plus large, mais la profondeur de terre cultivable et le drainage doivent être vérifiés avant plantation. Ces distinctions, parcelle par parcelle, évitent des remplacements à répétition.',
       },
       elagage: {
         content: `
@@ -874,6 +880,8 @@ export const cities: CityData[] = [
           'Plantations de zone humide en bordure des basses vallées',
           'Valorisation des murets en tuffeau et allées en gravier existants',
         ],
+        accroche: 'Limons profonds autour des bourgs de Cantenay et d\'Épinard qui acceptent une palette végétale large, argile hydromorphe en descendant vers les vallées qui restreint les options aux essences de zone humide, propriétés rurales avec fermes en tuffeau et terrains assez vastes pour accueillir potager, verger et prairie fleurie, parcelles exposées au vent du nord sans protection naturelle — le cadre rural de la commune offre un potentiel rare, à condition de composer avec la dualité de ses sols.\n\nLes basses vallées angevines classées Natura 2000, en bordure de commune, orientent le vocabulaire végétal vers des essences locales cohérentes avec le paysage.',
+        whyPro: 'Un jardin conçu dans son ensemble évite les incohérences qu\'un aménagement fragmenté ne détecte pas — un verger planté sur l\'argile hydromorphe de fond de vallée dont les racines asphyxient au premier hiver, une haie monospécifique qui se dégarnit en trois ans, un potager exposé au vent du nord sans brise-vent. À Cantenay-Épinard, la transition entre limons profonds en hauteur et argile de vallée se joue parfois sur quelques dizaines de mètres. Un professionnel identifie cette limite, choisit les essences en conséquence — cornouillers et iris en bas, fruitiers et rosiers en haut — et structure l\'espace pour qu\'il fonctionne dans la durée.',
       },
       elagage: {
         content: `
