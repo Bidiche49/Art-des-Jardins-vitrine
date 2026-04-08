@@ -607,6 +607,8 @@ export const cities: CityData[] = [
           'Diagnostic phytosanitaire avant intervention',
           'Gestion de la luminosité en quartiers résidentiels',
         ],
+        accroche: 'Cyprès de Leyland planté en haie il y a quarante ans qui dépasse le toit de la maison, épicéa devenu si large qu\'il prive la terrasse de lumière, trottoir soulevé par les racines d\'un chêne qui s\'étalent dans le schiste, branche morte au-dessus du garage repérée après un coup de vent — à la Quantinière comme au Petit Trélazé, les arbres des premiers lotissements ont atteint des dimensions que les parcelles ne peuvent plus absorber.\n\nLe sol schisteux ardoisier, fragmenté et peu profond, pousse les racines à s\'étaler en surface — une particularité qui fragilise l\'ancrage des grands sujets et complique chaque intervention.',
+        whyPro: 'Un conifère taillé au-delà de sa zone verte ne repousse pas — le trou est définitif. À Trélazé, les cyprès de Leyland et les thuyas des années 1980, devenus disproportionnés, ne laissent souvent qu\'une marge de manœuvre étroite entre la réduction utile et la coupe irréversible. Seul un diagnostic préalable détermine si le sujet est encore rattrapable ou s\'il faut envisager un remplacement.\n\nSur les feuillus, le schiste fragmenté limite l\'ancrage racinaire en surface. Un houppier trop allégé sur un chêne dont les racines courent dans le schiste modifie le centre de gravité et augmente le risque de basculement au premier coup de vent d\'hiver. Un professionnel calibre chaque coupe en fonction de la stabilité réelle du sujet.',
       },
       'entretien-jardin': {
         content: `
@@ -708,6 +710,8 @@ export const cities: CityData[] = [
           'Entretien des frênes et aulnes de ripisylve',
           'Réduction de houppier respectueuse du port naturel',
         ],
+        accroche: 'Saule dont une charpentière fendue menace de tomber sur le passage, peuplier de berge si haut que ses branches surplombent la toiture depuis Belle-Île, tilleul du centre historique dont le houppier déborde sur la façade du voisin à Saint-Maurille, frêne de ripisylve au houppier clairsemé qui perd ses branches sans prévenir — aux Ponts-de-Cé, la cohabitation entre les arbres de bord de Loire et les habitations crée des situations que chaque tempête d\'ouest aggrave.\n\nEntre les sols sablonneux des zones basses, où l\'ancrage reste limité, et les quartiers anciens où les arbres d\'ornement manquent d\'espace, les contraintes varient d\'une parcelle à l\'autre.',
+        whyPro: 'Un saule blanc de quinze mètres dont le bois se fend à chaque rafale, un peuplier de berge ancré dans le sable qui bascule au premier coup de vent d\'ouest — aux Ponts-de-Cé, la question n\'est pas esthétique, elle est sécuritaire. Intervenir en hauteur au-dessus des toitures, à proximité de lignes aériennes ou en surplomb de la Loire, exige un matériel et des techniques que le travail au sol ne prépare pas.\n\nSur les frênes de ripisylve, la chalarose provoque des chutes de branches imprévisibles — un sujet peut paraître sain vu du sol et avoir un houppier fragilisé en partie haute. Un professionnel évalue la structure réelle de l\'arbre avant d\'engager l\'intervention.',
       },
       'entretien-jardin': {
         content: `
@@ -809,6 +813,8 @@ export const cities: CityData[] = [
           'Surveillance phytosanitaire de la chalarose du frêne',
           'Taille de réduction et haubanage préventif avant tempêtes',
         ],
+        accroche: 'Peuplier de vingt mètres en bord de Sarthe dont les branches surplombent la toiture, saule blanc fendu après la dernière tempête qui menace de tomber sur la clôture, vieux résineux des années 1970 qui prive le jardin de lumière à Éventard, frêne dont le houppier sèche de branche en branche en Basse-Île — à Écouflant, la diversité des arbres et des situations d\'urgence suit la diversité des sols et des expositions.\n\nLe sol alluvial des zones basses, gorgé d\'eau une partie de l\'année, favorise un enracinement superficiel qui rend les grands sujets vulnérables au vent — une donnée que chaque intervention doit intégrer.',
+        whyPro: 'La chalarose du frêne progresse en vallée de la Sarthe — à Écouflant, les frênes de ripisylve montrent des houppiers qui sèchent par le haut, des nécroses sur l\'écorce et des chutes de branches sans signal préalable. Distinguer un sujet encore défendable par élagage sanitaire d\'un arbre dont la structure interne est compromise exige un diagnostic que l\'observation depuis le sol ne suffit pas à établir.\n\nAu-delà de la chalarose, le sol alluvial de Basse-Île produit des peupliers et des saules au bois tendre dont les charpentières cassent facilement. Un professionnel évalue l\'ancrage, la qualité du bois et l\'état sanitaire avant de déterminer s\'il faut tailler, haubaner ou abattre.',
       },
       'entretien-jardin': {
         content: `
@@ -909,6 +915,8 @@ export const cities: CityData[] = [
           'Éclaircissage des grands feuillus en propriétés rurales',
           'Intervention adaptée selon l\'ancrage racinaire (limon ou argile)',
         ],
+        accroche: 'Chêne centenaire dont les branches basses rasent le toit de la longère, cèdre du Liban de quinze mètres qui n\'a jamais été taillé, tilleul argenté si dense qu\'il plonge la cour dans l\'ombre, peuplier de fond de vallée qui a perdu une charpentière pendant l\'hiver — à Cantenay-Épinard, les arbres remarquables des propriétés rurales posent des problèmes à la mesure de leur envergure.\n\nEntre les limons profonds des bourgs de Cantenay et d\'Épinard, où les grands feuillus s\'ancrent solidement, et les argiles de fond de vallée, où la ripisylve développe des racines superficielles, les conditions d\'intervention changent sur quelques dizaines de mètres.',
+        whyPro: 'Un chêne têtard du bocage ne s\'entretient pas comme un chêne de jardin — la taille de restauration suit un cycle spécifique, et un élagage classique détruirait la silhouette en trognard que des générations ont maintenue. De même, intervenir sur un cèdre du Liban ou un séquoia de quinze mètres sans connaître l\'architecture propre à ces essences risque de compromettre une structure qui a mis un siècle à se construire.\n\nSur les argiles de fond de vallée, les frênes touchés par la chalarose ajoutent une urgence sanitaire — houppier qui sèche, branches qui tombent sans prévenir. Un professionnel distingue le bois mort à supprimer du bois encore viable et adapte l\'intervention à la stabilité réelle de chaque sujet.',
       },
       'entretien-jardin': {
         content: `
