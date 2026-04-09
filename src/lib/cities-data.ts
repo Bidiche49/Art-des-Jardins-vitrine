@@ -216,6 +216,8 @@ export const cities: CityData[] = [
           'Taille de haies persistantes et caduques selon calendrier',
           'Fertilisation saisonnière adaptée aux sols compacts',
         ],
+        accroche: 'Pelouse qui jaunit par plaques dès juin malgré l\'arrosage, mousse qui s\'étend sous les arbres côté nord, haie de lauriers qui déborde sur le trottoir alors que les photinias d\'à côté n\'ont pas encore bougé, résidus de tonte qui s\'accumulent sans qu\'on sache s\'il vaut mieux les ramasser ou les laisser — le rythme d\'entretien d\'un jardin à Avrillé ne s\'improvise pas.\n\nLe sol argilo-limoneux de la commune retient l\'eau en hiver et se compacte en été. Cette alternance impose un calendrier d\'intervention précis, différent d\'un jardin sur sol sableux ou schisteux.',
+        whyPro: 'Sur sol argilo-limoneux, tondre trop ras en été — sous cinq centimètres — expose les racines au dessèchement et le gazon ne se relève pas avant l\'automne. Sans aération mécanique au printemps, la croûte d\'argile compactée empêche l\'eau et l\'air d\'atteindre le système racinaire, et la mousse s\'installe durablement dans les zones ombragées.\n\nUn professionnel ajuste la hauteur de coupe à la saison, repère les signes de compactage avant qu\'ils ne deviennent visibles à l\'œil, et cale les interventions — aération, terreautage, taille des persistants et des caducs — sur un calendrier adapté au sol argileux et au rythme de pousse local.',
       },
       abattage: {
         content: `
@@ -319,6 +321,8 @@ export const cities: CityData[] = [
           'Scarification et terreautage saisonnier des pelouses',
           'Entretien des massifs de vivaces et arbustifs',
         ],
+        accroche: 'Gazon qui pousse si vite au printemps qu\'une semaine sans tonte suffit à le rendre difficile à rattraper, sol qui colle aux chaussures dès novembre et ne sèche pas avant avril, haies de thuyas à tailler trois fois par an sous peine de voir les voisins — dans les lotissements de Beaucouzé, l\'entretien d\'un jardin suit un calendrier que le sol limoneux impose.\n\nCes limons fertiles donnent une croissance vigoureuse à tout ce qui pousse, adventices comprises. Le paillage se décompose en un à deux ans, les adventices s\'enracinent profondément — chaque poste d\'entretien demande un rythme et une méthode adaptés au terrain.',
+        whyPro: 'Intervenir au mauvais moment sur un sol limoneux gorgé d\'eau — passer une tondeuse en novembre, rouler un aérateur sur un terrain détrempé — compacte la structure du sol pour toute la saison. Les ornières laissées par le passage d\'engins se referment mal sur ce type de terre, et le gazon ne repousse pas dans les zones tassées.\n\nUn professionnel connaît la fenêtre d\'intervention : tonte soutenue d\'avril à juin quand le sol porte, arrêt anticipé à l\'automne avant la saturation, aération mécanique au bon moment pour améliorer la perméabilité sans dégrader le terrain. Sur les haies mixtes — photinias, éléagnus, charmilles — chaque essence a son propre rythme de croissance et sa période de taille.',
       },
       abattage: {
         content: `
@@ -422,6 +426,8 @@ export const cities: CityData[] = [
           'Nettoyage et remise en état après retrait des crues',
           'Choix de graminées résistantes pour coteaux secs',
         ],
+        accroche: 'Mousse qui gagne du terrain chaque hiver dans les zones proches de la Maine, gazon qui jaunit sur les coteaux dès la mi-juin faute de réserve d\'eau dans le schiste, dépôts de crue à nettoyer en fin d\'hiver avant que la végétation ne reparte — à Bouchemaine, un même jardin peut cumuler des problèmes d\'excès d\'eau en bas de parcelle et de sécheresse sur les hauteurs.\n\nLa proximité des cours d\'eau accélère la pousse et favorise les maladies fongiques sur les pelouses, tandis que les coteaux du Bourg et de La Pointe imposent des graminées capables de tenir sans arrosage sur sol superficiel.',
+        whyPro: 'Scarifier une pelouse envahie de mousse au mauvais moment — trop tôt sur sol gorgé d\'eau, trop tard quand la mousse a déjà sporulé — aggrave le problème au lieu de le résoudre. En zone humide à Bouchemaine, la mousse revient en quelques semaines si le scarifiage n\'est pas suivi d\'un sursemis et d\'un amendement adaptés au sol alluvial.\n\nSur les coteaux, l\'erreur inverse guette : semer un gazon classique sur schiste superficiel condamne la pelouse dès le premier été sec. Un professionnel choisit les graminées adaptées — fétuques élevées, ray-grass anglais — et repère les premiers signes de maladie fongique que l\'humidité ambiante des bords de rivière propage rapidement.',
       },
       abattage: {
         content: `
@@ -525,6 +531,8 @@ export const cities: CityData[] = [
           'Paillage au broyat de branches pour massifs et pieds de haie',
           'Tonte adaptée avec hauteur relevée en période sèche',
         ],
+        accroche: 'Sol qui se fissure dès mai et laisse les pissenlits s\'enraciner en profondeur, mousse qui colonise les passages piétinés et les zones sous les arbres, haie de thuyas dégarnie à la base sans possibilité de regarnissage, pelouse qui jaunit par plaques alors que le voisin sur le même lotissement a un gazon dense — à Saint-Barthélemy-d\'Anjou, les problèmes de jardin ont souvent la même origine : un sol argileux compact que l\'entretien standard ne suffit pas à corriger.\n\nLe substrat schisteux, légèrement acide, favorise la mousse et complique l\'implantation durable du gazon sans intervention mécanique régulière.',
+        whyPro: 'Une haie de thuyas dégarnie à la base ne se regarnit pas — le résineux ne repart pas sur le vieux bois. Replanter une haie mixte à la place sans corriger l\'acidité du sol schisteux ni amender le terrain appauvri par des décennies de thuyas mène au même résultat en quelques années.\n\nSur le gazon, la scarification sans chaulage modéré sur ce pH acide repousse la mousse pour quelques semaines, pas plus. Un professionnel diagnostique l\'ensemble — pH du sol, compactage, drainage — avant de traiter les symptômes. Il cale l\'aération mécanique au printemps, le terreautage compost en automne, et adapte la hauteur de coupe au comportement du sol argileux saison par saison.',
       },
       abattage: {
         content: `
