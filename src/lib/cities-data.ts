@@ -1055,6 +1055,8 @@ export const cities: CityData[] = [
           'Taille de haies persistantes en lotissement (photinias, lauriers)',
           'Entretien des massifs d\'aromatiques et rosiers de coteau',
         ],
+        accroche: 'Pelouse qui jaunit dès la mi-juin sur les coteaux schisteux alors que la plaine d\'Érigné continue de pousser, sédum et cymbalaire qui colonisent les joints d\'un muret en schiste local sans qu\'on sache s\'il faut les arracher ou les garder, massif d\'aromatiques — romarins, thyms, sauges — qui se dégarnit à la base après quelques années sans taille de fin de floraison, haie de photinias du lotissement que deux tailles annuelles suffisent à contenir — à Mûrs-Érigné, l\'entretien oscille en permanence entre le rythme des coteaux et celui de la plaine.\n\nLe microclimat favorable allonge la saison de végétation, mais la nature du sol change radicalement d\'une parcelle à l\'autre.',
+        whyPro: 'Arracher tout ce qui pousse entre les pierres d\'un muret en schiste revient à se priver du sédum, de la valériane et de la cymbalaire qui participent au charme d\'un jardin angevin — et à passer à côté des vraies adventices, celles qui fragilisent les joints et déchaussent les pierres. Le tri se fait espèce par espèce, à l\'œil.\n\nLe même raisonnement vaut pour la tonte sur coteau schisteux : descendre sous 8 cm en période sèche brûle la pelouse sur un sol qui draine déjà en profondeur. Un professionnel cale la hauteur de coupe, espace les passages en été et concentre le paillage là où la plaine sablo-limoneuse perd son eau trop vite.',
       },
       abattage: {
         content: `
@@ -1158,6 +1160,8 @@ export const cities: CityData[] = [
           'Aération mécanique sur substrat schisteux à La Roche',
           'Paillage systématique contre le dessèchement estival',
         ],
+        accroche: 'Gazon qui lève vite en avril sur le sable alluvial puis jaunit dès juillet sans que l\'arrosage suffise, mousse qui s\'étend sous les grands arbres riverains côté ombre, haie de charmilles du bourg ancien taillée comme la haie de lauriers-cerises du lotissement d\'à côté alors que les deux ne réclament ni le même rythme ni la même période, sol schisteux de La Roche qui forme une croûte imperméable dès la fin du printemps — à Sainte-Gemmes-sur-Loire, les quartiers imposent leurs propres règles.\n\nDu sable alluvial en plaine au schiste affleurant à La Roche, et du bourg ancien aux lotissements récents, un même calendrier d\'entretien ne peut pas couvrir toute la commune.',
+        whyPro: 'Sur une même rue à Sainte-Gemmes-sur-Loire, on trouve trois ensembles de haies qui ne se conduisent pas de la même façon. Les lauriers-cerises et photinias des lotissements demandent deux passages de persistants en juin et septembre. Les charmilles et buis du bourg ancien, caducs, se travaillent en fin d\'hiver pour préserver un port serré. Les haies champêtres de périphérie — cornouillers, troènes, viornes — mélangent les habitudes selon l\'essence.\n\nAppliquer le calendrier d\'un persistant de lotissement à une charmille de bourg, ou l\'inverse, abîme la haie sans économiser de temps. Un professionnel tient ces calendriers séparés et ajuste l\'entretien du pied selon chaque essence.',
       },
       abattage: {
         content: `
@@ -1261,6 +1265,8 @@ export const cities: CityData[] = [
           'Paillage épais pour contrôle des adventices sur argile',
           'Calendrier d\'entretien adapté au cycle hydrique du sol',
         ],
+        accroche: 'Tonte qui ne peut reprendre avant fin mars parce que l\'argile reste gorgée d\'eau et que le moindre passage d\'engin marque le sol, gazon qui se couvre de feutrage et de mousse en quelques mois à proximité de la Mayenne, haie de thuyas ou de cyprès de Leyland d\'un lotissement des années 1990 qu\'il faut décider de remplacer, haie mixte récente où personne ne sait plus quand tailler quoi — à Montreuil-Juigné, le sol argileux et l\'héritage des plantations dictent le calendrier.\n\nEntre le cycle hydrique et la diversité des haies installées, le rythme d\'entretien ne ressemble à aucun autre de l\'agglomération.',
+        whyPro: 'Une haie mixte ne se taille pas comme une haie de thuyas — on ne peut pas y passer le taille-haies deux fois l\'an en espérant un bon résultat. Chaque essence a sa fenêtre : le charme se taille en août, quand la pousse tendre s\'est arrêtée ; le photinia se reprend après sa floraison printanière ; l\'éléagnus se travaille en fin de printemps, avant que le bois ne durcisse. Passer toutes ces essences en même temps coupe des fleurs en formation et donne un rendu hétérogène.\n\nSur les lotissements de Montreuil-Juigné qui remplacent leurs monocultures de thuyas et cyprès de Leyland, ce calendrier par essence devient la base du travail.',
       },
       abattage: {
         content: `
@@ -1364,6 +1370,8 @@ export const cities: CityData[] = [
           'Terreautage au compost pour améliorer la structure du sol',
           'Ramassage et broyage de feuilles sous chênes et hêtres',
         ],
+        accroche: 'Sol limono-argileux qui devient collant dès les premières pluies d\'octobre et reste gras jusqu\'en avril, tonte qui s\'interrompt tôt et reprend tard sans qu\'on puisse forcer, feuilles de chêne et de hêtre qui couvrent la pelouse sur plusieurs semaines en automne et que le râteau peine à suivre, haie bocagère de charmes, aubépines et noisetiers qui ne se conduit pas comme la haie de photinias du lotissement mitoyen — à Saint-Jean-de-Linières, le calendrier d\'entretien suit le bocage avant de suivre la saison.\n\nEntre les grandes pelouses des propriétés rurales et la cohabitation des deux types de haies, chaque poste d\'entretien demande une cadence propre.',
+        whyPro: 'Sous un chêne ou un hêtre mature, ramasser les feuilles au râteau ou au souffleur prend des heures et laisse un résidu qui étouffe la pelouse. Quand le volume reste raisonnable, un passage de tondeuse à lame adaptée broie les feuilles sur place : elles se décomposent dans le gazon et nourrissent le sol au lieu de former le tapis asphyxiant des feuilles entières. L\'option n\'est valable qu\'à densité de feuillage modérée — au-delà, le ramassage reste nécessaire.\n\nMême logique pour le calendrier de tonte : sur le limono-argileux, forcer un passage en mars quand le sol reste gras marque le terrain pour toute la saison. Un professionnel attend que le sol porte.',
       },
       abattage: {
         content: `
