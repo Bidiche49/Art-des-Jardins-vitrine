@@ -636,6 +636,8 @@ export const cities: CityData[] = [
           'Désherbage écologique et paillage au broyat local',
           'Terreautage au compost pour améliorer la rétention d\'eau',
         ],
+        accroche: 'Gazon qui jaunit dès les premières chaleurs de juin alors que le drainage rapide du schiste semblait un atout, mousse qui revient chaque année sous les arbres malgré un sol bien ressuyé, tapis de feuilles mortes sous les tilleuls et érables qui étouffe la pelouse en novembre, haie de thuyas des années 1980 dégarnie à la base sans possibilité de regarnissage — à Trélazé, le sol schisteux ardoisier entretient des contradictions que l\'entretien standard ne règle pas.\n\nLe pH naturellement acide du schiste et l\'ombre des grands arbres favorisent la mousse, tandis que le drainage rapide impose un calendrier de tonte et d\'arrosage différent des gazons sur argile.',
+        whyPro: 'Un gazon qui jaunit en juin et se couvre de mousse en hiver sur le même terrain — le symptôme paraît contradictoire, il ne l\'est pas. À Trélazé, le schiste draine si vite que les racines manquent d\'eau dès les premières chaleurs, mais son pH acide et l\'ombre des tilleuls ou des érables matures laissent la mousse prospérer. Scarifier sans chauler, terreauter sans choisir des graminées à enracinement profond — fétuques élevées, ray-grass anglais — revient à traiter un symptôme à la fois. Un professionnel cale l\'ensemble : scarification et chaulage modéré au printemps, terreautage au compost en surface pour retenir l\'eau, ramassage des feuilles en automne avant qu\'elles n\'asphyxient le gazon.',
       },
       abattage: {
         content: `
@@ -739,6 +741,8 @@ export const cities: CityData[] = [
           'Taille de haies persistantes et champêtres',
           'Ramassage et broyage des feuilles de ripisylve en automne',
         ],
+        accroche: 'Pelouse qui jaunit en deux semaines sur le sable filtrant des parties basses dès que l\'été s\'installe, sol argilo-limoneux des hauteurs de Sorges ou Saint-Aubin qui colle aux chaussures jusqu\'en avril puis se fissure en surface, mousse qui s\'étend chaque hiver dans les jardins proches de la Loire, feuilles de peupliers et de saules qui forment un tapis humide en novembre sous lequel le gazon s\'asphyxie — aux Ponts-de-Cé, le même entretien ne peut pas convenir à une parcelle de Belle-Île et à un jardin de Saint-Aubin.\n\nLe profil du sol change avec l\'altitude, et le rythme de pousse comme les problèmes rencontrés suivent ce changement.',
+        whyPro: 'Aérer et sabler un gazon compacté a du sens sur les argilo-limons de Sorges ou Saint-Aubin — aucun sur le sable filtrant de Belle-Île, où le problème n\'est pas le compactage mais la perte d\'eau. Inversement, arroser un gazon qui jaunit en partie basse sans reconsidérer le choix des graminées ne tient pas l\'été. Un professionnel lit d\'abord le sol : fétuques élevées pour les zones à sécheresse rapide, aération mécanique et sablage léger sur les compacts des hauteurs. Les haies suivent la même logique — deux à trois passages pour les persistants des lotissements récents, un seul passage hivernal pour les haies champêtres de charmes, noisetiers et aubépines des propriétés anciennes.',
       },
       abattage: {
         content: `
@@ -841,6 +845,8 @@ export const cities: CityData[] = [
           'Taille de haies champêtres mixtes selon calendrier par essence',
           'Paillage organique et contrôle des espèces invasives en bord de Sarthe',
         ],
+        accroche: 'Pelouse qui ressort de l\'hiver couverte de limon et de débris après plusieurs semaines d\'immersion en Basse-Île, gazon qui se dessèche dès juillet sur les hauteurs sablo-limoneuses du bourg et d\'Éventard, haie champêtre de cornouillers, viornes et prunelliers qui ne se conduit pas comme une haie monospécifique de thuyas, renouée du Japon repérée en bord de Sarthe — à Écouflant, l\'entretien d\'un jardin suit le rythme des basses vallées plus qu\'un calendrier standard.\n\nEntre les parcelles qui attendent le retrait des eaux pour reprendre et celles qui se ressuient en quelques jours, les interventions changent d\'une zone à l\'autre de la commune.',
+        whyPro: 'Reprendre une pelouse après une crue ne consiste pas à sortir la tondeuse dès que le sol porte. Le limon déposé doit être nettoyé, le gazon scarifié pour éliminer les débris et la matière morte, puis les zones clairsemées réensemencées avant que les adventices ne prennent la place. À Écouflant, passer cette séquence dans le désordre — ou trop tôt sur sol encore gorgé — compromet la reprise pour toute la saison. En bord de Sarthe, la surveillance des espèces invasives — renouée du Japon, balsamine de l\'Himalaya — fait partie du travail courant : un pied arraché à temps évite une colonisation qui demandera des années à contenir.',
       },
       abattage: {
         content: `
@@ -944,6 +950,8 @@ export const cities: CityData[] = [
           'Gestion différenciée tonte/fauche sur grands terrains ruraux',
           'Traitement anti-mousse en zones ombragées par les grands arbres',
         ],
+        accroche: 'Parcelle basse gorgée d\'eau de novembre à mars où aucun engin ne peut passer sans marquer le sol, limons des parties hautes qui demandent une tonte hebdomadaire d\'avril à juin, haie bocagère de chênes, frênes et noisetiers qui n\'a pas le même calendrier qu\'une haie de photinias, grand terrain de 2 000 m² dont l\'entretien intégral en gazon tondu n\'a de sens ni économique ni écologique — à Cantenay-Épinard, le rythme des basses vallées et la taille des propriétés imposent une logique d\'entretien différente.\n\nLes crues hivernales et les haies bocagères traditionnelles cadrent un calendrier propre au contexte rural, distinct de celui des lotissements de l\'agglomération.',
+        whyPro: 'Tondre l\'intégralité d\'une parcelle de 2 000 m² toute l\'année n\'a pas de sens — coûteux, énergivore et en décalage avec le paysage bocager voisin. Une gestion différenciée — gazon entretenu près de la maison, fauche tardive en fond de parcelle — réduit les passages tout en laissant la biodiversité s\'installer, ce qui rejoint la logique des basses vallées Natura 2000 mitoyennes. Les haies bocagères suivent la même règle : une seule taille par an en fin d\'hiver, en préservant les rameaux fructifères. Les tailler deux ou trois fois comme des photinias supprime les fleurs, les fruits, et l\'intérêt écologique qui a justifié leur maintien sur la parcelle.',
       },
       abattage: {
         content: `
