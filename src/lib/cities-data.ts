@@ -1895,6 +1895,8 @@ export const cities: CityData[] = [
           'Paillage organique contre l\'évapotranspiration éolienne',
           'Entretien adapté aux six bourgs de la commune nouvelle',
         ],
+        accroche: 'Gazon qui monte en épis faute de tonte hebdomadaire, haie d\'osmanthes ou de photinias héritée du passé horticole qui demande une taille précise pour garder son port naturel, massif exposé qui sèche plus vite que ne le laisse supposer la richesse du sol, taches de fil rouge qui apparaissent dès l\'automne dans la zone ombragée au fond du jardin — à Loire-Authion, la vigueur du limon alluvial et le vent d\'ouest constant imposent un rythme d\'entretien qu\'un jardin classique ne connaît pas.\n\nLe calendrier — scarifiage en mars-avril, tonte hebdomadaire puis bihebdomadaire en pic, paillage organique épais des massifs — n\'est pas négociable sur cette plaine.',
+        whyPro: 'Sur le limon alluvial de la plaine, sauter une semaine de tonte au printemps suffit pour voir le gazon monter en épis et étouffer les graminées fines. Le rythme est hebdomadaire au printemps, bihebdomadaire en période de pic — sans ce suivi, le tapis herbeux perd sa densité. Le vent d\'ouest constant accélère par ailleurs l\'évapotranspiration estivale : les massifs exposés sèchent plus vite que ne le laisse supposer la richesse du sol, d\'où un paillage organique épais — broyat de branches ou paillettes de chanvre — pour maintenir l\'humidité en surface. Un professionnel cale ces interventions sur le rythme réel de la plaine.',
       },
       abattage: {
         content: `
@@ -1998,6 +2000,8 @@ export const cities: CityData[] = [
           'Scarifiage anti-mousse dans les zones ombragées humides',
           'Paillage organique épais sur substrat de grès filtrant',
         ],
+        accroche: 'Pelouse qui s\'enfonce sous le pied tout l\'hiver avec des ornières laissées par la tondeuse, même terrain qui fissure et durcit en surface dès le mois de juin, gazon qui souffre de la sécheresse sur les hauteurs du Plessis-Macé là où il croulait sous l\'eau en bas de la commune, haie de charmes ou de lauriers à caler sur un calendrier précis pour rester dense — à Longuenée-en-Anjou, le même jardin peut cumuler les deux extrêmes selon la saison et selon la hauteur.\n\nLe substrat change aussi entre les bourgs — argilo-limoneux en contrebas, grès filtrant sur les hauteurs — et les réglages d\'entretien ne sont pas les mêmes d\'une parcelle à l\'autre.',
+        whyPro: 'Sur les hauteurs du Plessis-Macé, le substrat de grès plus filtrant fait souffrir le gazon de la sécheresse estivale davantage que de l\'excès d\'eau hivernal : un ray-grass classique y souffre chaque été. Les fétuques élevées et le trèfle nain, plus résistants au sec, constituent une alternative pertinente. En contrebas, sur le sol argilo-limoneux, l\'entretien suit au contraire un triptyque — scarifiage et aération mécanique au printemps, tonte haute en été pour protéger les racines, terreautage à l\'automne pour restaurer la structure. Un professionnel oriente le choix de mélange et le calendrier selon la hauteur exacte de la parcelle.',
       },
       abattage: {
         content: `
