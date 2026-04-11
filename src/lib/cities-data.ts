@@ -1475,6 +1475,8 @@ export const cities: CityData[] = [
           'Entretien des massifs de vivaces de terrain humide',
           'Gestion de la mousse en zones ombragées et humides',
         ],
+        accroche: 'Pelouse qui reste gorgée d\'eau longtemps après les pluies de printemps, mousse qui gagne du terrain sous les arbres de berge, haie de lauriers-palme dont les feuilles brunissent aux pointes après chaque taille au taille-haie, taches noires sur les rosiers qui s\'aggravent chaque été humide — à Briollay, le confluent de la Sarthe et du Loir impose un rythme d\'entretien que la plupart des jardins ne trouvent jamais seuls.\n\nLe sol limoneux retient l\'eau, l\'humidité ambiante favorise les maladies fongiques, et chaque essence végétale demande un traitement spécifique.',
+        whyPro: 'Tailler une haie de lauriers-palme au taille-haie électrique sectionne les feuilles plutôt que de couper aux nœuds — les moitiés laissées sur la plante brunissent en quelques jours et donnent un aspect grillé qui met des mois à disparaître. Le sécateur reste la bonne méthode sur cette essence, quitte à doubler le temps d\'intervention.\n\nSur le reste du jardin, l\'air humide du confluent propage rapidement les pathologies fongiques — marsonia sur rosiers, tavelure sur pommiers. Un professionnel ramasse systématiquement les feuilles atteintes, élimine les rameaux contaminés dès l\'apparition des symptômes, et cale scarification et regarnissage en ray-grass et fétuque élevée au bon moment de mars-avril.',
       },
       abattage: {
         content: `
@@ -1578,6 +1580,8 @@ export const cities: CityData[] = [
           'Taille de haies persistantes et caduques selon calendrier',
           'Palissage et taille des grimpantes sur façades en tuffeau',
         ],
+        accroche: 'Pelouse qui jaunit dès juin sur les coteaux schisteux, glycine qui s\'accroche à la façade en tuffeau et menace de fissurer la pierre tendre si personne ne la palisse, murets en pierre sèche qu\'il faut nettoyer sans déranger les lézards qui y nichent, désherbage à faire sans produit phytosanitaire parce que les parcelles voisines sont classées AOC — à Savennières, l\'entretien d\'un jardin compose avec le vignoble.\n\nLe sol maigre et drainant, le contexte viticole et les bâtis en tuffeau orientent chaque intervention avant la première coupe.',
+        whyPro: 'Dans un secteur viticole classé AOC, le désherbage chimique dans un jardin particulier n\'a pas sa place — les alternatives mécaniques et végétales sont les seuls leviers qui tiennent sur la durée. Un professionnel connaît celles qui marchent : binage manuel, paillage minéral en graviers de schiste ou pouzzolane, couvre-sols compétitifs comme le thym serpolet et le sédum. La prairie sèche fleurie — achillées, fétuques, trèfles — remplace un gazon classique qui ne tient pas au-delà de juin sur le schiste.\n\nLes grimpantes sur façades en tuffeau demandent un palissage et une taille annuelle adaptés — sans cette rigueur, le poids et les crampons endommagent une pierre qui ne se remplace pas facilement.',
       },
       abattage: {
         content: `
@@ -1681,6 +1685,8 @@ export const cities: CityData[] = [
           'Scarification et terreautage saisonnier des pelouses',
           'Désherbage mécanique sans produit chimique',
         ],
+        accroche: 'Mousse qui envahit la pelouse sous les grands érables du fond de jardin alors que la partie sud, en plein soleil, se fait coloniser par le liseron et le chiendent, tonte hebdomadaire à tenir d\'avril à juin pour ne pas perdre le gazon, feuilles mortes qui s\'accumulent en automne et étouffent la pelouse — dans les lotissements de Saint-Sylvain-d\'Anjou, une même parcelle peut cumuler des problèmes opposés selon l\'exposition.\n\nLe sol limono-argileux, l\'ombrage des grands feuillus et la vigueur des adventices à rhizomes imposent des traitements différenciés sur le même terrain.',
+        whyPro: 'Réensemencer toute une pelouse en gazon standard sur une parcelle mi-ombre mi-soleil ne donne jamais un résultat homogène : la partie ombragée se couvre de mousse en quelques mois, la partie ensoleillée se laisse coloniser par le liseron et le chiendent. Un professionnel différencie les traitements — fétuques fines et ray-grass anglais sous les grands feuillus pour résister à l\'ombre, désherbage mécanique régulier en zone ensoleillée sur des rhizomes de liseron et de chiendent qui repoussent après chaque arrachage superficiel.\n\nLa scarification et le terreautage sableux au printemps valent pour toute la parcelle, mais le choix des graminées et la stratégie anti-adventices changent d\'un côté à l\'autre du jardin.',
       },
       abattage: {
         content: `
@@ -1784,6 +1790,8 @@ export const cities: CityData[] = [
           'Correction de chlorose sur rosiers en sol calcaire actif',
           'Désherbage mécanique et paillage en fond de vallée humide',
         ],
+        accroche: 'Jeunes feuilles de rosiers qui jaunissent avec des nervures restées vertes malgré les arrosages et les engrais, pelouse compactée par un hiver gorgé d\'eau qui laisse passer le chiendent dès mars, haie bocagère de charme et d\'aubépine qu\'on n\'ose pas tailler avant la fin de la nidification — à Soulaines-sur-Aubance, le sol argilo-calcaire de la vallée dicte ce que le jardin peut supporter.\n\nLes iris germanica, pivoines et lavandes s\'y installent sans effort, mais les rosiers et d\'autres plantes sensibles au calcaire actif exigent des corrections que peu de propriétaires savent mettre en place.',
+        whyPro: 'La chlorose ferrique des rosiers sur sol argilo-calcaire n\'est pas un problème d\'arrosage ni d\'engrais classique — c\'est le calcaire actif qui bloque l\'assimilation du fer par les racines. Ajouter de la terre de bruyère au pied, apporter du fer chélaté en foliaire ou en arrosage, et choisir des variétés plus tolérantes au pH élevé : ces corrections demandent un diagnostic précis avant toute intervention.\n\nPour le reste du jardin, un professionnel oriente vers les vivaces qui prospèrent sur calcaire — iris germanica, pivoines, lavandes, sauges — et cale la taille des haies bocagères en septembre, après la nidification, pour respecter la faune qu\'elles abritent.',
       },
       abattage: {
         content: `
