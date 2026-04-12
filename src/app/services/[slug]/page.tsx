@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { services, getServiceBySlug } from '@/lib/services-data';
+import { cities, serviceTypes } from '@/lib/cities-data';
 import { ServiceSchema } from '@/components/seo/ServiceSchema';
 import { TaxCreditSection } from '@/components/TaxCreditSection';
 import { HeroSection } from '@/components/ui/HeroSection';
@@ -44,6 +45,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default function ServicePage({ params }: PageProps) {
   const service = getServiceBySlug(params.slug);
   if (!service) notFound();
+
+  // Maillage interne : seuls les 4 services principaux ont des pages villes dédiées.
+  // paysagisme (services) correspond à paysagiste (pages villes).
+  const cityServiceSlug = service.slug === 'paysagisme' ? 'paysagiste' : service.slug;
+  const cityService = serviceTypes.find((s) => s.service === cityServiceSlug);
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -207,6 +213,31 @@ export default function ServicePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Interventions par commune — maillage interne vers les pages villes */}
+      {cityService && (
+        <section className="py-16 lg:py-24 bg-gray-50">
+          <div className="container-custom">
+            <h2 className="text-3xl font-bold text-center mb-4">
+              {cityService.serviceTitle} dans nos communes d&apos;intervention
+            </h2>
+            <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              Nous intervenons à Angers et dans un rayon de 30 km. Retrouvez notre service par commune.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {cities.map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/${cityService.service}-${city.slug}/`}
+                  className="px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 hover:text-primary-600 hover:shadow-md transition-all border border-gray-200"
+                >
+                  {cityService.serviceTitle} {city.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Final */}
       <section className="relative py-16 overflow-hidden">

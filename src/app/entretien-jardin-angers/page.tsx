@@ -316,6 +316,24 @@ export default function EntretienJardinAngersPage() {
                     Demander un devis
                   </Link>
                 </div>
+
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h3 className="text-lg font-bold text-gray-800 mb-4">Autres services à Angers</h3>
+                  <ul className="space-y-2">
+                    {serviceTypes
+                      .filter((s) => s.service !== service.service)
+                      .map((s) => (
+                        <li key={s.service}>
+                          <Link
+                            href={`/${s.service}-angers/`}
+                            className="text-primary-600 hover:text-primary-800 text-sm"
+                          >
+                            {s.serviceTitle} Angers
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
