@@ -65,54 +65,54 @@ export const services: ServiceData[] = [
       'Éclairage de jardin',
     ],
     benefits: [
-      'Valorisation de votre propriété',
-      'Espace de détente personnalisé',
-      'Entretien facilité grâce à une conception réfléchie',
-      'Végétaux adaptés au climat local',
-      'Projet adapté aux contraintes du terrain',
+      'Conception sur plan avec choix des végétaux, matériaux et chiffrage',
+      'Plantations sélectionnées pour le climat ligérien et le sol en place',
+      'Entretien réduit par une implantation raisonnée des massifs',
+      'Terrassement, maçonnerie paysagère et finitions végétales intégrés',
+      'Styles variés : contemporain, champêtre, méditerranéen',
     ],
     process: [
       {
         title: 'Visite et analyse',
         description:
-          'Nous nous déplaçons gratuitement pour étudier votre terrain, comprendre vos besoins et vos envies.',
+          'Déplacement sur site, étude du sol, de l\'exposition et du dénivelé.',
       },
       {
         title: 'Conception du projet',
         description:
-          'Notre équipe élabore un plan détaillé avec choix des végétaux, matériaux et estimation précise.',
+          'Plan détaillé avec choix des végétaux, matériaux et chiffrage précis.',
       },
       {
         title: 'Validation et planification',
         description:
-          'Nous ajustons le projet selon vos retours et planifions les travaux à la période idéale.',
+          'Ajustements selon les retours, planification des travaux à la période adaptée.',
       },
       {
         title: 'Réalisation',
         description:
-          'Nos équipes exécutent les travaux avec soin, dans le respect des délais convenus.',
+          'Travaux selon le planning défini : terrassement, plantations, finitions.',
       },
       {
         title: 'Suivi et conseils',
         description:
-          'Nous vous accompagnons après les travaux avec des conseils d\'entretien personnalisés.',
+          'Compte-rendu de fin de chantier et recommandations d\'entretien.',
       },
     ],
     faq: [
       {
         question: 'Combien coûte un aménagement paysager ?',
         answer:
-          'Chaque projet est unique. Le coût dépend de la surface, des matériaux et des plantations choisis. Contactez-nous pour un devis gratuit et personnalisé.',
+          'Le coût dépend de la surface, des matériaux choisis et du volume de plantations. Un devis détaillé est établi après visite du terrain.',
       },
       {
         question: 'Quelle est la meilleure période pour aménager un jardin ?',
         answer:
-          'L\'automne et l\'hiver sont idéaux pour la plantation, cependant nous réalisons les travaux d\'aménagement toute l\'année.',
+          'L\'automne et l\'hiver sont les périodes les plus favorables à la plantation. Les travaux de terrassement et de maçonnerie paysagère se réalisent toute l\'année.',
       },
       {
         question: 'Proposez-vous un service d\'entretien après l\'aménagement ?',
         answer:
-          'Oui, nous proposons des contrats d\'entretien annuels pour maintenir votre jardin en parfait état. Tonte, taille, désherbage... nous nous occupons de tout.',
+          'Oui — contrats annuels avec passages programmés (tonte, taille, désherbage) ou interventions ponctuelles à la demande.',
       },
     ],
   },
@@ -148,54 +148,54 @@ export const services: ServiceData[] = [
       'Hivernage et protection des plantes',
     ],
     benefits: [
-      'Gain de temps considérable',
-      'Jardin toujours impeccable',
-      'Matériels professionnels fournis',
-      'Conseils de jardinage inclus',
-      'Éligible au crédit d\'impôt de 50 %',
+      'Formules modulables : contrat annuel ou ponctuel',
+      'Calendrier calé sur le cycle végétatif (tontes, tailles, protections)',
+      'Équipement professionnel : tondeuses autoportées, taille-haies thermiques',
+      'Évacuation des déchets verts incluse',
+      'Crédit d\'impôt de 50 % sur les prestations éligibles',
     ],
     process: [
       {
         title: 'Évaluation des besoins',
         description:
-          'Nous visitons votre jardin pour évaluer les travaux nécessaires et la fréquence d\'intervention.',
+          'Visite du jardin, relevé des surfaces et des plantations, évaluation de la fréquence nécessaire.',
       },
       {
         title: 'Proposition personnalisée',
         description:
-          'Nous vous remettons un devis détaillé avec planning d\'intervention adapté aux saisons.',
+          'Devis détaillé avec planning d\'intervention calé sur les saisons.',
       },
       {
         title: 'Interventions régulières',
         description:
-          'Notre équipe intervient selon le calendrier établi, avec ou sans votre présence.',
+          'Passages selon le calendrier établi, avec ou sans présence du propriétaire.',
       },
       {
         title: 'Suivi qualité',
         description:
-          'Nous ajustons nos prestations selon l\'évolution de votre jardin et vos retours.',
+          'Ajustement des prestations selon l\'évolution du jardin et les retours.',
       },
     ],
     faq: [
       {
         question: 'À quelle fréquence devez-vous intervenir ?',
         answer:
-          'Cela dépend de la surface et du type de jardin. En général, une intervention toutes les 2 semaines au printemps/été et mensuelle en automne/hiver suffit pour un jardin standard.',
+          'En général, toutes les 2 semaines au printemps/été et une fois par mois en automne/hiver. La fréquence s\'ajuste à la surface et au type de plantations.',
       },
       {
         question: 'Que faites-vous des déchets verts ?',
         answer:
-          'Nous évacuons systématiquement tous les déchets verts vers un centre de compostage agréé. L\'évacuation est incluse dans nos tarifs.',
+          'Les déchets verts sont évacués vers un centre de compostage agréé. L\'évacuation est incluse dans le tarif.',
       },
       {
         question: 'Intervenez-vous pendant les vacances ?',
         answer:
-          'Oui, nous pouvons intervenir en votre absence. C\'est même l\'idéal pour que vous retrouviez un jardin impeccable à votre retour.',
+          'Oui, les interventions se font avec ou sans présence du propriétaire, selon le calendrier convenu.',
       },
       {
         question: 'Quel est le tarif d\'un entretien de jardin ?',
         answer:
-          'Le tarif dépend de la surface, de la fréquence et des prestations souhaitées. Avec le crédit d\'impôt de 50 %, le coût réel est divisé par deux. Demandez votre devis gratuit.',
+          'Le tarif dépend de la surface, de la fréquence et des prestations retenues. Avec le crédit d\'impôt de 50 %, le coût réel est divisé par deux. Un devis est établi après visite.',
       },
     ],
   },
@@ -228,54 +228,54 @@ export const services: ServiceData[] = [
       'Diagnostic phytosanitaire',
     ],
     benefits: [
-      'Arbres plus sains et vigoureux',
-      'Réduction des risques de chute',
-      'Meilleure luminosité dans le jardin',
-      'Respect de la législation (distances, hauteurs)',
-      'Intervention sécurisée et assurée',
+      'Taille raisonnée qui respecte la physiologie de l\'arbre',
+      'Diagnostic visuel préalable : état sanitaire, structure, risques',
+      'Techniques adaptées à chaque essence et configuration',
+      'Matériel de grimpe, nacelle et broyeur selon le chantier',
+      'Conformité aux distances et hauteurs réglementaires',
     ],
     process: [
       {
         title: 'Diagnostic sur place',
         description:
-          'Nous examinons vos arbres pour évaluer leur état sanitaire et les travaux nécessaires.',
+          'Examen de l\'arbre : état sanitaire, structure de la couronne, risques identifiés.',
       },
       {
         title: 'Devis détaillé',
         description:
-          'Nous vous remettons un devis détaillé précisant le type de taille et les moyens utilisés.',
+          'Devis précisant le type de taille retenu, les moyens techniques et le planning.',
       },
       {
         title: 'Intervention',
         description:
-          'Nos élagueurs interviennent avec le matériel adapté : cordes, nacelle, broyeur...',
+          'Taille réalisée avec le matériel adapté à la configuration : cordes, nacelle ou broyeur.',
       },
       {
         title: 'Nettoyage complet',
         description:
-          'Nous évacuons tous les déchets et laissons votre jardin propre.',
+          'Évacuation des branches et déchets, site laissé propre.',
       },
     ],
     faq: [
       {
         question: 'Quand faut-il élaguer ses arbres ?',
         answer:
-          'La période idéale varie selon les espèces. En général, l\'hiver (hors gel) est recommandé pour la plupart des arbres, mais certains comme les cerisiers se taillent après la floraison.',
+          'La période idéale varie selon les espèces. L\'hiver hors gel convient à la plupart des arbres. Certains fruitiers (cerisiers, pruniers) se taillent après la floraison pour limiter les maladies.',
       },
       {
         question: 'Faut-il une autorisation pour élaguer ?',
         answer:
-          'Pour les arbres classés ou en zone protégée, une autorisation peut être nécessaire. Nous pouvons vous accompagner dans ces démarches administratives.',
+          'En zone protégée ou pour les arbres classés, une autorisation préalable de la mairie peut être exigée. Le diagnostic sur place permet de clarifier les démarches nécessaires.',
       },
       {
         question: 'Quelle est la différence entre élagage et taille ?',
         answer:
-          'L\'élagage concerne la coupe de grosses branches sur les arbres de grande taille, tandis que la taille s\'applique aux arbustes et haies. Les techniques et le matériel diffèrent.',
+          'L\'élagage concerne les grosses branches sur les arbres de moyenne et grande hauteur. La taille s\'applique aux arbustes et haies. Les techniques, le matériel et les périodes d\'intervention diffèrent.',
       },
       {
         question: 'Combien coûte un élagage d\'arbre ?',
         answer:
-          'Le prix varie selon l\'essence, la hauteur et l\'accessibilité de l\'arbre. Nous établissons un devis gratuit après visite sur place.',
+          'Le prix dépend de l\'essence, de la hauteur, de l\'accessibilité et du type de taille. Un devis est établi après visite sur place.',
       },
     ],
   },
@@ -312,17 +312,17 @@ export const services: ServiceData[] = [
       'Conseil pour replantation',
     ],
     benefits: [
-      'Sécurisation des personnes et des biens',
-      'Intervention rapide en urgence',
-      'Matériel professionnel adapté',
-      'Entreprise assurée',
-      'Terrain nettoyé et prêt à l\'emploi',
+      'Intervention possible en zone contrainte — bâtiments, lignes, routes',
+      'Démontage pièce par pièce quand l\'espace de chute est limité',
+      'Dessouchage à la rogneuse et évacuation complète des débris',
+      'Intervention rapide sur arbres dangereux après tempête',
+      'Terrain prêt pour replantation ou nouvel aménagement',
     ],
     process: [
       {
         title: 'Évaluation du chantier',
         description:
-          'Nous analysons l\'arbre à abattre, son environnement et définissons la méthode appropriée.',
+          'Analyse de l\'arbre, de son environnement (bâtiments, lignes, accès) et choix de la méthode.',
       },
       {
         title: 'Préparation du site',
@@ -349,22 +349,22 @@ export const services: ServiceData[] = [
       {
         question: 'Faut-il une autorisation pour abattre un arbre ?',
         answer:
-          'Cela dépend de votre commune et du type d\'arbre. En zone protégée ou pour les arbres classés, une autorisation est obligatoire. Nous vous aidons à faire les démarches.',
+          'En zone protégée ou pour les arbres classés, une autorisation municipale est obligatoire. Le diagnostic sur site permet de vérifier les contraintes réglementaires applicables.',
       },
       {
         question: 'Que faites-vous du bois ?',
         answer:
-          'Nous proposons plusieurs options : évacuation complète, débit en bûches si vous souhaitez le conserver, ou valorisation par nos soins. Le choix vous appartient.',
+          'Plusieurs options : évacuation complète, débit en bûches pour conservation, ou valorisation. Le choix est défini au moment du devis.',
       },
       {
         question: 'Intervenez-vous en urgence après tempête ?',
         answer:
-          'Oui, en cas d\'arbre tombé ou dangereux, appelez-nous directement. Nous faisons notre maximum pour intervenir rapidement et sécuriser les lieux.',
+          'Oui. En cas d\'arbre tombé ou dangereux, une intervention de sécurisation est organisée dans les meilleurs délais.',
       },
       {
         question: 'Quel est le prix d\'un abattage d\'arbre ?',
         answer:
-          'Le coût dépend de la hauteur, de l\'environnement (zone contrainte ou dégagée) et de l\'évacuation. Contactez-nous pour une évaluation gratuite.',
+          'Le coût dépend de la hauteur de l\'arbre, de l\'environnement (zone contrainte ou dégagée) et des options retenues (dessouchage, évacuation). Un devis est établi après visite.',
       },
     ],
   },
@@ -402,22 +402,22 @@ export const services: ServiceData[] = [
       'Drainage et gestion des eaux de pluie',
     ],
     benefits: [
-      'Espace de vie supplémentaire toute l\'année',
-      'Valorisation immédiate de votre propriété',
-      'Matériaux durables et résistants aux intempéries',
-      'Conception sur mesure adaptée à votre terrain',
-      'Finitions soignées et intégration paysagère',
+      'Choix du matériau selon l\'usage, l\'exposition et le niveau d\'entretien',
+      'Pose sur plots possible pour compenser les irrégularités sans maçonnerie lourde',
+      'Bois naturel, composite, pierre naturelle ou béton décoratif',
+      'Aménagements complémentaires intégrés : pergola, muret, éclairage',
+      'Drainage et gestion des eaux de pluie intégrés à la conception',
     ],
     process: [
       {
         title: 'Visite et prise de mesures',
         description:
-          'Nous analysons votre terrain, l\'exposition et vos envies pour définir le projet idéal.',
+          'Relevé du terrain, étude de l\'exposition et des contraintes techniques (portance, drainage).',
       },
       {
         title: 'Proposition et choix des matériaux',
         description:
-          'Nous vous présentons un plan détaillé avec échantillons de matériaux et devis précis.',
+          'Plan détaillé avec échantillons de matériaux et devis chiffré.',
       },
       {
         title: 'Préparation du terrain',
@@ -432,29 +432,29 @@ export const services: ServiceData[] = [
       {
         title: 'Réception des travaux',
         description:
-          'Vérification finale avec vous et conseils d\'entretien pour la longévité de votre terrasse.',
+          'Vérification finale et remise des consignes d\'entretien adaptées au matériau posé.',
       },
     ],
     faq: [
       {
         question: 'Quel matériau choisir pour ma terrasse ?',
         answer:
-          'Le choix dépend de votre budget, de l\'entretien souhaité et de l\'esthétique voulue. Le bois composite est le plus simple d\'entretien, le bois naturel le plus chaleureux, et la pierre le plus durable. Nous vous conseillerons lors de la visite.',
+          'Le composite demande peu d\'entretien, le bois naturel offre un rendu chaleureux, la pierre est le matériau le plus durable. Le choix dépend du budget, de l\'exposition et du niveau d\'entretien accepté.',
       },
       {
         question: 'Faut-il un permis de construire pour une terrasse ?',
         answer:
-          'Une terrasse de plain-pied ne nécessite généralement pas de permis. Au-delà de 60 cm de hauteur ou 20 m² de surface, une déclaration préalable peut être requise. Nous vous accompagnons dans les démarches.',
+          'Une terrasse de plain-pied ne nécessite généralement pas de permis. Au-delà de 60 cm de hauteur ou 20 m² de surface, une déclaration préalable peut être requise.',
       },
       {
         question: 'Combien de temps dure la construction d\'une terrasse ?',
         answer:
-          'Comptez généralement 1 à 2 semaines pour une terrasse standard, selon la surface et la complexité du projet. Nous vous communiquons un planning précis au moment du devis.',
+          'Comptez 1 à 2 semaines pour une terrasse standard. La durée varie selon la surface, le matériau et la complexité du terrain. Le planning est précisé au devis.',
       },
       {
         question: 'Quel est le prix d\'une terrasse ?',
         answer:
-          'Le coût varie selon le matériau, la surface et les aménagements associés. Contactez-nous pour un devis gratuit et personnalisé après visite sur place.',
+          'Le coût dépend du matériau, de la surface et des aménagements associés (pergola, éclairage, murets). Un devis est établi après visite du terrain.',
       },
     ],
   },
@@ -491,22 +491,22 @@ export const services: ServiceData[] = [
       'Brise-vue et occultation',
     ],
     benefits: [
-      'Sécurisation de votre propriété',
-      'Protection de votre intimité',
-      'Valorisation esthétique du terrain',
-      'Matériaux durables et résistants',
-      'Installation conforme aux règles d\'urbanisme',
+      'Panneaux rigides, bois, composite, aluminium, gabions — solution adaptée à chaque usage',
+      'Portails battants ou coulissants, portillons et brise-vue',
+      'Vérification des règles d\'urbanisme locales avant pose',
+      'Hauteurs et distances de voisinage conformes à la réglementation',
+      'Fondations et poteaux dimensionnés selon la nature du sol',
     ],
     process: [
       {
         title: 'Visite et métrage',
         description:
-          'Nous mesurons le périmètre, identifions les contraintes du terrain et définissons vos besoins.',
+          'Relevé du périmètre, identification des contraintes du terrain et des limites de propriété.',
       },
       {
         title: 'Choix de la solution',
         description:
-          'Nous vous présentons les options adaptées à votre projet avec devis détaillé.',
+          'Présentation des options adaptées au projet avec devis détaillé.',
       },
       {
         title: 'Préparation du terrain',
@@ -523,17 +523,17 @@ export const services: ServiceData[] = [
       {
         question: 'Quelle clôture choisir pour mon terrain ?',
         answer:
-          'Le choix dépend de votre objectif (intimité, sécurité, esthétique), de votre budget et des règles d\'urbanisme locales. Nous vous conseillons la solution la plus adaptée lors de la visite gratuite.',
+          'Le choix dépend de l\'objectif (intimité, sécurité, esthétique), du budget et des règles d\'urbanisme locales. La visite sur site permet de définir la solution adaptée.',
       },
       {
         question: 'Faut-il une autorisation pour poser une clôture ?',
         answer:
-          'Dans la plupart des communes, une déclaration préalable de travaux est nécessaire. Certaines zones imposent des contraintes de hauteur ou de matériau. Nous vérifions les règles locales pour vous.',
+          'Dans la plupart des communes, une déclaration préalable de travaux est nécessaire. Certaines zones imposent des contraintes de hauteur ou de matériau. Les règles locales sont vérifiées en amont.',
       },
       {
         question: 'Quelle est la durée de pose d\'une clôture ?',
         answer:
-          'Pour un terrain standard, comptez 2 à 5 jours selon le linéaire et le type de clôture. Nous vous communiquons un planning précis dans le devis.',
+          'Comptez 2 à 5 jours pour un terrain standard, selon le linéaire et le type de clôture. Le planning est précisé au devis.',
       },
     ],
   },
@@ -569,54 +569,54 @@ export const services: ServiceData[] = [
       'Traitement phytosanitaire si nécessaire',
     ],
     benefits: [
-      'Haies denses et uniformes',
-      'Respect de la réglementation de voisinage',
-      'Matériel professionnel pour une coupe nette',
-      'Évacuation des déchets verts incluse',
-      'Conseils d\'entretien personnalisés',
+      'Technique de coupe adaptée à chaque essence (persistantes, caduques, champêtres)',
+      'Taille de formation sur jeunes haies pour favoriser la ramification',
+      'Rabattage possible pour réduire les haies devenues trop hautes',
+      'Évacuation des déchets de taille vers un centre de compostage',
+      'Crédit d\'impôt de 50 % sur les prestations éligibles',
     ],
     process: [
       {
         title: 'Évaluation de la haie',
         description:
-          'Nous identifions les essences, l\'état sanitaire et le type de taille adapté.',
+          'Identification des essences, de l\'état sanitaire et du type de taille adapté.',
       },
       {
         title: 'Devis et planification',
         description:
-          'Nous établissons un devis en fonction du linéaire, de la hauteur et de la fréquence souhaitée.',
+          'Devis établi en fonction du linéaire, de la hauteur et de la fréquence souhaitée.',
       },
       {
         title: 'Taille professionnelle',
         description:
-          'Nos jardiniers interviennent avec le matériel adapté pour une coupe nette et régulière.',
+          'Coupe réalisée au taille-haies thermique ou sur perche selon la hauteur.',
       },
       {
         title: 'Nettoyage et évacuation',
         description:
-          'Ramassage de tous les déchets de taille et évacuation vers un centre de compostage.',
+          'Ramassage des déchets de taille et évacuation vers un centre de compostage.',
       },
     ],
     faq: [
       {
         question: 'Quand tailler sa haie ?',
         answer:
-          'La plupart des haies se taillent 2 fois par an : en juin après la première pousse et en septembre avant l\'hiver. Certaines espèces à croissance rapide peuvent nécessiter 3 tailles par an.',
+          'La plupart des haies se taillent 2 fois par an : en juin après la première pousse et en septembre avant l\'hiver. Les espèces à croissance rapide (laurier, troène) peuvent nécessiter 3 passages.',
       },
       {
         question: 'Ma haie est trop haute, peut-on la réduire ?',
         answer:
-          'Oui, nous réalisons des rabattages pour réduire la hauteur des haies devenues trop imposantes. L\'opération se fait généralement en fin d\'hiver pour limiter le stress sur les végétaux.',
+          'Oui, un rabattage permet de réduire significativement la hauteur. L\'opération se fait en fin d\'hiver pour limiter le stress végétal et favoriser la repousse.',
       },
       {
         question: 'Quelle est la réglementation pour les haies en limite de propriété ?',
         answer:
-          'Les haies de plus de 2 m de haut doivent être plantées à 2 m minimum de la limite de propriété. En dessous de 2 m, la distance minimale est de 50 cm. Nous veillons au respect de ces règles.',
+          'Les haies de plus de 2 m de haut doivent être plantées à 2 m minimum de la limite de propriété. En dessous de 2 m, la distance minimale est de 50 cm (Code civil, art. 671).',
       },
       {
         question: 'Combien coûte la taille de haie ?',
         answer:
-          'Le prix dépend du linéaire, de la hauteur et de l\'accessibilité. Nous proposons des tarifs dégressifs dans le cadre de contrats annuels. Avec le crédit d\'impôt de 50 %, le coût réel est divisé par deux. Demandez votre devis gratuit.',
+          'Le prix dépend du linéaire, de la hauteur et de l\'accessibilité. Des tarifs dégressifs existent dans le cadre de contrats annuels. Avec le crédit d\'impôt de 50 %, le coût réel est divisé par deux.',
       },
     ],
   },
@@ -653,44 +653,44 @@ export const services: ServiceData[] = [
       'Débroussaillage préventif (obligation légale)',
     ],
     benefits: [
-      'Terrain propre et exploitable rapidement',
-      'Matériel professionnel puissant',
-      'Mise en conformité réglementaire',
-      'Intervention rapide sur tout type de terrain',
-      'Valorisation foncière de votre parcelle',
+      'Matériel dimensionné selon la densité : débroussailleuses à lames, broyeur, mini-pelle',
+      'Broyat réutilisable en paillis ou évacuation vers centre de compostage',
+      'Mise en conformité avec l\'obligation légale de débroussaillage (50 m autour des habitations)',
+      'Intervention sur tous types de terrains : friches, sous-bois, parcelles à bâtir',
+      'Crédit d\'impôt de 50 % sur les prestations éligibles',
     ],
     process: [
       {
         title: 'Évaluation du terrain',
         description:
-          'Nous visitons le terrain pour évaluer la densité de végétation et les contraintes d\'accès.',
+          'Visite du terrain, évaluation de la densité de végétation et des contraintes d\'accès.',
       },
       {
         title: 'Devis adapté',
         description:
-          'Nous établissons un devis précis en fonction de la surface et du niveau d\'intervention nécessaire.',
+          'Devis établi en fonction de la surface et du niveau d\'intervention nécessaire.',
       },
       {
         title: 'Débroussaillage et broyage',
         description:
-          'Notre équipe intervient avec le matériel professionnel adapté pour un résultat impeccable.',
+          'Coupe et broyage de la végétation avec le matériel adapté à la densité du terrain.',
       },
       {
         title: 'Évacuation et finitions',
         description:
-          'Nettoyage complet du terrain, évacuation des déchets et remise en état finale.',
+          'Nettoyage complet du terrain, évacuation des déchets et remise en état.',
       },
     ],
     faq: [
       {
         question: 'Mon terrain est totalement envahi, pouvez-vous intervenir ?',
         answer:
-          'Oui, nous intervenons sur tous types de terrains, même les plus envahis. Ronces, arbustes sauvages, repousses d\'arbres : notre matériel professionnel permet de traiter toutes les situations.',
+          'Oui — ronces, arbustes sauvages, repousses d\'arbres. Le matériel (débroussailleuses à lames, broyeur, mini-pelle) est dimensionné en fonction de la densité.',
       },
       {
         question: 'Le débroussaillage est-il obligatoire ?',
         answer:
-          'Dans certaines zones classées à risque d\'incendie, le débroussaillage est une obligation légale dans un rayon de 50 m autour des habitations. Nous vous renseignons sur vos obligations.',
+          'Dans les zones classées à risque d\'incendie, le débroussaillage dans un rayon de 50 m autour des habitations est imposé par la réglementation. Le non-respect expose à une amende.',
       },
       {
         question: 'Que devient la végétation coupée ?',
@@ -733,22 +733,22 @@ export const services: ServiceData[] = [
       'Extension de système existant',
     ],
     benefits: [
-      'Économie d\'eau significative (jusqu\'à 40 %)',
-      'Pelouse verte toute l\'année sans effort',
-      'Arrosage adapté à chaque type de plante',
-      'Gain de temps au quotidien',
-      'Système fiable et durable',
+      'Réduction de la consommation d\'eau jusqu\'à 40 % par rapport à l\'arrosage manuel',
+      'Zonage par secteur : tuyères pour pelouses, goutte-à-goutte pour massifs',
+      'Programmation automatique avec sonde d\'humidité ou pluviomètre en option',
+      'Installation par tranchage léger — gazon refermé en quelques semaines',
+      'Maintenance saisonnière : hivernage à l\'automne, remise en route au printemps',
     ],
     process: [
       {
         title: 'Étude du jardin',
         description:
-          'Nous analysons la surface, les plantations, le débit d\'eau disponible et l\'exposition.',
+          'Analyse de la surface, des plantations, du débit d\'eau disponible et de l\'exposition.',
       },
       {
         title: 'Conception du réseau',
         description:
-          'Nous dessinons le plan du circuit avec positionnement des arroseurs et zonage optimal.',
+          'Plan du circuit avec positionnement des arroseurs, zonage par secteur et choix des équipements.',
       },
       {
         title: 'Installation',
@@ -763,29 +763,29 @@ export const services: ServiceData[] = [
       {
         title: 'Formation et suivi',
         description:
-          'Nous vous formons à l\'utilisation du programmateur et assurons le suivi saisonnier.',
+          'Prise en main du programmateur et suivi saisonnier (hivernage, remise en route).',
       },
     ],
     faq: [
       {
         question: 'L\'arrosage automatique consomme-t-il beaucoup d\'eau ?',
         answer:
-          'Au contraire, un système bien conçu économise jusqu\'à 40 % d\'eau par rapport à un arrosage manuel. La programmation et les sondes d\'humidité évitent le gaspillage.',
+          'Un système bien dimensionné économise jusqu\'à 40 % d\'eau par rapport à un arrosage manuel. La programmation par cycles et les sondes d\'humidité évitent les apports inutiles.',
       },
       {
         question: 'Peut-on installer un arrosage automatique sur un jardin existant ?',
         answer:
-          'Oui, l\'installation se fait par tranchage léger qui se referme en quelques semaines. Le gazon retrouve un aspect normal rapidement après l\'intervention.',
+          'Oui. L\'installation se fait par tranchage léger dans la pelouse existante. Le gazon se referme en quelques semaines.',
       },
       {
         question: 'Que faire de l\'arrosage en hiver ?',
         answer:
-          'Nous réalisons l\'hivernage de votre système : purge complète du circuit, protection du programmateur et des vannes. La remise en route se fait au printemps.',
+          'L\'hivernage comprend la purge complète du circuit, la protection du programmateur et des vannes. La remise en route se fait au printemps avec vérification de l\'ensemble du réseau.',
       },
       {
         question: 'Quel budget pour un arrosage automatique ?',
         answer:
-          'Le coût dépend de la surface à arroser, du nombre de zones et des équipements choisis. Nous établissons un devis détaillé après étude de votre jardin.',
+          'Le coût dépend de la surface à arroser, du nombre de zones et des équipements choisis (sondes, pluviomètre). Un devis détaillé est établi après étude du jardin.',
       },
     ],
   },

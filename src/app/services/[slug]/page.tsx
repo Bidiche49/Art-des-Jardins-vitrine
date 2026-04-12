@@ -80,7 +80,7 @@ export default function ServicePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'HowTo',
-          name: `Comment fonctionne notre service ${service.shortTitle.toLowerCase()} ?`,
+          name: `Déroulement d'une intervention ${service.shortTitle.toLowerCase()}`,
           description: service.metaDescription,
           step: service.process.map((step, i) => ({
             '@type': 'HowToStep',
@@ -108,7 +108,7 @@ export default function ServicePage({ params }: PageProps) {
         <div className="container-custom">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold mb-6">Notre expertise</h2>
+              <h2 className="text-3xl font-bold mb-6">Expertise {service.shortTitle.toLowerCase()}</h2>
               <div className="prose prose-lg max-w-none text-gray-600">
                 {service.description.split('\n\n').map((paragraph, i) => (
                   <p key={i}>{paragraph.trim()}</p>
@@ -116,7 +116,7 @@ export default function ServicePage({ params }: PageProps) {
               </div>
 
               {/* Features */}
-              <h3 className="text-2xl font-bold mt-12 mb-6">Nos prestations</h3>
+              <h3 className="text-2xl font-bold mt-12 mb-6">Prestations</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {service.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
@@ -132,7 +132,7 @@ export default function ServicePage({ params }: PageProps) {
               <div className="sticky top-24 space-y-6">
                 {/* Benefits */}
                 <div className="bg-primary-50 rounded-xl p-6">
-                  <h3 className="text-lg font-bold text-primary-800 mb-4">Pourquoi nous choisir ?</h3>
+                  <h3 className="text-lg font-bold text-primary-800 mb-4">Points clés</h3>
                   <ul className="space-y-3">
                     {service.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-start gap-2 text-primary-700">
@@ -145,9 +145,9 @@ export default function ServicePage({ params }: PageProps) {
 
                 {/* CTA Devis */}
                 <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                  <h3 className="text-lg font-bold mb-2">Devis gratuit et personnalisé</h3>
+                  <h3 className="text-lg font-bold mb-2">Devis gratuit</h3>
                   <p className="text-gray-600 text-sm mb-4">
-                    Chaque projet est unique. Contactez-nous pour recevoir une estimation adaptée à vos besoins sous 48h après la visite.
+                    Estimation après visite sur site. Réponse sous 48h.
                   </p>
                   <Link href="/contact/" className="btn-primary w-full text-center block">
                     Demander un devis gratuit
@@ -177,7 +177,7 @@ export default function ServicePage({ params }: PageProps) {
       {/* Process */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold text-center mb-12">Comment ça marche ?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Déroulement d&apos;une intervention</h2>
           <div className="flex flex-wrap justify-center gap-6">
             {service.process.map((step, i) => (
               <div key={i} className="relative w-full md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)]">
@@ -222,7 +222,7 @@ export default function ServicePage({ params }: PageProps) {
               {cityService.serviceTitle} dans nos communes d&apos;intervention
             </h2>
             <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              Nous intervenons à Angers et dans un rayon de 30 km. Retrouvez notre service par commune.
+              Interventions à Angers et dans un rayon de 30 km.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {cities.map((city) => (
@@ -244,10 +244,9 @@ export default function ServicePage({ params }: PageProps) {
         <img src={`/images/realisations/${serviceCardImages[service.slug as keyof typeof serviceCardImages] || 'creation-7'}-1200w.webp`} alt="" loading="lazy" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 hero-overlay-strong" />
         <div className="container-custom text-center relative z-10">
-          <h2 className="text-3xl font-bold mb-4 text-white">Prêt à démarrer votre projet ?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white">{service.title} — devis gratuit</h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Contactez-nous pour un devis gratuit et sans engagement. Notre équipe vous répond sous
-            48h.
+            Devis après visite sur site. Réponse sous 48h.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact/" className="btn-primary-light">
@@ -257,7 +256,7 @@ export default function ServicePage({ params }: PageProps) {
               href={SITE.phone1.link}
               className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white/10"
             >
-              Appeler maintenant
+              Appeler
             </a>
           </div>
         </div>
