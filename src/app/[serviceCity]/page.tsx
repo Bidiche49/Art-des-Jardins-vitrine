@@ -69,6 +69,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
+const accrocheH2: Record<string, (cityName: string) => string> = {
+  paysagiste: (cityName) => `Un projet d'aménagement paysager à ${cityName}`,
+  elagage: () => 'Des situations concrètes qui appellent un élagueur',
+  'entretien-jardin': (cityName) => `Un jardin à entretenir à ${cityName}`,
+  abattage: () => 'Quand l\'abattage devient nécessaire',
+};
+
 export default function ServiceCityPage({ params }: PageProps) {
   const parsed = parseServiceCitySlug(params.serviceCity);
   if (!parsed) notFound();
@@ -81,6 +88,42 @@ export default function ServiceCityPage({ params }: PageProps) {
   const mainAngersPage = `/${service.service}-angers/`;
   const cityServiceContent = city.serviceContent?.[parsed.service as ServiceSlug];
 
+  const isUrgencyService = ['elagage', 'abattage'].includes(service.service);
+
+  const processSteps: Record<string, { title: string; description: string }[]> = {
+    paysagiste: [
+      { title: 'Visite du terrain', description: `Déplacement à ${city.name}, étude du sol et de l'exposition.` },
+      { title: 'Échange sur le projet', description: 'Usages souhaités, style, budget.' },
+      { title: 'Proposition d\'aménagement', description: 'Plan détaillé, choix des végétaux et chiffrage.' },
+      { title: 'Réalisation', description: 'Travaux selon le planning défini.' },
+      { title: 'Suivi', description: 'Conseils d\'entretien et vérification de la reprise.' },
+    ],
+    elagage: [
+      { title: 'Diagnostic', description: `Évaluation de l'arbre et des contraintes à ${city.name}.` },
+      { title: 'Choix de la technique', description: 'Taille douce, éclaircissage ou démontage.' },
+      { title: 'Sécurisation', description: 'Balisage et protection du site.' },
+      { title: 'Intervention', description: 'Travail par élagueurs certifiés.' },
+      { title: 'Nettoyage', description: 'Broyage et évacuation des rémanents.' },
+    ],
+    'entretien-jardin': [
+      { title: 'Évaluation', description: `État du jardin à ${city.name} — pelouse, haies, massifs.` },
+      { title: 'Formule adaptée', description: 'Contrat annuel ou intervention ponctuelle.' },
+      { title: 'Planning', description: 'Passages calés sur le cycle végétatif.' },
+      { title: 'Interventions', description: 'Tonte, taille, désherbage selon le planning.' },
+      { title: 'Ajustements', description: 'Programme évolutif selon les saisons.' },
+    ],
+    abattage: [
+      { title: 'Diagnostic', description: `Faisabilité et contraintes à ${city.name}.` },
+      { title: 'Démarches', description: 'Autorisations si zone protégée.' },
+      { title: 'Sécurisation', description: 'Balisage de la zone.' },
+      { title: 'Abattage', description: 'Direct ou démontage technique selon le contexte.' },
+      { title: 'Évacuation', description: 'Dessouchage, broyage, valorisation du bois.' },
+    ],
+  };
+
+  const steps = processSteps[service.service] || [];
+  const servicesPageSlug = service.service === 'paysagiste' ? 'paysagisme' : service.service;
+
   return (
     <>
       <LocalBusinessCitySchema
@@ -91,11 +134,11 @@ export default function ServiceCityPage({ params }: PageProps) {
         url={`${SITE.url}/${params.serviceCity}/`}
       />
 
-      {/* Hero */}
+      {/* Section 1 — Hero */}
       <HeroSection
         imageSlug={serviceHeroImages[service.service] || 'creation-2'}
         title={pageTitle}
-        subtitle={`Art des Jardins, votre spécialiste ${service.serviceDescription} à ${city.name}.${city.distance ? ` À seulement ${city.distance} d'Angers.` : ''} Devis gratuit.`}
+        subtitle={`${service.serviceTitle} à ${city.name}${city.distance ? `, à ${city.distance} d'Angers` : ''} — ${service.serviceDescription}.`}
         breadcrumbs={[
           { label: 'Accueil', href: '/' },
           { label: `${service.serviceTitle} Angers`, href: mainAngersPage },
@@ -110,7 +153,7 @@ export default function ServiceCityPage({ params }: PageProps) {
             href={SITE.phone1.link}
             className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white/10"
           >
-            Appeler : {SITE.phone1.display}
+            {isUrgencyService ? `Urgence : ${SITE.phone1.display}` : `Appeler : ${SITE.phone1.display}`}
           </a>
         </div>
       </HeroSection>
@@ -120,16 +163,24 @@ export default function ServiceCityPage({ params }: PageProps) {
         <div className="container-custom">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
+
+              {/* Section 2 — Accroche (conditionnelle) */}
+              {cityServiceContent?.accroche && (
+                <>
+                  <h2 className="text-3xl font-bold mb-6">
+                    {accrocheH2[service.service]?.(city.name) ?? `${service.serviceTitle} à ${city.name}`}
+                  </h2>
+                  <div className="prose prose-lg max-w-none text-gray-600 mb-12">
+                    <p>{cityServiceContent.accroche}</p>
+                  </div>
+                </>
+              )}
+
+              {/* Section 3 — Expertise locale */}
               <h2 className="text-3xl font-bold mb-6">
-                {service.serviceTitle} professionnel à {city.name}
+                {service.serviceTitle} à {city.name} : expertise locale
               </h2>
               <div className="prose prose-lg max-w-none text-gray-600">
-                <p>
-                  Vous recherchez un <strong>{service.serviceTitle.toLowerCase()} à {city.name}</strong> ?
-                  Art des Jardins intervient régulièrement dans votre commune pour tous vos besoins en
-                  {' '}{service.serviceDescription}.
-                </p>
-                <p>{city.description}</p>
                 {(cityServiceContent?.content ?? city.specificContent)
                   .split('\n\n')
                   .filter((p) => p.trim())
@@ -143,9 +194,10 @@ export default function ServiceCityPage({ params }: PageProps) {
                 )}
               </div>
 
+              {/* Section 5 — Prestations */}
               <h3 className="text-2xl font-bold mt-12 mb-6">Parmi nos interventions à {city.name}</h3>
               <div className="grid sm:grid-cols-2 gap-4">
-                {(cityServiceContent?.highlights ?? service.features).map((feature, i) => (
+                {service.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
                     <IconCheck className="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>
@@ -154,12 +206,52 @@ export default function ServiceCityPage({ params }: PageProps) {
               </div>
               <p className="mt-6 text-sm">
                 <Link
-                  href={`/services/${service.service === 'paysagiste' ? 'paysagisme' : service.service}/`}
+                  href={`/services/${servicesPageSlug}/`}
                   className="text-primary-600 hover:text-primary-800 font-medium"
                 >
                   Découvrir l'ensemble de nos prestations {service.serviceTitle.toLowerCase()} →
                 </Link>
               </p>
+
+              {/* Section 6 — Déroulement */}
+              <h3 className="text-2xl font-bold mt-12 mb-6">Comment se déroule une intervention</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {steps.map((item, i) => (
+                  <div key={i} className="bg-gray-50 rounded-xl p-5">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-600 text-white text-sm font-bold">
+                        {i + 1}
+                      </span>
+                      <h4 className="font-bold text-gray-900">{item.title}</h4>
+                    </div>
+                    <p className="text-gray-600 text-sm">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Section 7 — Pourquoi un professionnel (conditionnelle) */}
+              {cityServiceContent?.whyPro && (
+                <>
+                  <h3 className="text-2xl font-bold mt-12 mb-6">Pourquoi faire appel à un professionnel</h3>
+                  <div className="prose prose-lg max-w-none text-gray-600">
+                    <p>{cityServiceContent.whyPro}</p>
+                  </div>
+                </>
+              )}
+
+              {/* Section 8 — Différenciateurs (conditionnelle sur highlights) */}
+              {cityServiceContent?.highlights && cityServiceContent.highlights.length > 0 && (
+                <>
+                  <h3 className="text-2xl font-bold mt-12 mb-8">Pourquoi choisir Art des Jardins</h3>
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    {cityServiceContent.highlights.slice(0, 4).map((highlight, i) => (
+                      <div key={i} className="bg-gray-50 rounded-xl p-6">
+                        <p className="text-gray-700 text-sm">{highlight}</p>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Sidebar */}
@@ -220,8 +312,8 @@ export default function ServiceCityPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Other Cities */}
-      <section className="py-16 bg-gray-50">
+      {/* Section 9 — Maillage villes */}
+      <section className="py-16 lg:py-24">
         <div className="container-custom">
           <h2 className="text-3xl font-bold text-center mb-12">
             {service.serviceTitle} dans les communes voisines
@@ -233,18 +325,21 @@ export default function ServiceCityPage({ params }: PageProps) {
                 <Link
                   key={c.slug}
                   href={`/${service.service}-${c.slug}/`}
-                  className="block p-4 bg-white rounded-lg hover:bg-primary-50 transition-colors text-center shadow-sm"
+                  className="block p-4 bg-gray-50 rounded-lg hover:bg-primary-50 transition-colors text-center"
                 >
                   <span className="font-medium text-gray-900">
                     {service.serviceTitle} {c.name}
                   </span>
+                  {c.distance && (
+                    <span className="block text-sm text-gray-500 mt-1">à {c.distance}</span>
+                  )}
                 </Link>
               ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Section 10 — CTA */}
       <section className="relative py-16 overflow-hidden">
         <img src={`/images/realisations/${serviceHeroImages[service.service] || 'creation-4'}-1200w.webp`} alt="" loading="lazy" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 hero-overlay-strong" />
@@ -255,9 +350,17 @@ export default function ServiceCityPage({ params }: PageProps) {
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Intervention dans tous les quartiers de {city.name}{city.distance ? ' et dans un rayon de 30 km autour d\'Angers' : ''}.
           </p>
-          <Link href="/contact/" className="btn-primary-light">
-            Demander un devis gratuit
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact/" className="btn-primary-light">
+              Demander un devis gratuit
+            </Link>
+            <a
+              href={SITE.phone1.link}
+              className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white/10"
+            >
+              {isUrgencyService ? `Urgence : ${SITE.phone1.display}` : SITE.phone1.display}
+            </a>
+          </div>
         </div>
       </section>
     </>

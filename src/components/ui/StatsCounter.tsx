@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { getCumulatedExperience } from '@/lib/site-config';
 
 interface Stat {
   value: number;
@@ -9,10 +10,10 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: 16, suffix: ' ans', label: 'D\'expérience cumulée' },
+  { value: getCumulatedExperience(), suffix: ' ans', label: 'D\'expérience cumulée' },
   { value: 30, suffix: ' km', label: 'Zone d\'intervention' },
   { value: 100, suffix: '%', label: 'Assuré RC Pro & décennale' },
-  { value: 48, suffix: 'h', label: 'Devis gratuit sous' },
+  { value: 48, suffix: 'h', label: 'Réponse sous' },
 ];
 
 function easeOutCubic(t: number): number {

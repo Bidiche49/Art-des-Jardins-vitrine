@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { MobileStickyBar } from '@/components/ui/MobileStickyBar';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { Analytics } from '@/components/Analytics';
-import { SITE } from '@/lib/site-config';
+import { SITE, getCumulatedExperience } from '@/lib/site-config';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const cormorant = Cormorant_Garamond({
@@ -29,8 +29,9 @@ export const metadata: Metadata = {
     default: 'Paysagiste Angers - Art des Jardins | Devis Gratuit',
     template: '%s | Art des Jardins - Paysagiste Angers',
   },
+  applicationName: 'Art des Jardins - Paysagiste',
   description:
-    'Paysagiste professionnel à Angers et Maine-et-Loire. Aménagement de jardins, entretien, élagage, abattage. 16 ans d\'expérience cumulée. Devis gratuit sous 48h.',
+    `Paysagiste à Angers et Maine-et-Loire. Aménagement de jardins, entretien, élagage, abattage. ${getCumulatedExperience()} ans d'expérience cumulée. Devis gratuit.`,
   keywords: [
     'paysagiste angers',
     'jardinier angers',
@@ -98,9 +99,22 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Art des Jardins - Paysagiste',
+    alternateName: 'Art des Jardins',
+    url: siteUrl,
+  };
+
   return (
     <html lang="fr" className={`${inter.variable} ${cormorant.variable}`}>
-      <head />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col">
         <a
           href="#main-content"

@@ -7,9 +7,11 @@ import {
   IconAmenagement,
   IconEntretien,
   IconElagage,
+  IconAbattage,
   IconTerrasse,
   IconCloture,
   IconTailleHaies,
+  IconDebroussaillage,
   IconChevronDown,
   IconPhone,
   IconMenu,
@@ -22,12 +24,14 @@ const menuIconMap: Record<string, React.ReactNode> = {
   paysagisme: <IconAmenagement className="w-6 h-6" />,
   'entretien-jardin': <IconEntretien className="w-6 h-6" />,
   elagage: <IconElagage className="w-6 h-6" />,
+  abattage: <IconAbattage className="w-6 h-6" />,
+  debroussaillage: <IconDebroussaillage className="w-6 h-6" />,
   terrasse: <IconTerrasse className="w-6 h-6" />,
   cloture: <IconCloture className="w-6 h-6" />,
   'taille-haies': <IconTailleHaies className="w-6 h-6" />,
 };
 
-const menuServiceSlugs = ['paysagisme', 'entretien-jardin', 'elagage', 'terrasse', 'cloture', 'taille-haies'] as const;
+const menuServiceSlugs = ['paysagisme', 'entretien-jardin', 'elagage', 'abattage', 'debroussaillage', 'terrasse', 'cloture', 'taille-haies'] as const;
 
 const serviceMenuItems = menuServiceSlugs.map((slug) => {
   const s = services.find((svc) => svc.slug === slug)!;

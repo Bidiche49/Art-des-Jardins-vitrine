@@ -1,4 +1,4 @@
-import { SITE } from '@/lib/site-config';
+import { SITE, getCumulatedExperience } from '@/lib/site-config';
 
 export function LocalBusinessSchema() {
   const schema = {
@@ -7,7 +7,7 @@ export function LocalBusinessSchema() {
     '@id': `${SITE.url}/#organization`,
     name: SITE.name,
     legalName: SITE.legalName,
-    description: 'Paysagiste professionnel à Angers et Maine-et-Loire. Création de jardins, aménagement, entretien, élagage, abattage. 16 ans d\'expérience cumulée.',
+    description: `Paysagiste professionnel à Angers et Maine-et-Loire. Création de jardins, aménagement, entretien, élagage, abattage. ${getCumulatedExperience()} ans d'expérience cumulée.`,
     url: SITE.url,
     image: `${SITE.url}/images/og-image.jpg`,
     logo: `${SITE.url}/images/logo.png`,

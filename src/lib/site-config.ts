@@ -1,3 +1,8 @@
+/** Années d'expérience cumulée des 2 associés. Base : 16 ans en 2026, +2/an. */
+export function getCumulatedExperience(): number {
+  return 16 + (new Date().getFullYear() - 2026) * 2;
+}
+
 export const SITE = {
   name: 'Art des Jardins',
   legalName: 'SARL Art des Jardins',
@@ -13,7 +18,7 @@ export const SITE = {
     international: '+33659684916',
   },
   whatsapp: '33781160737',
-  email: 'contact@artdesjardins-paysagiste.fr',
+  email: 'artdesjardins49@gmail.com',
   address: {
     street: '9 bis rue Rouget de l\'Isle',
     city: 'Les Ponts-de-Cé',

@@ -4,6 +4,8 @@ export interface ServiceCityContent {
   content: string;           // 3-5 unique paragraphs about THIS service in THIS city
   metaDescription: string;   // unique meta description, 150-160 chars
   highlights?: string[];     // service-specific highlights for this city
+  accroche?: string;         // Section 2 text (80-120 words)
+  whyPro?: string;           // Section 7 text (80-120 words)
 }
 
 export interface CityData {
@@ -172,6 +174,8 @@ export const cities: CityData[] = [
           'Massifs de vivaces et graminées ornementales quatre saisons',
           'Aménagement de jardins étroits en centre-bourg historique',
         ],
+        accroche: 'Sol argilo-limoneux qui compacte dès juin et freine l\'enracinement, parcelles de 600 à 1 500 m² à structurer entre terrasse, massifs et circulations, lotissements récents sans ombre où le plein soleil rend les étés difficiles, jardin étroit du centre-bourg à repenser en profondeur plutôt qu\'en largeur.\n\nChaque terrain à Avrillé a ses contraintes — la nature argileuse du sol, l\'exposition généreuse et la taille de la parcelle orientent les choix bien avant la première plantation.',
+        whyPro: 'Un aménagement conçu dans son ensemble évite les incohérences qu\'une approche par ajouts successifs accumule — une terrasse posée sans anticiper les circulations, des massifs qui bloquent l\'accès au fond de parcelle, des végétaux mal assortis au sol. À Avrillé, planter sans décompactage préalable du sol argilo-limoneux condamne les racines à rester en surface ; un érable champêtre ou un charme fastigié installé sans amendement organique peinera à s\'établir là où le même sujet, correctement préparé, formera un arbre d\'ombrage structurant en quelques années.',
       },
       elagage: {
         content: `
@@ -191,6 +195,8 @@ export const cities: CityData[] = [
           'Taille de fructification des fruitiers (pommiers, poiriers, cerisiers)',
           'Sécurisation des arbres fragilisés par le vent',
         ],
+        accroche: 'Arbre qui n\'a pas été taillé depuis la construction du lotissement et dont les branches basses raclent le toit du garage, cèdre devenu si large qu\'il plonge la moitié du jardin dans l\'ombre, racines qui soulèvent les dalles de l\'allée, branche morte repérée après un coup de vent d\'hiver — dans les quartiers résidentiels d\'Avrillé, les arbres plantés il y a trente ou quarante ans ont atteint une envergure que personne n\'avait anticipée.\n\nLe sol argilo-limoneux de la commune, compact et peu profond, pousse les racines à s\'étaler en surface — une contrainte qui conditionne l\'approche de taille autant que la gestion de l\'ancrage.',
+        whyPro: 'Une coupe mal placée sur un chêne ou un érable mature ne cicatrise pas — elle ouvre une porte d\'entrée permanente aux champignons lignivores qui fragilisent la charpente de l\'intérieur. Sur les sujets d\'Avrillé, où le sol argilo-limoneux compact limite déjà l\'ancrage racinaire, un houppier déséquilibré par une taille sévère augmente le risque de basculement au premier coup de vent.\n\nL\'intervention en hauteur à proximité des toitures et des lignes aériennes exige un matériel et un savoir-faire spécifiques. Un professionnel adapte chaque coupe à l\'espèce, à la saison et à la structure de l\'arbre — conditions qu\'un non-spécialiste ne maîtrise pas.',
       },
       'entretien-jardin': {
         content: `
@@ -210,6 +216,8 @@ export const cities: CityData[] = [
           'Taille de haies persistantes et caduques selon calendrier',
           'Fertilisation saisonnière adaptée aux sols compacts',
         ],
+        accroche: 'Pelouse qui jaunit par plaques dès juin malgré l\'arrosage, mousse qui s\'étend sous les arbres côté nord, haie de lauriers qui déborde sur le trottoir alors que les photinias d\'à côté n\'ont pas encore bougé, résidus de tonte qui s\'accumulent sans qu\'on sache s\'il vaut mieux les ramasser ou les laisser — le rythme d\'entretien d\'un jardin à Avrillé ne s\'improvise pas.\n\nLe sol argilo-limoneux de la commune retient l\'eau en hiver et se compacte en été. Cette alternance impose un calendrier d\'intervention précis, différent d\'un jardin sur sol sableux ou schisteux.',
+        whyPro: 'Sur sol argilo-limoneux, tondre trop ras en été — sous cinq centimètres — expose les racines au dessèchement et le gazon ne se relève pas avant l\'automne. Sans aération mécanique au printemps, la croûte d\'argile compactée empêche l\'eau et l\'air d\'atteindre le système racinaire, et la mousse s\'installe durablement dans les zones ombragées.\n\nUn professionnel ajuste la hauteur de coupe à la saison, repère les signes de compactage avant qu\'ils ne deviennent visibles à l\'œil, et cale les interventions — aération, terreautage, taille des persistants et des caducs — sur un calendrier adapté au sol argileux et au rythme de pousse local.',
       },
       abattage: {
         content: `
@@ -229,6 +237,8 @@ export const cities: CityData[] = [
           'Broyage des rémanents et valorisation en paillage sur place',
           'Diagnostic post-tempête et abattage de sécurisation',
         ],
+        accroche: 'Thuya devenu opaque et envahissant, épicéa dont les racines soulèvent la terrasse, sapin qui prive le jardin de lumière, peuplier penché après un coup de vent d\'hiver avec la motte racinaire partiellement soulevée — dans les lotissements d\'Avrillé, les conifères disproportionnés et les feuillus à enracinement superficiel finissent par poser des problèmes que seul l\'abattage résout.\n\nLes parcelles enclavées du centre-bourg et les jardins mitoyens de La Perrière limitent les options d\'abattage direct et orientent presque systématiquement vers le démontage par sections.',
+        whyPro: 'Dans les parcelles enclavées du centre-bourg d\'Avrillé ou les jardins mitoyens de La Perrière, l\'absence d\'espace de chute impose un démontage par sections — chaque tronçon descendu au cordage depuis la cime pour préserver les clôtures, toitures et plantations adjacentes. Cette technique d\'escalade et de descente contrôlée exige un matériel et un savoir-faire spécifiques.\n\nLe dessouchage sur sol argilo-limoneux compact freine la rogneuse et demande un matériel dimensionné en conséquence. Après une tempête, l\'identification des sujets inclinés, fissurés ou dont la motte racinaire s\'est partiellement soulevée relève d\'un diagnostic visuel précis — c\'est lui qui détermine si l\'abattage de sécurisation s\'impose.',
       },
     },
   },
@@ -247,7 +257,7 @@ export const cities: CityData[] = [
 
       Le sol de Beaucouzé est principalement composé de limons profonds reposant sur un substrat schisteux. Ces sols fertiles et bien équilibrés permettent la culture d'une large gamme de végétaux. Les rosiers, vivaces et arbustes à fleurs s'y développent particulièrement bien. Le drainage naturel peut cependant être insuffisant en période de fortes pluies hivernales, et la mise en place de drains est recommandée pour les zones les plus basses.
 
-      Art des Jardins intervient à Beaucouzé aussi bien pour les particuliers que pour les copropriétés et les entreprises du secteur commercial. Les terrains généralement plats facilitent la création de belles pelouses et de terrasses de plain-pied, ainsi que l'installation de systèmes d'arrosage automatique pour les jardins de plus de 300 m².
+      Art des Jardins intervient à Beaucouzé aussi bien pour les particuliers que pour les professionnels. Les terrains généralement plats facilitent la création de belles pelouses et de terrasses de plain-pied, ainsi que l'installation de systèmes d'arrosage automatique pour les jardins de plus de 300 m².
 
       Les demandes les plus fréquentes concernent la création ou la rénovation de terrasses, l'engazonnement de nouvelles parcelles et la plantation de haies. Les jardins des constructions récentes nécessitent souvent un aménagement complet depuis le terrain nu : terrassement, apport de terre végétale, engazonnement et création d'espaces de vie extérieurs.
     `,
@@ -271,6 +281,8 @@ export const cities: CityData[] = [
           'Drainage et noues paysagères pour parcelles en zone basse',
           'Rénovation de massifs et haies dans les quartiers anciens',
         ],
+        accroche: 'Terrain nu livré par le constructeur, haies monotones de thuyas à remplacer, massifs vieillissants à restructurer dans les quartiers du centre-bourg ou de la Gaudière, limons qui saturent d\'eau en hiver et asphyxient les plantations récentes — les raisons de repenser un jardin à Beaucouzé sont liées au terrain autant qu\'aux usages.\n\nLe relief plat et les sols limoneux fertiles de la commune offrent un potentiel large, à condition d\'intégrer le drainage dès la conception.',
+        whyPro: 'Un jardin dessiné dans sa globalité assure la cohérence entre terrasse, pelouse, massifs et haies — ce qu\'un aménagement par morceaux ne permet pas. À Beaucouzé, les limons profonds sur substrat schisteux retiennent l\'eau en hiver au point de noyer les racines des plantations sensibles. Poser un drain agricole ou créer une noue paysagère avant de planter, choisir des cornouillers ou des iris en zone basse plutôt que des essences de sol sec : ces décisions techniques, prises en amont, évitent des remplacements coûteux après deux ou trois hivers.',
       },
       elagage: {
         content: `
@@ -290,6 +302,8 @@ export const cities: CityData[] = [
           'Respect du calendrier de taille selon les essences',
           'Intervention sur arbres proches des clôtures et toitures',
         ],
+        accroche: 'Thuyas plantés en haie il y a vingt-cinq ans qui dépassent les huit mètres et plongent la parcelle du voisin dans l\'ombre, tilleul dont le houppier déborde sur la toiture depuis plusieurs saisons, branches mortes au-dessus de l\'allée repérées après une tempête — au centre-bourg comme à la Gaudière, les arbres de Beaucouzé posent des problèmes concrets que le temps n\'arrange pas.\n\nLes résineux devenus disproportionnés constituent un cas particulier : un thuya ou un cyprès de Leyland ne repart pas sur le vieux bois, ce qui limite les possibilités de réduction et impose une approche spécifique.',
+        whyPro: 'Sur un chêne pédonculé ou un tilleul mature de Beaucouzé, une taille sévère provoque des repousses anarchiques — gourmands vigoureux mais mal ancrés — et crée des plaies larges qui cicatrisent lentement, favorisant les champignons lignivores. L\'arbre perd sa structure et devient moins sûr qu\'avant l\'intervention.\n\nLes conifères posent un problème inverse : tailler un thuya ou un cyprès de Leyland au-delà de la zone verte laisse un trou définitif — le résineux ne repartira pas. L\'évaluation préalable par un professionnel détermine ce qui est rattrapable et ce qui relève du remplacement, évitant une intervention coûteuse sur un sujet irrécupérable.',
       },
       'entretien-jardin': {
         content: `
@@ -309,6 +323,8 @@ export const cities: CityData[] = [
           'Scarification et terreautage saisonnier des pelouses',
           'Entretien des massifs de vivaces et arbustifs',
         ],
+        accroche: 'Gazon qui pousse si vite au printemps qu\'une semaine sans tonte suffit à le rendre difficile à rattraper, sol qui colle aux chaussures dès novembre et ne sèche pas avant avril, haies de thuyas à tailler trois fois par an sous peine de voir les voisins — dans les lotissements de Beaucouzé, l\'entretien d\'un jardin suit un calendrier que le sol limoneux impose.\n\nCes limons fertiles donnent une croissance vigoureuse à tout ce qui pousse, adventices comprises. Le paillage se décompose en un à deux ans, les adventices s\'enracinent profondément — chaque poste d\'entretien demande un rythme et une méthode adaptés au terrain.',
+        whyPro: 'Intervenir au mauvais moment sur un sol limoneux gorgé d\'eau — passer une tondeuse en novembre, rouler un aérateur sur un terrain détrempé — compacte la structure du sol pour toute la saison. Les ornières laissées par le passage d\'engins se referment mal sur ce type de terre, et le gazon ne repousse pas dans les zones tassées.\n\nUn professionnel connaît la fenêtre d\'intervention : tonte soutenue d\'avril à juin quand le sol porte, arrêt anticipé à l\'automne avant la saturation, aération mécanique au bon moment pour améliorer la perméabilité sans dégrader le terrain. Sur les haies mixtes — photinias, éléagnus, charmilles — chaque essence a son propre rythme de croissance et sa période de taille.',
       },
       abattage: {
         content: `
@@ -328,6 +344,8 @@ export const cities: CityData[] = [
           'Valorisation du bois de chauffage (chêne, frêne, érable)',
           'Broyage des rémanents et évacuation sur site',
         ],
+        accroche: 'Épicéa, pin ou cyprès devenus disproportionnés par rapport à la parcelle, frêne touché par la chalarose, platane atteint par le chancre coloré, vieux sujet rongé par un polypore soufré dont la tenue mécanique n\'est plus assurée — dans les quartiers résidentiels de Beaucouzé, les motifs d\'abattage sanitaire ou sécuritaire se cumulent sur les arbres matures des propriétés privées.\n\nLa configuration mitoyenne des parcelles et les rues bordées de végétation ferment presque toujours la porte à l\'abattage direct et orientent vers un démontage par sections, branche par branche, tronçon par tronçon.',
+        whyPro: 'Avant toute décision d\'abattage à Beaucouzé, un diagnostic visuel — complété si nécessaire d\'un examen au résistographe — évalue l\'état interne du tronc d\'un sujet touché par le chancre coloré, la chalarose ou un polypore soufré. C\'est cette lecture préalable qui conditionne la décision d\'intervenir ou de conserver l\'arbre.\n\nLe dessouchage sur les limons de Beaucouzé exige un réglage adapté de la rogneuse : meuble en surface, le sol devient compact en profondeur au contact du schiste. Le mélange de copeaux et de terre de remblai constitue ensuite un substrat correct pour un réengazonnement, à condition d\'ajouter un apport azoté pour compenser la faim d\'azote liée à la décomposition du bois.',
       },
     },
   },
@@ -370,6 +388,8 @@ export const cities: CityData[] = [
           'Jardins étagés intégrant la topographie des coteaux',
           'Palette végétale méditerranéenne sur sol schisteux drainé',
         ],
+        accroche: 'Jardin en zone inondable où les plantations doivent résister aux submersions, propriété de 1 000 à 3 000 m² sur les coteaux avec une vue sur la Loire à préserver, sol alluvial lourd en bas de parcelle et schiste sec sur les hauteurs du Bourg ou de La Pointe — à Bouchemaine, un même terrain peut imposer deux logiques d\'aménagement distinctes.\n\nLa topographie, la nature du sol et les contraintes hydrauliques du confluent orientent chaque décision avant le premier coup de pelle.',
+        whyPro: 'La dualité des sols à Bouchemaine — alluvions lourdes en zone basse, schiste drainé sur les coteaux — rend les erreurs de plantation coûteuses. Un cornouiller sanguin ou un iris des marais prospère en Basse-Île mais dépérit sur le schiste sec de La Pointe ; inversement, une lavande ou un romarin installé en fond de vallée pourrira dès le premier hiver humide. Un aménagement pensé dans son ensemble intègre ces contraintes parcelle par parcelle, choisit les matériaux adaptés au contexte ligérien — tuffeau, pierre de schiste, bois — et anticipe l\'évolution des végétaux sur un terrain où le relief crée des microclimats à quelques mètres d\'écart.',
       },
       elagage: {
         content: `
@@ -389,6 +409,8 @@ export const cities: CityData[] = [
           'Élagage en bord de rivière avec contraintes réglementaires',
           'Sécurisation des arbres sur sol schisteux superficiel',
         ],
+        accroche: 'Saule dont les branches traînent sur le toit depuis le dernier coup de vent, frêne qui penche au-dessus de la rivière avec un houppier à moitié sec, arbre du coteau jamais taillé qui masque la vue sur la Loire, branches mortes suspendues au-dessus du passage après une tempête de février — à Bouchemaine, la proximité de l\'eau et l\'exposition aux vents de vallée accélèrent la croissance et multiplient les situations d\'urgence.\n\nEntre les parcelles basses le long de la Maine et les coteaux schisteux du Bourg et de La Pointe, les conditions d\'ancrage et les contraintes réglementaires changent radicalement d\'un terrain à l\'autre.',
+        whyPro: 'Un frêne fragilisé par l\'humidité permanente des bords de Maine ou un saule dont le bois tendre cède à chaque rafale ne se taille pas comme un arbre sain — une coupe mal placée ouvre une porte d\'entrée aux pathogènes que l\'atmosphère humide propage rapidement. Sur les coteaux de La Pointe, où le schiste limite l\'ancrage à quelques dizaines de centimètres, un élagage trop sévère déséquilibre un arbre déjà vulnérable aux vents de vallée.\n\nLes interventions en bord de rivière relèvent souvent de périmètres réglementés — zones humides, berges protégées — où le calendrier et les méthodes sont encadrés. Un professionnel intègre ces contraintes au diagnostic et adapte chaque coupe à l\'état sanitaire réel du sujet.',
       },
       'entretien-jardin': {
         content: `
@@ -408,6 +430,8 @@ export const cities: CityData[] = [
           'Nettoyage et remise en état après retrait des crues',
           'Choix de graminées résistantes pour coteaux secs',
         ],
+        accroche: 'Mousse qui gagne du terrain chaque hiver dans les zones proches de la Maine, gazon qui jaunit sur les coteaux dès la mi-juin faute de réserve d\'eau dans le schiste, dépôts de crue à nettoyer en fin d\'hiver avant que la végétation ne reparte — à Bouchemaine, un même jardin peut cumuler des problèmes d\'excès d\'eau en bas de parcelle et de sécheresse sur les hauteurs.\n\nLa proximité des cours d\'eau accélère la pousse et favorise les maladies fongiques sur les pelouses, tandis que les coteaux du Bourg et de La Pointe imposent des graminées capables de tenir sans arrosage sur sol superficiel.',
+        whyPro: 'Scarifier une pelouse envahie de mousse au mauvais moment — trop tôt sur sol gorgé d\'eau, trop tard quand la mousse a déjà sporulé — aggrave le problème au lieu de le résoudre. En zone humide à Bouchemaine, la mousse revient en quelques semaines si le scarifiage n\'est pas suivi d\'un sursemis et d\'un amendement adaptés au sol alluvial.\n\nSur les coteaux, l\'erreur inverse guette : semer un gazon classique sur schiste superficiel condamne la pelouse dès le premier été sec. Un professionnel choisit les graminées adaptées — fétuques élevées, ray-grass anglais — et repère les premiers signes de maladie fongique que l\'humidité ambiante des bords de rivière propage rapidement.',
       },
       abattage: {
         content: `
@@ -427,6 +451,8 @@ export const cities: CityData[] = [
           'Valorisation du bois en bûches ou paillage',
           'Intervention après tempête en vallée de Loire',
         ],
+        accroche: 'Peuplier en fin de cycle qui inquiète après un coup de vent d\'hiver, saule fragilisé par un champignon lignivore, frêne touché par la chalarose — à Bouchemaine, les tempêtes hivernales qui remontent la vallée de la Loire mettent régulièrement à l\'épreuve les arbres âgés ou mal ancrés des parcelles proches de la rivière.\n\nEntre les chemins étroits le long de la Maine et les coteaux schisteux du Bourg, chaque intervention impose des choix techniques différents — configuration d\'accès, matériel de dessouchage, protection des structures voisines.',
+        whyPro: 'En bord de Maine ou de Loire, les chemins d\'accès étroits, la proximité de l\'eau et la végétation dense autour de l\'arbre ferment la porte à l\'abattage direct — le démontage par sections, avec descente des tronçons au cordage, reste la seule approche qui protège les clôtures, abris et plantations voisines et limite l\'impact au sol sur les terrains meubles.\n\nSur les coteaux du Bourg, le schiste peu profond complique le dessouchage mécanique : la rogneuse travaille dans un substrat dur et hétérogène, mêlant roche et racines, et le temps d\'intervention est nettement plus long que sur sol meuble. Ces deux configurations demandent un matériel et une expérience qu\'un abattage improvisé ne peut offrir.',
       },
     },
   },
@@ -469,6 +495,8 @@ export const cities: CityData[] = [
           'Aménagement optimisé pour parcelles de 300 à 600 m²',
           'Fruitiers palissés et vivaces adaptés au sol de rétention',
         ],
+        accroche: 'Terrain décapé par la construction avec à peine vingt centimètres de terre végétale, parcelle de 300 à 600 m² à organiser entre terrasse, coin repas et plantations, sol argilo-schisteux qui durcit en croûte dès juin et colle aux outils en hiver — dans les lotissements récents comme dans les jardins anciens du Bourg et de La Grande Chaussée, les contraintes du terrain conditionnent chaque choix.\n\nLa nature du sol, la taille de la parcelle et l\'état du terrain de départ orientent un aménagement avant toute considération esthétique.',
+        whyPro: 'Sur le sol argilo-schisteux de Saint-Barthélemy-d\'Anjou, planter sans préparation revient à condamner les végétaux : l\'argile compacte forme une croûte en été que les racines ne traversent pas, et le schiste sous-jacent limite la profondeur d\'enracinement. Un décompactage mécanique suivi d\'un apport de compost transforme ce sol difficile en substrat favorable. De même, une haie monospécifique de thuyas finit par se dégarnir à la base — une haie mixte associant photinia, eleagnus et charmille résiste mieux aux maladies et reste dense toute l\'année. Ces choix techniques, intégrés dès la conception, évitent les reprises à trois ou cinq ans.',
       },
       elagage: {
         content: `
@@ -488,6 +516,8 @@ export const cities: CityData[] = [
           'Taille de fructification des pommiers, cerisiers et pruniers',
           'Réduction de voilure pour limiter la prise au vent',
         ],
+        accroche: 'Érable qui a doublé de volume depuis dix ans et dont les branches raclent la toiture, haie de cyprès de Leyland devenue opaque et si haute qu\'elle prive la terrasse de lumière, racines qui fissurent les dalles de l\'allée, vieux cerisier qui n\'a jamais été taillé et produit de moins en moins — au Bourg comme à La Baumette, les arbres plantés dans les premiers lotissements de Saint-Barthélemy ont largement dépassé les dimensions prévues.\n\nLe sol argilo-schisteux de la commune, compact en surface, pousse les racines à s\'étaler plutôt qu\'à descendre — une caractéristique qui conditionne à la fois la stabilité des arbres et les dégâts au voisinage.',
+        whyPro: 'Sur un érable sycomore ou un tilleul de douze mètres, une taille sévère à la tronçonneuse provoque des repousses désordonnées et crée des plaies qui ne cicatrisent pas — porte d\'entrée directe pour les champignons lignivores. À Saint-Barthélemy, le sol argilo-schisteux étale les racines en surface : un arbre dont on a trop réduit le houppier bascule plus facilement sous les rafales, sans que le système racinaire puisse compenser.\n\nLes conifères des années 1980 posent un problème spécifique — un thuya taillé au-delà de la zone verte ne repart pas. Seul un diagnostic préalable détermine si l\'arbre est encore rattrapable par élagage ou s\'il faut envisager un remplacement. Un professionnel évalue cette limite avant d\'intervenir.',
       },
       'entretien-jardin': {
         content: `
@@ -507,6 +537,8 @@ export const cities: CityData[] = [
           'Paillage au broyat de branches pour massifs et pieds de haie',
           'Tonte adaptée avec hauteur relevée en période sèche',
         ],
+        accroche: 'Sol qui se fissure dès mai et laisse les pissenlits s\'enraciner en profondeur, mousse qui colonise les passages piétinés et les zones sous les arbres, haie de thuyas dégarnie à la base sans possibilité de regarnissage, pelouse qui jaunit par plaques alors que le voisin sur le même lotissement a un gazon dense — à Saint-Barthélemy-d\'Anjou, les problèmes de jardin ont souvent la même origine : un sol argileux compact que l\'entretien standard ne suffit pas à corriger.\n\nLe substrat schisteux, légèrement acide, favorise la mousse et complique l\'implantation durable du gazon sans intervention mécanique régulière.',
+        whyPro: 'Une haie de thuyas dégarnie à la base ne se regarnit pas — le résineux ne repart pas sur le vieux bois. Replanter une haie mixte à la place sans corriger l\'acidité du sol schisteux ni amender le terrain appauvri par des décennies de thuyas mène au même résultat en quelques années.\n\nSur le gazon, la scarification sans chaulage modéré sur ce pH acide repousse la mousse pour quelques semaines, pas plus. Un professionnel diagnostique l\'ensemble — pH du sol, compactage, drainage — avant de traiter les symptômes. Il cale l\'aération mécanique au printemps, le terreautage compost en automne, et adapte la hauteur de coupe au comportement du sol argileux saison par saison.',
       },
       abattage: {
         content: `
@@ -526,6 +558,8 @@ export const cities: CityData[] = [
           'Diagnostic post-tempête et abattage de sécurisation',
           'Évacuation des rémanents et valorisation en bois de chauffage',
         ],
+        accroche: 'Peuplier de plusieurs décennies dont le bois devient cassant et dont une charpentière s\'est fendue, racines traçantes qui ont fini par endommager les canalisations à plusieurs mètres du tronc, branche morte repérée en cime après un épisode venteux, vieux sujet incliné dont la motte racinaire s\'est partiellement soulevée — dans les quartiers pavillonnaires de La Grande Chaussée et des Music\'Halles, les raisons d\'abattre un arbre sont rarement esthétiques.\n\nLa configuration mitoyenne des parcelles barthéloméennes laisse peu d\'espace de chute libre et impose presque systématiquement un démontage par sections.',
+        whyPro: 'Dans les quartiers pavillonnaires de La Grande Chaussée et des Music\'Halles, l\'abattage direct est rarement envisageable — chaque tronçon doit être descendu au cordage depuis la cime pour éviter tout impact sur les clôtures, toitures et plantations voisines. Cette technique exige un savoir-faire d\'élagueur-grimpeur et un équipement adapté.\n\nLe dessouchage sur argilo-schisteux combine deux difficultés : la rogneuse avance correctement dans l\'argile meuble, mais les racines qui s\'insinuent entre les strates de schiste résistent davantage et nécessitent parfois un complément à la mini-pelle. Après un épisode venteux, un diagnostic visuel précis identifie les sujets inclinés ou dont la motte racinaire s\'est partiellement soulevée — lui seul détermine si l\'abattage de sécurisation s\'impose.',
       },
     },
   },
@@ -568,6 +602,8 @@ export const cities: CityData[] = [
           'Massifs arbustifs résistants aux sols drainants',
           'Conception optimisée pour parcelles de centre-ville',
         ],
+        accroche: 'Sol schisteux ardoisier qui draine vite mais manque de matière organique, parcelle de 800 à 1 200 m² au Petit Trélazé ou à la Quantinière à structurer entre terrasse, massifs et potager, jardin compact en centre-ville où chaque mètre carré compte, terrain en dénivelé près des anciennes carrières qui appelle un aménagement en terrasses — les conditions de départ varient d\'un quartier à l\'autre.\n\nÀ Trélazé, la nature du sol ardoisier et la topographie du terrain orientent les choix de conception bien avant la première plantation.',
+        whyPro: 'Un aménagement conçu dans sa globalité assure la cohérence entre terrasse, massifs, circulations et potager — ce qu\'une approche par ajouts successifs ne permet pas. À Trélazé, le schiste ardoisier draine l\'eau si vite que les plantations non amendées peinent à s\'enraciner ; un apport de compost et de terre végétale avant plantation transforme ce sol minéral en substrat viable. De même, un muret en schiste local mal dimensionné retiendra peu de terre en terrasse étagée — la profondeur de substrat et le drainage de chaque niveau se calculent dès le plan.',
       },
       elagage: {
         content: `
@@ -587,6 +623,8 @@ export const cities: CityData[] = [
           'Diagnostic phytosanitaire avant intervention',
           'Gestion de la luminosité en quartiers résidentiels',
         ],
+        accroche: 'Cyprès de Leyland planté en haie il y a quarante ans qui dépasse le toit de la maison, épicéa devenu si large qu\'il prive la terrasse de lumière, trottoir soulevé par les racines d\'un chêne qui s\'étalent dans le schiste, branche morte au-dessus du garage repérée après un coup de vent — à la Quantinière comme au Petit Trélazé, les arbres des premiers lotissements ont atteint des dimensions que les parcelles ne peuvent plus absorber.\n\nLe sol schisteux ardoisier, fragmenté et peu profond, pousse les racines à s\'étaler en surface — une particularité qui fragilise l\'ancrage des grands sujets et complique chaque intervention.',
+        whyPro: 'Un conifère taillé au-delà de sa zone verte ne repousse pas — le trou est définitif. À Trélazé, les cyprès de Leyland et les thuyas des années 1980, devenus disproportionnés, ne laissent souvent qu\'une marge de manœuvre étroite entre la réduction utile et la coupe irréversible. Seul un diagnostic préalable détermine si le sujet est encore rattrapable ou s\'il faut envisager un remplacement.\n\nSur les feuillus, le schiste fragmenté limite l\'ancrage racinaire en surface. Un houppier trop allégé sur un chêne dont les racines courent dans le schiste modifie le centre de gravité et augmente le risque de basculement au premier coup de vent d\'hiver. Un professionnel calibre chaque coupe en fonction de la stabilité réelle du sujet.',
       },
       'entretien-jardin': {
         content: `
@@ -606,6 +644,8 @@ export const cities: CityData[] = [
           'Désherbage écologique et paillage au broyat local',
           'Terreautage au compost pour améliorer la rétention d\'eau',
         ],
+        accroche: 'Gazon qui jaunit dès les premières chaleurs de juin alors que le drainage rapide du schiste semblait un atout, mousse qui revient chaque année sous les arbres malgré un sol bien ressuyé, tapis de feuilles mortes sous les tilleuls et érables qui étouffe la pelouse en novembre, haie de thuyas des années 1980 dégarnie à la base sans possibilité de regarnissage — à Trélazé, le sol schisteux ardoisier entretient des contradictions que l\'entretien standard ne règle pas.\n\nLe pH naturellement acide du schiste et l\'ombre des grands arbres favorisent la mousse, tandis que le drainage rapide impose un calendrier de tonte et d\'arrosage différent des gazons sur argile.',
+        whyPro: 'Un gazon qui jaunit en juin et se couvre de mousse en hiver sur le même terrain — le symptôme paraît contradictoire, il ne l\'est pas. À Trélazé, le schiste draine si vite que les racines manquent d\'eau dès les premières chaleurs, mais son pH acide et l\'ombre des tilleuls ou des érables matures laissent la mousse prospérer. Scarifier sans chauler, terreauter sans choisir des graminées à enracinement profond — fétuques élevées, ray-grass anglais — revient à traiter un symptôme à la fois. Un professionnel cale l\'ensemble : scarification et chaulage modéré au printemps, terreautage au compost en surface pour retenir l\'eau, ramassage des feuilles en automne avant qu\'elles n\'asphyxient le gazon.',
       },
       abattage: {
         content: `
@@ -625,6 +665,8 @@ export const cities: CityData[] = [
           'Broyage sur place et valorisation en paillage',
           'Évacuation complète des rémanents et bois de coupe',
         ],
+        accroche: 'Peuplier d\'Italie planté il y a quarante ans en rideau brise-vent dans les anciennes zones maraîchères dont le bois devient cassant et les charpentières se fendent sous l\'effet du vent, branche morte en cime après un épisode venteux, grand sujet dont les racines courent en surface faute de pouvoir s\'ancrer dans la roche et dont la stabilité se fragilise à chaque tempête — à Trélazé, un sol schisteux qui n\'offre qu\'un ancrage limité cumule les motifs d\'abattage sur les arbres matures.\n\nDans ces jardins, l\'abattage directionnel classique n\'est pas toujours possible et le démontage par sections, de la cime vers la base, reste la technique à privilégier.',
+        whyPro: 'Le démontage par sections, technique la plus adaptée dans les jardins trélazéens, exige un matériel de grimpe et un savoir-faire qu\'une intervention improvisée ne couvre pas : chaque tronçon descendu depuis la cime sert à contrôler la coupe et à protéger les structures environnantes.\n\nLe dessouchage sur terrain schisteux a aussi ses particularités. La rogneuse travaille efficacement dans le schiste fragmenté, mais les racines faufilées entre les strates de pierre demandent parfois un travail complémentaire à la mini-pelle. Sur les grands sujets à enracinement superficiel, le risque de basculement accentué par les tempêtes justifie de confier l\'intervention à un professionnel.',
       },
     },
   },
@@ -667,6 +709,8 @@ export const cities: CityData[] = [
           'Jardins en pente sur les coteaux de Sorges et Saint-Aubin',
           'Végétaux méditerranéens en microclimats de murs anciens',
         ],
+        accroche: 'Sols sablonneux qui perdent leur eau dès les premières chaleurs en partie basse, nappe haute et risque de submersion sur Belle-Île, parcelles argilo-limoneuses de 600 à 1 500 m² sur les hauteurs de Sorges et Saint-Aubin, jardins du centre historique encadrés par des murs en tuffeau qui créent des microclimats — aux Ponts-de-Cé, un même projet peut croiser deux natures de sol et une contrainte hydraulique liée à la Loire.\n\nLa proximité du fleuve, le type de sol et l\'altitude de la parcelle conditionnent chaque choix d\'aménagement.',
+        whyPro: 'Un jardin pensé dans son ensemble intègre les contraintes du terrain dès le départ — ce qu\'un aménagement par morceaux ne garantit pas. Aux Ponts-de-Cé, planter en zone basse sans tenir compte de la nappe haute et des submersions hivernales condamne les végétaux sensibles dès le premier hiver. Un professionnel distingue les parcelles sablonneuses de bord de Loire, où iris des marais et cornouillers sanguins prospèrent, des coteaux argilo-limoneux de Sorges où la palette s\'élargit. Le choix des revêtements suit la même logique : dalles sur plots en zone inondable, pierre naturelle sur les hauteurs.',
       },
       elagage: {
         content: `
@@ -686,6 +730,8 @@ export const cities: CityData[] = [
           'Entretien des frênes et aulnes de ripisylve',
           'Réduction de houppier respectueuse du port naturel',
         ],
+        accroche: 'Saule dont une charpentière fendue menace de tomber sur le passage, peuplier de berge si haut que ses branches surplombent la toiture depuis Belle-Île, tilleul du centre historique dont le houppier déborde sur la façade du voisin à Saint-Maurille, frêne de ripisylve au houppier clairsemé qui perd ses branches sans prévenir — aux Ponts-de-Cé, la cohabitation entre les arbres de bord de Loire et les habitations crée des situations que chaque tempête d\'ouest aggrave.\n\nEntre les sols sablonneux des zones basses, où l\'ancrage reste limité, et les quartiers anciens où les arbres d\'ornement manquent d\'espace, les contraintes varient d\'une parcelle à l\'autre.',
+        whyPro: 'Un saule blanc de quinze mètres dont le bois se fend à chaque rafale, un peuplier de berge ancré dans le sable qui bascule au premier coup de vent d\'ouest — aux Ponts-de-Cé, la question n\'est pas esthétique, elle est sécuritaire. Intervenir en hauteur au-dessus des toitures, à proximité de lignes aériennes ou en surplomb de la Loire, exige un matériel et des techniques que le travail au sol ne prépare pas.\n\nSur les frênes de ripisylve, la chalarose provoque des chutes de branches imprévisibles — un sujet peut paraître sain vu du sol et avoir un houppier fragilisé en partie haute. Un professionnel évalue la structure réelle de l\'arbre avant d\'engager l\'intervention.',
       },
       'entretien-jardin': {
         content: `
@@ -705,6 +751,8 @@ export const cities: CityData[] = [
           'Taille de haies persistantes et champêtres',
           'Ramassage et broyage des feuilles de ripisylve en automne',
         ],
+        accroche: 'Pelouse qui jaunit en deux semaines sur le sable filtrant des parties basses dès que l\'été s\'installe, sol argilo-limoneux des hauteurs de Sorges ou Saint-Aubin qui colle aux chaussures jusqu\'en avril puis se fissure en surface, mousse qui s\'étend chaque hiver dans les jardins proches de la Loire, feuilles de peupliers et de saules qui forment un tapis humide en novembre sous lequel le gazon s\'asphyxie — aux Ponts-de-Cé, le même entretien ne peut pas convenir à une parcelle de Belle-Île et à un jardin de Saint-Aubin.\n\nLe profil du sol change avec l\'altitude, et le rythme de pousse comme les problèmes rencontrés suivent ce changement.',
+        whyPro: 'Aérer et sabler un gazon compacté a du sens sur les argilo-limons de Sorges ou Saint-Aubin — aucun sur le sable filtrant de Belle-Île, où le problème n\'est pas le compactage mais la perte d\'eau. Inversement, arroser un gazon qui jaunit en partie basse sans reconsidérer le choix des graminées ne tient pas l\'été. Un professionnel lit d\'abord le sol : fétuques élevées pour les zones à sécheresse rapide, aération mécanique et sablage léger sur les compacts des hauteurs. Les haies suivent la même logique — deux à trois passages pour les persistants des lotissements récents, un seul passage hivernal pour les haies champêtres de charmes, noisetiers et aubépines des propriétés anciennes.',
       },
       abattage: {
         content: `
@@ -724,6 +772,8 @@ export const cities: CityData[] = [
           'Dessouchage à la rogneuse en terrain sablonneux',
           'Évacuation et valorisation des rémanents en bois et paillage',
         ],
+        accroche: 'Peuplier noir de berge, saule blanc âgé, frêne fragilisé par la chalarose — aux Ponts-de-Cé, les tempêtes d\'ouest qui remontent la vallée de la Loire exposent ces sujets riverains à des contraintes mécaniques répétées, d\'autant que la configuration insulaire de la commune n\'offre aucun relief pour briser le vent.\n\nDans le centre-ville et sur les îles, les rues étroites, les façades en tuffeau à préserver, les lignes électriques basses et la proximité immédiate de la Loire ferment presque toujours la porte à l\'abattage directionnel classique.',
+        whyPro: 'Le démontage par sections avec rétention au cordage et descente contrôlée de chaque tronçon reste la technique la plus adaptée à ce tissu urbain dense — elle exige un matériel de grimpe et une expérience que le travail au sol ne remplace pas.\n\nEn zone inondable — Belle-Île, berges, bras secondaires —, le calendrier d\'intervention pèse autant. Les périodes de basses eaux, entre juin et octobre, offrent les meilleures conditions d\'accès et de stabilité du sol pour les engins ; en hiver, les terrains gorgés d\'eau ne supportent pas le passage de machines lourdes sans risque d\'ornièrage profond.',
       },
     },
   },
@@ -766,6 +816,8 @@ export const cities: CityData[] = [
           'Haies champêtres de cornouillers, viornes et prunelliers',
           'Aménagement de grandes parcelles résidentielles de 800 à 2 000 m²',
         ],
+        accroche: 'Sol alluvial gorgé d\'eau en Basse-Île qui impose des plantations tolérantes aux submersions, terrain sablo-limoneux sur les hauteurs du bourg et d\'Éventard qui se ressuie en quelques jours, parcelles de 800 à 2 000 m² assez profondes pour structurer plusieurs ambiances, proximité des prairies Natura 2000 qui oriente le choix vers des essences indigènes — à Écouflant, le profil du sol change avec l\'altitude et chaque zone de la parcelle peut appeler une approche différente.\n\nLa dualité alluvial–sablo-limoneux et le contexte naturel des basses vallées cadrent le projet dès le relevé de terrain.',
+        whyPro: 'Un aménagement conçu globalement anticipe les erreurs qu\'un jardin construit par ajouts successifs accumule — une terrasse posée en zone inondable sans matériaux résistants, des essences de sol sec plantées sur alluvions gorgées d\'eau. À Écouflant, un saule arbustif ou un cornouiller s\'installe durablement en Basse-Île là où un rosier ou un lilas dépérira dès la première remontée de nappe. En hauteur vers Éventard, le sol sablo-limoneux autorise une palette plus large, mais la profondeur de terre cultivable et le drainage doivent être vérifiés avant plantation. Ces distinctions, parcelle par parcelle, évitent des remplacements à répétition.',
       },
       elagage: {
         content: `
@@ -785,6 +837,8 @@ export const cities: CityData[] = [
           'Surveillance phytosanitaire de la chalarose du frêne',
           'Taille de réduction et haubanage préventif avant tempêtes',
         ],
+        accroche: 'Peuplier de vingt mètres en bord de Sarthe dont les branches surplombent la toiture, saule blanc fendu après la dernière tempête qui menace de tomber sur la clôture, vieux résineux des années 1970 qui prive le jardin de lumière à Éventard, frêne dont le houppier sèche de branche en branche en Basse-Île — à Écouflant, la diversité des arbres et des situations d\'urgence suit la diversité des sols et des expositions.\n\nLe sol alluvial des zones basses, gorgé d\'eau une partie de l\'année, favorise un enracinement superficiel qui rend les grands sujets vulnérables au vent — une donnée que chaque intervention doit intégrer.',
+        whyPro: 'La chalarose du frêne progresse en vallée de la Sarthe — à Écouflant, les frênes de ripisylve montrent des houppiers qui sèchent par le haut, des nécroses sur l\'écorce et des chutes de branches sans signal préalable. Distinguer un sujet encore défendable par élagage sanitaire d\'un arbre dont la structure interne est compromise exige un diagnostic que l\'observation depuis le sol ne suffit pas à établir.\n\nAu-delà de la chalarose, le sol alluvial de Basse-Île produit des peupliers et des saules au bois tendre dont les charpentières cassent facilement. Un professionnel évalue l\'ancrage, la qualité du bois et l\'état sanitaire avant de déterminer s\'il faut tailler, haubaner ou abattre.',
       },
       'entretien-jardin': {
         content: `
@@ -803,6 +857,8 @@ export const cities: CityData[] = [
           'Taille de haies champêtres mixtes selon calendrier par essence',
           'Paillage organique et contrôle des espèces invasives en bord de Sarthe',
         ],
+        accroche: 'Pelouse qui ressort de l\'hiver couverte de limon et de débris après plusieurs semaines d\'immersion en Basse-Île, gazon qui se dessèche dès juillet sur les hauteurs sablo-limoneuses du bourg et d\'Éventard, haie champêtre de cornouillers, viornes et prunelliers qui ne se conduit pas comme une haie monospécifique de thuyas, renouée du Japon repérée en bord de Sarthe — à Écouflant, l\'entretien d\'un jardin suit le rythme des basses vallées plus qu\'un calendrier standard.\n\nEntre les parcelles qui attendent le retrait des eaux pour reprendre et celles qui se ressuient en quelques jours, les interventions changent d\'une zone à l\'autre de la commune.',
+        whyPro: 'Reprendre une pelouse après une crue ne consiste pas à sortir la tondeuse dès que le sol porte. Le limon déposé doit être nettoyé, le gazon scarifié pour éliminer les débris et la matière morte, puis les zones clairsemées réensemencées avant que les adventices ne prennent la place. À Écouflant, passer cette séquence dans le désordre — ou trop tôt sur sol encore gorgé — compromet la reprise pour toute la saison. En bord de Sarthe, la surveillance des espèces invasives — renouée du Japon, balsamine de l\'Himalaya — fait partie du travail courant : un pied arraché à temps évite une colonisation qui demandera des années à contenir.',
       },
       abattage: {
         content: `
@@ -822,6 +878,8 @@ export const cities: CityData[] = [
           'Dessouchage à la rogneuse en sol alluvial meuble',
           'Broyage et évacuation des rémanents en zone sensible Natura 2000',
         ],
+        accroche: 'Peuplier dont les branches sommitales sèchent et qui présente une cavité au collet, saule blanc porteur de champignons lignivores sur le tronc, frêne dont la chalarose a colonisé plus de la moitié du houppier, parcelle de Basse-Île ou de bord de Sarthe où les chemins étroits et les sols meubles en période humide empêchent l\'acheminement d\'un engin lourd — à Écouflant, les motifs d\'abattage et les contraintes d\'accès se conjuguent sur ces parcelles riveraines.\n\nLa proximité immédiate de la rivière et la nature meuble des terrains conditionnent le choix du matériel bien avant la coupe.',
+        whyPro: 'Sur les parcelles riveraines d\'Écouflant — Basse-Île, bords de Sarthe —, l\'acheminement d\'engins lourds n\'est pas toujours possible. Le démontage par sections avec descente des tronçons au cordage reste la technique la plus employée, et il exige un savoir-faire de grimpe que le travail au sol ne remplace pas.\n\nSur les frênes touchés par la chalarose, la décision se joue sur la colonisation du houppier : au-delà de la moitié, l\'abattage devient la seule option réaliste. Les rémanents se broient ou s\'évacuent systématiquement pour limiter la dissémination des spores dans l\'environnement immédiat.',
       },
     },
   },
@@ -864,6 +922,8 @@ export const cities: CityData[] = [
           'Plantations de zone humide en bordure des basses vallées',
           'Valorisation des murets en tuffeau et allées en gravier existants',
         ],
+        accroche: 'Limons profonds autour des bourgs de Cantenay et d\'Épinard qui acceptent une palette végétale large, argile hydromorphe en descendant vers les vallées qui restreint les options aux essences de zone humide, propriétés rurales avec fermes en tuffeau et terrains assez vastes pour accueillir potager, verger et prairie fleurie, parcelles exposées au vent du nord sans protection naturelle — le cadre rural de la commune offre un potentiel rare, à condition de composer avec la dualité de ses sols.\n\nLes basses vallées angevines classées Natura 2000, en bordure de commune, orientent le vocabulaire végétal vers des essences locales cohérentes avec le paysage.',
+        whyPro: 'Un jardin conçu dans son ensemble évite les incohérences qu\'un aménagement fragmenté ne détecte pas — un verger planté sur l\'argile hydromorphe de fond de vallée dont les racines asphyxient au premier hiver, une haie monospécifique qui se dégarnit en trois ans, un potager exposé au vent du nord sans brise-vent. À Cantenay-Épinard, la transition entre limons profonds en hauteur et argile de vallée se joue parfois sur quelques dizaines de mètres. Un professionnel identifie cette limite, choisit les essences en conséquence — cornouillers et iris en bas, fruitiers et rosiers en haut — et structure l\'espace pour qu\'il fonctionne dans la durée.',
       },
       elagage: {
         content: `
@@ -883,6 +943,8 @@ export const cities: CityData[] = [
           'Éclaircissage des grands feuillus en propriétés rurales',
           'Intervention adaptée selon l\'ancrage racinaire (limon ou argile)',
         ],
+        accroche: 'Chêne centenaire dont les branches basses rasent le toit de la longère, cèdre du Liban de quinze mètres qui n\'a jamais été taillé, tilleul argenté si dense qu\'il plonge la cour dans l\'ombre, peuplier de fond de vallée qui a perdu une charpentière pendant l\'hiver — à Cantenay-Épinard, les arbres remarquables des propriétés rurales posent des problèmes à la mesure de leur envergure.\n\nEntre les limons profonds des bourgs de Cantenay et d\'Épinard, où les grands feuillus s\'ancrent solidement, et les argiles de fond de vallée, où la ripisylve développe des racines superficielles, les conditions d\'intervention changent sur quelques dizaines de mètres.',
+        whyPro: 'Un chêne têtard du bocage ne s\'entretient pas comme un chêne de jardin — la taille de restauration suit un cycle spécifique, et un élagage classique détruirait la silhouette en trognard que des générations ont maintenue. De même, intervenir sur un cèdre du Liban ou un séquoia de quinze mètres sans connaître l\'architecture propre à ces essences risque de compromettre une structure qui a mis un siècle à se construire.\n\nSur les argiles de fond de vallée, les frênes touchés par la chalarose ajoutent une urgence sanitaire — houppier qui sèche, branches qui tombent sans prévenir. Un professionnel distingue le bois mort à supprimer du bois encore viable et adapte l\'intervention à la stabilité réelle de chaque sujet.',
       },
       'entretien-jardin': {
         content: `
@@ -902,6 +964,8 @@ export const cities: CityData[] = [
           'Gestion différenciée tonte/fauche sur grands terrains ruraux',
           'Traitement anti-mousse en zones ombragées par les grands arbres',
         ],
+        accroche: 'Parcelle basse gorgée d\'eau de novembre à mars où aucun engin ne peut passer sans marquer le sol, limons des parties hautes qui demandent une tonte hebdomadaire d\'avril à juin, haie bocagère de chênes, frênes et noisetiers qui n\'a pas le même calendrier qu\'une haie de photinias, grand terrain de 2 000 m² dont l\'entretien intégral en gazon tondu n\'a de sens ni économique ni écologique — à Cantenay-Épinard, le rythme des basses vallées et la taille des propriétés imposent une logique d\'entretien différente.\n\nLes crues hivernales et les haies bocagères traditionnelles cadrent un calendrier propre au contexte rural, distinct de celui des lotissements de l\'agglomération.',
+        whyPro: 'Tondre l\'intégralité d\'une parcelle de 2 000 m² toute l\'année n\'a pas de sens — coûteux, énergivore et en décalage avec le paysage bocager voisin. Une gestion différenciée — gazon entretenu près de la maison, fauche tardive en fond de parcelle — réduit les passages tout en laissant la biodiversité s\'installer, ce qui rejoint la logique des basses vallées Natura 2000 mitoyennes. Les haies bocagères suivent la même règle : une seule taille par an en fin d\'hiver, en préservant les rameaux fructifères. Les tailler deux ou trois fois comme des photinias supprime les fleurs, les fruits, et l\'intérêt écologique qui a justifié leur maintien sur la parcelle.',
       },
       abattage: {
         content: `
@@ -921,6 +985,8 @@ export const cities: CityData[] = [
           'Diagnostic post-tempête des arbres exposés au couloir de vent',
           'Broyage et valorisation des rémanents sur place',
         ],
+        accroche: 'Chêne centenaire dont une charpentière menace la toiture d\'une longère après un coup de vent, peuplier déraciné qui penche vers une dépendance, frêne dont la chalarose a colonisé plus de la moitié du houppier, branches cassées restées suspendues dans le houppier après un épisode venteux — à Cantenay-Épinard, les arbres de grand développement des propriétés rurales arrivent parfois au stade où seul l\'abattage résout la situation.\n\nLa proximité immédiate des bâtiments en tuffeau et la fréquence des tempêtes d\'ouest dans le couloir des basses vallées conditionnent chaque décision d\'intervention.',
+        whyPro: 'Beaucoup de longères et de fermes en tuffeau de Cantenay-Épinard sont implantées à proximité immédiate d\'arbres de grand développement. Le démontage par sections, avec descente de chaque tronçon au cordage, évite l\'impact sur ces bâtiments en pierre dont la fragilité aux chocs ne pardonne pas.\n\nLe dessouchage change selon la localisation : sur les limons profonds des hauteurs, la rogneuse travaille efficacement et permet un réengazonnement rapide ; sur les argiles lourdes de fond de vallée, la machine peine et le trou se remplit d\'eau en hiver, imposant un comblement drainant avant toute replantation.',
       },
     },
   },
@@ -963,6 +1029,8 @@ export const cities: CityData[] = [
           'Massifs de lavandes, romarins et graminées ornementales',
           'Aménagement différencié coteau / plaine selon la parcelle',
         ],
+        accroche: 'Couche arable de 20 à 30 cm sur les coteaux avant d\'atteindre le schiste fragmenté, dénivelés marqués dans le secteur des Coteaux et du bourg de Mûrs qui compliquent toute plantation sans travail de fosse élargie, microclimat quasi-méditerranéen lié à l\'exposition sud-ouest et à la Loire qui ouvre la palette aux figuiers, oliviers et grenadiers, sols sablo-limoneux en plaine d\'Érigné qui changent complètement la donne — sur une même commune, deux natures de sol et deux logiques d\'aménagement coexistent.\n\nLa minceur du sol schisteux en coteau et la profondeur du sablo-limoneux en plaine orientent chaque choix de plantation bien avant le dessin du jardin.',
+        whyPro: 'Un aménagement pensé dans sa globalité intègre la transition coteau–plaine dès le plan, ce qu\'un jardin créé par ajouts successifs ne permet pas. À Mûrs-Érigné, un olivier planté sur le schiste des coteaux sans fosse élargie ni apport de terre végétale reste coincé dans 20 cm de sol cultivable ; le même sujet, installé dans une fosse mélangée au schiste concassé pour conserver le drainage, développe un enracinement viable en profondeur. Les murets en schiste local ne jouent leur rôle de régulateur thermique — chaleur diurne restituée le soir aux fruitiers palissés — que s\'ils sont dimensionnés pour retenir suffisamment de substrat en terrasse.',
       },
       elagage: {
         content: `
@@ -982,6 +1050,8 @@ export const cities: CityData[] = [
           'Taille de fructification des figuiers et fruitiers de coteau',
           'Allègement de couronne adapté aux sujets de haut de coteau',
         ],
+        accroche: 'Pin maritime penché par les rafales d\'ouest sur le coteau, chêne pubescent dont les branches mortes menacent la toiture, figuier si vigoureux qu\'il faut le contenir chaque année pour garder la récolte accessible, robiniers et érables champêtres poussés sans contrainte dans une ancienne vigne avec des fourches qui se fendent à chaque tempête — à Mûrs-Érigné, les situations d\'élagage varient autant que les arbres, entre coteaux schisteux et plaine.\n\nSur les hauteurs, le sol schisteux force les racines à courir dans les fissures de la roche en surface — un ancrage limité qui rend chaque arbre exposé au vent de vallée plus vulnérable qu\'il n\'y paraît.',
+        whyPro: 'Un cerisier taillé en plein hiver cicatrise mal et s\'expose à la gommose ; un figuier rabattu au mauvais moment repart de plus belle sans fructifier. À Mûrs-Érigné, le microclimat des coteaux et la diversité des espèces — fruitiers, résineux, feuillus de friche — imposent un calendrier d\'intervention propre à chaque arbre, pas une fenêtre unique.\n\nLes sujets issus des anciennes vignes posent un problème structurel distinct : houppiers déséquilibrés, fourches à écorce incluse que seul un examen rapproché permet de détecter. Un professionnel identifie ces faiblesses et adapte la taille à l\'architecture réelle de chaque sujet.',
       },
       'entretien-jardin': {
         content: `
@@ -1001,6 +1071,8 @@ export const cities: CityData[] = [
           'Taille de haies persistantes en lotissement (photinias, lauriers)',
           'Entretien des massifs d\'aromatiques et rosiers de coteau',
         ],
+        accroche: 'Pelouse qui jaunit dès la mi-juin sur les coteaux schisteux alors que la plaine d\'Érigné continue de pousser, sédum et cymbalaire qui colonisent les joints d\'un muret en schiste local sans qu\'on sache s\'il faut les arracher ou les garder, massif d\'aromatiques — romarins, thyms, sauges — qui se dégarnit à la base après quelques années sans taille de fin de floraison, haie de photinias du lotissement que deux tailles annuelles suffisent à contenir — à Mûrs-Érigné, l\'entretien oscille en permanence entre le rythme des coteaux et celui de la plaine.\n\nLe microclimat favorable allonge la saison de végétation, mais la nature du sol change radicalement d\'une parcelle à l\'autre.',
+        whyPro: 'Arracher tout ce qui pousse entre les pierres d\'un muret en schiste revient à se priver du sédum, de la valériane et de la cymbalaire qui participent au charme d\'un jardin angevin — et à passer à côté des vraies adventices, celles qui fragilisent les joints et déchaussent les pierres. Le tri se fait espèce par espèce, à l\'œil.\n\nLe même raisonnement vaut pour la tonte sur coteau schisteux : descendre sous 8 cm en période sèche brûle la pelouse sur un sol qui draine déjà en profondeur. Un professionnel cale la hauteur de coupe, espace les passages en été et concentre le paillage là où la plaine sablo-limoneuse perd son eau trop vite.',
       },
       abattage: {
         content: `
@@ -1020,6 +1092,8 @@ export const cities: CityData[] = [
           'Sécurisation post-tempête des arbres fragilisés en crête',
           'Évacuation et broyage des rémanents sur terrain en dénivelé',
         ],
+        accroche: 'Peuplier, pin maritime ou chêne installé en crête de coteau dont l\'enracinement reste superficiel faute de sol profond au-dessus du schiste, résineux des années 1980-1990 — pin, cyprès, thuya — planté sur une parcelle de coteau et devenu disproportionné au point que la taille de réduction ne suffit plus, sujet fragilisé par les rafales qui remontent le couloir de la Loire et dont le risque de basculement est accentué par l\'inclinaison du terrain — à Mûrs-Érigné, les arbres installés sur les coteaux cumulent les motifs d\'abattage.\n\nLes parcelles en pente, les murets de schiste à préserver et la proximité des habitations ferment presque toujours la porte à l\'abattage directionnel classique.',
+        whyPro: 'Sur les coteaux de Mûrs-Érigné, les parcelles en pente, les murets de schiste à préserver et la proximité des habitations ne laissent pas de place à un abattage directionnel. Le démontage par sections, chaque tronçon descendu au cordage depuis la cime, reste la seule approche compatible avec ce contexte et demande un matériel et un savoir-faire d\'élagueur-grimpeur.\n\nLe dessouchage sur schiste fragmenté ajoute une difficulté : les racines se faufilent entre les strates de roche et forment un réseau qu\'une rogneuse seule ne parvient pas toujours à extraire — la combinaison avec une mini-pelle devient nécessaire sur le schiste compact. La pente ajoute une contrainte d\'accès qui conditionne le choix du matériel.',
       },
     },
   },
@@ -1062,6 +1136,8 @@ export const cities: CityData[] = [
           'Cadrage des perspectives sur la Loire',
           'Plantations adaptées au substrat schisteux de La Roche',
         ],
+        accroche: 'Sol sablo-limoneux profond et meuble dans la plaine alluviale, substrat schisteux maigre et sec en été vers La Roche, terrasses en tuffeau du bourg historique à prolonger sans rompre l\'identité architecturale, parcelles en bord de Loire avec une vue sur le fleuve à cadrer sans la fermer, zone inondable qui impose des matériaux et des végétaux résistants à la submersion — à Sainte-Gemmes-sur-Loire, la nature du sol et la distance au fleuve changent les règles d\'un jardin à l\'autre.\n\nLa dualité alluvial–schisteux et la contrainte hydraulique ligérienne cadrent le projet dès le relevé de terrain.',
+        whyPro: 'Aux Jubeaux, le sol sablo-limoneux profond retient l\'eau et autorise une palette large ; à La Roche, le substrat schisteux impose des espèces frugales — lavandes, romarins, graminées. Confondre les deux conduit à des échecs de plantation dès le premier été. Un professionnel identifie cette transition à quelques centaines de mètres d\'écart et adapte végétaux et matériaux parcelle par parcelle. De même, cadrer une perspective sur la Loire demande un travail de plans successifs — plantations basses au premier plan, arbustes à port transparent en intermédiaire — qu\'un alignement improvisé ne produit pas.',
       },
       elagage: {
         content: `
@@ -1081,6 +1157,8 @@ export const cities: CityData[] = [
           'Taille de fructification des fruitiers anciens en jardins clos',
           'Sécurisation des arbres exposés aux vents de vallée',
         ],
+        accroche: 'Saule blanc dont les branches traînent sur le toit depuis la dernière crue, peuplier noir en bord de Loire qui perd des branches sans prévenir, frêne dont le houppier sèche de saison en saison, vieux poirier dans un jardin clos de tuffeau au bourg qui n\'a pas été taillé depuis des années — à Sainte-Gemmes-sur-Loire, les arbres de ripisylve et les fruitiers anciens cohabitent à quelques centaines de mètres d\'écart.\n\nSur les hauteurs de La Roche, le schiste superficiel limite l\'ancrage des chênes et des châtaigniers — une contrainte que les rafales remontant la vallée de la Loire mettent régulièrement à l\'épreuve.',
+        whyPro: 'En bord de Loire, les interventions sur la végétation ne se programment pas librement. La ripisylve — saules, aulnes, frênes, peupliers — relève de périmètres où le calendrier et les méthodes sont encadrés : périodes de nidification à respecter, essences protégées à identifier, accès au chantier conditionné par le niveau d\'eau. Un élagage conduit hors de ce cadre expose le propriétaire à des complications administratives.\n\nÀ La Roche, le problème est différent mais tout aussi technique : le schiste superficiel limite l\'ancrage, et un arbre allégé trop brutalement sur ce sol perd sa stabilité face aux rafales. Un professionnel intègre ces deux réalités — réglementaire et mécanique — dès le diagnostic.',
       },
       'entretien-jardin': {
         content: `
@@ -1100,6 +1178,8 @@ export const cities: CityData[] = [
           'Aération mécanique sur substrat schisteux à La Roche',
           'Paillage systématique contre le dessèchement estival',
         ],
+        accroche: 'Gazon qui lève vite en avril sur le sable alluvial puis jaunit dès juillet sans que l\'arrosage suffise, mousse qui s\'étend sous les grands arbres riverains côté ombre, haie de charmilles du bourg ancien taillée comme la haie de lauriers-cerises du lotissement d\'à côté alors que les deux ne réclament ni le même rythme ni la même période, sol schisteux de La Roche qui forme une croûte imperméable dès la fin du printemps — à Sainte-Gemmes-sur-Loire, les quartiers imposent leurs propres règles.\n\nDu sable alluvial en plaine au schiste affleurant à La Roche, et du bourg ancien aux lotissements récents, un même calendrier d\'entretien ne peut pas couvrir toute la commune.',
+        whyPro: 'Sur une même rue à Sainte-Gemmes-sur-Loire, on trouve trois ensembles de haies qui ne se conduisent pas de la même façon. Les lauriers-cerises et photinias des lotissements demandent deux passages de persistants en juin et septembre. Les charmilles et buis du bourg ancien, caducs, se travaillent en fin d\'hiver pour préserver un port serré. Les haies champêtres de périphérie — cornouillers, troènes, viornes — mélangent les habitudes selon l\'essence.\n\nAppliquer le calendrier d\'un persistant de lotissement à une charmille de bourg, ou l\'inverse, abîme la haie sans économiser de temps. Un professionnel tient ces calendriers séparés et ajuste l\'entretien du pied selon chaque essence.',
       },
       abattage: {
         content: `
@@ -1119,6 +1199,8 @@ export const cities: CityData[] = [
           'Abattage de frênes atteints de chalarose',
           'Valorisation du bois en bûches et paillage sur place',
         ],
+        accroche: 'Peuplier noir aligné le long de la Loire en fin de cycle biologique dont le bois tendre est creusé par des cavités liées aux champignons lignivores, frêne dont le dépérissement a dépassé la moitié du houppier et pour lequel la taille sanitaire ne suffit plus, sujet riverain à écarter préventivement avant le prochain coup de vent qui balaie la vallée — à Sainte-Gemmes-sur-Loire, les motifs d\'abattage se concentrent sur les arbres âgés des parcelles proches du fleuve.\n\nLes chemins étroits, le sol meuble en bordure de fleuve et la végétation dense conditionnent l\'accès au chantier bien avant la coupe.',
+        whyPro: 'Sur les parcelles riveraines de Sainte-Gemmes-sur-Loire, les chemins étroits, le sol meuble en bordure de fleuve et la végétation dense laissent rarement le champ libre à un abattage directionnel. Le démontage par sections, avec descente contrôlée de chaque tronçon au cordage depuis la cime, reste la technique adaptée — elle exige un savoir-faire de grimpe que le travail au sol ne remplace pas.\n\nLe dessouchage change de physionomie d\'une parcelle à l\'autre : sur les sols sableux de la plaine, la rogneuse progresse rapidement dans un substrat meuble et homogène ; vers La Roche, le schiste affleurant ralentit le travail mécanique et demande un matériel plus puissant. Sur les frênes touchés par la chalarose, la décision se joue au seuil de la moitié du houppier.',
       },
     },
   },
@@ -1161,6 +1243,8 @@ export const cities: CityData[] = [
           'Plantations résistantes à l\'humidité en bord de Mayenne',
           'Restructuration de massifs avec vivaces adaptées à l\'argile',
         ],
+        accroche: 'Terrain nu livré compacté par les engins dans les lotissements de La Foresterie ou des Music\'Halles, argile lourde qui sature en hiver et fissure en été au point d\'endommager bordures et terrasses, haies de thuyas dégarnies à la base à Juigné-Bené après trente ans de service, massifs vieillissants sur un sol que peu de vivaces tolèrent sans amendement, parcelles en bord de Mayenne où l\'humidité favorise mousses et maladies fongiques — à Montreuil-Juigné, le sol argileux et le contexte de chaque quartier dictent l\'approche avant tout choix de plantation.\n\nL\'argile qui travaille selon les saisons et la proximité de la Mayenne conditionnent la durabilité de chaque aménagement.',
+        whyPro: 'Sur l\'argile lourde de Montreuil-Juigné, poser une terrasse sans fondation adaptée au retrait-gonflement, c\'est accepter des fissures en deux ou trois étés. Planter sans décompactage préalable sur un terrain de lotissement compacté par les engins condamne l\'engazonnement et les massifs à végéter. Un professionnel distingue les parcelles neuves de La Foresterie, où tout est à créer depuis le drainage, des jardins anciens de Juigné-Bené où le remplacement d\'une haie de thuyas en fin de cycle par une haie mixte — charme, viorne, éléagnus — demande un phasage pour ne pas laisser la parcelle à nu. Ces diagnostics, posés en amont, évitent les reprises.',
       },
       elagage: {
         content: `
@@ -1180,6 +1264,8 @@ export const cities: CityData[] = [
           'Réduction de houppier sur arbres en surplomb de toiture',
           'Suppression de bois mort et branches à risque',
         ],
+        accroche: 'Érable planté quand le lotissement a été construit dont les branches surplombent maintenant la toiture du voisin, tilleul qui déborde sur la clôture et soulève le trottoir, peuplier en bord de Mayenne qui a perdu une charpentière sans prévenir, pommier devenu si haut que les fruits pourrissent hors de portée — au bourg comme à Juigné-Bené, les arbres des premiers lotissements de Montreuil-Juigné sont devenus trop grands pour les parcelles qui les accueillent.\n\nLe sol argileux, qui sature en hiver et fissure en été, pousse les racines à s\'étaler en surface — une donnée qui conditionne la stabilité des arbres et le type d\'intervention.',
+        whyPro: 'Un érable ou un tilleul de trente ans dont on réduit brutalement le houppier ne rapetisse pas — il réagit par des rejets vigoureux, mal ancrés, qui aggravent le problème en deux ou trois saisons. À Montreuil-Juigné, où les arbres des premiers lotissements ont dépassé les dimensions prévues, la tentation de la taille sévère est fréquente. Elle est aussi la plus coûteuse à terme.\n\nLes peupliers en bord de Mayenne posent un problème distinct : bois tendre qui devient cassant après trente à quarante ans, cavités internes, champignons. Un professionnel évalue si le sujet peut être sécurisé par élagage ou s\'il a dépassé le stade où la taille suffit.',
       },
       'entretien-jardin': {
         content: `
@@ -1199,6 +1285,8 @@ export const cities: CityData[] = [
           'Paillage épais pour contrôle des adventices sur argile',
           'Calendrier d\'entretien adapté au cycle hydrique du sol',
         ],
+        accroche: 'Tonte qui ne peut reprendre avant fin mars parce que l\'argile reste gorgée d\'eau et que le moindre passage d\'engin marque le sol, gazon qui se couvre de feutrage et de mousse en quelques mois à proximité de la Mayenne, haie de thuyas ou de cyprès de Leyland d\'un lotissement des années 1990 qu\'il faut décider de remplacer, haie mixte récente où personne ne sait plus quand tailler quoi — à Montreuil-Juigné, le sol argileux et l\'héritage des plantations dictent le calendrier.\n\nEntre le cycle hydrique et la diversité des haies installées, le rythme d\'entretien ne ressemble à aucun autre de l\'agglomération.',
+        whyPro: 'Une haie mixte ne se taille pas comme une haie de thuyas — on ne peut pas y passer le taille-haies deux fois l\'an en espérant un bon résultat. Chaque essence a sa fenêtre : le charme se taille en août, quand la pousse tendre s\'est arrêtée ; le photinia se reprend après sa floraison printanière ; l\'éléagnus se travaille en fin de printemps, avant que le bois ne durcisse. Passer toutes ces essences en même temps coupe des fleurs en formation et donne un rendu hétérogène.\n\nSur les lotissements de Montreuil-Juigné qui remplacent leurs monocultures de thuyas et cyprès de Leyland, ce calendrier par essence devient la base du travail.',
       },
       abattage: {
         content: `
@@ -1218,6 +1306,8 @@ export const cities: CityData[] = [
           'Abattage sécurisé de peupliers en bord de Mayenne',
           'Broyage des rémanents et valorisation en paillage',
         ],
+        accroche: 'Épicéa de huit à douze mètres planté comme élément de haie et devenu un arbre à part entière, thuya devenu un arbre après vingt-cinq à trente ans dans le lotissement, pin sylvestre au houppier déséquilibré dont le système racinaire reste superficiel sur l\'argile, peuplier ou saule en déclin en bord de Mayenne — dans les quartiers du Bourg, de La Foresterie et des Music\'Halles, les conifères disproportionnés et les sujets riverains concentrent les demandes d\'abattage à Montreuil-Juigné.\n\nLes parcelles mitoyennes laissent rarement la place pour un abattage en pied, ce qui oriente chaque intervention vers un démontage par sections.',
+        whyPro: 'Dans les lotissements mitoyens du Bourg, de La Foresterie et des Music\'Halles, la place pour un abattage en pied fait défaut. Le démontage par sections — tronçonnage progressif depuis le sommet, descente des billots au cordage — reste la technique standard, plus longue qu\'un abattage direct mais qui préserve clôtures, toitures et jardins voisins.\n\nLe dessouchage sur argile compacte demande un réglage spécifique : la rogneuse progresse plus lentement que dans un sol sableux ou limoneux, et en période humide, l\'accès de la machine impose la pose de plaques de roulage pour éviter l\'ornièrage. En bord de Mayenne, l\'abattage des peupliers et des saules en déclin suit un protocole de rétention strict pour éviter toute chute dans l\'eau.',
       },
     },
   },
@@ -1260,6 +1350,8 @@ export const cities: CityData[] = [
           'Drainage correctif en bas de parcelle sur sol limono-argileux',
           'Rocailles et murets sur affleurements de grès locaux',
         ],
+        accroche: 'Parcelles de plus de 1 500 m² à structurer entre allées, verger, potager et fond de bocage, corps de ferme rénovés dont les abords restent à reprofiler et à planter, bas de parcelle et cuvettes qui retiennent l\'eau sur un sol limono-argileux pourtant fertile en partie haute, affleurements de grès vers La Motte et Les Linières qui émergent au milieu du terrain — à Saint-Jean-de-Linières, la surface disponible et la variété des situations sur une même propriété élargissent le champ des possibles autant qu\'elles compliquent la conception.\n\nLe paysage bocager environnant — haies vives, chênes têtards, chemins creux — fournit un vocabulaire végétal qu\'un aménagement cohérent prolonge plutôt que d\'ignorer.',
+        whyPro: 'Sur une parcelle de 1 500 m² et plus, un aménagement par morceaux produit une accumulation de zones sans lien entre elles — un potager ici, une terrasse là, un massif au milieu, sans circulation ni cohérence de registre. À Saint-Jean-de-Linières, les corps de ferme rénovés appellent un travail d\'ensemble : cour paysagée en harmonie avec la pierre locale, haies mixtes de charmes et d\'aubépines prolongeant le bocage, drainage des cuvettes avant plantation du verger en bas de parcelle. Un érable champêtre planté sans tenir compte de l\'affleurement de grès en sous-sol verra ses racines buter sur la roche là où un reprofilage aurait permis un enracinement correct.',
       },
       elagage: {
         content: `
@@ -1279,6 +1371,8 @@ export const cities: CityData[] = [
           'Éclaircissage de houppiers développés sans taille de formation',
           'Allègement de couronne sur sujets exposés au vent d\'ouest',
         ],
+        accroche: 'Chêne de limite de propriété dont le houppier, jamais taillé depuis la plantation, empiète sur la toiture et les lignes aériennes, hêtre qui a poussé librement le long d\'un chemin creux et dont les branches basses gênent le passage, châtaignier au fond du jardin qui perd des branches à chaque coup de vent d\'ouest, pommier non taillé depuis des années qui produit en hauteur et se couvre de gui — à Saint-Jean-de-Linières, les arbres du bocage et les fruitiers de verger posent des problèmes d\'entretien que leur taille rend difficiles à reporter.\n\nLe sol limono-argileux profond porte des enracinements puissants, mais en hiver, quand il sature d\'eau, la stabilité des sujets les plus exposés diminue.',
+        whyPro: 'Les arbres de Saint-Jean-de-Linières ont grandi sans taille de formation — houppiers développés librement, branches croisées, bois mort pris dans la ramure. Sur ces sujets, une coupe au hasard aggrave les défauts structurels au lieu de les corriger : un éclaircissage mal orienté déplace le centre de gravité, et une réduction trop forte déclenche des rejets qui referment la couronne en une saison.\n\nLes chênes têtards du bocage exigent un savoir-faire distinct — le rétrogradage suit un cycle de cinq à huit ans, et une taille d\'entretien classique appliquée par erreur compromet leur silhouette patrimoniale. Un professionnel lit l\'architecture de chaque arbre avant de décider où couper.',
       },
       'entretien-jardin': {
         content: `
@@ -1298,6 +1392,8 @@ export const cities: CityData[] = [
           'Terreautage au compost pour améliorer la structure du sol',
           'Ramassage et broyage de feuilles sous chênes et hêtres',
         ],
+        accroche: 'Sol limono-argileux qui devient collant dès les premières pluies d\'octobre et reste gras jusqu\'en avril, tonte qui s\'interrompt tôt et reprend tard sans qu\'on puisse forcer, feuilles de chêne et de hêtre qui couvrent la pelouse sur plusieurs semaines en automne et que le râteau peine à suivre, haie bocagère de charmes, aubépines et noisetiers qui ne se conduit pas comme la haie de photinias du lotissement mitoyen — à Saint-Jean-de-Linières, le calendrier d\'entretien suit le bocage avant de suivre la saison.\n\nEntre les grandes pelouses des propriétés rurales et la cohabitation des deux types de haies, chaque poste d\'entretien demande une cadence propre.',
+        whyPro: 'Sous un chêne ou un hêtre mature, ramasser les feuilles au râteau ou au souffleur prend des heures et laisse un résidu qui étouffe la pelouse. Quand le volume reste raisonnable, un passage de tondeuse à lame adaptée broie les feuilles sur place : elles se décomposent dans le gazon et nourrissent le sol au lieu de former le tapis asphyxiant des feuilles entières. L\'option n\'est valable qu\'à densité de feuillage modérée — au-delà, le ramassage reste nécessaire.\n\nMême logique pour le calendrier de tonte : sur le limono-argileux, forcer un passage en mars quand le sol reste gras marque le terrain pour toute la saison. Un professionnel attend que le sol porte.',
       },
       abattage: {
         content: `
@@ -1317,6 +1413,8 @@ export const cities: CityData[] = [
           'Diagnostic de châtaigniers atteints de maladie de l\'encre',
           'Évacuation et valorisation des rémanents en broyat',
         ],
+        accroche: 'Vieux chêne de limite de propriété dont une charpentière lourde risque la rupture sous le poids du givre ou lors d\'un coup de vent, châtaignier dont le feuillage paraît encore sain mais dont le tronc est affaibli par la pourriture interne installée par la maladie de l\'encre ou le chancre, arbre du maillage bocager devenu incompatible avec l\'habitat voisin — dans les secteurs du Bocage et de La Motte, les demandes d\'abattage concernent des sujets présents depuis plusieurs générations.\n\nLa proximité des bâtiments, des clôtures et des haies mitoyennes interdit l\'abattage directionnel, et les parcelles sans accès pour un engin de levage orientent d\'emblée vers le démontage par sections.',
+        whyPro: 'Sur les parcelles du Bocage et de La Motte, l\'absence d\'accès pour un engin de levage et la proximité des bâtiments, clôtures et haies mitoyennes écartent l\'abattage directionnel. Le démontage par sections avec descente de chaque tronçon au cordage reste la seule technique possible — un savoir-faire de grimpe qu\'une intervention improvisée ne couvre pas.\n\nSur les châtaigniers, le diagnostic pèse autant que la coupe : un feuillage encore sain peut masquer un tronc affaibli par la pourriture interne liée à la maladie de l\'encre ou au chancre. Le dessouchage à la rogneuse sur le sol limono-argileux profond avance plus lentement que sur sable, mais les racines n\'opposent pas la résistance d\'un substrat rocheux.',
       },
     },
   },
@@ -1359,6 +1457,8 @@ export const cities: CityData[] = [
           'Matériaux imputrescibles pour parcelles en zone inondable',
           'Prairies fleuries et vergers sur limons du confluent',
         ],
+        accroche: 'Demeures bourgeoises dont les jardins conservent des structures héritées — allées de tilleuls, roseraies, massifs de buis — à intégrer ou à remplacer, parcelles en bord de Sarthe ou de Loir où la nappe haute entre novembre et mars interdit certaines plantations vers La Basse-Rivière et Le Port, terrain limoneux fertile aux Grandes-Rivières qui porte sans difficulté un verger ou une prairie fleurie — à Briollay, le confluent des deux rivières crée autant de possibilités que de contraintes.\n\nLe microclimat humide et tempéré du confluent, les sols alluviaux profonds et le risque de submersion temporaire conditionnent chaque choix de matériau et de végétal.',
+        whyPro: 'Un jardin conçu dans sa globalité tient compte de la nappe, du sol et du microclimat dès le plan — ce qu\'un aménagement par ajouts successifs ne fait pas. À Briollay, un hortensia prospère naturellement grâce à l\'humidité atmosphérique du confluent, là où la même plante exige un arrosage constant sur un coteau sec à quelques kilomètres. Mais poser une terrasse en bois non classé 4 vers Le Port, c\'est accepter qu\'elle pourrisse à la première submersion hivernale. Replanter une roseraie héritée sans vérifier la profondeur de nappe condamne les rosiers à l\'asphyxie racinaire dès novembre. Ces arbitrages se décident au relevé de terrain, pas au fil des saisons.',
       },
       elagage: {
         content: `
@@ -1378,6 +1478,8 @@ export const cities: CityData[] = [
           'Entretien des tilleuls et marronniers du bourg historique',
           'Intervention sur arbres à proximité de berges et cours d\'eau',
         ],
+        accroche: 'Saule blanc dont la ramure couvre quinze mètres de diamètre et frotte sur la toiture, peuplier noir qui a pris vingt mètres en vingt ans et surplombe maintenant le chemin d\'accès, aulne dont les branches mortes tombent sur la berge à chaque rafale, frêne de ripisylve qui perd ses rameaux par le haut sans raison visible — à Briollay, les essences du confluent Sarthe-Loir poussent vite dans le sol alluvial humide, et les problèmes suivent.\n\nLe bois tendre des saules et des peupliers casse plus facilement que celui des chênes ou des érables — une réalité que chaque tempête rappelle le long des berges.',
+        whyPro: 'Un saule blanc ou un peuplier noir ne se taille pas comme un chêne — le bois est tendre, les fibres cassent net, et une coupe mal orientée sur une charpentière peut fendre le tronc jusqu\'à la fourche. À Briollay, ces essences de ripisylve atteignent des dimensions imposantes en vingt ans sur le sol alluvial du confluent, mais leur bois reste fragile. Un allègement régulier de la couronne réduit la prise au vent et limite les chutes de branches.\n\nSur les frênes, la chalarose ajoute une fragilité que seul un diagnostic en hauteur permet d\'évaluer. Un professionnel adapte chaque coupe à la nature du bois et à l\'état sanitaire réel du sujet.',
       },
       'entretien-jardin': {
         content: `
@@ -1397,6 +1499,8 @@ export const cities: CityData[] = [
           'Entretien des massifs de vivaces de terrain humide',
           'Gestion de la mousse en zones ombragées et humides',
         ],
+        accroche: 'Pelouse qui reste gorgée d\'eau longtemps après les pluies de printemps, mousse qui gagne du terrain sous les arbres de berge, haie de lauriers-palme dont les feuilles brunissent aux pointes après chaque taille au taille-haie, taches noires sur les rosiers qui s\'aggravent chaque été humide — à Briollay, le confluent de la Sarthe et du Loir impose un rythme d\'entretien que la plupart des jardins ne trouvent jamais seuls.\n\nLe sol limoneux retient l\'eau, l\'humidité ambiante favorise les maladies fongiques, et chaque essence végétale demande un traitement spécifique.',
+        whyPro: 'Tailler une haie de lauriers-palme au taille-haie électrique sectionne les feuilles plutôt que de couper aux nœuds — les moitiés laissées sur la plante brunissent en quelques jours et donnent un aspect grillé qui met des mois à disparaître. Le sécateur reste la bonne méthode sur cette essence, quitte à doubler le temps d\'intervention.\n\nSur le reste du jardin, l\'air humide du confluent propage rapidement les pathologies fongiques — marsonia sur rosiers, tavelure sur pommiers. Un professionnel ramasse systématiquement les feuilles atteintes, élimine les rameaux contaminés dès l\'apparition des symptômes, et cale scarification et regarnissage en ray-grass et fétuque élevée au bon moment de mars-avril.',
       },
       abattage: {
         content: `
@@ -1416,6 +1520,8 @@ export const cities: CityData[] = [
           'Haubanage temporaire sur arbres penchés au-dessus de l\'eau',
           'Intervention en période de basses eaux pour sol stable',
         ],
+        accroche: 'Peuplier noir planté en rangée le long de la Sarthe qui s\'incline progressivement vers la rivière, cavités de cœur ou champignons lignivores à la base d\'un sujet voisin, frêne au houppier défolié à plus de moitié avec nécroses de collet, accès aux berges réduit à un chemin de halage ou une servitude de passage — à Briollay, les arbres du confluent Sarthe-Loir cumulent les motifs d\'intervention en bordure immédiate de l\'eau.\n\nLa proximité du cours d\'eau et l\'étroitesse des accès interdisent presque toujours la chute libre de tronçons volumineux.',
+        whyPro: 'Un frêne dont la chalarose a atteint un stade avancé peut casser par temps calme, sans signal mécanique préalable — un mode de rupture documenté sur les sujets défoliés à plus de 50 %. Maintenir ces arbres à proximité de zones fréquentées n\'est pas tenable.\n\nÀ Briollay, un peuplier penché au-dessus de la Sarthe ou du Loir se démonte depuis la cime avec un haubanage temporaire qui stabilise l\'arbre pendant l\'intervention. Le dessouchage à la rogneuse, efficace sur limon meuble, devient risqué quand la nappe phréatique remonte : un professionnel programme ces chantiers en période de basses eaux, entre juin et septembre.',
       },
     },
   },
@@ -1458,6 +1564,8 @@ export const cities: CityData[] = [
           'Jardins de propriétés en tuffeau intégrés au paysage viticole',
           'Rocaille et garrigue sur les pentes exposées sud-est',
         ],
+        accroche: 'Propriétés en tuffeau nichées entre les rangs de vignes, jardins pentus sur les coteaux de la Roche-aux-Moines où le schiste pourpré affleure à quelques centimètres, cours de ferme rénovées à réaménager sans dénaturer le caractère viticole du lieu, terrains plus plats du côté d\'Épiré avec des sols légèrement plus profonds qui élargissent la palette — à Savennières, le terroir viticole donne le ton jusque dans les jardins privés.\n\nL\'exposition sud-est face à la Loire et le microclimat qui en résulte autorisent des plantations inhabituelles en Maine-et-Loire, mais le schiste drainant impose ses propres limites.',
+        whyPro: 'Sur les coteaux schisteux de Savennières, un aménagement improvisé accumule les erreurs que le terroir ne pardonne pas. Un massif installé sans travail en terrasses voit sa terre emportée au premier orage ; un rosier planté en plein schiste sans apport de substrat végète là où une lavande ou un romarin s\'installerait durablement. Du côté d\'Épiré, les sols plus profonds acceptent des fruitiers en espalier et des haies champêtres, mais la transition entre coteau maigre et plaine fertile se joue sur quelques centaines de mètres. Un professionnel adapte les murets en schiste local, les escaliers de pierre sèche et les plantations au profil exact de chaque zone.',
       },
       elagage: {
         content: `
@@ -1477,6 +1585,8 @@ export const cities: CityData[] = [
           'Taille sanitaire sur arbres stressés par la sécheresse estivale',
           'Taille de fructification des figuiers, pruniers et cerisiers',
         ],
+        accroche: 'Chêne pubescent au houppier asymétrique façonné par les vents d\'ouest, pin maritime penché au-dessus de la toiture en ardoise, figuier centenaire dont les branches envahissent la façade en tuffeau, tilleul qui n\'a pas été taillé depuis la rénovation de la propriété et dont les gourmands recouvrent les fenêtres — sur les coteaux de Savennières, les arbres poussent dans les fissures du schiste et de la rhyolite, avec des ports irréguliers que la taille doit respecter plutôt que corriger.\n\nLes pentes et l\'étroitesse des chemins bordés de murets rendent l\'accès en nacelle souvent impossible — l\'intervention passe par la grimpe.',
+        whyPro: 'Sur les coteaux schisteux de Savennières, le volume de terre exploitable par les racines reste limité malgré un ancrage profond dans la roche. En période de sécheresse prolongée, les arbres développent du bois mort dans le houppier — un signal d\'alarme, pas un défaut esthétique. Ces branches sèches deviennent cassantes et tombent sans prévenir, parfois sur les toitures en ardoise des propriétés en tuffeau en contrebas.\n\nDistinguer le bois mort lié au stress hydrique d\'une branche encore viable demande un examen en hauteur. Un professionnel identifie ce qui relève de la taille sanitaire urgente et ce qui peut attendre la saison suivante.',
       },
       'entretien-jardin': {
         content: `
@@ -1496,6 +1606,8 @@ export const cities: CityData[] = [
           'Taille de haies persistantes et caduques selon calendrier',
           'Palissage et taille des grimpantes sur façades en tuffeau',
         ],
+        accroche: 'Pelouse qui jaunit dès juin sur les coteaux schisteux, glycine qui s\'accroche à la façade en tuffeau et menace de fissurer la pierre tendre si personne ne la palisse, murets en pierre sèche qu\'il faut nettoyer sans déranger les lézards qui y nichent, désherbage à faire sans produit phytosanitaire parce que les parcelles voisines sont classées AOC — à Savennières, l\'entretien d\'un jardin compose avec le vignoble.\n\nLe sol maigre et drainant, le contexte viticole et les bâtis en tuffeau orientent chaque intervention avant la première coupe.',
+        whyPro: 'Dans un secteur viticole classé AOC, le désherbage chimique dans un jardin particulier n\'a pas sa place — les alternatives mécaniques et végétales sont les seuls leviers qui tiennent sur la durée. Un professionnel connaît celles qui marchent : binage manuel, paillage minéral en graviers de schiste ou pouzzolane, couvre-sols compétitifs comme le thym serpolet et le sédum. La prairie sèche fleurie — achillées, fétuques, trèfles — remplace un gazon classique qui ne tient pas au-delà de juin sur le schiste.\n\nLes grimpantes sur façades en tuffeau demandent un palissage et une taille annuelle adaptés — sans cette rigueur, le poids et les crampons endommagent une pierre qui ne se remplace pas facilement.',
       },
       abattage: {
         content: `
@@ -1515,6 +1627,8 @@ export const cities: CityData[] = [
           'Débroussaillage et abattage sélectif sur parcelles en friche',
           'Évacuation et broyage des rémanents pour valorisation sur place',
         ],
+        accroche: 'Frêne en bordure de Loire ou dans une haie bocagère dont le dépérissement dépasse la moitié du houppier, figuier ou pin qui a poussé sans formation sur une parcelle viticole reconvertie en jardin d\'agrément, coteau pentu bordé de murets en schiste où l\'accès se réduit à quelques mètres, proximité des rangs de vignes et d\'un bâti en tuffeau à préserver — à Savennières, les motifs d\'abattage se superposent rarement dans un contexte simple.\n\nL\'abattage directionnel classique est presque toujours exclu par la pente, l\'étroitesse des chemins et le voisinage immédiat du vignoble.',
+        whyPro: 'Sur les coteaux pentus de Savennières, l\'abattage directionnel n\'a pas sa place. Chemins étroits bordés de murets, parcelles en dénivelé, proximité des rangs de vignes et d\'un bâti en tuffeau à préserver : chaque tronçon descend au cordage depuis la cime, pièce par pièce.\n\nLe dessouchage ajoute sa propre contrainte. La rogneuse bute sur les blocs de schiste et les affleurements de rhyolite, ce qui allonge le temps de travail et impose un matériel renforcé. Pour toute replantation ensuite, le broyat de souche mélangé à du compost reconstitue la poche de terre végétale indispensable sur un sol aussi maigre.',
       },
     },
   },
@@ -1557,6 +1671,8 @@ export const cities: CityData[] = [
           'Haies mixtes brise-vue pour parcelles en bordure d\'axes passants',
           'Drainage préventif sur parcelles basses sujettes à la stagnation',
         ],
+        accroche: 'Jardins des années 1980-1990 où les conifères ont pris des proportions incompatibles avec des parcelles de 400 à 900 m², haies de thuyas dégarnies après trente ans qui n\'assurent plus leur rôle de brise-vue, massifs appauvris à restructurer, terrain nu livré sans terre végétale dans les lotissements récents — à Saint-Sylvain-d\'Anjou, la plupart des projets commencent par un constat : le jardin existant ne fonctionne plus, ou le terrain de départ n\'offre rien.\n\nLe sol limono-argileux de la commune retient bien l\'eau et les nutriments, mais sa tendance à stagner en hiver impose un travail de drainage avant toute plantation en partie basse.',
+        whyPro: 'Sur une parcelle de 400 à 900 m², chaque mètre compte. Poser une terrasse sans anticiper les circulations, planter un arbre sans projeter son ombrage à maturité, aligner des thuyas en haie sans prévoir leur encombrement à dix ans — ces choix fragmentés produisent un jardin qu\'il faut reprendre. À Saint-Sylvain-d\'Anjou, un cyprès de Leyland planté dans les années 1990 en limite de parcelle atteint aujourd\'hui huit mètres et prive le voisin de lumière ; une haie mixte de photinias, charmilles et viornes aurait assuré la même intimité en restant à deux mètres. Un professionnel dimensionne les plantations en fonction de la surface réelle et du sol limono-argileux local.',
       },
       elagage: {
         content: `
@@ -1576,6 +1692,8 @@ export const cities: CityData[] = [
           'Suppression du bois mort et allègement de ramure',
           'Intervention à proximité des toitures et lignes électriques',
         ],
+        accroche: 'Érable ou tilleul de plus de quinze mètres dont les branches empiètent sur la toiture et les lignes électriques, haie de cyprès de Leyland des années 1980 montée à dix mètres qui plonge la parcelle voisine dans l\'ombre, bouleau dont le houppier encombre l\'allée, vieux pommier jamais taillé qui produit hors de portée et se couvre de gui — dans les quartiers pavillonnaires de Saint-Sylvain-d\'Anjou, les arbres plantés il y a trente ou quarante ans ont dépassé les dimensions que les parcelles peuvent absorber.\n\nLe sol limono-argileux, fertile et bien pourvu en eau, a nourri un enracinement profond et vigoureux qui alimente des houppiers devenus disproportionnés.',
+        whyPro: 'Sur le sol limono-argileux de Saint-Sylvain-d\'Anjou, les grands feuillus développent un enracinement profond et vigoureux. Réduire brutalement le houppier d\'un érable ou d\'un chêne de quinze mètres rompt l\'équilibre entre la partie aérienne et ce système racinaire puissant — l\'arbre réagit par des rejets vigoureux qui referment la couronne en une ou deux saisons, annulant l\'intervention.\n\nLes conifères des années 1970-1980 — thuyas, cyprès de Leyland, épicéas — posent un problème inverse : montés à huit ou douze mètres, ils ne repartent pas sur le vieux bois. Toute réduction au-delà de la zone verte est définitive. Un professionnel évalue la marge de manœuvre réelle avant d\'intervenir.',
       },
       'entretien-jardin': {
         content: `
@@ -1595,6 +1713,8 @@ export const cities: CityData[] = [
           'Scarification et terreautage saisonnier des pelouses',
           'Désherbage mécanique sans produit chimique',
         ],
+        accroche: 'Mousse qui envahit la pelouse sous les grands érables du fond de jardin alors que la partie sud, en plein soleil, se fait coloniser par le liseron et le chiendent, tonte hebdomadaire à tenir d\'avril à juin pour ne pas perdre le gazon, feuilles mortes qui s\'accumulent en automne et étouffent la pelouse — dans les lotissements de Saint-Sylvain-d\'Anjou, une même parcelle peut cumuler des problèmes opposés selon l\'exposition.\n\nLe sol limono-argileux, l\'ombrage des grands feuillus et la vigueur des adventices à rhizomes imposent des traitements différenciés sur le même terrain.',
+        whyPro: 'Réensemencer toute une pelouse en gazon standard sur une parcelle mi-ombre mi-soleil ne donne jamais un résultat homogène : la partie ombragée se couvre de mousse en quelques mois, la partie ensoleillée se laisse coloniser par le liseron et le chiendent. Un professionnel différencie les traitements — fétuques fines et ray-grass anglais sous les grands feuillus pour résister à l\'ombre, désherbage mécanique régulier en zone ensoleillée sur des rhizomes de liseron et de chiendent qui repoussent après chaque arrachage superficiel.\n\nLa scarification et le terreautage sableux au printemps valent pour toute la parcelle, mais le choix des graminées et la stratégie anti-adventices changent d\'un côté à l\'autre du jardin.',
       },
       abattage: {
         content: `
@@ -1614,6 +1734,8 @@ export const cities: CityData[] = [
           'Diagnostic post-tempête des branches suspendues',
           'Broyage et évacuation des rémanents sur place',
         ],
+        accroche: 'Épicéa jaunissant ou thuya dépérissant planté il y a quarante ou cinquante ans dans un jardin alors vide et désormais trop proche des fondations, pin dont le système racinaire superficiel ne tient plus dans les coups de vent, branches cassées suspendues dans le houppier d\'un feuillu après une rafale et qui peuvent tomber des semaines plus tard — dans les lotissements de Saint-Sylvain-d\'Anjou, les parcelles mitoyennes laissent peu de marge à chaque intervention.\n\nL\'abattage direct est rarement envisageable dans ce contexte : clôtures, abris et constructions voisines imposent un démontage par sections.',
+        whyPro: 'Après une tempête, une branche cassée restée suspendue dans un houppier peut tomber des semaines plus tard, sans signal préalable. Ce risque sous-estimé justifie un diagnostic visuel après chaque épisode venteux — une inspection en hauteur que personne n\'improvise depuis le sol.\n\nSur les parcelles mitoyennes des lotissements, le démontage par sections est imposé par la proximité des clôtures, abris et constructions voisines. Sur les zones les plus argileuses, le trou laissé par une rogneuse de souche retient l\'eau en hiver : un professionnel comble avec un mélange drainant — graviers, terre végétale, compost — plutôt que de laisser le terrain stagner.',
       },
     },
   },
@@ -1656,6 +1778,8 @@ export const cities: CityData[] = [
           'Haies champêtres de bocage : charme, noisetier, aubépine',
           'Structuration de grands jardins ruraux de 1 000 à 5 000 m²',
         ],
+        accroche: 'Fermes et longères reconverties dont les cours en tuffeau et moellon attendent un aménagement à la mesure de l\'architecture, propriétés de 1 000 à 5 000 m² assez vastes pour accueillir jardin d\'agrément, verger et potager en séquences distinctes, coteaux argilo-calcaires qui se réchauffent vite au printemps mais collent aux outils en période humide, fond de vallée le long de l\'Aubance où le sol alluvial plus frais change complètement la palette végétale — à Soulaines-sur-Aubance, la surface des parcelles et la variété des sols ouvrent un champ large.\n\nLe paysage viticole et bocager environnant — rangs de vignes, murets de pierre, haies vives — constitue une référence que l\'aménagement gagne à prolonger.',
+        whyPro: 'Sur une propriété de plusieurs milliers de mètres carrés, un aménagement par morceaux produit une juxtaposition de zones sans cohérence — un potager isolé, une terrasse déconnectée, un verger mal placé. À Soulaines-sur-Aubance, la transition entre coteau argilo-calcaire sec et fond de vallée humide le long de l\'Aubance se joue parfois au milieu de la parcelle. Un cornouiller ou un hosta s\'installe en zone basse là où un rosier dépérirait ; sur le coteau, lavandes et graminées prospèrent dans un sol que les mêmes hostas ne supporteraient pas. Structurer l\'espace en tenant compte de cette dualité évite les remplacements à répétition.',
       },
       elagage: {
         content: `
@@ -1675,6 +1799,8 @@ export const cities: CityData[] = [
           'Relèvement de couronne sur arbres à branches basses',
           'Diagnostic de sujets à risque en bordure de parcelles viticoles',
         ],
+        accroche: 'Chêne sessile dont les branches basses descendent à deux mètres du sol et bloquent l\'accès au fond de la parcelle, châtaignier au houppier si large qu\'il couvre la moitié du jardin, saule en bord d\'Aubance qui perd ses branches mortes à chaque coup de vent, vieux pommier ou poirier du verger qui n\'a pas été taillé depuis des années et ne produit plus que du bois — à Soulaines-sur-Aubance, les arbres des coteaux et de la ripisylve cohabitent avec des vergers anciens dont personne ne s\'est occupé.\n\nLes parcelles viticoles reconverties en jardins conservent parfois des arbres de haut jet en bordure — peupliers, chênes — dont l\'envergure n\'avait pas été anticipée pour un usage résidentiel.',
+        whyPro: 'Un verger de pommiers ou de poiriers non taillé depuis des années ne se rattrape pas en une seule intervention. Forcer la restauration sur un arbre qui a accumulé dix ans de croissance non maîtrisée provoque des rejets anarchiques et affaiblit la charpente au lieu de la restructurer. À Soulaines-sur-Aubance, les vergers anciens — pommiers, poiriers, cerisiers, noyers — demandent un travail étalé sur deux à trois saisons : bois mort la première année, éclaircissage de la charpente la deuxième, mise en forme de fructification la troisième.\n\nUn professionnel planifie cette progression et adapte chaque passage à la réponse de l\'arbre — un rythme que l\'impatience d\'un non-spécialiste compromet.',
       },
       'entretien-jardin': {
         content: `
@@ -1694,6 +1820,8 @@ export const cities: CityData[] = [
           'Correction de chlorose sur rosiers en sol calcaire actif',
           'Désherbage mécanique et paillage en fond de vallée humide',
         ],
+        accroche: 'Jeunes feuilles de rosiers qui jaunissent avec des nervures restées vertes malgré les arrosages et les engrais, pelouse compactée par un hiver gorgé d\'eau qui laisse passer le chiendent dès mars, haie bocagère de charme et d\'aubépine qu\'on n\'ose pas tailler avant la fin de la nidification — à Soulaines-sur-Aubance, le sol argilo-calcaire de la vallée dicte ce que le jardin peut supporter.\n\nLes iris germanica, pivoines et lavandes s\'y installent sans effort, mais les rosiers et d\'autres plantes sensibles au calcaire actif exigent des corrections que peu de propriétaires savent mettre en place.',
+        whyPro: 'La chlorose ferrique des rosiers sur sol argilo-calcaire n\'est pas un problème d\'arrosage ni d\'engrais classique — c\'est le calcaire actif qui bloque l\'assimilation du fer par les racines. Ajouter de la terre de bruyère au pied, apporter du fer chélaté en foliaire ou en arrosage, et choisir des variétés plus tolérantes au pH élevé : ces corrections demandent un diagnostic précis avant toute intervention.\n\nPour le reste du jardin, un professionnel oriente vers les vivaces qui prospèrent sur calcaire — iris germanica, pivoines, lavandes, sauges — et cale la taille des haies bocagères en septembre, après la nidification, pour respecter la faune qu\'elles abritent.',
       },
       abattage: {
         content: `
@@ -1713,6 +1841,8 @@ export const cities: CityData[] = [
           'Dessouchage combiné rogneuse et mini-pelle sur sol calcaire',
           'Évacuation et broyage des rémanents sur propriétés rurales',
         ],
+        accroche: 'Arbre devenu trop volumineux dans une cour fermée d\'ancienne ferme, enclavé entre bâtiments en pierre, dépendances et murets, châtaignier des zones basses dont le tronc laisse apparaître un écoulement noirâtre et dont les branches meurent en cime, peuplier en bord d\'Aubance au bois cassant et à l\'enracinement superficiel qu\'une tempête d\'automne peut coucher sur une toiture — à Soulaines-sur-Aubance, les motifs d\'abattage mêlent contraintes d\'accès et vigilance sanitaire.\n\nDans les cours anciennes, l\'abattage directionnel est presque toujours exclu et le démontage par sections reste la seule approche réaliste.',
+        whyPro: 'Dans une cour fermée d\'ancienne ferme, enclavée entre bâtiments en pierre et dépendances, l\'abattage directionnel d\'un arbre devenu trop volumineux n\'est pas une option. Le démontage par sections depuis la cime, tronçon par tronçon, reste la seule manière de maîtriser la chute de chaque pièce de bois sans endommager les murs anciens alentour.\n\nLe dessouchage ajoute une difficulté propre aux sols argilo-calcaires. La rogneuse fonctionne dans les couches supérieures, mais les racines profondes ancrées dans le calcaire sous-jacent résistent au broyage. Sur les souches de grand diamètre, un professionnel complète le travail à la mini-pelle pour extraire les pivots principaux.',
       },
     },
   },
@@ -1755,6 +1885,8 @@ export const cities: CityData[] = [
           'Jardins résilients en zone inondable avec matériaux adaptés',
           'Création paysagère sur grands terrains d\'anciens sites horticoles',
         ],
+        accroche: 'Ancien terrain horticole à Brain-sur-l\'Authion vaste mais sans structure, propriété en surplomb de levée à Saint-Mathurin battue par le vent d\'ouest, jardin pavillonnaire à Corné livré nu par le constructeur, parcelle en contrebas de la levée qui se retrouve sous l\'eau certains hivers — sur une commune de six bourgs, les situations de départ se ressemblent rarement.\n\nLes limons noirs de la plaine, parmi les plus fertiles du département, portent presque tout ce qu\'on y plante — à condition d\'avoir réglé le drainage et la protection au vent avant de choisir le premier végétal.',
+        whyPro: 'Sur un ancien terrain horticole de plus de 1 000 m², aménager par morceaux produit une succession de zones sans lien — un potager ici, une terrasse là, un massif au milieu. À Loire-Authion, la fertilité exceptionnelle des limons pousse les végétaux vite et fort : un arbre mal placé atteint en cinq ans une envergure qui gêne la terrasse ou prive le potager de lumière. En zone inondable sous la levée, une terrasse en bois non classé IV ou des plantations sensibles à la submersion sont à refaire après le premier hiver de crue. Un professionnel intègre ces paramètres dès le plan d\'ensemble.',
       },
       elagage: {
         content: `
@@ -1774,6 +1906,8 @@ export const cities: CityData[] = [
           'Diagnostic d\'ancrage racinaire en sol alluvial saturé',
           'Intervention sur arbres en bord de berge et zone humide',
         ],
+        accroche: 'Peuplier qui a perdu une maîtresse branche au-dessus du jardin lors du dernier coup de vent, frêne dont le houppier sèche par le haut depuis deux ans sans explication claire, érables et tilleuls des lotissements de Brain ou Corné dont les couronnes touchent la toiture et masquent les fenêtres de l\'étage, saule blanc en bord de boire qui penche un peu plus à chaque crue — à Loire-Authion, les arbres poussent vite sur les limons fertiles, et les problèmes arrivent plus tôt qu\'ailleurs.\n\nLe sol alluvial meuble qui favorise cette croissance rapide produit aussi des enracinements asymétriques en terrain saturé — une donnée à intégrer avant toute intervention.',
+        whyPro: 'En sol alluvial meuble, un arbre qui penche n\'a pas forcément le même problème qu\'un arbre qui penche sur terrain stable. Près des berges de l\'Authion ou en terrain régulièrement saturé par les crues, les racines se développent de manière asymétrique — ancrées d\'un côté, quasi absentes de l\'autre. Tailler le houppier sans évaluer cet ancrage réel peut aggraver le déséquilibre au lieu de le corriger.\n\nUn diagnostic d\'ancrage sur ces sujets précède toute coupe : il détermine si l\'arbre supporte une réduction de voilure ou s\'il relève du haubanage, voire de l\'abattage. Un professionnel fait cette distinction avant de monter dans l\'arbre.',
       },
       'entretien-jardin': {
         content: `
@@ -1793,6 +1927,8 @@ export const cities: CityData[] = [
           'Paillage organique contre l\'évapotranspiration éolienne',
           'Entretien adapté aux six bourgs de la commune nouvelle',
         ],
+        accroche: 'Gazon qui monte en épis faute de tonte hebdomadaire, haie d\'osmanthes ou de photinias héritée du passé horticole qui demande une taille précise pour garder son port naturel, massif exposé qui sèche plus vite que ne le laisse supposer la richesse du sol, taches de fil rouge qui apparaissent dès l\'automne dans la zone ombragée au fond du jardin — à Loire-Authion, la vigueur du limon alluvial et le vent d\'ouest constant imposent un rythme d\'entretien qu\'un jardin classique ne connaît pas.\n\nLe calendrier — scarifiage en mars-avril, tonte hebdomadaire puis bihebdomadaire en pic, paillage organique épais des massifs — n\'est pas négociable sur cette plaine.',
+        whyPro: 'Sur le limon alluvial de la plaine, sauter une semaine de tonte au printemps suffit pour voir le gazon monter en épis et étouffer les graminées fines. Le rythme est hebdomadaire au printemps, bihebdomadaire en période de pic — sans ce suivi, le tapis herbeux perd sa densité. Le vent d\'ouest constant accélère par ailleurs l\'évapotranspiration estivale : les massifs exposés sèchent plus vite que ne le laisse supposer la richesse du sol, d\'où un paillage organique épais — broyat de branches ou paillettes de chanvre — pour maintenir l\'humidité en surface. Un professionnel cale ces interventions sur le rythme réel de la plaine.',
       },
       abattage: {
         content: `
@@ -1812,6 +1948,8 @@ export const cities: CityData[] = [
           'Retrait sécurisé de frênes atteints de chalarose avancée',
           'Évacuation et gestion adaptée des bois contaminés',
         ],
+        accroche: 'Peuplier d\'Italie planté il y a quarante ou cinquante ans le long d\'un chemin rural ou en limite de propriété, devenu cassant, bois qui se creuse et charpentières qui se fendent à chaque tempête, frêne dont la chalarose a atteint un stade avancé avec houppier desséché à plus de moitié et écorce nécrosée à la base, parcelle enclavée à La Bohalle ou à La Daguenière où ni la grue ni la nacelle ne peuvent s\'approcher — à Loire-Authion, les motifs d\'abattage mêlent alignements vieillissants et foyers de chalarose.\n\nLe sol alluvial meuble en surface impose par ailleurs un calage rigoureux du matériel lourd pour éviter l\'enlisement.',
+        whyPro: 'En bordure de l\'Authion ou dans les parcelles enclavées de La Bohalle et La Daguenière, ni la grue ni la nacelle ne peuvent s\'approcher du sujet à retirer. Le démontage par sections par un élagueur-grimpeur qui descend chaque tronçon au cordage reste la seule méthode praticable. Sur ces terrains, le sol alluvial meuble en surface impose en plus un calage rigoureux du matériel lourd pour éviter l\'enlisement.\n\nPour un frêne atteint de chalarose à un stade avancé, un professionnel évacue le bois contaminé au lieu de le broyer sur place — une précaution indispensable pour limiter la dissémination du champignon.',
       },
     },
   },
@@ -1854,6 +1992,8 @@ export const cities: CityData[] = [
           'Haies champêtres bocagères en prolongement du paysage local',
           'Terrasses et murets en grès roussard ou pierre locale',
         ],
+        accroche: 'Parcelle nue dans un lotissement de La Meignanne où tout reste à créer sur un sol compacté par les engins, jardin ancien au Plessis-Macé avec un parterre envahi et une haie de charmes clairsemée, ferme rénovée à La Membrolle dont les abords n\'ont pas suivi la restauration du bâti, envie de prolonger le bocage environnant plutôt que de poser un jardin générique — à Longuenée-en-Anjou, les points de départ vont du terrain vierge au patrimoine végétal à sauver.\n\nLe sol change vite entre les bourgs — grès filtrant en hauteur, argile lourde en bas — et chaque configuration appelle ses propres choix de plantation et de drainage.',
+        whyPro: 'Au Plessis-Macé, replanter une haie de charmes clairsemée sans vérifier l\'état du sol de grès roussard en sous-sol, c\'est risquer un enracinement superficiel et une reprise médiocre. À La Meignanne, poser une terrasse sur un sol argileux compacté sans décompactage préalable expose les dalles au soulèvement dès le premier cycle de retrait-gonflement estival. Le bocage dense qui relie les trois bourgs fournit un vocabulaire végétal — cornouillers, viornes, noisetiers, chênes — qu\'un aménagement cohérent prolonge en limite de propriété plutôt que d\'ignorer au profit d\'un alignement de thuyas. Un professionnel adapte les plantations, les matériaux et le drainage au profil exact de chaque parcelle.',
       },
       elagage: {
         content: `
@@ -1873,6 +2013,8 @@ export const cities: CityData[] = [
           'Taille de fructification des fruitiers (pommiers, poiriers, noyers)',
           'Taille de ragréage des chênes têtards en chemin creux',
         ],
+        accroche: 'Tilleul centenaire au Plessis-Macé dont les branches basses raclent la toiture du voisin, cèdre de l\'Atlas devenu si large qu\'il prive le jardin de lumière six mois par an, racines d\'un marronnier qui soulèvent les dalles de la terrasse à La Meignanne, vieux chêne têtard en bord de chemin creux qui n\'a pas été ragréé depuis des années et dont les rejets deviennent lourds — à Longuenée-en-Anjou, les arbres hérités posent autant de questions que les arbres plantés.\n\nLe sol change entre les bourgs — argileux et compact en contrebas, grès filtrant sur les hauteurs — et chaque situation d\'ancrage appelle un diagnostic avant la première coupe.',
+        whyPro: 'Sur le sol argileux compact de La Meignanne, les racines ne descendent pas — elles s\'étalent en surface. Un marronnier ou un tilleul de trente ans y développe un réseau traçant capable de soulever une terrasse, fissurer un muret ou déstabiliser une clôture sur plusieurs mètres. Tailler le houppier sans évaluer ce réseau racinaire revient à traiter un symptôme en ignorant la contrainte mécanique réelle.\n\nUn diagnostic racinaire détermine si l\'arbre peut être allégé d\'un côté pour rééquilibrer les efforts, s\'il nécessite un haubanage préventif, ou si les dégâts au sol imposent une solution plus radicale. Un professionnel pose ce diagnostic avant d\'intervenir.',
       },
       'entretien-jardin': {
         content: `
@@ -1892,6 +2034,8 @@ export const cities: CityData[] = [
           'Scarifiage anti-mousse dans les zones ombragées humides',
           'Paillage organique épais sur substrat de grès filtrant',
         ],
+        accroche: 'Pelouse qui s\'enfonce sous le pied tout l\'hiver avec des ornières laissées par la tondeuse, même terrain qui fissure et durcit en surface dès le mois de juin, gazon qui souffre de la sécheresse sur les hauteurs du Plessis-Macé là où il croulait sous l\'eau en bas de la commune, haie de charmes ou de lauriers à caler sur un calendrier précis pour rester dense — à Longuenée-en-Anjou, le même jardin peut cumuler les deux extrêmes selon la saison et selon la hauteur.\n\nLe substrat change aussi entre les bourgs — argilo-limoneux en contrebas, grès filtrant sur les hauteurs — et les réglages d\'entretien ne sont pas les mêmes d\'une parcelle à l\'autre.',
+        whyPro: 'Sur les hauteurs du Plessis-Macé, le substrat de grès plus filtrant fait souffrir le gazon de la sécheresse estivale davantage que de l\'excès d\'eau hivernal : un ray-grass classique y souffre chaque été. Les fétuques élevées et le trèfle nain, plus résistants au sec, constituent une alternative pertinente. En contrebas, sur le sol argilo-limoneux, l\'entretien suit au contraire un triptyque — scarifiage et aération mécanique au printemps, tonte haute en été pour protéger les racines, terreautage à l\'automne pour restaurer la structure. Un professionnel oriente le choix de mélange et le calendrier selon la hauteur exacte de la parcelle.',
       },
       abattage: {
         content: `
@@ -1911,6 +2055,8 @@ export const cities: CityData[] = [
           'Dessouchage à la rogneuse sur sol argileux compact',
           'Valorisation du bois de chêne et châtaignier en bûches',
         ],
+        accroche: 'Épicéa planté à La Meignanne dans les années 1980-1990 dont les racines superficielles soulèvent aujourd\'hui la terrasse, thuya devenu opaque et envahissant, sapin qui prive les pièces de lumière dans un jardin de 700 m² dimensionné pour la forêt et non pour ce calibre, tilleul dépérissant ou châtaignier creux fragilisé par les sécheresses successives au Plessis-Macé et à La Membrolle — à Longuenée-en-Anjou, les abattages se répartissent entre conifères surdimensionnés des lotissements et feuillus hérités des propriétés anciennes.\n\nLa mitoyenneté et la proximité des constructions interdisent presque toujours l\'abattage direct, et le sol argileux compact ajoute sa propre contrainte au dessouchage.',
+        whyPro: 'Dans les lotissements de La Meignanne, la mitoyenneté et la proximité des constructions interdisent l\'abattage direct : chaque tronçon descend au cordage depuis la cime pour épargner clôtures, toitures et plantations voisines. Sur les feuillus dépérissants du Plessis-Macé et de La Membrolle — tilleul en déclin, châtaignier creux, chêne fragilisé par les sécheresses successives —, un diagnostic visuel et mécanique détermine si l\'arbre relève encore de la taille sanitaire ou si l\'abattage s\'impose.\n\nLe dessouchage sur argile compacte demande un matériel dimensionné : elle freine la rogneuse et colle aux outils, et le mélange copeaux-argile doit être excavé et remplacé par de la terre végétale amendée avant replantation.',
       },
     },
   },

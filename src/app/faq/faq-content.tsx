@@ -25,7 +25,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'Quels services proposez-vous ?',
         answer:
-          'Art des Jardins propose l\'aménagement paysager (création de jardins, terrasses, clôtures), l\'entretien régulier (tonte, taille de haies, désherbage), l\'élagage d\'arbres et l\'abattage sécurisé avec dessouchage. Nous intervenons aussi bien chez les particuliers que pour les professionnels et syndics.',
+          'Art des Jardins propose l\'aménagement paysager (création de jardins, terrasses, clôtures), l\'entretien régulier (tonte, taille de haies, désherbage), l\'élagage d\'arbres et l\'abattage sécurisé avec dessouchage. Nous intervenons aussi bien chez les particuliers que pour les professionnels.',
       },
       {
         question: 'Dans quelle zone intervenez-vous ?',
@@ -35,7 +35,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'Comment obtenir un devis ?',
         answer:
-          `Appelez-nous au ${SITE.phone1.display} ou au ${SITE.phone2.display}, écrivez-nous sur WhatsApp, ou remplissez le formulaire sur notre page contact. Nous vous recontactons sous 48h et planifions une visite gratuite sur place pour évaluer votre projet. Le devis est gratuit sous 48h suite au rendez-vous, détaillé, transparent et sans engagement.`,
+          `Appelez-nous au ${SITE.phone1.display} ou au ${SITE.phone2.display}, écrivez-nous sur WhatsApp, ou remplissez le formulaire sur notre page contact. Nous vous recontactons sous 48h et planifions une visite gratuite sur place pour évaluer votre projet. Le devis est détaillé, transparent et sans engagement.`,
       },
       {
         question: 'Êtes-vous assurés ?',
@@ -55,7 +55,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'Quels sont vos délais d\'intervention ?',
         answer:
-          `Pour un devis, nous vous recontactons sous 48h suite au rendez-vous. Pour une intervention classique, comptez 2 semaines à 1 mois selon la saison. En cas d'urgence (arbre dangereux, dégâts de tempête), nous pouvons intervenir sous 24 à 48h. Appelez-nous directement au ${SITE.phone1.display}.`,
+          `Pour un devis, nous vous recontactons sous 48h. Pour une intervention classique, comptez 2 semaines à 1 mois selon la saison. En cas d'urgence (arbre dangereux, dégâts de tempête), appelez-nous directement au ${SITE.phone1.display}.`,
       },
     ],
   },
@@ -143,7 +143,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'Intervenez-vous en urgence après tempête ?',
         answer:
-          'Oui, nous disposons d\'une ligne d\'urgence pour les arbres tombés ou dangereux. Nous intervenons rapidement pour sécuriser les lieux.',
+          'Oui, en cas d\'arbre tombé ou dangereux, appelez-nous directement. Nous faisons notre maximum pour intervenir rapidement et sécuriser les lieux.',
       },
     ],
   },
@@ -269,7 +269,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'Les travaux de jardinage sont-ils éligibles au crédit d\'impôt ?',
         answer:
-          'Oui, les travaux d\'entretien de jardin réalisés par un professionnel ouvrent droit à un crédit d\'impôt de 50 % (dans la limite de 5 000 € par an pour une personne seule, 10 000 € pour un couple). Cela inclut la tonte, la taille de haies, le débroussaillage et le désherbage. Les travaux de création (aménagement, terrasse) ne sont pas éligibles.',
+          'Oui, les travaux d\'entretien de jardin réalisés par un professionnel ouvrent droit à un crédit d\'impôt de 50 % (dans la limite de 5 000 € de dépenses par foyer fiscal et par an, soit 2 500 € de crédit d\'impôt maximum). Cela inclut la tonte, la taille de haies, le débroussaillage et le désherbage. Les travaux de création (aménagement, terrasse) ne sont pas éligibles.',
       },
     ],
   },
