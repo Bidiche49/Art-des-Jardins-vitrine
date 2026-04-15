@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { ContactForm } from '@/components/ContactForm';
 import { HeroSection } from '@/components/ui/HeroSection';
-import { IconPhone, IconEmail, IconZone30km, IconHoraires, IconCheck } from '@/lib/icons';
+import { IconPhone, IconEmail, IconZone30km, IconHoraires, IconCheck, IconPin } from '@/lib/icons';
 import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
@@ -35,6 +35,13 @@ const contactInfo = [
     content: SITE.email,
     link: `mailto:${SITE.email}`,
     description: 'Réponse sous 48h',
+  },
+  {
+    icon: <IconPin className="w-6 h-6" />,
+    title: 'Adresse',
+    content: SITE.address.street,
+    secondaryContent: `${SITE.address.postalCode} ${SITE.address.city}`,
+    description: SITE.address.region,
   },
   {
     icon: <IconZone30km className="w-6 h-6" />,
@@ -98,7 +105,7 @@ export default function ContactPage() {
             <div className="lg:col-span-1">
               <div className="lg:sticky lg:top-24 space-y-6">
                 {/* Contact Cards */}
-                <div className="space-y-4">
+                <address className="space-y-4 not-italic">
                   {contactInfo.map((info, i) => (
                     <div key={i} className="bg-gray-50 rounded-xl p-5">
                       <div className="flex items-start gap-4">
@@ -128,14 +135,19 @@ export default function ContactPage() {
                               )}
                             </div>
                           ) : (
-                            <p className="text-gray-900 font-medium">{info.content}</p>
+                            <>
+                              <p className="text-gray-900 font-medium">{info.content}</p>
+                              {info.secondaryContent && (
+                                <p className="text-gray-900 font-medium">{info.secondaryContent}</p>
+                              )}
+                            </>
                           )}
                           <p className="text-sm text-gray-500 mt-1">{info.description}</p>
                         </div>
                       </div>
                     </div>
                   ))}
-                </div>
+                </address>
 
                 {/* Urgence Card */}
                 <div className="bg-red-50 rounded-xl p-6 border border-red-100">

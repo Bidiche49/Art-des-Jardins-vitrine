@@ -2,9 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { IconPin, IconPhone, IconEmail, IconInstagram } from '@/lib/icons';
 import { SITE } from '@/lib/site-config';
+import { cities } from '@/lib/cities-data';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const zoneCities = cities.filter((c) => c.slug !== 'angers');
 
   return (
     <footer className="bg-gray-900 text-gray-300 pb-[72px] md:pb-0">
@@ -128,6 +130,25 @@ export function Footer() {
               </ul>
             </div>
           </div>
+        </div>
+
+        {/* Zones d'intervention — maillage SEO local */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <h3 className="text-white font-semibold mb-4">Zones d&apos;intervention</h3>
+          <nav aria-label="Communes d'intervention">
+            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-2 text-sm">
+              {zoneCities.map((city) => (
+                <li key={city.slug}>
+                  <Link
+                    href={`/paysagiste-${city.slug}/`}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Paysagiste {city.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 space-y-1">
