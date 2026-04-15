@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { getCumulatedExperience } from '@/lib/site-config';
+import { getImage, getSrcSet, getDefaultSrc } from '@/lib/images-manifest';
 
 interface Stat {
   value: number;
@@ -62,6 +63,7 @@ function StatItem({ stat, isVisible }: { stat: Stat; isVisible: boolean }) {
 export function StatsCounter() {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const bgImage = getImage('entretien-2');
 
   useEffect(() => {
     const el = ref.current;
@@ -85,7 +87,21 @@ export function StatsCounter() {
     <section ref={ref} className="relative py-16 lg:py-20 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-primary-800" />
-      <img src="/images/realisations/entretien-2-1200w.webp" alt="" loading="lazy" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-20" />
+      {bgImage && (
+        <picture>
+          <source type="image/webp" srcSet={getSrcSet(bgImage)} sizes="100vw" />
+          <img
+            src={getDefaultSrc(bgImage, 1200)}
+            alt=""
+            width={bgImage.sizes[1200].width}
+            height={bgImage.sizes[1200].height}
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover opacity-20"
+          />
+        </picture>
+      )}
       <div className="absolute inset-0 bg-primary-900/60" />
 
       {/* Content */}

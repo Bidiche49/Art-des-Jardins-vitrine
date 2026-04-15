@@ -16,10 +16,10 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Image
-                src="/images/logo-leaf.png"
+                src="/images/logo-leaf.webp"
                 alt=""
-                width={40}
-                height={26}
+                width={90}
+                height={50}
                 className="h-7 w-auto brightness-110"
               />
               <span className="text-xl font-bold text-white font-serif">Art des Jardins</span>

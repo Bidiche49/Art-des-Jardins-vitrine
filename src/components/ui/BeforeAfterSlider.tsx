@@ -2,24 +2,26 @@
 
 import { useState, useRef, useCallback } from 'react';
 import { IconSliderArrows } from '@/lib/icons';
+import { getImage, getSrcSet, getDefaultSrc } from '@/lib/images-manifest';
 
 interface BeforeAfterSliderProps {
-  before: string;
-  after: string;
-  beforeAlt: string;
-  afterAlt: string;
+  beforeSlug: string;
+  afterSlug: string;
   title?: string;
   location?: string;
 }
 
+const SIZES = '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px';
+
 export function BeforeAfterSlider({
-  before,
-  after,
-  beforeAlt,
-  afterAlt,
+  beforeSlug,
+  afterSlug,
   title,
   location,
 }: BeforeAfterSliderProps) {
+  const beforeImg = getImage(beforeSlug);
+  const afterImg = getImage(afterSlug);
+
   const [position, setPosition] = useState(50);
   const isDragging = useRef(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -65,6 +67,11 @@ export function BeforeAfterSlider({
     }
   }, []);
 
+  if (!beforeImg || !afterImg) return null;
+
+  const beforeSize = beforeImg.sizes[800];
+  const afterSize = afterImg.sizes[800];
+
   return (
     <div className="group">
       <div
@@ -84,26 +91,38 @@ export function BeforeAfterSlider({
         style={{ cursor: 'col-resize' }}
       >
         {/* After (full width behind) */}
-        <img
-          src={after}
-          alt={afterAlt}
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-          loading="lazy"
-          draggable={false}
-        />
+        <picture>
+          <source type="image/webp" srcSet={getSrcSet(afterImg)} sizes={SIZES} />
+          <img
+            src={getDefaultSrc(afterImg, 800)}
+            alt={afterImg.alt}
+            width={afterSize.width}
+            height={afterSize.height}
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            loading="lazy"
+            decoding="async"
+            draggable={false}
+          />
+        </picture>
 
         {/* Before (clipped) */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
         >
-          <img
-            src={before}
-            alt={beforeAlt}
-            className="absolute inset-0 w-full h-full object-cover"
-            loading="lazy"
-            draggable={false}
-          />
+          <picture>
+            <source type="image/webp" srcSet={getSrcSet(beforeImg)} sizes={SIZES} />
+            <img
+              src={getDefaultSrc(beforeImg, 800)}
+              alt={beforeImg.alt}
+              width={beforeSize.width}
+              height={beforeSize.height}
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              draggable={false}
+            />
+          </picture>
         </div>
 
         {/* Slider line + handle */}

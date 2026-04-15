@@ -100,10 +100,10 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/images/logo-leaf.png"
+              src="/images/logo-leaf.webp"
               alt=""
-              width={40}
-              height={26}
+              width={90}
+              height={50}
               className="h-7 w-auto"
               priority
             />

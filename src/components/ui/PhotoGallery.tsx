@@ -123,6 +123,8 @@ export function PhotoGallery({ maxItems, showFilters = true, initialCategory, ex
                 <img
                   src={getDefaultSrc(image, 480)}
                   alt={image.alt}
+                  width={image.sizes[480].width}
+                  height={image.sizes[480].height}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-auto transition-transform duration-500 group-hover:scale-105"

@@ -1,5 +1,4 @@
-import { type ImageEntry, getImage, getSrcSet, getDefaultSrc } from '@/lib/images-manifest';
-import { HeroClient } from './HeroClient';
+import { getImage, getSrcSet, getDefaultSrc } from '@/lib/images-manifest';
 import { ScrollIndicator } from './ScrollIndicator';
 import { SITE } from '@/lib/site-config';
 
@@ -50,13 +49,20 @@ export function HeroSection({
     <section className={`hero-section relative text-white min-h-[400px] lg:min-h-[580px] flex items-center ${fullHeight ? 'lg:!min-h-0 lg:flex-1' : ''}`}>
       {/* Preload hero image for better LCP */}
       <link rel="preload" as="image" type="image/webp" imageSrcSet={srcSet} imageSizes="100vw" />
-      <HeroClient
-        srcSet={srcSet}
-        defaultSrc={defaultSrc}
-        blurDataURI={image.blurDataURI}
-        alt={image.alt}
-        overlayClass={overlayClass}
-      />
+      <div className="absolute inset-0 bg-gray-900">
+        <picture>
+          <source type="image/webp" srcSet={srcSet} sizes="100vw" />
+          <img
+            src={defaultSrc}
+            alt={image.alt}
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </picture>
+      </div>
+      <div className={`absolute inset-0 ${overlayClass}`} />
       <div className="container-custom relative z-10 py-16 lg:py-24">
         {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
         <div className="w-16 h-1 bg-secondary-500 rounded-full mb-6" />
