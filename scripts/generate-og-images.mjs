@@ -16,9 +16,9 @@ const SECONDARY = '#b89a58';
 const VARIANTS = [
   { out: 'og-image.jpg',     sourceSlug: 'entretien-2', title: 'Art des Jardins',     subtitle: 'Paysagiste à Angers · Maine-et-Loire' },
   { out: 'og-paysagisme.jpg', sourceSlug: 'creation-9',  title: 'Création de jardins', subtitle: 'Art des Jardins · Paysagiste Angers' },
-  { out: 'og-elagage.jpg',    sourceSlug: 'elagage-1',   title: "Élagage d'arbres",     subtitle: 'Art des Jardins · Paysagiste Angers' },
+  { out: 'og-elagage.jpg',    sourceSlug: 'elagage-2',   title: "Élagage d'arbres",     subtitle: 'Art des Jardins · Paysagiste Angers' },
   { out: 'og-entretien.jpg',  sourceSlug: 'entretien-3', title: 'Entretien de jardins', subtitle: 'Art des Jardins · Paysagiste Angers' },
-  { out: 'og-abattage.jpg',   sourceSlug: 'elagage-3',   title: "Abattage d'arbres",    subtitle: 'Art des Jardins · Paysagiste Angers' },
+  { out: 'og-abattage.jpg',   sourceSlug: 'elagage-1',   title: "Abattage d'arbres",    subtitle: 'Art des Jardins · Paysagiste Angers' },
 ];
 
 async function loadFontBase64(filename) {
@@ -77,8 +77,19 @@ function buildSvg({ title, subtitle, cormorantB64, interB64 }) {
 </svg>`;
 }
 
+async function findSource(slug) {
+  for (const w of [1920, 1200, 800]) {
+    const p = path.join(REALISATIONS_DIR, `${slug}-${w}w.webp`);
+    try {
+      await readFile(p);
+      return p;
+    } catch {}
+  }
+  throw new Error(`No source variant found for slug '${slug}' in ${REALISATIONS_DIR}`);
+}
+
 async function generateOne(variant, fonts) {
-  const sourcePath = path.join(REALISATIONS_DIR, `${variant.sourceSlug}-1920w.webp`);
+  const sourcePath = await findSource(variant.sourceSlug);
   const outPath = path.join(OG_DIR, variant.out);
 
   const svg = buildSvg({ ...variant, ...fonts });
