@@ -6,7 +6,7 @@
     "dev": "next dev -p 3001",
     "images:optimize": "node scripts/optimize-images.mjs",
     "og:generate": "node scripts/generate-og-images.mjs",
-    "prebuild": "pnpm images:optimize",
+    "prebuild": "pnpm images:optimize && pnpm og:generate",
     "build": "next build",
     "start": "next start -p 3001",
     "lint": "next lint",

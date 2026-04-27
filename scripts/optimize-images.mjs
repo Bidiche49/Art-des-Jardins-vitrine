@@ -1,5 +1,5 @@
 import sharp from 'sharp';
-import { readdir, mkdir, writeFile, readFile } from 'fs/promises';
+import { readdir, mkdir, writeFile } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -8,7 +8,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const IMAGES_SRC = path.join(ROOT, 'Images');
 const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'images', 'realisations');
-const OG_DIR = path.join(__dirname, '..', 'public', 'images');
 const MANIFEST_PATH = path.join(__dirname, '..', 'src', 'lib', 'images-manifest.ts');
 
 const WIDTHS = [480, 800, 1200, 1920];
@@ -52,15 +51,6 @@ const IMAGE_CATALOG = [
   { file: 'Creation_10_avant.jpeg', slug: 'creation-10-avant', category: 'creation', alt: 'Jardin en friche avec vegetation desordonnee avant amenagement paysager', tags: ['creation', 'avant', 'friche'] },
   { file: 'Creation_10.jpeg', slug: 'creation-10', category: 'creation', alt: 'Jardin amenage avec allee en paves et massifs vegetaux apres creation paysagere', tags: ['creation', 'allee', 'paves', 'massifs'] },
   { file: 'Terasse_1_avant.jpeg', slug: 'terrasse-1-avant', category: 'terrasse', alt: 'Spa pose sur herbe sans amenagement avant construction terrasse bois', tags: ['terrasse', 'avant', 'spa'] },
-];
-
-// OG image mappings
-const OG_IMAGES = [
-  { source: 'Entretien_2.JPG', output: 'og-image.jpg', alt: 'Art des Jardins - Paysagiste Angers', subtitle: 'Paysagiste à Angers' },
-  { source: 'Creation_9.jpg', output: 'og-paysagisme.jpg', alt: 'Paysagisme Angers - Art des Jardins', subtitle: 'Création paysagère' },
-  { source: 'Elagage_3.jpeg', output: 'og-elagage.jpg', alt: 'Elagage Angers - Art des Jardins', subtitle: 'Élagage professionnel' },
-  { source: 'Entretien_3.jpg', output: 'og-entretien.jpg', alt: 'Entretien Jardin Angers - Art des Jardins', subtitle: 'Entretien de jardins' },
-  { source: 'Elagage_1.JPG', output: 'og-abattage.jpg', alt: 'Abattage Arbres Angers - Art des Jardins', subtitle: 'Abattage & démontage' },
 ];
 
 async function ensureDir(dir) {
@@ -135,115 +125,6 @@ async function processImage(entry) {
     blurDataURI,
     sizes,
   };
-}
-
-async function loadLogo() {
-  const logoPath = path.join(OG_DIR, 'logo-leaf.png');
-  if (!existsSync(logoPath)) {
-    return null;
-  }
-  const logoBuffer = await sharp(logoPath)
-    .resize(90, null, { withoutEnlargement: true })
-    .toBuffer();
-  const logoMeta = await sharp(logoBuffer).metadata();
-  return { buffer: logoBuffer, width: logoMeta.width, height: logoMeta.height };
-}
-
-function buildBrandingOverlay(subtitle, logoHeight) {
-  const titleY = 555;
-  const subtitleY = 590;
-  const xmlSubtitle = subtitle.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-  return `<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="55%" stop-color="black" stop-opacity="0" />
-          <stop offset="100%" stop-color="black" stop-opacity="0.65" />
-        </linearGradient>
-      </defs>
-      <rect width="1200" height="630" fill="url(#grad)" />
-      <text x="600" y="${titleY}" text-anchor="middle" fill="white"
-            font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold">
-        Art des Jardins
-      </text>
-      <text x="600" y="${subtitleY}" text-anchor="middle" fill="white" fill-opacity="0.85"
-            font-family="Arial, Helvetica, sans-serif" font-size="27">
-        ${xmlSubtitle}
-      </text>
-    </svg>`;
-}
-
-function getBrandingComposites(logo, subtitle) {
-  const titleY = 555;
-  const logoX = Math.round((1200 - logo.width) / 2);
-  const logoY = titleY - logo.height - 18;
-  const svgOverlay = buildBrandingOverlay(subtitle, logo.height);
-
-  return [
-    { input: Buffer.from(svgOverlay), top: 0, left: 0 },
-    { input: logo.buffer, top: logoY, left: logoX },
-  ];
-}
-
-async function generateOGImages() {
-  console.log('\nGenerating OG images...');
-  await ensureDir(OG_DIR);
-
-  const logo = await loadLogo();
-  if (!logo) {
-    console.warn('  SKIP OG branding: logo-leaf.png not found');
-    return 0;
-  }
-
-  let count = 0;
-  for (const og of OG_IMAGES) {
-    const inputPath = path.join(IMAGES_SRC, og.source);
-    if (!existsSync(inputPath)) {
-      console.warn(`  SKIP OG: ${og.source} not found`);
-      continue;
-    }
-
-    const outputPath = path.join(OG_DIR, og.output);
-    await sharp(inputPath)
-      .rotate()
-      .resize(1200, 630, { fit: 'cover', position: 'center' })
-      .composite(getBrandingComposites(logo, og.subtitle))
-      .jpeg({ quality: 85 })
-      .withMetadata({ exif: undefined })
-      .toFile(outputPath);
-
-    console.log(`  OG: ${og.output}`);
-    count++;
-  }
-  return count;
-}
-
-async function brandExistingOGImages() {
-  console.log('\nBranding existing OG images...');
-
-  const logo = await loadLogo();
-  if (!logo) {
-    console.warn('  SKIP branding: logo-leaf.png not found');
-    return;
-  }
-
-  for (const og of OG_IMAGES) {
-    const ogPath = path.join(OG_DIR, og.output);
-    if (!existsSync(ogPath)) {
-      console.warn(`  SKIP branding: ${og.output} not found`);
-      continue;
-    }
-
-    // Read entire file into buffer first (cannot read and write same file with sharp)
-    const inputBuffer = await readFile(ogPath);
-
-    await sharp(inputBuffer)
-      .composite(getBrandingComposites(logo, og.subtitle))
-      .jpeg({ quality: 85 })
-      .toFile(ogPath);
-
-    console.log(`  Branded: ${og.output}`);
-  }
 }
 
 function generateManifest(results) {
@@ -366,26 +247,16 @@ export const ogImages = {
 async function main() {
   console.log('=== Art des Jardins Image Optimization ===\n');
 
-  // Ensure output directories
   await ensureDir(OUTPUT_DIR);
-  await ensureDir(OG_DIR);
 
-  // Check source images
   const sourceFiles = await readdir(IMAGES_SRC).catch(() => []);
   console.log(`Found ${sourceFiles.filter((f) => !f.startsWith('.')).length} source images\n`);
 
-  // Process all images
   console.log('Processing responsive images...');
   const results = [];
   for (const entry of IMAGE_CATALOG) {
     const result = await processImage(entry);
     results.push(result);
-  }
-
-  // Generate OG images (from sources if available, otherwise brand existing files)
-  const ogCount = await generateOGImages();
-  if (ogCount === 0) {
-    await brandExistingOGImages();
   }
 
   // Generate manifest (only if images were processed, to avoid overwriting existing manifest)
@@ -406,12 +277,10 @@ async function main() {
     console.log('\nNo images processed, keeping existing manifest.');
   }
 
-  // Summary
   const totalFiles = processed.reduce((acc, r) => acc + Object.keys(r.sizes).length, 0);
   console.log(`\n=== Done! ===`);
   console.log(`  ${processed.length} images processed`);
   console.log(`  ${totalFiles} responsive variants generated`);
-  console.log(`  ${ogCount} OG images generated`);
 }
 
 const isDirectRun = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1];
