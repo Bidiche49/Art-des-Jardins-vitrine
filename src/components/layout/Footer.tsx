@@ -154,6 +154,17 @@ export function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 space-y-1">
           <p>&copy; {currentYear} SARL Art des Jardins. Tous droits réservés.</p>
           <p className="text-xs text-gray-600">{SITE.legalName} - SIRET {SITE.siret} - TVA {SITE.tva} - RCS Angers</p>
+          <p className="text-xs text-gray-700 pt-2">
+            Conception &amp; développement{' '}
+            <a
+              href="https://nicolazic.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-400 transition-colors"
+            >
+              NZTD
+            </a>
+          </p>
         </div>
       </div>
     </footer>

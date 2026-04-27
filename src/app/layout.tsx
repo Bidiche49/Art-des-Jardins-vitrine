@@ -66,9 +66,9 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: siteUrl,
     siteName: 'Art des Jardins',
-    title: 'Art des Jardins - Paysagiste Angers',
+    title: 'Paysagiste Angers - Art des Jardins | Devis Gratuit',
     description:
-      'Paysagiste professionnel à Angers. Aménagement, entretien, élagage, abattage. Devis gratuit.',
+      'Paysagiste professionnel à Angers. Création de jardins, entretien, élagage et abattage. Approche sur mesure, qualité artisanale. Devis gratuit.',
     images: [
       {
         url: '/images/og-image.jpg',
@@ -80,8 +80,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Art des Jardins - Paysagiste Angers',
-    description: 'Paysagiste professionnel à Angers. Devis gratuit.',
+    title: 'Paysagiste Angers - Art des Jardins | Devis Gratuit',
+    description:
+      'Paysagiste professionnel à Angers. Création de jardins, entretien, élagage et abattage. Approche sur mesure, qualité artisanale. Devis gratuit.',
     images: ['/images/og-image.jpg'],
   },
   robots: {
