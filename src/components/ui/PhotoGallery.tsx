@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useCallback, useEffect, useRef } from 'react';
-import { type ImageEntry, images, categories, getSrcSet, getDefaultSrc } from '@/lib/images-manifest';
-import { IconClose, IconChevronLeft, IconChevronRight } from '@/lib/icons';
+import { useState, useCallback, useMemo } from 'react';
+import { images, categories } from '@/lib/images-manifest';
+import { GalleryCarousel } from './GalleryCarousel';
+import { Lightbox } from './Lightbox';
 
 interface PhotoGalleryProps {
   maxItems?: number;
@@ -20,21 +21,33 @@ const categoryLabels: Record<string, string> = {
   arrosage: 'Arrosage',
 };
 
-export function PhotoGallery({ maxItems, showFilters = true, initialCategory, excludeSlugs }: PhotoGalleryProps) {
-  const [activeCategory, setActiveCategory] = useState<string | null>(initialCategory || null);
+export function PhotoGallery({
+  maxItems,
+  showFilters = true,
+  initialCategory,
+  excludeSlugs,
+}: PhotoGalleryProps) {
+  const [activeCategory, setActiveCategory] = useState<string | null>(
+    initialCategory || null
+  );
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const dialogRef = useRef<HTMLDialogElement>(null);
-  const closeBtnRef = useRef<HTMLButtonElement>(null);
 
-  const hiddenSlugs = ['creation-6'];
-  const allImages = Object.values(images).filter((img) => img.category !== 'blog' && !img.slug.includes('avant') && !hiddenSlugs.includes(img.slug));
-  const excluded = excludeSlugs
-    ? allImages.filter((img) => !excludeSlugs.includes(img.slug))
-    : allImages;
-  const filtered = activeCategory
-    ? excluded.filter((img) => img.category === activeCategory)
-    : excluded;
-  const displayed = maxItems ? filtered.slice(0, maxItems) : filtered;
+  const displayed = useMemo(() => {
+    const hiddenSlugs = ['creation-6'];
+    const allImages = Object.values(images).filter(
+      (img) =>
+        img.category !== 'blog' &&
+        !img.slug.includes('avant') &&
+        !hiddenSlugs.includes(img.slug)
+    );
+    const excluded = excludeSlugs
+      ? allImages.filter((img) => !excludeSlugs.includes(img.slug))
+      : allImages;
+    const filtered = activeCategory
+      ? excluded.filter((img) => img.category === activeCategory)
+      : excluded;
+    return maxItems ? filtered.slice(0, maxItems) : filtered;
+  }, [activeCategory, excludeSlugs, maxItems]);
 
   const openLightbox = useCallback((index: number) => {
     setLightboxIndex(index);
@@ -46,152 +59,79 @@ export function PhotoGallery({ maxItems, showFilters = true, initialCategory, ex
 
   const navigate = useCallback(
     (direction: 1 | -1) => {
-      if (lightboxIndex === null) return;
-      const newIndex = (lightboxIndex + direction + displayed.length) % displayed.length;
-      setLightboxIndex(newIndex);
+      setLightboxIndex((prev) => {
+        if (prev === null || displayed.length === 0) return prev;
+        return (prev + direction + displayed.length) % displayed.length;
+      });
     },
-    [lightboxIndex, displayed.length]
+    [displayed.length]
   );
-
-  useEffect(() => {
-    if (lightboxIndex !== null) {
-      dialogRef.current?.showModal();
-      closeBtnRef.current?.focus();
-    } else {
-      dialogRef.current?.close();
-    }
-  }, [lightboxIndex]);
-
-  useEffect(() => {
-    const handleKeydown = (e: KeyboardEvent) => {
-      if (lightboxIndex === null) return;
-      if (e.key === 'ArrowLeft') navigate(-1);
-      if (e.key === 'ArrowRight') navigate(1);
-    };
-    window.addEventListener('keydown', handleKeydown);
-    return () => window.removeEventListener('keydown', handleKeydown);
-  }, [lightboxIndex, navigate]);
 
   return (
     <div>
-      {/* Filters */}
+      {/* Filtres — trait doré sous le label actif (ton éditorial) */}
       {showFilters && (
-        <div className="flex flex-wrap gap-2 mb-8 justify-center">
-          <button
+        <div
+          className="flex flex-nowrap md:flex-wrap gap-x-6 md:gap-x-8 gap-y-2 mb-10 md:justify-center overflow-x-auto pb-2 -mx-4 px-4 md:mx-0 md:px-0"
+          role="tablist"
+          aria-label="Filtrer par categorie"
+          style={{ scrollbarWidth: 'none' }}
+        >
+          <FilterButton
+            label="Tout"
+            active={activeCategory === null}
             onClick={() => setActiveCategory(null)}
-            aria-pressed={activeCategory === null}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              activeCategory === null
-                ? 'bg-primary-600 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
-          >
-            Tout
-          </button>
+          />
           {categories.map((cat) => (
-            <button
+            <FilterButton
               key={cat}
+              label={categoryLabels[cat] || cat}
+              active={activeCategory === cat}
               onClick={() => setActiveCategory(cat)}
-              aria-pressed={activeCategory === cat}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                activeCategory === cat
-                  ? 'bg-primary-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {categoryLabels[cat] || cat}
-            </button>
+            />
           ))}
         </div>
       )}
 
-      {/* Gallery Grid */}
-      <div className={`gallery-masonry${displayed.length <= 3 ? ' gallery-max-2' : displayed.length <= 6 ? ' gallery-max-3' : ''}`}>
-        {displayed.map((image, index) => (
-          <button
-            key={image.slug}
-            onClick={() => openLightbox(index)}
-            className="gallery-item group cursor-pointer overflow-hidden rounded-lg mb-4 break-inside-avoid"
-          >
-            <div className="relative overflow-hidden rounded-lg">
-              <picture>
-                <source
-                  type="image/webp"
-                  srcSet={getSrcSet(image)}
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                />
-                <img
-                  src={getDefaultSrc(image, 480)}
-                  alt={image.alt}
-                  width={image.sizes[480].width}
-                  height={image.sizes[480].height}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                  style={{
-                    backgroundImage: `url(${image.blurDataURI})`,
-                    backgroundSize: 'cover',
-                  }}
-                />
-              </picture>
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-            </div>
-          </button>
-        ))}
-      </div>
+      <GalleryCarousel
+        key={activeCategory || 'all'}
+        images={displayed}
+        onOpen={openLightbox}
+      />
 
-      {/* Lightbox */}
-      <dialog
-        ref={dialogRef}
-        className="lightbox-dialog"
-        aria-label="Visionneuse photo"
+      <Lightbox
+        images={displayed}
+        index={lightboxIndex}
         onClose={closeLightbox}
-        onClick={(e) => {
-          if (e.target === dialogRef.current) closeLightbox();
-        }}
-      >
-        {lightboxIndex !== null && displayed[lightboxIndex] && (
-          <div className="lightbox-content">
-            <button
-              ref={closeBtnRef}
-              onClick={closeLightbox}
-              className="absolute top-4 right-4 z-10 text-white/80 hover:text-white bg-black/50 rounded-full p-2"
-              aria-label="Fermer"
-            >
-              <IconClose className="w-6 h-6" />
-            </button>
-            <button
-              onClick={() => navigate(-1)}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white bg-black/50 rounded-full p-2"
-              aria-label="Photo precedente"
-            >
-              <IconChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={() => navigate(1)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white bg-black/50 rounded-full p-2"
-              aria-label="Photo suivante"
-            >
-              <IconChevronRight className="w-6 h-6" />
-            </button>
-            <picture>
-              <source
-                type="image/webp"
-                srcSet={getSrcSet(displayed[lightboxIndex])}
-                sizes="90vw"
-              />
-              <img
-                src={getDefaultSrc(displayed[lightboxIndex], 1200)}
-                alt={displayed[lightboxIndex].alt}
-                className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg"
-              />
-            </picture>
-            <p className="text-white/50 text-center mt-4 text-sm">
-              {lightboxIndex + 1} / {displayed.length}
-            </p>
-          </div>
-        )}
-      </dialog>
+        onNavigate={navigate}
+      />
     </div>
+  );
+}
+
+interface FilterButtonProps {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+}
+
+function FilterButton({ label, active, onClick }: FilterButtonProps) {
+  return (
+    <button
+      onClick={onClick}
+      role="tab"
+      aria-pressed={active}
+      aria-selected={active}
+      className={`relative shrink-0 px-1 py-2 text-sm font-medium tracking-wide transition-colors duration-200 whitespace-nowrap ${
+        active ? 'text-primary-700' : 'text-gray-500 hover:text-gray-800'
+      }`}
+    >
+      {label}
+      <span
+        className={`absolute left-0 right-0 -bottom-0.5 mx-auto h-[2px] bg-secondary-500 transition-all duration-300 ${
+          active ? 'w-full opacity-100' : 'w-0 opacity-0'
+        }`}
+      />
+    </button>
   );
 }

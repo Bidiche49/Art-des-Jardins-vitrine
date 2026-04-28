@@ -23,6 +23,7 @@ export function BeforeAfterSlider({
   const afterImg = getImage(afterSlug);
 
   const [position, setPosition] = useState(50);
+  const [hasInteracted, setHasInteracted] = useState(false);
   const isDragging = useRef(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -38,6 +39,7 @@ export function BeforeAfterSlider({
     (e: React.PointerEvent) => {
       e.preventDefault();
       isDragging.current = true;
+      setHasInteracted(true);
       (e.target as HTMLElement).setPointerCapture(e.pointerId);
       updatePosition(e.clientX);
     },
@@ -60,9 +62,11 @@ export function BeforeAfterSlider({
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
     if (e.key === 'ArrowLeft') {
       e.preventDefault();
+      setHasInteracted(true);
       setPosition((p) => Math.max(0, p - 2));
     } else if (e.key === 'ArrowRight') {
       e.preventDefault();
+      setHasInteracted(true);
       setPosition((p) => Math.min(100, p + 2));
     }
   }, []);
@@ -130,7 +134,7 @@ export function BeforeAfterSlider({
           className="absolute top-0 bottom-0 w-0.5 bg-white/90 shadow-lg z-10 pointer-events-none"
           style={{ left: `${position}%` }}
         >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 bg-white rounded-full shadow-xl flex items-center justify-center ring-2 ring-secondary-400/50">
+          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 bg-white rounded-full shadow-xl flex items-center justify-center ring-2 ring-secondary-400/50 ${hasInteracted ? '' : 'ba-handle-hint'}`}>
             <IconSliderArrows className="w-5 h-5 text-secondary-600" />
           </div>
         </div>
