@@ -183,17 +183,19 @@ export function ContactForm() {
 
     // 2. Fallback Web3Forms (plan gratuit : pas de pieces jointes)
     const hadPhotos = photos.length > 0;
+    // Le mail est lu par un humain : envoyer le libelle, pas le slug ('taille-haies').
+    const serviceLabel = services.find((s) => s.value === formData.service)?.label;
     try {
       const body = new globalThis.FormData();
       body.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '');
-      body.append('subject', `Nouveau contact Art des Jardins - ${formData.service || 'Demande generale'}`);
+      body.append('subject', `Nouveau contact Art des Jardins - ${serviceLabel || 'Demande generale'}`);
       body.append('from_name', formData.name);
       body.append('replyto', formData.email);
       body.append('Nom', formData.name);
       body.append('Email', formData.email);
       body.append('Telephone', phone || 'Non renseigne');
       body.append('Ville', formData.city || 'Non renseigne');
-      body.append('Service', formData.service || 'Non precise');
+      body.append('Service', serviceLabel || 'Non precise');
       body.append('Message', formData.message);
       if (hadPhotos) {
         body.append('Photos', `${photos.length} photo(s) jointe(s) - merci de les demander au client`);
