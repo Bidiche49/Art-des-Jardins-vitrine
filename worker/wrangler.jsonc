@@ -1,0 +1,21 @@
+{
+  "name": "art-des-jardins-contact",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-28",
+  // Necessaire pour lire le CPU time reel via `wrangler tail` : c'est la mesure
+  // qui decide si le plan Workers Free suffit avec des photos compressees.
+  "observability": { "enabled": true },
+  // Pas de binding "ratelimits" : verifie no-op sur le plan Workers Free.
+  // L'anti-abus passera par Turnstile, cote formulaire.
+  "vars": {
+    // Destinataire de production : la boite que le paysagiste consulte.
+    "CONTACT_TO": "artdesjardins49@gmail.com",
+    // Le domaine racine est verifie chez Resend (DKIM resend._domainkey), donc on
+    // envoie depuis lui directement : pas besoin du sous-domaine send., qui ne sert
+    // qu'au Return-Path de SES.
+    "CONTACT_FROM": "Art des Jardins <contact@artdesjardins-paysagiste.fr>",
+    "ALLOWED_ORIGINS": "https://artdesjardins-paysagiste.fr,http://localhost:3001"
+  }
+  // RESEND_API_KEY est un secret : `wrangler secret put RESEND_API_KEY`.
+  // Jamais dans ce fichier, il est versionne.
+}

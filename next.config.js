@@ -3,16 +3,17 @@ require('dotenv').config();
 
 const isDocker = process.env.DOCKER_BUILD === 'true';
 
-// Le formulaire de contact a besoin d'au moins un canal d'envoi. Les variables
-// NEXT_PUBLIC_* sont inlinees au build : absentes ici, le formulaire est deploye
-// mort, sans aucun signal ni cote build ni cote runtime. On echoue donc le build
-// sur Cloudflare Pages plutot que de mettre en ligne un formulaire casse.
-const hasContactChannel = Boolean(
-  process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_WEB3FORMS_KEY
-);
-if (!hasContactChannel) {
+// Les variables NEXT_PUBLIC_* sont inlinees au build : absentes ici, le formulaire
+// est deploye mort, sans aucun signal ni cote build ni cote runtime. On echoue donc
+// le build sur Cloudflare Pages plutot que de mettre en ligne un formulaire casse.
+//
+// NEXT_PUBLIC_WEB3FORMS_KEY est exigee sans condition : c'est le fallback du
+// formulaire, et il doit rester actif en permanence. Le Worker (NEXT_PUBLIC_API_URL)
+// est le chemin prioritaire, pas un remplacement — le supprimer degrade, supprimer
+// le fallback laisse le site sans filet.
+if (!process.env.NEXT_PUBLIC_WEB3FORMS_KEY) {
   const message =
-    'Formulaire de contact sans canal d\'envoi : definir NEXT_PUBLIC_WEB3FORMS_KEY (ou NEXT_PUBLIC_API_URL).';
+    "Formulaire de contact sans fallback : NEXT_PUBLIC_WEB3FORMS_KEY est obligatoire, meme quand NEXT_PUBLIC_API_URL est defini.";
   if (process.env.CF_PAGES) {
     throw new Error(message);
   }

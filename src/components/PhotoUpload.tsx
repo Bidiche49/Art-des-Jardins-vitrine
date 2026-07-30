@@ -22,6 +22,12 @@ const ACCEPTED_EXT = ['.jpg', '.jpeg', '.png', '.webp', '.heic', '.heif'];
 // Thumbnail: 160px for retina, displayed at 80x80
 const THUMB_SIZE = 160;
 
+// Compression avant envoi. Double objectif : un upload fiable en 4G (une photo
+// de smartphone brute pese 3 a 5 Mo), et un cout CPU maitrise cote Worker, qui
+// doit encoder les pieces jointes en base64 pour l'API mail.
+const UPLOAD_MAX_DIM = 1600;
+const UPLOAD_QUALITY = 0.8;
+
 function isAcceptedFile(file: File): boolean {
   if (ACCEPTED_MIME.includes(file.type)) return true;
   const ext = file.name.toLowerCase().slice(file.name.lastIndexOf('.'));
@@ -81,37 +87,88 @@ function cropToThumbnail(source: HTMLImageElement | ImageBitmap): Promise<string
 }
 
 /**
- * Generate a thumbnail for any image file.
+ * Decode an image file into a drawable source.
  *
- * Strategy 1: native Image loading → Canvas resize
+ * Strategy 1: native Image loading
  *   Works for JPG/PNG/WebP on all browsers, and HEIC on Safari.
  *
  * Strategy 2: HEIC → ImageBitmap via heic-to (no JPEG round-trip, faster)
  *   Only loaded when strategy 1 fails (Chrome/Firefox + HEIC).
- *
- * Strategy 3: raw objectURL fallback
- *   If Canvas is blocked (e.g. anti-fingerprint extensions), show the image as-is.
+ */
+async function decodeImage(file: File): Promise<HTMLImageElement | ImageBitmap> {
+  try {
+    return await loadImage(file);
+  } catch {
+    // Native load failed — likely HEIC on Chrome/Firefox
+    const { heicTo } = await import('heic-to/next');
+    return await heicTo({ blob: file, type: 'bitmap' as const });
+  }
+}
+
+/**
+ * Generate a thumbnail for any image file.
+ * Falls back to a raw objectURL if decoding or Canvas is unavailable
+ * (e.g. anti-fingerprint extensions blocking canvas).
  */
 async function generateThumbnail(file: File): Promise<string> {
-  // Strategy 1: native load + canvas resize
   try {
-    const img = await loadImage(file);
-    return await cropToThumbnail(img);
+    return await cropToThumbnail(await decodeImage(file));
   } catch {
-    // Native load failed — likely HEIC on Chrome/Firefox, or canvas blocked
+    return URL.createObjectURL(file);
+  }
+}
+
+function isHeic(file: File): boolean {
+  return /image\/hei[cf]/.test(file.type) || /\.hei[cf]$/i.test(file.name);
+}
+
+function toJpegName(name: string): string {
+  return `${name.replace(/\.[^.]+$/, '')}.jpg`;
+}
+
+/**
+ * Reduce a photo before upload: cap its largest dimension and re-encode to JPEG.
+ *
+ * Every failure path returns the original file — perdre la photo du visiteur
+ * serait pire que d'envoyer un fichier lourd.
+ */
+async function compressForUpload(file: File): Promise<File> {
+  let source: HTMLImageElement | ImageBitmap;
+  try {
+    source = await decodeImage(file);
+  } catch {
+    return file;
   }
 
-  // Strategy 2: HEIC decode → ImageBitmap → canvas (skips JPEG encode/decode round-trip)
-  try {
-    const { heicTo } = await import('heic-to/next');
-    const bitmap = await heicTo({ blob: file, type: 'bitmap' as const });
-    return await cropToThumbnail(bitmap);
-  } catch {
-    // heic-to or canvas failed
-  }
+  const width = source instanceof HTMLImageElement ? source.naturalWidth : source.width;
+  const height = source instanceof HTMLImageElement ? source.naturalHeight : source.height;
+  const scale = Math.min(1, UPLOAD_MAX_DIM / Math.max(width, height));
 
-  // Strategy 3: raw objectURL (no resize, but at least shows the image)
-  return URL.createObjectURL(file);
+  const canvas = document.createElement('canvas');
+  canvas.width = Math.max(1, Math.round(width * scale));
+  canvas.height = Math.max(1, Math.round(height * scale));
+  const ctx = canvas.getContext('2d');
+  if (!ctx) {
+    if ('close' in source) source.close();
+    return file;
+  }
+  ctx.drawImage(source, 0, 0, canvas.width, canvas.height);
+  if ('close' in source) source.close();
+
+  const blob = await new Promise<Blob | null>((resolve) => {
+    canvas.toBlob(resolve, 'image/jpeg', UPLOAD_QUALITY);
+  });
+  if (!blob) return file;
+
+  // Le HEIC est toujours converti : de nombreux clients mail ne l'affichent pas,
+  // le paysagiste doit pouvoir ouvrir la piece jointe. Pour les autres formats on
+  // ne garde le resultat que s'il fait reellement gagner du poids.
+  if (!isHeic(file) && blob.size >= file.size) return file;
+
+  return new File([blob], toJpegName(file.name), {
+    type: 'image/jpeg',
+    lastModified: file.lastModified,
+  });
 }
 
 export function PhotoUpload({ files, onChange }: PhotoUploadProps) {
@@ -119,6 +176,8 @@ export function PhotoUpload({ files, onChange }: PhotoUploadProps) {
   const [error, setError] = useState('');
   const [thumbnails, setThumbnails] = useState<Record<string, string | null>>({});
   const [generating, setGenerating] = useState<Record<string, boolean>>({});
+  /** Nombre de photos en cours de compression, pour afficher des emplacements d'attente. */
+  const [preparing, setPreparing] = useState(0);
   const pendingRef = useRef<Set<string>>(new Set());
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -176,7 +235,7 @@ export function PhotoUpload({ files, onChange }: PhotoUploadProps) {
   }, []);
 
   const validateAndAdd = useCallback(
-    (newFiles: FileList | File[]) => {
+    async (newFiles: FileList | File[]) => {
       setError('');
       const toAdd: File[] = [];
 
@@ -196,8 +255,17 @@ export function PhotoUpload({ files, onChange }: PhotoUploadProps) {
         toAdd.push(file);
       }
 
-      if (toAdd.length > 0) {
+      if (toAdd.length === 0) return;
+
+      // On compresse avant de stocker : au moment ou le visiteur clique
+      // "Envoyer", les fichiers sont deja prets et la soumission part vite.
+      setPreparing(toAdd.length);
+      try {
+        onChange([...files, ...(await Promise.all(toAdd.map(compressForUpload)))]);
+      } catch {
         onChange([...files, ...toAdd]);
+      } finally {
+        setPreparing(0);
       }
     },
     [files, onChange]
@@ -287,7 +355,7 @@ export function PhotoUpload({ files, onChange }: PhotoUploadProps) {
 
       {error && <p className="text-sm text-red-600 mt-2">{error}</p>}
 
-      {files.length > 0 && (
+      {(files.length > 0 || preparing > 0) && (
         <div className="flex gap-3 mt-3">
           {files.map((file, i) => {
             const key = fileKey(file);
@@ -326,6 +394,15 @@ export function PhotoUpload({ files, onChange }: PhotoUploadProps) {
               </div>
             );
           })}
+
+          {Array.from({ length: preparing }, (_, i) => (
+            <div
+              key={`preparing-${i}`}
+              className="w-20 h-20 rounded-lg border border-gray-200 bg-gray-100 flex items-center justify-center"
+            >
+              <IconSpinner className="w-5 h-5 text-gray-400 animate-spin" />
+            </div>
+          ))}
         </div>
       )}
     </div>
