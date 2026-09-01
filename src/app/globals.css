@@ -436,6 +436,21 @@
   scrollbar-width: thin;
 }
 
+/* Degrade sur la derniere ligne, pour signaler qu'il reste du texte. Il se gere
+   seul : sur un avis court, il n'y a rien dessous, donc du blanc sur du blanc.
+   Pose sur la zone et non sur le blockquote, sinon il defilerait avec le texte. */
+.avis-texte-zone::after {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  /* Laisse la gouttiere du pr-2, ou se loge la barre de defilement. */
+  inset-inline-end: 0.5rem;
+  bottom: 0;
+  height: 2.25rem;
+  background: linear-gradient(to bottom, rgb(255 255 255 / 0), rgb(255 255 255));
+  pointer-events: none;
+}
+
 .avis-texte::-webkit-scrollbar {
   width: 4px;
 }
@@ -474,19 +489,11 @@
     scroll-snap-stop: always;
   }
 
-  /* La seconde copie n'existe que pour boucler le defilement. Parcourue au
-     doigt, elle ferait lire deux fois les memes avis. */
-  .avis-duplicata {
-    display: none;
-  }
-
   /* Pas de zone scrollable dans une carte qui snap : deux scrolls imbriques se
-     disputent le geste. Le texte est tronque en fondu, le tap ouvre l'avis
-     complet sur Google. */
+     disputent le geste. Le texte est tronque, le degrade de .avis-texte-zone
+     signale la coupe et le tap ouvre l'avis complet sur Google. */
   .avis-texte {
     overflow: hidden;
-    -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent);
-    mask-image: linear-gradient(to bottom, #000 78%, transparent);
   }
 }
 

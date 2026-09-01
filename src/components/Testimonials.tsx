@@ -1,4 +1,5 @@
 import { IconStarFilled, IconGoogle } from '@/lib/icons';
+import { AvisPiste } from '@/components/ui/AvisPiste';
 import { SITE, getGoogleReviewsUrl } from '@/lib/site-config';
 import {
   reviews,
@@ -96,12 +97,16 @@ function ReviewCard({
         <StarRating rating={review.rating} className="h-4 w-4" />
 
         {/* Hauteur fixe pour aligner les cartes : les avis vont d'une ligne a
-            trois paragraphes. Le surplus se lit au scroll ou sur Google. */}
-        <blockquote className="avis-texte mt-3 flex-1 space-y-2 pr-2 text-sm leading-relaxed text-gray-600">
-          {paragraphs.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
-        </blockquote>
+            trois paragraphes. Le surplus se lit au scroll ou sur Google.
+            Le degrade de bas de zone vit sur ce conteneur, qui ne defile pas,
+            et non sur le blockquote, ou il suivrait le texte. */}
+        <div className="avis-texte-zone relative mt-3 flex-1">
+          <blockquote className="avis-texte h-full space-y-2 pr-2 text-sm leading-relaxed text-gray-600">
+            {paragraphs.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </blockquote>
+        </div>
       </a>
     </li>
   );
@@ -144,10 +149,7 @@ export function Testimonials() {
       </div>
 
       {/* Hors container-custom : le bandeau doit filer d'un bord a l'autre. */}
-      <div
-        className="avis-piste-wrap mt-10"
-        style={{ '--avis-duree': `${reviews.length * DUREE_PAR_AVIS_S}s` } as React.CSSProperties}
-      >
+      <AvisPiste dureeS={reviews.length * DUREE_PAR_AVIS_S}>
         {/* Aucun padding sur la piste : il entrerait dans le calcul du -50% du
             keyframe et decalerait la boucle a chaque tour. */}
         <ul className="avis-piste">
@@ -158,7 +160,7 @@ export function Testimonials() {
             <ReviewCard key={`b-${i}`} review={review} duplicata />
           ))}
         </ul>
-      </div>
+      </AvisPiste>
 
       <div className="container-custom mt-10 text-center">
         <a href="/contact/" className="btn-primary">
