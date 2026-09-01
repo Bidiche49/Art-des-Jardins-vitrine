@@ -162,22 +162,23 @@ export function Testimonials() {
         </ul>
       </AvisPiste>
 
-      <div className="container-custom mt-10 text-center">
+      {/* Le lien d'avis est le seul levier qui fasse monter le compteur : il a sa
+          place a cote du CTA, pas en note de bas de section. Reste secondaire
+          pour ne pas concurrencer la demande de devis. */}
+      <div className="container-custom mt-10 flex flex-wrap items-center justify-center gap-4">
         <a href="/contact/" className="btn-primary">
           Demander un devis gratuit
         </a>
         {SITE.google.writeReviewUrl && (
-          <p className="mt-4 text-sm text-gray-500">
-            Vous avez fait appel à nous ?{' '}
-            <a
-              href={SITE.google.writeReviewUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary-600 hover:underline"
-            >
-              Laissez un avis
-            </a>
-          </p>
+          <a
+            href={SITE.google.writeReviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary inline-flex items-center gap-2"
+          >
+            <IconGoogle className="h-4 w-4" />
+            Donnez votre avis
+          </a>
         )}
       </div>
     </section>

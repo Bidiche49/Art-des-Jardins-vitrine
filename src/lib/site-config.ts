@@ -55,13 +55,35 @@ export const SITE = {
     handle: '@artdesjardins_49',
   },
   /**
-   * Fiche Google Business Profile.
-   * `profileUrl` : lien maps.app.goo.gl ou google.com/maps/place de la fiche.
-   * `writeReviewUrl` : lien "Rediger un avis" (Google Business Profile > Demander des avis).
-   * Chaine vide = le lien correspondant n'est pas affiche.
+   * Fiche Google Business Profile. Chaine vide = le lien n'est pas affiche.
+   *
+   * Identifiants de la fiche, en cas de besoin :
+   *   kgmid  /g/11yx_kt1x4
+   *   lrd    0x2c35ff5aa4d974cf:0x853b427e055f7407
+   *   cid    9600340139693798407
+   *
+   * Si les liens `share.google` cessent un jour de fonctionner, le repli stable
+   * est https://maps.google.com/?cid=9600340139693798407
    */
   google: {
-    profileUrl: 'https://share.google/xmo4sCrGHBRolARqT',
-    writeReviewUrl: '',
+    profileUrl: 'https://share.google/3sooKN7FXFATAr9Ux',
+    /**
+     * Ouvre l'onglet avis de la fiche, ou le visiteur doit encore cliquer sur
+     * "Rediger un avis". C'est le fragment `#lrd` et son `,3,` qui font la
+     * difference : un lien raccourci ne peut pas en porter, d'ou l'URL longue.
+     *
+     * Volontairement reduite a `kgmid`, `q` et le fragment. L'URL copiee depuis
+     * Google embarque en plus un jeton `sxsrf` horodate, les dimensions d'ecran
+     * de la personne qui a copie le lien, et des parametres de tracking : rien
+     * qui serve au visiteur, et un jeton qui finit par expirer.
+     *
+     * A REMPLACER par le lien officiel, qui ouvre le formulaire directement
+     * sans etape intermediaire. Il ne s'obtient que depuis le tableau de bord
+     * du proprietaire : Fiche d'etablissement > Avis > Obtenir plus d'avis >
+     * Copier. Il se presente sous la forme https://g.page/r/<code>/review
+     * https://support.google.com/business/answer/16816815?hl=fr
+     */
+    writeReviewUrl:
+      'https://www.google.com/search?kgmid=/g/11yx_kt1x4&q=Art+des+jardins#lrd=0x2c35ff5aa4d974cf:0x853b427e055f7407,3,,,,',
   },
 };
