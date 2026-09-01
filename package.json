@@ -7,6 +7,8 @@
     "images:optimize": "node scripts/optimize-images.mjs",
     "og:generate": "node scripts/generate-og-images.mjs",
     "google:rating": "node scripts/fetch-google-rating.mjs",
+    "avis:check": "node scripts/check-new-reviews.mjs",
+    "avis:status": "curl -s https://artdesjardins-paysagiste.fr/ | grep -o 'data-avis-maj=\"[^\"]*\"' | head -1",
     "prebuild": "pnpm images:optimize && pnpm og:generate && pnpm google:rating",
     "build": "next build",
     "start": "next start -p 3001",

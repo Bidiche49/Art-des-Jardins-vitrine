@@ -50,6 +50,9 @@ export const REVIEWS_TOTAL_COUNT: number = googleRating.userRatingCount;
 /** Note moyenne de la fiche Google. Regeneree au build. */
 export const REVIEWS_AVERAGE_RATING: number = googleRating.rating;
 
+/** Date du dernier appel reussi a l'API Places, format ISO YYYY-MM-DD. */
+export const REVIEWS_FETCHED_AT: string = googleRating.fetchedAt;
+
 /**
  * Avis dont le texte est repris sur le site. Vide = la section ne s'affiche pas.
  * Ordre d'affichage : les plus parlants en premier.

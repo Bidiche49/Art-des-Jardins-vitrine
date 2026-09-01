@@ -5,6 +5,7 @@ import {
   reviews,
   REVIEWS_TOTAL_COUNT,
   REVIEWS_AVERAGE_RATING,
+  REVIEWS_FETCHED_AT,
   type GoogleReview,
 } from '@/lib/reviews';
 
@@ -181,7 +182,13 @@ export function Testimonials() {
     // Padding haut volontairement faible : la section Services qui precede a le
     // meme fond gris et son propre pb-24. Deux paddings pleins bout a bout
     // creaient un vide de plus de 200 px entre le bouton et ce titre.
-    <section className="bg-gray-50 pt-4 pb-16 lg:pt-6 lg:pb-24">
+    <section
+      className="bg-gray-50 pt-4 pb-16 lg:pt-6 lg:pb-24"
+      /* Date du dernier appel reussi a l'API Places. Sans repere de ce genre,
+         rien ne distingue de l'exterieur un build qui a interroge Google d'un
+         build qui a conserve les valeurs du fichier faute de cle. */
+      data-avis-maj={REVIEWS_FETCHED_AT}
+    >
       <div className="container-custom text-center">
         <h2 className="mb-6 text-3xl font-bold md:text-4xl">Ce que disent nos clients</h2>
 
