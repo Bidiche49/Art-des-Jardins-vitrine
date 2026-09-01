@@ -61,7 +61,7 @@ export const SITE = {
    * Chaine vide = le lien correspondant n'est pas affiche.
    */
   google: {
-    profileUrl: '',
+    profileUrl: 'https://share.google/xmo4sCrGHBRolARqT',
     writeReviewUrl: '',
   },
 };

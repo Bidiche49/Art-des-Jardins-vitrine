@@ -385,9 +385,18 @@
   50% { transform: translateY(10px); opacity: 0; }
 }
 
-/* ─── Bandeau d'avis defilant ────────────────────────────────
-   Defilement en CSS pur : pas de JS, donc le composant reste rendu cote
-   serveur et les avis restent dans le HTML. La pause au survol est native. */
+/* ─── Bandeau d'avis ─────────────────────────────────────────
+   Deux comportements distincts, parce qu'ils repondent a deux gestes distincts.
+
+   Desktop : defilement automatique, mis en pause au survol. Il y a un curseur
+   pour l'arreter et de la place pour montrer plusieurs avis a la fois.
+
+   Mobile : aucun defilement. Pas de survol pour l'interrompre, et on ne lit pas
+   un texte qui bouge. On reprend le geste natif, un carrousel scroll-snap
+   parcouru au doigt, comme .gallery-responsive ailleurs sur le site.
+
+   Tout est en CSS : le composant reste rendu cote serveur et les avis restent
+   dans le HTML livre, ce qu'un carrousel en JS aurait supprime. */
 
 .avis-piste-wrap {
   overflow: hidden;
@@ -412,16 +421,15 @@
   }
 }
 
-/* Survol souris et focus clavier : sans le focus-within, tabuler dans les
-   cartes serait impossible, la cible s'echappant sous le curseur. */
+/* Survol souris et focus clavier. Sans le focus-within, tabuler dans les cartes
+   serait impossible, la cible s'echappant sous le curseur. */
 .avis-piste-wrap:hover .avis-piste,
-.avis-piste-wrap:focus-within .avis-piste,
-.avis-piste-wrap:active .avis-piste {
+.avis-piste-wrap:focus-within .avis-piste {
   animation-play-state: paused;
 }
 
-/* Texte plus long que la carte. `contain` empeche le scroll de se propager a la
-   page une fois arrive en bout de course. */
+/* Texte plus long que la carte : lisible a la molette. `contain` empeche le
+   scroll de se propager a la page une fois arrive en bout de course. */
 .avis-texte {
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -435,6 +443,51 @@
 .avis-texte::-webkit-scrollbar-thumb {
   background: #d1d5db;
   border-radius: 9999px;
+}
+
+/* ─── Mobile : carrousel au doigt ─── */
+@media (max-width: 767px) {
+  .avis-piste-wrap {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 7.5vw;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Le fondu lateral masquerait la carte active, qui touche presque le bord. */
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .avis-piste-wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+  .avis-piste {
+    animation: none;
+    width: auto;
+    gap: 1rem;
+    padding-inline: 7.5vw;
+  }
+
+  .avis-piste > li {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+
+  /* La seconde copie n'existe que pour boucler le defilement. Parcourue au
+     doigt, elle ferait lire deux fois les memes avis. */
+  .avis-duplicata {
+    display: none;
+  }
+
+  /* Pas de zone scrollable dans une carte qui snap : deux scrolls imbriques se
+     disputent le geste. Le texte est tronque en fondu, le tap ouvre l'avis
+     complet sur Google. */
+  .avis-texte {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent);
+    mask-image: linear-gradient(to bottom, #000 78%, transparent);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

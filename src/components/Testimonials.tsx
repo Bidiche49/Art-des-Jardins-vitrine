@@ -8,12 +8,16 @@ import {
 } from '@/lib/reviews';
 
 /**
- * Bandeau d'avis Google defilant, alimente par `@/lib/reviews`. Ne rend rien
- * tant qu'aucun avis n'est renseigne.
+ * Bandeau d'avis Google, alimente par `@/lib/reviews`. Ne rend rien tant
+ * qu'aucun avis n'est renseigne.
  *
- * Le defilement est en CSS pur (cf. .avis-piste dans globals.css) : le composant
- * reste rendu cote serveur, les avis restent donc dans le HTML livre. La pause
- * au survol, au focus clavier et au doigt maintenu est native, sans JS.
+ * Deux comportements selon le support, entierement pilotes par le CSS de
+ * globals.css : defilement automatique avec pause au survol sur desktop,
+ * carrousel scroll-snap parcouru au doigt sur mobile, ou l'absence de survol
+ * rendrait un texte en mouvement illisible.
+ *
+ * Aucun JS : le composant reste rendu cote serveur, donc les avis restent dans
+ * le HTML livre. Un carrousel en JS les aurait rendus invisibles aux crawlers.
  *
  * Pas de balisage schema.org Review/AggregateRating ici : Google considere comme
  * "self-serving" les avis qu'une entite publie sur son propre site, ce qui rend
@@ -50,36 +54,35 @@ function formatReviewDate(date: string): string {
 }
 
 /**
- * Une carte d'avis. Toute la carte est un lien vers les avis Google : c'est la
- * que se lit l'avis complet, et c'est le trafic qu'on veut y envoyer.
+ * Une carte d'avis. Toute la carte pointe vers cet avis precis sur Google :
+ * c'est la que le texte integral se lit, et c'est le trafic qu'on veut y
+ * envoyer. C'est aussi ce qui rend inutile le scroll interne sur mobile.
  *
  * `duplicata` marque la seconde copie de la liste, presente uniquement pour que
  * la boucle du defilement soit sans couture. Elle est masquee aux technologies
  * d'assistance et retiree de l'ordre de tabulation, sinon chaque avis serait
- * annonce et tabulable deux fois.
+ * annonce et tabulable deux fois. Le CSS la retire carrement sur mobile.
  */
 function ReviewCard({
   review,
-  href,
   duplicata = false,
 }: {
   review: GoogleReview;
-  href: string;
   duplicata?: boolean;
 }) {
   const paragraphs = review.text.split('\n\n');
 
   return (
     <li
-      className="shrink-0 w-[85vw] sm:w-80"
+      className={`shrink-0 w-[85vw] sm:w-80 ${duplicata ? 'avis-duplicata' : ''}`}
       aria-hidden={duplicata || undefined}
     >
       <a
-        href={href}
+        href={review.url}
         target="_blank"
         rel="noopener noreferrer"
         tabIndex={duplicata ? -1 : undefined}
-        title="Voir cet avis sur Google"
+        title={`Lire l’avis de ${review.author} sur Google`}
         className="flex h-64 flex-col rounded-xl border border-gray-100 bg-white p-5 shadow-sm transition-shadow hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
       >
         <div className="mb-2 flex items-start justify-between gap-3">
@@ -107,7 +110,7 @@ function ReviewCard({
 export function Testimonials() {
   if (reviews.length === 0) return null;
 
-  const href = getGoogleReviewsUrl();
+  const ficheUrl = getGoogleReviewsUrl();
 
   // La fiche compte plus d'avis que ceux repris ici : les plus courts ne sont
   // pas affiches mais restent comptes dans le total renvoye par l'API.
@@ -118,12 +121,15 @@ export function Testimonials() {
       : reviews.reduce((acc, r) => acc + r.rating, 0) / reviews.length;
 
   return (
-    <section className="bg-gray-50 py-16 lg:py-24">
+    // Padding haut volontairement faible : la section Services qui precede a le
+    // meme fond gris et son propre pb-24. Deux paddings pleins bout a bout
+    // creaient un vide de plus de 200 px entre le bouton et ce titre.
+    <section className="bg-gray-50 pt-4 pb-16 lg:pt-6 lg:pb-24">
       <div className="container-custom text-center">
         <h2 className="mb-6 text-3xl font-bold md:text-4xl">Ce que disent nos clients</h2>
 
         <a
-          href={href}
+          href={ficheUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 rounded-full border border-gray-200 bg-white px-6 py-3 shadow-sm transition-shadow hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
@@ -146,10 +152,10 @@ export function Testimonials() {
             keyframe et decalerait la boucle a chaque tour. */}
         <ul className="avis-piste">
           {reviews.map((review, i) => (
-            <ReviewCard key={`a-${i}`} review={review} href={href} />
+            <ReviewCard key={`a-${i}`} review={review} />
           ))}
           {reviews.map((review, i) => (
-            <ReviewCard key={`b-${i}`} review={review} href={href} duplicata />
+            <ReviewCard key={`b-${i}`} review={review} duplicata />
           ))}
         </ul>
       </div>
