@@ -1,6 +1,12 @@
 {
   "name": "art-des-jardins-contact",
   "main": "src/index.ts",
+  // Compte nicolazicdev@gmail.com. Explicite parce que la machine de dev est
+  // souvent authentifiee sur un autre compte Cloudflare : wrangler echoue alors
+  // en "Authentication error [code: 10000]". Verifier `wrangler whoami` avant
+  // un deploiement, et au besoin `wrangler logout && wrangler login`.
+  // Un account ID n'est pas un secret, il figure dans les URLs du dashboard.
+  "account_id": "951f8540b66a9564be48be5c9f0c9861",
   "compatibility_date": "2026-07-28",
   // Necessaire pour lire le CPU time reel via `wrangler tail` : c'est la mesure
   // qui decide si le plan Workers Free suffit avec des photos compressees.

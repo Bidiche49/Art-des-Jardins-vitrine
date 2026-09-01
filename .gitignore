@@ -3,6 +3,14 @@ node_modules/
 out/
 .env
 .env.local
+# Secrets locaux des workers, lus par `wrangler dev`. Les secrets deployes
+# (`wrangler secret put`) ne sont pas accessibles en local.
+.dev.vars
+# State local de wrangler : caches miniflare, bundles, traces.
+.wrangler/
 *.tsbuildinfo
 audit-reports/
 email-signature.html
+
+# code-index (claude-conf) — generated artifacts
+docs/.code-map/

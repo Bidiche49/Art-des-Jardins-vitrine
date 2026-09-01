@@ -1,0 +1,25 @@
+{
+  "name": "art-des-jardins-cron",
+  "main": "src/index.ts",
+  // Compte nicolazicdev@gmail.com. Explicite parce que la machine de dev est
+  // souvent authentifiee sur un autre compte Cloudflare : wrangler echoue alors
+  // en "Authentication error [code: 10000]". Verifier `wrangler whoami` avant
+  // un deploiement, et au besoin `wrangler logout && wrangler login`.
+  // Un account ID n'est pas un secret, il figure dans les URLs du dashboard.
+  "account_id": "951f8540b66a9564be48be5c9f0c9861",
+  "compatibility_date": "2026-09-01",
+  "observability": { "enabled": true },
+  // Ce worker n'est declenche que par son cron : aucune raison de lui exposer
+  // une URL publique. Sans ces deux lignes, wrangler active workers.dev et les
+  // Preview URLs par defaut.
+  "workers_dev": false,
+  "preview_urls": false,
+  "triggers": {
+    // Tous les lundis a 6h UTC. Un passage par semaine suffit : la fiche gagne
+    // environ deux avis par mois, et un chiffre en retard de quelques jours ne
+    // se voit pas.
+    "crons": ["0 6 * * 1"]
+  }
+  // PAGES_DEPLOY_HOOK est un secret : `wrangler secret put PAGES_DEPLOY_HOOK`.
+  // Jamais dans ce fichier, il est versionne.
+}
