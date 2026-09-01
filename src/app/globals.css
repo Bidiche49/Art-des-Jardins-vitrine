@@ -413,9 +413,24 @@
   width: max-content;
 }
 
-/* Texte plus long que la carte : lisible a la molette sur desktop. `contain`
-   empeche le scroll de se propager a la page une fois arrive en bout de course. */
+/* Aucun defilement par defaut.
+
+   `overflow: hidden` fixe les deux axes d'un coup, ce qui neutralise au passage
+   le defilement horizontal : declarer le seul overflow-y ne suffit pas, car des
+   qu'un axe passe en auto, le CSS force l'autre de `visible` a `auto`. Une carte
+   se retrouvait donc defilable lateralement sans que rien ne le demande. */
 .avis-texte {
+  overflow: hidden;
+}
+
+/* Defilement vertical uniquement la ou le texte deborde reellement, `avis-deborde`
+   etant pose par AvisPiste apres mesure.
+
+   La condition n'est pas cosmetique : `overscroll-behavior: contain` capte la
+   molette des qu'un element est declare scrollable, meme sans rien a faire
+   defiler. Applique a toutes les cartes, il bloquait le defilement de la page
+   au survol des avis courts. */
+.avis-texte-zone.avis-deborde .avis-texte {
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
@@ -460,15 +475,6 @@
   opacity: 0;
 }
 
-.avis-texte::-webkit-scrollbar {
-  width: 4px;
-}
-
-.avis-texte::-webkit-scrollbar-thumb {
-  background: #d1d5db;
-  border-radius: 9999px;
-}
-
 /* ─── Mobile : carrousel au doigt ─── */
 @media (max-width: 767px) {
   /* Le snap est reserve au mobile : sur desktop il se battrait avec le
@@ -491,8 +497,11 @@
 
   /* Pas de zone scrollable dans une carte qui snap : deux scrolls imbriques se
      disputent le geste. Le texte est tronque, le degrade de .avis-texte-zone
-     signale la coupe et le tap ouvre l'avis complet sur Google. */
-  .avis-texte {
+     signale la coupe et le tap ouvre l'avis complet sur Google.
+
+     Le selecteur reprend celui du desktop : plus court, il perdrait en
+     specificite et le defilement reviendrait sur mobile. */
+  .avis-texte-zone.avis-deborde .avis-texte {
     overflow: hidden;
   }
 }
