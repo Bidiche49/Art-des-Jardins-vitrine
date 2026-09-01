@@ -39,4 +39,14 @@ export const SITE = {
     url: 'https://www.instagram.com/artdesjardins_49',
     handle: '@artdesjardins_49',
   },
+  /**
+   * Fiche Google Business Profile.
+   * `profileUrl` : lien maps.app.goo.gl ou google.com/maps/place de la fiche.
+   * `writeReviewUrl` : lien "Rediger un avis" (Google Business Profile > Demander des avis).
+   * Chaine vide = le lien correspondant n'est pas affiche.
+   */
+  google: {
+    profileUrl: '',
+    writeReviewUrl: '',
+  },
 };
