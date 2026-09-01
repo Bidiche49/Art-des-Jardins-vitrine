@@ -3,6 +3,21 @@ export function getCumulatedExperience(): number {
   return 16 + (new Date().getFullYear() - 2026) * 2;
 }
 
+/**
+ * Destination des liens « avis » de la page d'accueil.
+ *
+ * Renvoie `SITE.google.profileUrl` dès qu'elle est renseignée, ce qui est la
+ * seule façon d'atterrir directement sur la liste d'avis de la fiche. À défaut,
+ * construit une recherche Maps sur le nom et la ville : le visiteur arrive sur
+ * la fiche mais doit ouvrir les avis lui-même. Repli volontairement temporaire.
+ */
+export function getGoogleReviewsUrl(): string {
+  if (SITE.google.profileUrl) return SITE.google.profileUrl;
+
+  const query = encodeURIComponent(`${SITE.name} ${SITE.address.city}`);
+  return `https://www.google.com/maps/search/?api=1&query=${query}`;
+}
+
 export const SITE = {
   name: 'Art des Jardins',
   legalName: 'SARL Art des Jardins',

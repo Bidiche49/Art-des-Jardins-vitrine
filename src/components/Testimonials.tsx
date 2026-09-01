@@ -1,5 +1,5 @@
 import { IconStarFilled, IconGoogle } from '@/lib/icons';
-import { SITE } from '@/lib/site-config';
+import { SITE, getGoogleReviewsUrl } from '@/lib/site-config';
 import {
   reviews,
   REVIEWS_TOTAL_COUNT,
@@ -8,15 +8,22 @@ import {
 } from '@/lib/reviews';
 
 /**
- * Section "avis clients", alimentee par les avis Google recopies dans
- * `@/lib/reviews`. Ne rend rien tant qu'aucun avis n'est renseigne.
+ * Bandeau d'avis Google defilant, alimente par `@/lib/reviews`. Ne rend rien
+ * tant qu'aucun avis n'est renseigne.
  *
- * Pas de balisage schema.org Review/AggregateRating ici : Google considere
- * comme "self-serving" les avis qu'une entite publie sur son propre site, ce
- * qui rend la page ineligible aux etoiles dans les resultats de recherche.
- * Les avis restent indexes via la fiche Google Business Profile.
+ * Le defilement est en CSS pur (cf. .avis-piste dans globals.css) : le composant
+ * reste rendu cote serveur, les avis restent donc dans le HTML livre. La pause
+ * au survol, au focus clavier et au doigt maintenu est native, sans JS.
+ *
+ * Pas de balisage schema.org Review/AggregateRating ici : Google considere comme
+ * "self-serving" les avis qu'une entite publie sur son propre site, ce qui rend
+ * la page ineligible aux etoiles dans les resultats de recherche. Les avis
+ * restent indexes via la fiche Google Business Profile.
  * https://developers.google.com/search/docs/appearance/structured-data/review-snippet
  */
+
+/** Duree d'un tour complet. Environ 8 s par avis, lisible sans etre lent. */
+const DUREE_PAR_AVIS_S = 8;
 
 function StarRating({ rating, className = 'w-5 h-5' }: { rating: number; className?: string }) {
   const rounded = Math.round(rating);
@@ -42,30 +49,65 @@ function formatReviewDate(date: string): string {
   return new Date(date).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
 }
 
-function ReviewCard({ review }: { review: GoogleReview }) {
+/**
+ * Une carte d'avis. Toute la carte est un lien vers les avis Google : c'est la
+ * que se lit l'avis complet, et c'est le trafic qu'on veut y envoyer.
+ *
+ * `duplicata` marque la seconde copie de la liste, presente uniquement pour que
+ * la boucle du defilement soit sans couture. Elle est masquee aux technologies
+ * d'assistance et retiree de l'ordre de tabulation, sinon chaque avis serait
+ * annonce et tabulable deux fois.
+ */
+function ReviewCard({
+  review,
+  href,
+  duplicata = false,
+}: {
+  review: GoogleReview;
+  href: string;
+  duplicata?: boolean;
+}) {
   const paragraphs = review.text.split('\n\n');
 
   return (
-    <li className="break-inside-avoid mb-6 bg-white rounded-xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition-shadow">
-      <div className="flex items-start justify-between gap-4 mb-3">
-        <div>
-          <p className="font-semibold text-gray-900">{review.author}</p>
-          <p className="text-sm text-gray-400">{formatReviewDate(review.date)}</p>
+    <li
+      className="shrink-0 w-[85vw] sm:w-80"
+      aria-hidden={duplicata || undefined}
+    >
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        tabIndex={duplicata ? -1 : undefined}
+        title="Voir cet avis sur Google"
+        className="flex h-64 flex-col rounded-xl border border-gray-100 bg-white p-5 shadow-sm transition-shadow hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+      >
+        <div className="mb-2 flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <p className="truncate font-semibold text-gray-900">{review.author}</p>
+            <p className="text-sm text-gray-400">{formatReviewDate(review.date)}</p>
+          </div>
+          <IconGoogle className="mt-0.5 h-5 w-5 shrink-0" />
         </div>
-        <IconGoogle className="w-5 h-5 shrink-0" />
-      </div>
-      <StarRating rating={review.rating} className="w-4 h-4" />
-      <blockquote className="text-gray-600 mt-4 space-y-3">
-        {paragraphs.map((paragraph, i) => (
-          <p key={i}>{paragraph}</p>
-        ))}
-      </blockquote>
+
+        <StarRating rating={review.rating} className="h-4 w-4" />
+
+        {/* Hauteur fixe pour aligner les cartes : les avis vont d'une ligne a
+            trois paragraphes. Le surplus se lit au scroll ou sur Google. */}
+        <blockquote className="avis-texte mt-3 flex-1 space-y-2 pr-2 text-sm leading-relaxed text-gray-600">
+          {paragraphs.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </blockquote>
+      </a>
     </li>
   );
 }
 
 export function Testimonials() {
   if (reviews.length === 0) return null;
+
+  const href = getGoogleReviewsUrl();
 
   // La fiche compte plus d'avis que ceux repris ici : les plus courts ne sont
   // pas affiches mais restent comptes dans le total renvoye par l'API.
@@ -76,59 +118,59 @@ export function Testimonials() {
       : reviews.reduce((acc, r) => acc + r.rating, 0) / reviews.length;
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
-      <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ce que disent nos clients</h2>
+    <section className="bg-gray-50 py-16 lg:py-24">
+      <div className="container-custom text-center">
+        <h2 className="mb-6 text-3xl font-bold md:text-4xl">Ce que disent nos clients</h2>
 
-          <div className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 bg-white rounded-full border border-gray-200 shadow-sm px-6 py-3">
-            <IconGoogle className="w-6 h-6" />
-            <span className="text-2xl font-bold text-gray-900">{formatRating(averageRating)}</span>
-            <StarRating rating={averageRating} />
-            <span className="text-gray-500">{totalCount} avis Google</span>
-          </div>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 rounded-full border border-gray-200 bg-white px-6 py-3 shadow-sm transition-shadow hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+        >
+          <IconGoogle className="h-6 w-6" />
+          <span className="text-2xl font-bold text-gray-900">{formatRating(averageRating)}</span>
+          <StarRating rating={averageRating} />
+          <span className="text-gray-500">
+            {totalCount} avis Google
+          </span>
+        </a>
+      </div>
 
-          {SITE.google.profileUrl && (
-            <p className="mt-4">
-              <a
-                href={SITE.google.profileUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-600 font-medium hover:underline"
-              >
-                Voir tous les avis sur Google
-              </a>
-            </p>
-          )}
-        </div>
-
-        {/* Colonnes CSS plutot qu'une grille : les avis vont de deux lignes a
-            trois paragraphes, une grille alignerait toutes les cartes d'une
-            rangee sur la plus haute et creerait de grands vides. */}
-        <ul className="columns-1 md:columns-2 lg:columns-3 gap-6">
+      {/* Hors container-custom : le bandeau doit filer d'un bord a l'autre. */}
+      <div
+        className="avis-piste-wrap mt-10"
+        style={{ '--avis-duree': `${reviews.length * DUREE_PAR_AVIS_S}s` } as React.CSSProperties}
+      >
+        {/* Aucun padding sur la piste : il entrerait dans le calcul du -50% du
+            keyframe et decalerait la boucle a chaque tour. */}
+        <ul className="avis-piste">
           {reviews.map((review, i) => (
-            <ReviewCard key={`${review.author}-${i}`} review={review} />
+            <ReviewCard key={`a-${i}`} review={review} href={href} />
+          ))}
+          {reviews.map((review, i) => (
+            <ReviewCard key={`b-${i}`} review={review} href={href} duplicata />
           ))}
         </ul>
+      </div>
 
-        <div className="text-center mt-6">
-          <a href="/contact/" className="btn-primary">
-            Demander un devis gratuit
-          </a>
-          {SITE.google.writeReviewUrl && (
-            <p className="mt-4 text-sm text-gray-500">
-              Vous avez fait appel à nous ?{' '}
-              <a
-                href={SITE.google.writeReviewUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-600 hover:underline"
-              >
-                Laissez un avis
-              </a>
-            </p>
-          )}
-        </div>
+      <div className="container-custom mt-10 text-center">
+        <a href="/contact/" className="btn-primary">
+          Demander un devis gratuit
+        </a>
+        {SITE.google.writeReviewUrl && (
+          <p className="mt-4 text-sm text-gray-500">
+            Vous avez fait appel à nous ?{' '}
+            <a
+              href={SITE.google.writeReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:underline"
+            >
+              Laissez un avis
+            </a>
+          </p>
+        )}
       </div>
     </section>
   );
