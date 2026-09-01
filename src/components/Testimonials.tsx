@@ -152,6 +152,25 @@ export function Testimonials() {
             {totalCount} avis Google
           </span>
         </a>
+
+        {/* Volontairement discret, et distinct du badge ci-dessus : on clique
+            sur une note pour verifier des avis, pas pour en ecrire un. Rediriger
+            le badge vers un formulaire romprait cette attente sur la seule
+            section dont l'objet est d'installer la confiance.
+            L'amorce "Déjà client ?" ecarte d'emblee ceux que ca ne concerne pas. */}
+        {SITE.google.writeReviewUrl && (
+          <p className="mt-4">
+            <a
+              href={SITE.google.writeReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-gray-500 underline-offset-4 hover:text-primary-700 hover:underline"
+            >
+              <IconGoogle className="h-3.5 w-3.5" />
+              Déjà client ? Donnez votre avis
+            </a>
+          </p>
+        )}
       </div>
 
       {/* Hors container-custom : le bandeau doit filer d'un bord a l'autre. */}
@@ -168,24 +187,13 @@ export function Testimonials() {
         </ul>
       </AvisPiste>
 
-      {/* Le lien d'avis est le seul levier qui fasse monter le compteur : il a sa
-          place a cote du CTA, pas en note de bas de section. Reste secondaire
-          pour ne pas concurrencer la demande de devis. */}
-      <div className="container-custom mt-10 flex flex-wrap items-center justify-center gap-4">
+      {/* Le devis reste seul en bas de section. Un second bouton lui disputait
+          l'attention pour un gain douteux : les avis viennent des liens envoyes
+          apres chantier, pas de la page d'accueil. */}
+      <div className="container-custom mt-10 text-center">
         <a href="/contact/" className="btn-primary">
           Demander un devis gratuit
         </a>
-        {SITE.google.writeReviewUrl && (
-          <a
-            href={SITE.google.writeReviewUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary inline-flex items-center gap-2"
-          >
-            <IconGoogle className="h-4 w-4" />
-            Donnez votre avis
-          </a>
-        )}
       </div>
     </section>
   );

@@ -4,18 +4,15 @@ export function getCumulatedExperience(): number {
 }
 
 /**
- * Destination des liens « avis » de la page d'accueil.
+ * Destination du badge de note de la page d'accueil.
  *
- * Renvoie `SITE.google.profileUrl` dès qu'elle est renseignée, ce qui est la
- * seule façon d'atterrir directement sur la liste d'avis de la fiche. À défaut,
- * construit une recherche Maps sur le nom et la ville : le visiteur arrive sur
- * la fiche mais doit ouvrir les avis lui-même. Repli volontairement temporaire.
+ * Le repli par recherche Maps a ete retire : il deposait le visiteur sur une
+ * page de resultats, entre les annuaires et les concurrents, alors qu'il venait
+ * verifier une note. `SITE.google.profileUrl` porte desormais un identifiant
+ * canonique de fiche, qui n'a aucune raison de devenir invalide.
  */
 export function getGoogleReviewsUrl(): string {
-  if (SITE.google.profileUrl) return SITE.google.profileUrl;
-
-  const query = encodeURIComponent(`${SITE.name} ${SITE.address.city}`);
-  return `https://www.google.com/maps/search/?api=1&query=${query}`;
+  return SITE.google.profileUrl;
 }
 
 export const SITE = {
@@ -66,24 +63,27 @@ export const SITE = {
    * est https://maps.google.com/?cid=9600340139693798407
    */
   google: {
-    profileUrl: 'https://share.google/3sooKN7FXFATAr9Ux',
     /**
-     * Ouvre l'onglet avis de la fiche, ou le visiteur doit encore cliquer sur
-     * "Rediger un avis". C'est le fragment `#lrd` et son `,3,` qui font la
-     * difference : un lien raccourci ne peut pas en porter, d'ou l'URL longue.
+     * Ouvre la fiche sur Google Maps, directement.
      *
-     * Volontairement reduite a `kgmid`, `q` et le fragment. L'URL copiee depuis
-     * Google embarque en plus un jeton `sxsrf` horodate, les dimensions d'ecran
-     * de la personne qui a copie le lien, et des parametres de tracking : rien
-     * qui serve au visiteur, et un jeton qui finit par expirer.
-     *
-     * A REMPLACER par le lien officiel, qui ouvre le formulaire directement
-     * sans etape intermediaire. Il ne s'obtient que depuis le tableau de bord
-     * du proprietaire : Fiche d'etablissement > Avis > Obtenir plus d'avis >
-     * Copier. Il se presente sous la forme https://g.page/r/<code>/review
-     * https://support.google.com/business/answer/16816815?hl=fr
+     * Le CID plutot qu'un lien `share.google` : ces derniers resolvent vers une
+     * page de resultats de recherche, ou la fiche n'apparait qu'en encart lateral
+     * au milieu des concurrents et des annuaires. Le CID est par ailleurs un
+     * identifiant canonique et stable, sans raccourcisseur ni parametres de
+     * suivi entre le visiteur et la fiche.
      */
-    writeReviewUrl:
-      'https://www.google.com/search?kgmid=/g/11yx_kt1x4&q=Art+des+jardins#lrd=0x2c35ff5aa4d974cf:0x853b427e055f7407,3,,,,',
+    profileUrl: 'https://maps.google.com/?cid=9600340139693798407',
+    /**
+     * Ouvre directement le formulaire d'avis, sans etape intermediaire.
+     *
+     * Lien officiel delivre par le tableau de bord du proprietaire :
+     * Fiche d'etablissement > Avis > Obtenir plus d'avis > Copier.
+     * https://support.google.com/business/answer/16816815?hl=fr
+     *
+     * C'est aussi ce lien qu'il faut utiliser hors du site, en SMS ou en QR code
+     * apres un chantier : c'est de la que viennent les avis, pas de la page
+     * d'accueil.
+     */
+    writeReviewUrl: 'https://g.page/r/CQd0XwV-QjuFEBE/review',
   },
 };
