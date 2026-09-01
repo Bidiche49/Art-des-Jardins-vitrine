@@ -411,6 +411,10 @@
   display: flex;
   gap: 1.5rem;
   width: max-content;
+  /* Le conteneur est en overflow-y hidden et epouse la hauteur des cartes :
+     sans cette marge, il rogne leur ombre en haut et en bas, davantage encore
+     au survol ou l'ombre s'agrandit. */
+  padding-block: 0.75rem;
 }
 
 /* Aucun defilement par defaut.
@@ -432,7 +436,10 @@
    au survol des avis courts. */
 .avis-texte-zone.avis-deborde .avis-texte {
   overflow-y: auto;
-  overscroll-behavior: contain;
+  /* Sur l'axe vertical seulement. `overscroll-behavior` sans suffixe s'applique
+     aux deux : il retenait aussi le geste horizontal, qui doit au contraire
+     remonter au bandeau pour le faire defiler depuis n'importe quelle carte. */
+  overscroll-behavior-y: contain;
   scrollbar-width: thin;
 }
 

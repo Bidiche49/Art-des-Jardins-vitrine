@@ -59,6 +59,10 @@ function formatReviewDate(date: string): string {
  * c'est la que le texte integral se lit, et c'est le trafic qu'on veut y
  * envoyer. C'est aussi ce qui rend inutile le scroll interne sur mobile.
  *
+ * Volontairement sans attribut `title` : l'infobulle du navigateur se posait
+ * par-dessus le texte de l'avis, cachant justement ce qu'on vient lire. Le lien
+ * se passe d'explication, son contenu est l'avis lui-meme.
+ *
  * `duplicata` marque la seconde copie de la liste, presente uniquement pour que
  * la boucle du defilement soit sans couture. Elle est masquee aux technologies
  * d'assistance et retiree de l'ordre de tabulation, sinon chaque avis serait
@@ -83,7 +87,6 @@ function ReviewCard({
         target="_blank"
         rel="noopener noreferrer"
         tabIndex={duplicata ? -1 : undefined}
-        title={`Lire l’avis de ${review.author} sur Google`}
         className="flex h-64 flex-col rounded-xl border border-gray-100 bg-white p-5 shadow-sm transition-shadow hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
       >
         <div className="mb-2 flex items-start justify-between gap-3">
