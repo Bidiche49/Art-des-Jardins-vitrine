@@ -100,7 +100,10 @@ function ReviewCard({
             trois paragraphes. Le surplus se lit au scroll ou sur Google.
             Le degrade de bas de zone vit sur ce conteneur, qui ne defile pas,
             et non sur le blockquote, ou il suivrait le texte. */}
-        <div className="avis-texte-zone relative mt-3 flex-1">
+        {/* min-h-0 est indispensable : sans lui, ce conteneur flex garde
+            min-height:auto, s'etire a la hauteur du texte et le blockquote ne
+            deborde jamais, donc ne defile jamais. */}
+        <div className="avis-texte-zone relative mt-3 min-h-0 flex-1">
           <blockquote className="avis-texte h-full space-y-2 pr-2 text-sm leading-relaxed text-gray-600">
             {paragraphs.map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
