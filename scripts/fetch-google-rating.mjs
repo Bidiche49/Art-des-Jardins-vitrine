@@ -69,7 +69,11 @@ async function main() {
   const payload = {
     rating,
     userRatingCount,
-    fetchedAt: new Date().toISOString().slice(0, 10),
+    // Horodatage complet, et non la date seule : la valeur de repli versionnee
+    // porte une date nue, si bien qu'un appel reussi le meme jour aurait ete
+    // indiscernable d'un appel jamais effectue. La presence de l'heure suffit a
+    // trancher.
+    fetchedAt: new Date().toISOString(),
   };
 
   await writeFile(OUTPUT_PATH, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');

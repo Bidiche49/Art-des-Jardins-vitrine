@@ -1,0 +1,17 @@
+# Reglages pnpm.
+#
+# Depuis pnpm 10, le champ "pnpm" de package.json n'est plus lu : tout ce qui
+# n'est ni auth ni registry vit ici. Sans ces autorisations, pnpm refuse
+# d'executer les scripts d'installation de sharp et d'esbuild, sort en code 1
+# et fait echouer n'importe quelle commande `pnpm <script>`.
+#
+# Les deux formes coexistent volontairement : `allowBuilds` est celle de
+# pnpm 11, `onlyBuiltDependencies` celle de pnpm 10. On ne maitrise pas la
+# version installee sur les runners de Cloudflare Pages.
+allowBuilds:
+  esbuild: true
+  sharp: true
+
+onlyBuiltDependencies:
+  - esbuild
+  - sharp

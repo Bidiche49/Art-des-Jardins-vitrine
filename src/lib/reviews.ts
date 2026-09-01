@@ -50,7 +50,12 @@ export const REVIEWS_TOTAL_COUNT: number = googleRating.userRatingCount;
 /** Note moyenne de la fiche Google. Regeneree au build. */
 export const REVIEWS_AVERAGE_RATING: number = googleRating.rating;
 
-/** Date du dernier appel reussi a l'API Places, format ISO YYYY-MM-DD. */
+/**
+ * Horodatage du dernier appel reussi a l'API Places.
+ *
+ * Une date nue (`2026-09-01`) signale la valeur de repli versionnee, donc un
+ * build qui n'a pas joint Google. Un horodatage complet signale un appel reussi.
+ */
 export const REVIEWS_FETCHED_AT: string = googleRating.fetchedAt;
 
 /**
