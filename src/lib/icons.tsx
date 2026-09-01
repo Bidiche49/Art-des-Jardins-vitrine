@@ -16,6 +16,7 @@ export { Bars3Icon as IconMenu } from '@heroicons/react/24/outline';
 export { XMarkIcon as IconClose } from '@heroicons/react/24/outline';
 export { ChevronDownIcon as IconChevronDown } from '@heroicons/react/24/outline';
 export { ChevronRightIcon as IconChevronRight } from '@heroicons/react/24/outline';
+export { ArrowRightIcon as IconArrowRight } from '@heroicons/react/24/outline';
 export { ChevronLeftIcon as IconChevronLeft } from '@heroicons/react/24/outline';
 export { CheckIcon as IconCheck } from '@heroicons/react/24/outline';
 export { StarIcon as IconStar } from '@heroicons/react/24/outline';

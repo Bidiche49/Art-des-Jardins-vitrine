@@ -1,4 +1,4 @@
-import { IconStarFilled, IconGoogle } from '@/lib/icons';
+import { IconStarFilled, IconGoogle, IconArrowRight } from '@/lib/icons';
 import { AvisPiste } from '@/components/ui/AvisPiste';
 import { SITE, getGoogleReviewsUrl } from '@/lib/site-config';
 import {
@@ -12,13 +12,13 @@ import {
  * Bandeau d'avis Google, alimente par `@/lib/reviews`. Ne rend rien tant
  * qu'aucun avis n'est renseigne.
  *
- * Deux comportements selon le support, entierement pilotes par le CSS de
- * globals.css : defilement automatique avec pause au survol sur desktop,
- * carrousel scroll-snap parcouru au doigt sur mobile, ou l'absence de survol
- * rendrait un texte en mouvement illisible.
+ * Deux comportements selon le support : defilement automatique avec pause au
+ * survol sur desktop, carrousel parcouru au doigt sur mobile, ou l'absence de
+ * survol rendrait un texte en mouvement illisible.
  *
- * Aucun JS : le composant reste rendu cote serveur, donc les avis restent dans
- * le HTML livre. Un carrousel en JS les aurait rendus invisibles aux crawlers.
+ * Ce composant reste rendu cote serveur. Seul le conteneur du bandeau,
+ * `AvisPiste`, est un composant client : il pilote le defilement et la boucle,
+ * et recoit les cartes en `children`.
  *
  * Pas de balisage schema.org Review/AggregateRating ici : Google considere comme
  * "self-serving" les avis qu'une entite publie sur son propre site, ce qui rend
@@ -29,6 +29,48 @@ import {
 
 /** Duree d'un tour complet. Environ 8 s par avis, lisible sans etre lent. */
 const DUREE_PAR_AVIS_S = 8;
+
+/**
+ * Couleurs des avatars, dans l'esprit de celles que Google attribue aux comptes
+ * sans photo : sourdes, assez foncees pour porter du texte blanc. Les deux
+ * dernieres viennent de la charte du site, pour raccrocher ces pastilles au
+ * reste de la page.
+ */
+const COULEURS_AVATAR = [
+  '#7b1fa2',
+  '#a93226',
+  '#455a64',
+  '#00695c',
+  '#5d4037',
+  '#8b6740',
+];
+
+/**
+ * Pastille a l'initiale, a la place du logo Google repete sur chaque carte.
+ *
+ * La couleur suit le rang de l'avis et non un hachage de son nom : un hachage
+ * repartissait quatre des neuf cartes sur la meme teinte tout en en laissant
+ * deux inutilisees, ce qui se voit quand les cartes defilent cote a cote. La
+ * rotation garantit que deux voisines different toujours.
+ *
+ * Les avis dont l'auteur a une vraie photo de profil sur Google recoivent eux
+ * aussi une initiale : reproduire ces photos supposerait de les recuperer et de
+ * les heberger, ce que ni le droit a l'image ni les conditions Google ne
+ * permettent.
+ */
+function Avatar({ author, rang }: { author: string; rang: number }) {
+  const initiale = author.trim().charAt(0).toUpperCase();
+
+  return (
+    <span
+      aria-hidden="true"
+      className="flex h-10 w-10 shrink-0 select-none items-center justify-center rounded-full text-lg font-medium leading-none text-white"
+      style={{ backgroundColor: COULEURS_AVATAR[rang % COULEURS_AVATAR.length] }}
+    >
+      {initiale}
+    </span>
+  );
+}
 
 function StarRating({ rating, className = 'w-5 h-5' }: { rating: number; className?: string }) {
   const rounded = Math.round(rating);
@@ -70,9 +112,11 @@ function formatReviewDate(date: string): string {
  */
 function ReviewCard({
   review,
+  rang,
   duplicata = false,
 }: {
   review: GoogleReview;
+  rang: number;
   duplicata?: boolean;
 }) {
   const paragraphs = review.text.split('\n\n');
@@ -89,12 +133,14 @@ function ReviewCard({
         tabIndex={duplicata ? -1 : undefined}
         className="flex h-64 flex-col rounded-xl border border-gray-100 bg-white p-5 shadow-sm transition-shadow hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
       >
-        <div className="mb-2 flex items-start justify-between gap-3">
+        {/* Plus de logo Google par carte : repete neuf fois de suite, il saturait
+            le bandeau. L'attribution passe par le badge en tete de section. */}
+        <div className="mb-2 flex items-center gap-3">
+          <Avatar author={review.author} rang={rang} />
           <div className="min-w-0">
             <p className="truncate font-semibold text-gray-900">{review.author}</p>
             <p className="text-sm text-gray-400">{formatReviewDate(review.date)}</p>
           </div>
-          <IconGoogle className="mt-0.5 h-5 w-5 shrink-0" />
         </div>
 
         <StarRating rating={review.rating} className="h-4 w-4" />
@@ -164,10 +210,16 @@ export function Testimonials() {
               href={SITE.google.writeReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-gray-500 underline-offset-4 hover:text-primary-700 hover:underline"
+              className="group inline-flex items-center gap-1.5 text-sm text-gray-500 transition-colors hover:text-primary-700"
             >
-              <IconGoogle className="h-3.5 w-3.5" />
               Déjà client ? Donnez votre avis
+              {/* La fleche remplace le logo Google, qui faisait un marqueur de
+                  plus sur une section qui en comptait deja dix. Elle glisse au
+                  survol : de quoi signaler le lien sans le souligner. */}
+              <IconArrowRight
+                aria-hidden="true"
+                className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1"
+              />
             </a>
           </p>
         )}
@@ -179,10 +231,12 @@ export function Testimonials() {
             keyframe et decalerait la boucle a chaque tour. */}
         <ul className="avis-piste">
           {reviews.map((review, i) => (
-            <ReviewCard key={`a-${i}`} review={review} />
+            <ReviewCard key={`a-${i}`} review={review} rang={i} />
           ))}
+          {/* Meme rang que l'original : la couleur d'avatar doit suivre la
+              personne, pas la position dans la piste. */}
           {reviews.map((review, i) => (
-            <ReviewCard key={`b-${i}`} review={review} duplicata />
+            <ReviewCard key={`b-${i}`} review={review} rang={i} duplicata />
           ))}
         </ul>
       </AvisPiste>
