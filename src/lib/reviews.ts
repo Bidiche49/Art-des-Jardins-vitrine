@@ -32,8 +32,9 @@ export interface GoogleReview {
    * Lien de partage de cet avis precis, obtenu via le menu "..." de l'avis sur
    * Google. Toute la carte pointe dessus : c'est la que le texte integral se lit.
    *
-   * Ces `share.google/...` dependent du raccourcisseur de Google. S'il disparait,
-   * les liens meurent en silence. A verifier si un doute apparait.
+   * Ces `share.google/...` (menu "...") et `maps.app.goo.gl/...` (bouton
+   * "Partager" de l'app Maps) dependent des raccourcisseurs de Google. S'ils
+   * disparaissent, les liens meurent en silence. A verifier si un doute apparait.
    */
   url: string;
   /** Note de l'avis, 1 a 5. */
@@ -73,6 +74,17 @@ export const reviews: GoogleReview[] = [
 Les travaux ont été réalisés avec soin, dans les délais annoncés et avec un souci du détail remarquable. L’ancienne haie a été retirée proprement et la nouvelle plantation est parfaitement réalisée. Le rendu est superbe et a complètement transformé mon jardin.
 
 C’est un vrai plaisir de faire appel à une entreprise aussi sérieuse, compétente et passionnée par son métier. Je recommande Arts des Jardins sans la moindre hésitation et je n’hésiterai pas à les recontacter pour de futurs projets. Merci à toute l’équipe pour cet excellent travail !`,
+  },
+  {
+    author: 'Anne-Ecclesia T.',
+    url: 'https://maps.app.goo.gl/HKGGsYJZaj3W2HRP7',
+    rating: 5,
+    date: '2026-09-29',
+    text: `Toujours aussi satisfaite de ces sympathiques paysagistes, et bien sûr sérieux, ponctuels, courageux mais aussi créatifs et de bons conseils. Ils sont intervenus plusieurs fois pour de gros travaux, élagage, dessouchage de haie puis pose d’une clôture rustique en bois (très esthétique), création d’un bel escalier, transformation d’un muret de ciment prêt à s’écrouler en une jolie retenue d’ardoises..... remise en état d’un haut mur couvert de lierre et ronces.
+
+Travaux très variés mais toujours menés à bien. Très bonne gestion du temps.
+
+MERCI à Louis et Jocelyn !`,
   },
   {
     author: 'Net’Anjou Services',
@@ -116,6 +128,27 @@ C’est un vrai plaisir de faire appel à une entreprise aussi sérieuse, compé
     rating: 5,
     date: '2026-05-15',
     text: 'Jocelyn et Louis sont très professionnels et efficaces. Nous avons toujours eu un bon contact avec eux, et les travaux ont été effectués rapidement et proprement (chantier propre et résultat très satisfaisants). Nous recommandons vivement !',
+  },
+  {
+    author: 'Céline R.',
+    url: 'https://maps.app.goo.gl/ZL3L2maXdtMnWpjp7',
+    rating: 5,
+    date: '2026-10-06',
+    text: 'Belle prestation à la hauteur de nos attentes !',
+  },
+  {
+    author: 'Antoine O.',
+    url: 'https://maps.app.goo.gl/vmNJXt2vGbZcCSWV8',
+    rating: 5,
+    date: '2026-10-06',
+    text: 'De jeunes entrepreneurs efficaces, avec un travail bien fait !',
+  },
+  {
+    author: 'Mathis J.',
+    url: 'https://maps.app.goo.gl/AFC8nkPte8szYTcm6',
+    rating: 5,
+    date: '2026-10-06',
+    text: 'Équipe au top et un travail de qualité a été réalisé',
   },
   {
     author: 'Chantal R.',
