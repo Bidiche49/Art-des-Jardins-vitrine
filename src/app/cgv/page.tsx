@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { getMediateur } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Conditions Generales de Vente',
@@ -13,6 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default function CGVPage() {
+  const mediateur = getMediateur();
+
   return (
     <div className="py-16 lg:py-24">
       <div className="container-custom max-w-4xl">
@@ -136,10 +139,17 @@ export default function CGVPage() {
             En cas de litige, une solution amiable sera recherchee en priorite. A defaut, le
             tribunal competent sera celui du siege social d'Art des Jardins (Angers).
           </p>
-          <p>
-            Le client peut egalement recourir a un mediateur de la consommation :{' '}
-            [Coordonnees du mediateur]
-          </p>
+          {mediateur && (
+            <p>
+              Conformement aux articles L.612-1 et suivants du Code de la consommation, le client
+              peut recourir gratuitement au mediateur de la consommation dont Art des Jardins
+              releve : {mediateur.nom}, {mediateur.adresse},{' '}
+              <a href={mediateur.site} target="_blank" rel="noopener noreferrer">
+                {mediateur.site.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+              </a>
+              .
+            </p>
+          )}
 
           <h2>Article 10 - Droit de retractation</h2>
           <p>

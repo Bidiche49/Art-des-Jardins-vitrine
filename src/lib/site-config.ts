@@ -87,3 +87,29 @@ export const SITE = {
     writeReviewUrl: 'https://g.page/r/CQd0XwV-QjuFEBE/review',
   },
 };
+
+/**
+ * Mediateur de la consommation auquel l'entreprise a adhere.
+ *
+ * Obligatoire des lors qu'on vend a des particuliers (Code de la consommation,
+ * L612-1). R616-1 impose d'afficher ses coordonnees ET l'adresse de son site,
+ * de facon visible, sur le site internet et dans les CGV.
+ *
+ * A remplir avec les informations de la convention d'adhesion, jamais avant :
+ * citer un mediateur sans contrat signe serait pire que de n'en citer aucun.
+ * Tant qu'un champ est vide, la mention n'apparait pas dans les CGV.
+ */
+export const MEDIATEUR = {
+  nom: '',
+  /** URL complete, protocole compris (https://...). */
+  site: '',
+  adresse: '',
+};
+
+export type Mediateur = typeof MEDIATEUR;
+
+/** Le mediateur a afficher, ou null tant que la constante est incomplete. */
+export function getMediateur(mediateur: Mediateur = MEDIATEUR): Mediateur | null {
+  const complet = Object.values(mediateur).every((valeur) => valeur.trim() !== '');
+  return complet ? mediateur : null;
+}
