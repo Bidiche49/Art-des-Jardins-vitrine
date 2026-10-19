@@ -18,7 +18,9 @@
     // Tous les lundis a 6h UTC. Un passage par semaine suffit : la fiche gagne
     // environ deux avis par mois, et un chiffre en retard de quelques jours ne
     // se voit pas.
-    "crons": ["0 6 * * 1"]
+    // Jour en toutes lettres : chez Cloudflare, 1 = dimanche (et non lundi comme
+    // dans le cron Unix). "0 6 * * 1" a tourne le dimanche jusqu'en octobre 2026.
+    "crons": ["0 6 * * MON"]
   }
   // PAGES_DEPLOY_HOOK est un secret : `wrangler secret put PAGES_DEPLOY_HOOK`.
   // Jamais dans ce fichier, il est versionne.
