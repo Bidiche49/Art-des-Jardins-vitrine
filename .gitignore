@@ -14,3 +14,7 @@ email-signature.html
 
 # code-index (claude-conf) — generated artifacts
 docs/.code-map/
+
+# Etat du rafraichissement de la note Google, genere au prebuild et publie
+# (lu par le chien de garde du worker de contact). Jamais versionne.
+public/google-rating.json

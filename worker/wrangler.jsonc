@@ -20,7 +20,15 @@
     // envoie depuis lui directement : pas besoin du sous-domaine send., qui ne sert
     // qu'au Return-Path de SES.
     "CONTACT_FROM": "Art des Jardins <contact@artdesjardins-paysagiste.fr>",
-    "ALLOWED_ORIGINS": "https://artdesjardins-paysagiste.fr,http://localhost:3001"
+    "ALLOWED_ORIGINS": "https://artdesjardins-paysagiste.fr,http://localhost:3001",
+    // Destinataire des alertes du chien de garde (src/watchdog.ts) : le
+    // developpeur, pas le paysagiste, qui n'aurait rien a en faire.
+    "ALERT_TO": "nicolazicdev@gmail.com"
+  },
+  "triggers": {
+    // Chien de garde de la note Google, chaque jour a 7 h UTC : une heure apres
+    // le rebuild du lundi de worker-cron, pour juger un build termine.
+    "crons": ["0 7 * * *"]
   }
   // RESEND_API_KEY est un secret : `wrangler secret put RESEND_API_KEY`.
   // Jamais dans ce fichier, il est versionne.

@@ -34,23 +34,20 @@ export default {
   // worker/src/index.ts, ce dossier n'embarque pas @cloudflare/workers-types et
   // s'appuie sur le tsconfig du site. On ne s'en sert pas.
   async scheduled(_event: unknown, env: Env): Promise<void> {
+    // Chaque echec leve une erreur plutot que de simplement journaliser : le
+    // passage apparait alors en echec dans Observability au lieu de "reussi".
+    // L'alerte, elle, vient du chien de garde du worker de contact
+    // (worker/src/watchdog.ts), qui constate le resultat sur le site. Pendant ce
+    // temps le site garde la derniere note valide.
     if (!env.PAGES_DEPLOY_HOOK) {
-      console.error('[cron] PAGES_DEPLOY_HOOK absent, aucun build declenche.');
-      return;
+      throw new Error('[cron] PAGES_DEPLOY_HOOK absent, aucun build declenche.');
     }
 
-    // Une erreur ici n'a pas de consequence : le site continue d'afficher les
-    // derniers chiffres connus, et le prochain passage retentera.
-    try {
-      const response = await fetch(env.PAGES_DEPLOY_HOOK, { method: 'POST' });
-      if (!response.ok) {
-        console.error(`[cron] Deploy Hook a repondu ${response.status} ${response.statusText}`);
-        return;
-      }
-      console.log('[cron] Build Cloudflare Pages declenche.');
-    } catch (error) {
-      console.error(`[cron] Appel du Deploy Hook impossible : ${(error as Error).message}`);
+    const response = await fetch(env.PAGES_DEPLOY_HOOK, { method: 'POST' });
+    if (!response.ok) {
+      throw new Error(`[cron] Deploy Hook a repondu ${response.status} ${response.statusText}`);
     }
+    console.log('[cron] Build Cloudflare Pages declenche.');
   },
 
   // Aucune surface HTTP : une URL publique capable de declencher un build

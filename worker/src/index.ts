@@ -16,9 +16,14 @@
  * REGLE ABSOLUE : ne jamais repondre 200 sans confirmation d'envoi par Resend.
  * Un 200 menteur empeche le fallback de se declencher : le lead est perdu
  * sans aucun signal, ni pour le visiteur ni pour l'exploitant.
+ *
+ * Le meme worker porte, sur un cron quotidien, le chien de garde du
+ * rafraichissement de la note Google : voir ./watchdog.ts.
  */
 
-interface Env {
+import { verifieRafraichissement, type WatchdogEnv } from './watchdog';
+
+interface Env extends WatchdogEnv {
   RESEND_API_KEY: string;
   /** Destinataire final. Tant que le domaine n'est pas verifie, Resend n'accepte
    *  que l'adresse du compte ou les adresses de test @resend.dev. */
@@ -169,6 +174,10 @@ function buildHtml(lead: Lead, photoCount: number): string {
 }
 
 export default {
+  async scheduled(_event: unknown, env: Env): Promise<void> {
+    await verifieRafraichissement(env);
+  },
+
   async fetch(request: Request, env: Env): Promise<Response> {
     const origin = request.headers.get('Origin');
     const cors = corsHeaders(origin, env);
